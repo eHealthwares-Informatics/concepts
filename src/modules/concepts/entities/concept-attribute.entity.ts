@@ -14,7 +14,7 @@ export class ConceptAttributeEntity {
   @PrimaryGeneratedColumn('uuid')
   id!: string;
 
-  @Column('simple-enum', { enum: CodingConcept })
+  @Column('varchar', { length: 50 })
   concept!: CodingConcept;
 
   // machine-friendly key (e.g. "component", "system", "scale")

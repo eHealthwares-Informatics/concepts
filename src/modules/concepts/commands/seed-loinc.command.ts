@@ -1,5 +1,5 @@
 import { Command, CommandRunner } from 'nest-commander';
-import { Injectable, Logger, OnApplicationBootstrap } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { LoincSeederService } from '../seeders/loinc.seeder';
 
 @Injectable()
@@ -7,14 +7,11 @@ import { LoincSeederService } from '../seeders/loinc.seeder';
   name: 'seed:loinc',
   description: 'Import LOINC data from Google Sheets',
 })
-export class SeedLoincCommand extends CommandRunner implements OnApplicationBootstrap {
+export class SeedLoincCommand extends CommandRunner {
   private readonly logger = new Logger(SeedLoincCommand.name);
 
   constructor(private readonly loincSeeder: LoincSeederService) {
     super();
-  }
-  onApplicationBootstrap() {
-    this.run([])
   }
 
   async run(passedParams: string[]): Promise<void> {

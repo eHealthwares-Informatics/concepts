@@ -24,7 +24,7 @@ export class ConceptAttributeValueEntity {
   @JoinColumn({ name: 'entity', referencedColumnName: 'id' })
   conceptCode!: ConceptCodingEntity;
 
-  @Column('simple-enum', { enum: CodingConcept })
+  @Column('varchar', { length: 50 })
   concept!: CodingConcept;
 
   @ManyToOne(() => ConceptAttributeEntity, { eager: true })

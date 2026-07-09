@@ -17,7 +17,7 @@ export class ConceptCodingEntity {
   @PrimaryGeneratedColumn('uuid')
   id!: string;
 
-  @Column('simple-enum', { enum: CodingConcept })
+  @Column('varchar', { length: 50 })
   concept!: CodingConcept;
 
   @Column('varchar', { length: 255 })

@@ -8,6 +8,10 @@
     "start": "node dist/main.js",
     "start:cli": "ts-node src/cli.ts",
     "seed:facility": "nest start --watch seed:facility",
+    "seed:icd": "nest start --watch seed:icd",
+    "seed:loinc": "nest start --watch seed:loinc",
+    "seed:drug": "nest start --watch seed:drug",
+    "seed:all": "nest start --watch seed:all",
     "start:dev": "nest start --watch seed:loinc",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main"

@@ -77,16 +77,10 @@ export class LoincSeederService {
       );
       stats.attributesCreated = attributeProcessingStats;
 
-      // Get changed rows if this is an update
-      const changedRows = previousTracking
-        ? await this.getChangedRowsFromPreviousImport(previousTracking)
-        : { added: currentData.rows, modified: [], deleted: [] };
-
-      // Process changed rows
+      // Process all rows in upsert mode
       const { codesCreated, valuesCreated, rowsProcessed } =
         await this.processChangedRows(
           currentData.rows,
-          changedRows,
           stats,
           currentData.headers,
         );
@@ -98,9 +92,9 @@ export class LoincSeederService {
         ...tracking,
         revision: currentData.revision,
         totalRowsProcessed: rowsProcessed,
-        rowsAdded: changedRows.added.length,
-        rowsModified: changedRows.modified.length,
-        rowsDeleted: changedRows.deleted.length,
+        rowsAdded: rowsProcessed,
+        rowsModified: 0,
+        rowsDeleted: 0,
       };
 
       // Save import tracking record
@@ -205,13 +199,12 @@ export class LoincSeederService {
    */
   private async processChangedRows(
     allRows: Record<string, string>[],
-    changedRows: any,
     stats: any,
     headers: string[],
   ): Promise<{ codesCreated: number; valuesCreated: number; rowsProcessed: number }> {
     let codesCreated = 0;
     let valuesCreated = 0;
-    const rowsToProcess = [...changedRows.added, ...changedRows.modified];
+    const rowsToProcess = allRows;
 
     for (const row of rowsToProcess) {
       try {
@@ -248,6 +241,15 @@ export class LoincSeederService {
           });
           conceptCode = await this.conceptCodeRepository.save(conceptCode);
           codesCreated++;
+        } else {
+          // Upsert — update existing code fields
+          let changed = false;
+          if (conceptCode.name !== component) { conceptCode.name = component || ''; changed = true; }
+          if (conceptCode.shortName !== shortName) { conceptCode.shortName = shortName || ''; changed = true; }
+          if (conceptCode.longName !== longName) { conceptCode.longName = longName || ''; changed = true; }
+          if (conceptCode.shortDescription !== description) { conceptCode.shortDescription = description || ''; changed = true; }
+          if (conceptCode.longDescription !== description) { conceptCode.longDescription = description || ''; changed = true; }
+          if (changed) await this.conceptCodeRepository.save(conceptCode);
         }
 
         // Process all attribute values for this code
@@ -338,26 +340,6 @@ export class LoincSeederService {
     return str
       .toLowerCase()
       .replace(/[\s-]+/g, '_') 
-  }
-
-  /**
-   * Get the changed rows based on previous import tracking
-   */
-  private async getChangedRowsFromPreviousImport(
-    previousTracking: ImportTrackingEntity,
-  ): Promise<any> {
-    // In a more advanced implementation, you would:
-    // 1. Store the previous sheet data snapshot
-    // 2. Compare with current data
-    // 3. Return only changed rows
-
-    // For now, return all rows (conservative approach)
-    // This can be optimized by storing row hashes in the tracking record
-    return {
-      added: [],
-      modified: [],
-      deleted: [],
-    };
   }
 
   /**

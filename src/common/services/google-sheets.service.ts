@@ -23,12 +23,13 @@ export class GoogleSheetsService {
     });
   }
 
-  async fetchSheetData(sheetName: string = 'LOINC') {
+  async fetchSheetData(sheetName: string = 'LOINC', sheetId?: string) {
     const client = await this.auth.getClient();
     const accessToken = await client.getAccessToken();
 
-    const range = `${sheetName}!A1:ZZ1000`;
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${this.sheetId}/values/${encodeURIComponent(range)}`;
+    const id = sheetId || this.sheetId;
+    const range = `${sheetName}!A1:ZZ`;
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${id}/values/${encodeURIComponent(range)}`;
 
     const data = await this.makeRequest(url, accessToken.token!);
 

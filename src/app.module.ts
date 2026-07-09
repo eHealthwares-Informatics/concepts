@@ -4,6 +4,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConceptsModule } from './modules/concepts/concepts.module';
 import { FacilitiesModule } from './modules/facilities/facilities.module';
 import { ApiExplorerModule } from './modules/api-explorer/api-explorer.module';
+import { SeedModule } from './seed/seed.module';
+import { DrugsModule } from './modules/drugs/drugs.module';
 import {
   ConceptAttributeEntity,
   ConceptAttributeValueEntity,
@@ -20,6 +22,11 @@ import {
   FacilityTypeEntity,
   FacilityLevelEntity,
 } from './modules/facilities/entities';
+import {
+  PharmaceuticsEntity,
+  DrugComponentEntity,
+  GenericProductEntity,
+} from './modules/drugs/entities';
 
 @Module({
   imports: [
@@ -50,13 +57,18 @@ import {
           LgaEntity,
           FacilityTypeEntity,
           FacilityLevelEntity,
+          PharmaceuticsEntity,
+          DrugComponentEntity,
+          GenericProductEntity,
         ],
         synchronize: true,
       }),
     }),
     ConceptsModule,
     FacilitiesModule,
+    DrugsModule,
     ApiExplorerModule,
+    SeedModule,
   ],
 })
 export class AppModule {}

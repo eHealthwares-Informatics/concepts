@@ -162,7 +162,7 @@ export class FacilitiesService {
       .getManyAndCount();
 
     const entries = data.map((facility) => ({
-      fullUrl: `http://localhost:3013/api/v1/fhir/Location/${facility.id}`,
+      fullUrl: `http://localhost:8004/api/v1/fhir/Location/${facility.id}`,
       resource: this.toFhirLocation(facility),
       search: {
         mode: 'match',

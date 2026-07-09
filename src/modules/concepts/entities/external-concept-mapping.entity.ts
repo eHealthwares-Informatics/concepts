@@ -17,19 +17,18 @@ export class ExternalConceptMappingEntity {
   @PrimaryGeneratedColumn('uuid')
   id!: string;
 
-  @Column('simple-enum', { enum: CodingConcept })
+  @Column('varchar', { length: 50 })
   externalConcept!: CodingConcept;
 
   @Column('varchar', { length: 255 })
   externalCode!: string;
 
-  @Column('simple-enum', { enum: CodingConcept })
+  @Column('varchar', { length: 50 })
   internalConcept!: CodingConcept;
 
   @Column('varchar', { length: 255, nullable: true })
   internalCode?: string;
 
-  @Column('varchar', { length: 255, nullable: true })
   conceptCodeId?: string;
 
   @ManyToOne(() => ConceptCodingEntity, (conceptCode) => conceptCode.externalMappings, {

@@ -19,6 +19,7 @@ import {
 
 import { ConceptsService } from './concepts.service';
 import { LoincSeederService } from './seeders/loinc.seeder';
+import { ICDSeederService } from './seeders/icd.seeder';
 
 @ApiTags('Concepts')
 @Controller('v1/concepts')
@@ -26,6 +27,7 @@ export class ConceptsController {
   constructor(
     private readonly conceptsService: ConceptsService,
     private readonly loincSeeder: LoincSeederService,
+    private readonly icdSeeder: ICDSeederService,
   ) {}
 
   @Post()
@@ -270,6 +272,31 @@ export class ConceptsController {
   async getLoincImportStatus() {
     return {
       data: await this.loincSeeder.getLatestImportStatus(),
+    };
+  }
+
+  // ICD-10 Seeding
+  @Post('seed/icd')
+  @ApiOperation({ summary: 'Trigger ICD-10 seed' })
+  async seedICD(@Query('triggeredBy') triggeredBy?: string) {
+    return this.icdSeeder.seedICDData(triggeredBy || 'manual');
+  }
+
+  @Get('seed/icd/history')
+  @ApiOperation({ summary: 'Get ICD-10 import history' })
+  async getICDImportHistory(@Query('limit') limit?: string) {
+    return {
+      data: await this.icdSeeder.getImportHistory(
+        Math.min(Math.max(Number(limit || 10), 1), 100),
+      ),
+    };
+  }
+
+  @Get('seed/icd/status')
+  @ApiOperation({ summary: 'Get ICD-10 import status' })
+  async getICDImportStatus() {
+    return {
+      data: await this.icdSeeder.getLatestImportStatus(),
     };
   }
 }
