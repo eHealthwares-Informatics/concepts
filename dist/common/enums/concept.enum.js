@@ -9,6 +9,7 @@ var CodingConcept;
     CodingConcept["EMDEx"] = "EMDEx";
     CodingConcept["ICD10"] = "ICD10";
     CodingConcept["RxNorm"] = "RxNorm";
+    CodingConcept["DICTIONARY"] = "DICTIONARY";
     CodingConcept["STATE"] = "STATE";
     CodingConcept["LGA"] = "LGA";
     CodingConcept["WARD"] = "WARD";

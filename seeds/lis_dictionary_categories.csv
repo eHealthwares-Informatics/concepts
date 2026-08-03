@@ -1,0 +1,55 @@
+openelisId,code,name,description,localAbbrev
+34,DCT-V,V,VIROLOGY,V
+35,DCT-E,E,MOLECULAR EPI,E
+1,DCT-GC,GC,GONORRHEA CULTURE,GC
+3,DCT-CG,CG,CLINICAL GENERAL,CG
+36,DCT-Q,Q,QA Event Type,Q
+37,DCT-QA_EVENT_CATEGORY,QA Event Category,QA Event Category,QC
+38,DCT-HL,HL,Haiti Lab,HL
+77,DCT-REC_STATUS,REC_STATUS,intake status,REC_STATUS
+117,DCT-HIVRESULT,HIVResult,Conclusion,Conclusion
+137,DCT-SPECIMEN_RECEPTION_CONDITION,specimen reception condition,specimen reception condition,reciptCond
+157,DCT-HAITDEPARTMENTS,haitDepartments,haitiDepartment,haitDept
+177,DCT-PATIENTPAYMENT,patientPayment,patientPayment,PP
+197,DCT-LOCALE,locale,possible language locales for the user to select,locale
+217,DCT-EDUCATION_LEVEL_DEMOGRAPHIC_INFORMATION,Education Level Demographic Information,Possible education levels,education
+218,DCT-MARITAL_STATUS_DEMOGRAPHIC_INFORMATION,Marital Status Demographic Information,Possible marriage status,marriage
+219,DCT-NATIONALITY_DEMOGRAPHIC_INFORMATION,Nationality Demographic Information,Possible nationalities,nation
+237,DCT-TEST_RESULT,Test Result,General test result,Test Reslt
+257,DCT-RESULTREJECTIONREASONS,resultRejectionReasons,Reasons for rejecting test results,resReject
+277,DCT-PROGRAMS,programs,Programs for orders,programs
+240,DCT-EDUCATION_LEVEL,Education Level,Education Level Demographic Information,Education
+78,DCT-MARITAL_STATUS,Marital Status,Marital Status Demographic Information,Marital
+79,DCT-NATIONALITY,Nationality,Nationality Demographic Information,National
+80,DCT-YES_NO_NA,Yes No NA,Yes No N/A question choices,YesNoNA
+81,DCT-YES_NO,Yes No,Yes No question choices,YesNo
+82,DCT-ARV_DISEASE,ARV Disease,ARV diseases for demographic question,ARVDisease
+83,DCT-ARV_PROPHYLAXIS,ARV Prophylaxis,ARV Prophylaxis treatments for demographic question choices,ARVProphyl
+84,DCT-AIDS_STAGES,AIDS Stages,AID Stages demographic question choices,AIDSStg
+97,DCT-REGIONAL_NATIONALITY,Regional Nationality,Simplified list of nationality demographic question choices,RegionNat
+241,DCT-HIV_STATUS,HIV Status,possible HIV status for demographic question choices,HIVStatus
+242,DCT-SECONDARY_PROPHYLAXIS,Secondary Prophylaxis,Secondary ARV Prophlaxis choices for ARV studies.,arvProph2
+243,DCT-SIMPLIFIED_NATIONALITY,Simplified Nationality,Simplified Nationality Choices for demographic questions,NatSimple
+158,DCT-ARV_TREATMENT_REGIME,ARV Treatment Regime,ARV treatment regime choices for ARV studies.,arvRegime
+244,DCT-RTN_DISEASES,RTN Diseases,Diseases for Routine Tests,RTNDisease
+178,DCT-RTN_EXAMINATION_DISEASES,RTN Examination Diseases,Diseases for Routine Test Examine Questions,RTNExam
+245,DCT-POSNEGINDINV,PosNegIndInv,"Result Values - Pos, Neg, Indeterminate, Invalid",PsNgIndInv
+198,DCT-HIVRESULT,HIVResult,"HIV Result-HIV1, HIV2, HIVD, Neg, Indtrminate, Invalid",HIVResult
+246,DCT-HIV1NIND,HIV1NInd,"Result Values - HIV 1, Negative, Indeterminate",HIV1NInd
+267,DCT-EID_WHICH_PCR_TEST,EID Which PCR Test,EID Which PCR Test,whichPCR
+258,DCT-REASON_FOR_SECOND_PCR_TEST,Reason for Second PCR Test,Reason for Second PCR Test,rsonPCRTst
+287,DCT-EID_TYPE_OF_CLINIC,EID Type of Clinic,EID Type of Clinic,typOfClinc
+278,DCT-EID_HOW_INFANT_EATING,EID How Infant Eating,EID How Infant Eating,howEating
+279,DCT-MOTHER'S_HIV_STATUS,Mother's HIV Status,Mother's HIV Status,momsStatus
+280,DCT-MOTHER'S_ARV_TREATMENT,Mother's ARV Treatment,Mother's ARV Treatment,momsTrtmnt
+281,DCT-EID_INFANT'S_ARV_PROPHYLAXIS,EID Infant's ARV Prophylaxis,EID Infant's ARV Prophylaxis,infantARV
+282,DCT-EID_COTRIMOXAZOLE,EID Cotrimoxazole,EID Infant Cotrimoxazole,eidCotrim
+297,DCT-SPECIAL_REQUEST_REASON,Special Request Reason,Special Request Reason,SpeclReasn
+298,DCT-,,ARV Demographic Marital Status,ARVMarital
+299,DCT-,,RTN Demographic Info: Nationality,RTNNation
+305,DCT-,,ARV Demographic Info: Nationality,ARVNation
+317,DCT-EID_STOPPED_BREASTFEEDING,EID Stopped Breastfeeding,Choices for when an infant stopped breastfeeding,stopFeed
+400,DCT-REASON_FOR_VIRAL_LOAD_REQUEST,Reason for Viral Load Request,Reason for Viral Load Request,vlReason
+403,DCT-TESTLOCATIONCODE,testLocationCode,Test Location Codes for CI LNSP,LocatCode
+404,DCT-,,ARV Demographic Education Level,ARVEd
+57,DCT-YES_NO_UNKNOWN,Yes No Unknown,"Demographic Yes, No, Unknown responses",YesNoUnkn

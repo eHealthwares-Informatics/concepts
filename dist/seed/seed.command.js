@@ -34,14 +34,15 @@ let SeedCommand = SeedCommand_1 = class SeedCommand extends nest_commander_1.Com
         }
     }
     async run(passedParams) {
-        this.logger.log('=== Starting full seed (facility → LOINC → ICD-10 → drugs) ===');
+        this.logger.log('=== Starting full seed (dictionary → facility → LOINC → ICD-10 → drugs) ===');
         const result = await this.seedOrchestrator.seedAll();
         this.logger.log('=== Seed results ===');
-        this.logger.log(`  Facility: ${result.facility.success ? '✓' : '✗'} (${result.facility.errors} errors)`);
-        this.logger.log(`  LOINC:    ${result.loinc.success ? '✓' : '✗'} (${result.loinc.errors} errors)`);
-        this.logger.log(`  ICD-10:   ${result.icd.success ? '✓' : '✗'} (${result.icd.errors} errors)`);
-        this.logger.log(`  Drugs:    ${result.drug.success ? '✓' : '✗'} (${result.drug.errors} errors)`);
-        this.logger.log(`  Total:    ${result.totalErrors} errors across all seeders`);
+        this.logger.log(`  Facility:    ${result.facility.success ? '✓' : '✗'} (${result.facility.errors} errors)`);
+        this.logger.log(`  Dictionary:  ${result.dictionary.success ? '✓' : '✗'} (${result.dictionary.errors} errors)`);
+        this.logger.log(`  LOINC:       ${result.loinc.success ? '✓' : '✗'} (${result.loinc.errors} errors)`);
+        this.logger.log(`  ICD-10:      ${result.icd.success ? '✓' : '✗'} (${result.icd.errors} errors)`);
+        this.logger.log(`  Drugs:       ${result.drug.success ? '✓' : '✗'} (${result.drug.errors} errors)`);
+        this.logger.log(`  Total:       ${result.totalErrors} errors across all seeders`);
         if (result.totalErrors > 0) {
             this.logger.warn('Seeding completed with errors — check logs above for details');
         }
@@ -52,7 +53,7 @@ exports.SeedCommand = SeedCommand = SeedCommand_1 = __decorate([
     (0, common_1.Injectable)(),
     (0, nest_commander_1.Command)({
         name: 'seed:all',
-        description: 'Run all seeders (facility → LOINC → ICD-10 → drugs) in sequence',
+        description: 'Run all seeders (dictionary → facility → LOINC → ICD-10 → drugs) in sequence',
     }),
     __metadata("design:paramtypes", [seed_orchestrator_service_1.SeedOrchestratorService,
         config_1.ConfigService])

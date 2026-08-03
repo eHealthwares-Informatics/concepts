@@ -5,6 +5,7 @@ export declare enum CodingConcept {
     EMDEx = "EMDEx",
     ICD10 = "ICD10",
     RxNorm = "RxNorm",
+    DICTIONARY = "DICTIONARY",
     STATE = "STATE",
     LGA = "LGA",
     WARD = "WARD",

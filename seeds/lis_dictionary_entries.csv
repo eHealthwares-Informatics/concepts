@@ -1,0 +1,658 @@
+code,dictEntry,localAbbrev,dictionaryCategoryId,displayKey,sortOrder,isActive
+INFLUENZA_VIRUS_A_H1_RNA_DETECTED,INFLUENZA VIRUS A/H1 RNA DETECTED,,3,,200,true
+INFLUENZA_VIRUS_A_H5_RNA_DETECTED,INFLUENZA VIRUS A/H5 RNA DETECTED,,3,,300,true
+ABI_7000,ABI 7000,,3,,27300,false
+PATEUSE,Pateuse,PATEUSE,38,dictionary.result.Pateuse,52000,true
+GP160,GP160,GP160,38,dictionary.result.GP160,60000,true
+P66,P66,P66,38,dictionary.result.P66,60100,true
+P55,P55,P55,38,dictionary.result.P55,64000,true
+FINAL_INTERPRETATION:_THESE_RESULTS_MOST_CLOSELY_I,FINAL INTERPRETATION: These results most closely indicate the presence of HIV-2 antibodies. Confirmation testing for HIV-2 will be performed at the Centers for Disease Control and Prevention on this current specimen. Please submit another specimen one month following the collection of the first specimen for repeat testing.,H25,3,,3700,true
+NEGATIVE_NOT_LYSED,NEGATIVE (NOT LYSED),,3,,8600,true
+POSITIVE_LYSED,POSITIVE (LYSED),,3,,8700,true
+NO_SPORES_PRESENT,No Spores Present,,3,,8800,true
+ACID_FAST_BACILLI,acid fast bacilli,,3,,10200,true
+PRESENT,PRESENT,,3,,10300,true
+MYCOBACTERIUM_NOT_SUGGESTIVE_OF_M_TUBERCULOSIS,Mycobacterium not suggestive of M tuberculosis,,3,,10500,true
+MYCOBACTERIUM_FORTUITUM,Mycobacterium fortuitum,,3,,10600,true
+MYCOBACTERIUM_KANSASII,Mycobacterium kansasii,,3,,10700,true
+MYCOBACTERIUM_SPECIES,Mycobacterium species,,3,,10800,true
+1+_RARE,1+ (rare),,3,,11100,true
+2+_FEW,2+ (few),,3,,11200,true
+3+_MODERATE,3+ (moderate),,3,,11300,true
+4+_NUMEROUS,4+ (numerous),,3,,11400,true
+PENDING,PENDING,,3,,11900,true
+DETECTED,DETECTED,,3,,9000,true
+FINAL_INTERPRETATION:_THESE_RESULTS_MOST_CLOSELY_I,FINAL INTERPRETATION: These results most closely indicate the presence of HIV antibodies (without differentiation). Please submit another specimen one month following the first specimen for repeat testing. This subsequent specimen may allow for HIV antibody confirmation and differentiation.,H26,3,,3800,true
+PRESUMPTIVE_FOR_BACILLUS_ANTHRACIS,Presumptive for Bacillus Anthracis,,3,,9200,true
+BACILLUS_ANTHRACIS,Bacillus anthracis,,3,,9300,true
+FLUORESCENCE_NOT_DETECTED,FLUORESCENCE NOT DETECTED,,3,,9900,false
+NOT_TESTED,NOT TESTED,,3,,10000,true
+WARNING:_PCR_RESULTS_ARE_FOR_RESEARCH_USE_ONLY_AND,WARNING: PCR results are FOR RESEARCH USE ONLY and should not be used for diagnosis of disease. Patient management decisions must be based on appropriate findings by a physician and the clinical condition of the patient.,,3,,10100,true
+MYCOBACTERIUM_TUBERCULOSIS_COMPLEX,Mycobacterium tuberculosis complex,,3,,10900,true
+MYCOBACTERIUM_GORDONAE,Mycobacterium gordonae,,3,,11000,true
+RESISTANT,RESISTANT,,3,,11600,true
+UNINTERPRETABLE,UNINTERPRETABLE,,3,,11700,true
+MOST_CLOSELY_RESEMBLES,Most Closely Resembles,,3,,12400,true
+PRESUMPTIVE,PRESUMPTIVE,,3,,12500,true
+_,-,,3,,14300,true
+NEISSERIA_GONORRHOEAE_NOT_FOUND,Neisseria gonorrhoeae not found,,3,,5600,true
+IMPORTANT:_YOU_ARE_LEGALLY_REQUIRED_TO_RETURN_A_CA,IMPORTANT: You are legally required to return a case report form. See enclosures.,,3,,5700,true
+ACID_FAST_BACILLI_PRESENT,acid fast bacilli present,,3,,12200,true
+ACID_FAST_BACILLI_NOT_FOUND,acid fast bacilli not found,,3,,12300,true
++__,+/-,,3,,14100,true
+REDUCED_SUSCEPTIBILITY,REDUCED SUSCEPTIBILITY,,3,,14900,true
+INTERMEDIATE,INTERMEDIATE,,3,,6500,true
+REPEATEDLY_REACTIVE,REPEATEDLY REACTIVE,,3,,5100,true
+NEISSERIA_GONORRHOEAE_PRESENT,Neisseria gonorrhoeae present,,3,,5300,true
+WEAKLY_REACTIVE,Weakly Reactive,,3,,15000,true
+NO_INTERPRETATION,No interpretation,NI,3,,16900,true
+<2,<2,<2,3,,20900,true
+4,4,4,3,,21000,true
+8,8,8,3,,21100,true
+>16,>16,>16,3,,21200,true
+NO_GROWTH_PRESENT,No growth present,,3,,24900,true
+MOTILE,Motile,,3,,25000,true
+MOTILITY_TEST_INCONCLUSIVE,Motility test inconclusive,,3,,25100,true
+FLUORESCENCE_DETECTED,Fluorescence detected,,3,,26500,true
+BACILLUS_ANTHRACIS_DNA_DETECTED,Bacillus anthracis DNA detected,,3,,26600,true
+INCONCLUSIVE_FOR_BACILLUS_ANTHRACIS_DNA,Inconclusive for Bacillus anthracis DNA,,3,,26700,true
+NO_BACILLUS_ANTHRACIS_DNA_DETECTED,No Bacillus anthracis DNA detected,,3,,26800,true
+ENRICHMENT,Enrichment,,3,,26900,true
+RECOVERED_ISOLATE,Recovered isolate,,3,,27000,true
+SAMPLE_WASH_OR_EXTRACT,Sample wash or extract,,3,,27100,true
+LIGHT_CYCLER,Light cycler,,3,,27200,true
+I_CYCLER,I cycler,,3,,27400,true
+CELL_LYSATES,Cell lysates,,3,,27500,true
+MASTERPURE_COMPLETE_RNA_AND_DNA_PURIFICATION,MasterPure complete RNA and DNA purification,,3,,27600,true
+SPORE_PREP,Spore prep,,3,,27700,true
+ROCHE_FAST_START_DNA_MASTER_HYRIDIZATION_PROBE_KIT,Roche Fast Start DNA Master Hyridization Probe Kit,,3,,27800,true
+VARIABLE:_BACILLI_IN_NO_DISCERNABLE_PATTERN,Variable: Bacilli in no discernable pattern,,3,,30600,true
+VARIABLE:_BACILLI_IN_CLUSTERS,Variable: Bacilli in clusters,,3,,30700,true
+VARIABLE:_COCCI_IN_CHAINS,Variable: Cocci in chains,,3,,30900,true
+VARIABLE:_COCCI_IN_NO_DISCERNABLE_PATTERN,Variable: Cocci in no discernable pattern,,3,,31000,true
+VARIABLE:_COCCI_IN_CLUSTERS,Variable: Cocci in clusters,,3,,31100,true
+VARIABLE:_COCCI_IN_PAIRS,Variable: Cocci in pairs,,3,,31200,true
+VARIABLE:_COCCOBACILLI_IN_CHAINS,Variable: Coccobacilli in chains,,3,,31300,true
+INTERNAL,Internal,,36,,33400,true
+WARNING,Warning,,36,,33500,true
+UNSAT_INTERPRETATION,Unsat interpretation,,3,,1600,true
+UNINTERPRETABLE_=_BANDS_ON_WESTERN_BLOT_SUGGEST_PO,UNINTERPRETABLE = Bands on Western Blot suggest possible HIV vaccine recipient.,H4,3,,1700,true
+POSITIVE_=_SPECIFIC_CYTOPLASMIC_STAINING_PRESENT._,POSITIVE = Specific cytoplasmic staining present. Patient is positive for anti-HIV-1 antibody.,H5,3,,1800,true
+NEGATIVE_=_NO_SPECIFIC_FLUORESCENT_STAINING_PRESEN,NEGATIVE = No specific fluorescent staining present. Patient is negative for HIV-1 antibody.,H6,3,,1900,true
+INDETERMINATE_=_NON_SPECIFIC_STAINING_PRESENT._PLE,INDETERMINATE = Non-specific staining present. Please submit another specimen.,H7,3,,2000,true
+NONREACTIVE_=_NO_ANTI_HIV_1_ANTIBODY_DETECTED.,NONREACTIVE = No anti-HIV-1 antibody detected.,H0,3,,2100,true
+POSITIVE_=_ANY_TWO_OF_THE_FOLLOWING_BANDS_PRESENT:,"POSITIVE = Any two of the following bands present: p24, gp41, and gp120/160. Other viral bands may be present. Indicates patient is positive for anti-HIV-1 antibody.",H1,3,,2200,true
+NEGATIVE_=_NO_BANDS_PRESENT_INDICATING_ABSENCE_OF_,NEGATIVE = No bands present indicating absence of anti-HIV-1 antibody. Please submit another OraSure (or serum) sample one month following the first sample for repeat testing.,H2,3,,2300,true
+INDETERMINATE_=_BAND_PATTERN_DOES_NOT_MEET_CRITERI,INDETERMINATE = Band pattern does not meet criteria for positive. Repeatedly similar indeterminate patterns indicate bands not specific for HIV. Please submit another OraSure (or serum) sample on month following the first sample for repeat testing.,H3,3,,2400,true
+INFLUENZA_VIRUS_A_RNA_DETECTED,INFLUENZA VIRUS A RNA DETECTED,,3,,100,true
+INFLUENZA_VIRUS_A_H3_RNA_DETECTED,INFLUENZA VIRUS A/H3 RNA DETECTED,,3,,400,true
+ONE_OR_MORE_BANDS_ARE_PRESENT_BUT_THE_BLOT_DOES_NO,"One or more bands are present but the blot does not meet the criteria for a positive HIV-1 Western Blot result. NOTE: The HIV-1 Western Blot confirms the presence of antibodies to HIV. This test does not always distinguish between the antibodies to HIV-1 and HIV-2 due to cross reactivity between the antibodies. If you suspect HIV-2, please contact the MDH Epidemiology at 877-676-5414 or 651-201-5414.",H13,3,,2500,true
+NO_BANDS_PRESENT_ON_THE_HIV_1_WESTERN_BLOT._NOTE:T,"No bands present on the HIV-1 Western Blot. NOTE:The HIV-1 Western Blot confirms the presence of antibodies to HIV. This test does not always distinguish between the antibodies to HIV-1 and HIV-2 due to cross reactivity between the antibodies. If you suspect HIV-2, please contact the MDH Epidemiology at 877-676-5414 or 651-201-5414.",H14,3,,2600,true
+THE_HIV_1_WESTERN_BLOT_CONFIRMS_THE_PRESENCE_OF_AN,"The HIV-1 Western Blot confirms the presence of antibodies to HIV. This test does not always distinguish between the antibodies to HIV-1 and HIV-2 due to cross reactivity between the antibodies. If you suspect HIV-2, please contact the MDH Epidemiology at 877-676-5414 or 651-201-5414.",H12,3,,2700,true
+PRELIMINARY_POSITIVE_SCREEN_FOR_HIV_1_ANTIBODIES_A,PRELIMINARY POSITIVE screen for HIV-1 antibodies and PRELIMINARY NEGATIVE screen for HIV-2 antibodies,H8,3,,2800,true
+PRELIMINARY_NEGATIVE_SCREEN_FOR_HIV_1_ANTIBODIES_A,PRELIMINARY NEGATIVE screen for HIV-1 antibodies and PRELIMINARY POSITIVE screen for HIV-2 antibodies,H9,3,,2900,true
+PRELIMINARY_POSITIVE_SCREEN_FOR_ANTIBODIES_TO_HIV_,"PRELIMINARY POSITIVE screen for antibodies to HIV-1 and HIV-2, undifferentiated",H10,3,,3000,true
+PRELIMINARY_NEGATIVE_SCREEN_FOR_HIV_1_AND_HIV_2_AN,PRELIMINARY NEGATIVE screen for HIV-1 and HIV-2 antibodies,H11,3,,3100,true
+NO_ANTI_HIV_1_HIV_2_PLUS_O_ANTIBODIES_DETECTED.,No anti-HIV-1/HIV-2 Plus O antibodies detected.,H30,3,,3200,true
+OVERRIDE_RESULT,Override result,,36,,33600,true
+NO_COMMENTS.,No comments.,,3,,33800,true
+NON_MOTILE,Non-motile,,3,,25200,true
+TEST_NOT_PERFORMED,Test not performed,,3,,25300,true
+NOT_LYSED_BY_PHAGE,Not lysed by phage,,3,,25400,true
+LYSED_BY_PHAGE,Lysed by phage,,3,,25500,true
+NOT_PERFORMED,Not performed,,3,,25600,true
+NON_ENCAPSULATED,Non-encapsulated,,3,,25700,true
+ENCAPSULATED,Encapsulated,,3,,25800,true
+CATALASE_PRODUCED,Catalase produced,,3,,25900,true
+NO_SPORES,No spores,,3,,26000,true
+NO_BACILLUS_ANTHRACIS_CELLS_DETECTED,No Bacillus Anthracis cells detected,,3,,26100,true
+PRESUMPTIVE_RESULT_FOR_BACILLUS_ANTHRACIS_CELLS,Presumptive result for Bacillus anthracis cells,,3,,26200,true
+NO_BACILLUS_ANTHRACIS_SPRES_DETECTED,No Bacillus anthracis spres detected,,3,,26300,true
+PRESUMPTIVE_RESULTS_FOR_BACILLUS_ANTHRACIS_SPORES,Presumptive results for Bacillus anthracis spores,,3,,26400,true
+NEGATIVE:_BACILLI_IN_CHAINS,Negative: Bacilli in chains,,3,,27900,true
+NEGATIVE:_BACILLI_IN_NO_DISCERNABLE_PATTERN,Negative: Bacilli in no discernable pattern,,3,,28000,true
+NEGATIVE:_BACILLI_IN_CLUSTERS,Negative: Bacilli in clusters,,3,,28100,true
+NEGATIVE:_BACILLI_IN_PAIRS,Negative: Bacilli in pairs,,3,,28200,true
+NEGATIVE:_COCCI_IN_CHAINS,Negative: Cocci in chains,,3,,28300,true
+NEGATIVE:_COCCI_IN_NO_DISCERNABLE_PATTERN,Negative: Cocci in no discernable pattern,,3,,28400,true
+NEGATIVE:_COCCI_IN_CLUSTERS,Negative: Cocci in clusters,,3,,28500,true
+NEGATIVE:_COCCI_IN_PAIRS,Negative: Cocci in pairs,,3,,28600,true
+NEGATIVE:_COCCOBACILLI_IN_CHAINS,Negative: Coccobacilli in chains,,3,,28700,true
+NEGATIVE:_COCCOBACILLI_IN_NO_DISCERNABLE_PATTERN,Negative: Coccobacilli in no discernable pattern,,3,,28800,true
+NEGATIVE:_COCCOBACILLI_IN_CLUSTERS,Negative: Coccobacilli in clusters,,3,,28900,true
+NEGATIVE:_COCCOBACILLI_IN_PAIRS,Negative: Coccobacilli in pairs,,3,,29000,true
+NEGATIVE:_OTHER,Negative: Other,,3,,29100,true
+POSITIVE:_BACILLI_IN_CHAINS,Positive: Bacilli in chains,,3,,29200,true
+POSITIVE:_BACILLI_IN_NO_DISCERNABLE_PATTERN,Positive: Bacilli in no discernable pattern,+B,3,,29300,true
+POSITIVE:_BACILLI_IN_CLUSTERS,Positive: Bacilli in clusters,,3,,29400,true
+POSITIVE:_BACILLI_IN_PAIRS,Positive: Bacilli in pairs,,3,,29500,true
+POSITIVE:_COCCI_IN_CHAINS,Positive: Cocci in chains,,3,,29600,true
+POSITIVE:_COCCI_IN_NO_DISCERNABLE_PATTERN,Positive: Cocci in no discernable pattern,,3,,29700,true
+POSITIVE:_COCCI_IN_CLUSTERS,Positive: Cocci in clusters,,3,,29800,true
+POSITIVE:_COCCI_IN_PAIRS,Positive: Cocci in pairs,,3,,29900,true
+POSITIVE:_COCCOBACILLI_IN_CHAINS,Positive: Coccobacilli in chains,,3,,30000,true
+POSITIVE:_COCCOBACILLI_IN_NO_DISCERNABLE_PATTERN,Positive: Coccobacilli in no discernable pattern,,3,,30100,true
+POSITIVE:_COCCOBACILLI_IN_CLUSTERS,Positive: Coccobacilli in clusters,,3,,30200,true
+POSITIVE:__COCCOBACILLI_IN_PAIRS,Positive:  Coccobacilli in pairs,,3,,30300,true
+POSITIVE:_OTHER,Positive: Other,+O,3,,30400,true
+VARIABLE:_BACILLI_IN_CHAINS,Variable: Bacilli in chains,,3,,30500,true
+VARIABLE:_COCCOBACILLI_IN_NO_DISCERNABLE_PATTERN,Variable: Coccobacilli in no discernable pattern,,3,,31400,true
+VARIABLE:_COCCOBACILLI_IN_CLUSTERS,Variable: Coccobacilli in clusters,,3,,31500,true
+VARIABLE:_COCCOBACILLI_IN_PAIRS,Variable: Coccobacilli in pairs,,3,,31600,true
+VARIABLE:_OTHER,Variable: Other,,3,,31700,true
+POSITIVE:_COCCOBACILLI_IN_PAIRS,Positive: Coccobacilli in pairs,,3,,31800,true
+ROCHE_FAST_START_DNA_MASTER_HYBRIDIZATION_PROBE_KI,Roche Fast Start DNA Master Hybridization Probe Kit,,3,,31900,true
+UNSATISFACTORY,Unsatisfactory,UNS,3,,32000,true
+FLUORESCENCE_DETECTED_+1,Fluorescence detected +1,,3,,32100,true
+FLUORESCENCE_DETECTED_+2,Fluorescence detected +2,,3,,32200,true
+FLUORESCENCE_DETECTED_+3,Fluorescence detected +3,,3,,32300,true
+FLUORESCENCE_DETECTED_+4,Fluorescence detected +4,,3,,32400,true
+NO_FLUORESCENCE_DETECTED,No fluorescence detected,,3,,32500,true
+INFLUENZA_VIRUS_A_RNA_NOT_DETECTED,Influenza Virus A RNA Not Detected,,3,,32600,true
+INFLUENZA_VIRUS_RNA_DETECTED,Influenza Virus RNA Detected,,3,,32700,true
+INFLUENZA_VIRUS_A_H3_RNA_DETECTED,Influenza Virus A/H3 RNA Detected,,35,,33000,true
+INFLUENZA_VIRUS_A_H1_RNA_DETECTED,Influenza Virus A/H1 RNA Detected,,35,,32900,true
+INFLUENZA_VIRUS_A_H5_RNA_DETECTED,Influenza Virus A/H5 RNA Detected,,35,,33100,true
+INFLUENZA_VIRUS_A_RNA_DETECTED,Influenza Virus A RNA Detected,,35,,33200,true
+INFLUENZA_VIRUS_A_UNTYPEABLE,Influenza Virus A/Untypeable,,3,,33300,true
+SUSPECT_COLONIES_PRESENT,Suspect Colonies Present,AAA,3,,35700,true
+NO_SUSPECT_COLONIES_PRESENT,No Suspect Colonies Present,,3,,36100,true
+GAMMA_HEMOLYTIC_NOT_DETECTED,Gamma Hemolytic Not Detected,,3,,36200,true
+ALPHA_HEMOLYTIC,Alpha Hemolytic,,3,,36300,true
+ALPHA_HEMOLYTIC_NOT_DETECTED,Alpha Hemolytic Not Detected,,3,,36400,true
+BETA_HEMOLYTIC,Beta Hemolytic,,3,,36500,true
+BETA_HEMOLYTIC_NOT_DETECTED,Beta Hemolytic Not Detected,,3,,36600,true
+CHOOSE_EQUIPMENT,Choose Equipment,,3,,36700,true
+RESULTS_USUALLY_INDICATE_SYPHILIS._A_FOLLOW_UP_SPE,Results usually indicate syphilis. A follow-up specimen is recommended to confirm this result unless another specimen has already been submitted within the past 3 months.,RR1,34,,38000,true
+RESULTS_USUALLY_INDICATE_SYPHILIS.,Results usually indicate syphilis.,RR2,34,,38100,true
+NONREACTIVE_FTA_ABS_TEST_RESULT_DOES_NOT_CONFIRM_S,Nonreactive FTA-ABS test result does not confirm syphilis.,RN,34,,38200,true
+RESULTS_INDICATE_PREVIOUS_SYPHILIS_TREATED_OR_UNTR,Results indicate previous syphilis (treated or untreated) or late syphilis. A follow-up specimen is recommended to confirm this result unless another specimen has already been submitted.,NR1,34,,38300,true
+GIARDIA_LAMBLIA_TROPHOZOITES,Giardia lamblia trophozoites,,3,,1400,true
+ENTAMOEBA_HISTOLYTICA_CYSTS,Entamoeba histolytica cysts,,3,,1500,true
+VIRAL_AGENT_NOT_ISOLATED,Viral Agent Not Isolated,VANI,34,,22900,true
+RESULTS_INDICATE_PREVIOUS_SYPHILIS_TREATED_OR_UNTR,Results indicate previous syphilis (treated or untreated) or late syphilis.,NR2,34,,38400,true
+1+,1+,,3,,39700,true
+DILUTION_1:10,Dilution 1:10,,3,,40600,true
+DILUTION_1:100,Dilution 1:100,,3,,40700,true
+DILUTION_1:1000,Dilution 1:1000,,3,,40800,true
+NO_BACILLUS_ANTHRACIS_CELLS_DETECTED_BY_TRF,No Bacillus anthracis cells detected by TRF,,3,,40900,true
+PRESUMPTIVE_RESULT_FOR_BACILLUS_ANTHRACIS_CELLS_BY,Presumptive result for Bacillus anthracis cells by TRF,,3,,41000,true
+NO_BACILLUS_ANTHRACIS_SPRORES_DETECTED_BY_TRF,No Bacillus anthracis sprores detected by TRF,,3,,41100,true
+PRESUMPTIVE_RESULTS_FOR_BACILLUS_ANTHRACIS_SPORES_,Presumptive results for Bacillus anthracis spores by TRF,,3,,41200,true
+SUSCEPTIBLE,Susceptible,,3,,41300,true
+NONSUSCEPTIBLE___CONTACT_CDC_FOR_CONFIRMATION_OF_R,Nonsusceptible - Contact CDC for confirmation of resistance,,3,,41400,true
+NO_PASS,No Pass,,3,,41500,true
+PASS,Pass,,3,,41600,true
+PRELIMINARY_POSITIVE,PRELIMINARY POSITIVE,,3,,600,true
+PRELIMINARY_NEGATIVE,PRELIMINARY NEGATIVE,,3,,700,true
+GRAM_+_ROD,gram + rod,,3,,800,false
+GRAM___ROD,gram - rod,,3,,900,false
+BACILLUS_SPECIES_NOT_ANTHRACIS,Bacillus species (not anthracis),,3,,1000,true
+BRUCELLA_SPECIES,Brucella species,,3,,1200,true
+FTA_ABS_TEST_RESULT_EQUIVOCAL._A_FOLLOW_UP_SPECIME,FTA-ABS test result equivocal. A follow-up specimen is recommended in 2-3 weeks to check for a possible early infection.,BOR1,34,,38500,true
+FTA_ABS_TEST_RESULT_EQUIVOCAL.,FTA-ABS test result equivocal.,BOR2,34,,38600,true
+ANTIBODY_DETECTED_MAY_BE_MATERNAL._OTHER_CRITERIA_,Antibody detected may be maternal. Other criteria must be used to rule out congenital syphilis.,INF,34,,38700,true
+STAINING_IS_ATYPICAL._RESULTS_ARE_UNINTERPRETABLE.,Staining is atypical. Results are uninterpretable. Please submit another specimen.,ATYP,34,,38800,true
+1_2+,1/2+,,3,,39800,true
+2+,2+,,3,,39900,true
+2_3+,2/3+,,3,,40000,true
+3+,3+,,3,,40100,true
+3_4+,3/4+,,3,,40200,true
+4+,4+,,3,,40300,true
+FTA_REACTIVE,FTA Reactive,F,34,,40400,true
+FLUORESCENCE,Fluorescence,R,34,,40500,true
+<_0.002_UG_ML,< 0.002 ug/ml,,3,,41700,true
+=_0.002_UG_ML,= 0.002 ug/ml,,3,,41800,true
+=0.003_UG_ML,=0.003 ug/ml,,3,,41900,true
+=0.004_UG_ML,=0.004 ug/ml,,3,,42000,true
+=0.006_UG_ML,=0.006 ug/ml,,3,,42100,true
+=0.008_UG_ML,=0.008 ug/ml,,3,,42200,true
+=0.012_UG_ML,=0.012 ug/ml,,3,,42300,true
+=0.016_UG_ML,=0.016 ug/ml,,3,,42400,true
+=0.023_UG_ML,=0.023 ug/ml,,3,,42500,true
+=0.032_UG_ML,=0.032 ug/ml,,3,,42600,true
+=0.047_UG_ML,=0.047 ug/ml,,3,,42700,true
+=0.064_UG_ML,=0.064 ug/ml,,3,,42800,true
+=0.094_UG_ML,=0.094 ug/ml,,3,,42900,true
+=0.125_UG_ML,=0.125 ug/ml,,3,,43000,true
+=0.19_UG_ML,=0.19 ug/ml,,3,,43100,true
+=0.25_UG_ML,=0.25 ug/ml,,3,,43200,true
+=0.38_UG_ML,=0.38 ug/ml,,3,,43300,true
+=0.5_UG_ML,=0.5 ug/ml,,3,,43400,true
+=0.75_UG_ML,=0.75 ug/ml,,3,,43500,true
+=1.0_UG_ML,=1.0 ug/ml,,3,,43600,true
+=1.5_UG_ML,=1.5 ug/ml,,3,,43700,true
+=2.3_UG_ML,=2.3 ug/ml,,3,,43800,false
+=4.6_UG_ML,=4.6 ug/ml,,3,,43900,false
+=8_UG_ML,=8 ug/ml,,3,,44000,true
+=12_UG_ML,=12 ug/ml,,3,,44100,true
+=16_UG_ML,=16 ug/ml,,3,,44200,true
+=24_UG_ML,=24 ug/ml,,3,,44300,true
+=32_UG_ML,=32 ug/ml,,3,,44400,true
+>_32_UG_ML,> 32 ug/ml,,3,,44500,true
+<_0.016_UG_ML,< 0.016 ug/ml,,3,,44600,true
+=48_UG_ML,=48 ug/ml,,3,,44700,true
+=64_UG_ML,=64 ug/ml,,3,,44800,true
+=96_UG_ML,=96 ug/ml,,3,,44900,true
+=128_UG_ML,=128 ug/ml,,3,,45000,true
+=192_UG_ML,=192 ug/ml,,3,,45100,true
+=256_UG_ML,=256 ug/ml,,3,,45200,true
+>_256_UG_ML,> 256 ug/ml,,3,,45300,true
+TETRACYCLINE,Tetracycline,,3,,45400,true
+=2.0_UG_ML,=2.0 ug/ml,,3,,45500,true
+=3.0_UG_ML,=3.0 ug/ml,,3,,45600,true
+=4.0_UG_ML,=4.0 ug/ml,,3,,45700,true
+=6.0_UG_ML,=6.0 ug/ml,,3,,45800,true
+INFLUENZA_VIRUS_A_H7_RNA_DETECTED,Influenza Virus A/H7 RNA Detected,,35,,47700,true
+INFLUENZA_VIRUS_A_H9_RNA_DETECTED,Influenza Virus A/H9 RNA Detected,,35,,47800,true
+INFLUENZA_VIRUS_A_H1,Influenza Virus A/H1,,35,,4500,true
+INFLUENZA_VIRUS_A_H7,Influenza Virus A/H7,,35,,4600,true
+INFLUENZA_VIRUS_A_H9,Influenza Virus A/H9,,35,,4700,true
+DUMMY_PLACEHOLDER,dummy placeholder,,3,,33700,true
+INDETERMINATE,INDETERMINATE,,34,,4900,true
+UNSATISFACTORY,UNSATISFACTORY,,35,,5000,true
+CODED_COMMENTS_NEED_TO_BE_ADDED,Coded comments need to be added,,3,,1100,true
+NOT_DETECTED,NOT DETECTED,,3,,5200,true
+GIARDIA_LAMBLIA_CYSTS,Giardia lamblia cysts,,3,,1300,true
+REACTIVE,REACTIVE,,34,,5400,true
+NONREACTIVE,NONREACTIVE,,34,,5500,true
+POSITIVE_=_ANY_TWO_OF_THE_FOLLOWING_BANDS_PRESENT:,"POSITIVE = Any two of the following bands present: p24,gp41, and gp 120/160. Other viral bands may be present. Indicates patient is positive for anti-HIV-1 antibody.",,34,,14700,true
+FINAL_INTERPRETATION:_THESE_RESULTS_MOST_CLOSELY_I,FINAL INTERPRETATION: These results most closely indicate the presence of HIV-1 antibodies.,H21,3,,3300,true
+MID_=_PATIENT_ID_ON_SPECIMEN_AND_REQUEST_MISMATCHE,MID = Patient ID ON Specimen and Request Mismatched,,34,,5800,true
+NR_=_SPECIMEN_CULTURE_NOT_RECEIVED,NR = Specimen/Culture Not Received,,34,,5900,true
+GH_=_GROSS_HEMOLYSIS_OF_SPECIMEN,GH = Gross Hemolysis of Specimen,,34,,6000,true
+ANO_=_PLEASE_SUBMIT_ANOTHER_SPECIMEN.,ANO = Please Submit Another Specimen.,,34,,6100,true
+NEGATIVE_=_NO_BANDS_ARE_PRESENT_INDICATING_ABSENCE,NEGATIVE = No bands are present indicating absence of anti-HIV-1 antibody. Please submit another OraSure (or serum) sample one month following the first sample for repeat testing.,,34,,14800,true
+INFLUENZA_VIRUS_A_H5,Influenza Virus A/H5,,35,,6700,true
+SENSITIVE,SENSITIVE,,3,,11500,true
+PRELIMINARY,Preliminary,,3,,12000,true
+FINAL,FINAL,,3,,12100,true
+BACILLUS_ANTHRACIS_NOT_FOUND,Bacillus anthracis not found,,3,,12700,true
++,+,,3,,12800,true
+VARIABLE:_BACILLI_IN_PAIRS,Variable: Bacilli in pairs,,3,,35800,true
+INFLUENZA_VIRUS_A_H3,Influenza Virus A/H3,,35,,4400,true
+INDETERMINATE_=_BAND_PATTERN_DOES_NOT_MEET_CRITERI,INDETERMINATE = Band pattern does not meet criteria for positive. Repeatedly similar indeterminate patterns indicate bands not specific for HIV. Please submit another OraSure (or serum) sample one month following the first sample for repeat testing.,,34,,6600,true
+NO_GROWTH,No Growth,,3,,7700,true
+SPORES_PRESENT,Spores Present,,3,,35900,true
+ATYPICAL_SUSPECT_COLONIES,Atypical Suspect Colonies,,3,,36000,true
+ABI_7500,ABI 7500,,3,,36800,true
+FINAL_INTERPRETATION:_THESE_RESULTS_MOST_CLOSELY_I,"FINAL INTERPRETATION: These results most closely indicate the presence of HIV-2 antibodies; however, confirmation testing for HIV-2 will be performed at the Centers for Disease Control and Prevention on this current specimen.",H22,3,,3400,true
+GAMMA_HEMOLYTIC,Gamma Hemolytic,,3,,8000,true
+BORDERLINE,BORDERLINE,BOR,3,,37800,true
+FINAL_INTERPRETATION:_THESE_RESULTS_MOST_CLOSELY_I,FINAL INTERPRETATION: These results most closely indicate the presence of HIV antibodies (without differentiation). Please submit another specimen one month following the collection of the first specimen for repeat testing. This subsequent specimen may allow for HIV antibody differentiation.,H23,3,,3500,true
+FINAL_INTERPRETATION:_THESE_RESULTS_MOST_CLOSELY_I,FINAL INTERPRETATION: These results most closely indicate the presence of HIV-1 antibodies. Please submit another specimen one month following the first specimen for repeat testing. This subsequent specimen may allow for confirmation of HIV-1 antibodies.,H24,3,,3600,true
+A,A,,3,,49700,true
+AB,AB,,34,,49800,true
+O,O,,35,,49900,true
+A,A,,,,50100,true
+RÉACTIF,Réactif,R,3,,37700,true
+"DEMOGRAPHIC_RESPONSE_YES_IN_YES,_NO_OR_UNKNOWN","Demographic Response Yes (in Yes, No or Unknown)",Yes,57,answer.yes,66000,true
+"DEMOGRAPHIC_RESPONSE_NO_YES,_NO_OR_UNKNOWN","Demographic Response No (Yes, No or Unknown)",No,57,answer.no,66100,true
+"DEMOGRAPHIC_RESPONSE_UNKNOWN_YES,_NO_OR_UNKNOWN","Demographic Response Unknown (Yes, No or Unknown)",Unknown,57,answer.unknown,66200,true
+THE_DATA_ENTRY_HAS_NOT_YET_STARTED,The data entry has not yet started,Not Start,77,record.notStarted,72000,true
+THE_INITIAL_ENTRY_HAS_BEEN_DONE,The initial entry has been done,Init Ent,77,record.initialEntry,72100,true
+"THE_SECOND,_VALIDATION,_ENTRY_HAS_BEEN_DONE","The second, validation, entry has been done",Valid Ent,77,record.validationEntry,72200,true
+THERE_IS_REASON_TO_SUSPECT_THAT_THE_FORM_WAS_NOT_F,There is reason to suspect that the form was not filled out correctly,Under Inv,77,record.underInvestigation,72300,true
+NON_RÉACTIF,Non Réactif,NR,3,,37900,true
+NÉGATIF,Négatif,,3,,6300,true
+POSITIF,Positif,,3,,6200,true
+INDÉTERMINÉ,Indéterminé,,3,,9400,true
+POSITIVE,Positive,,117,dict.HIVResult.positive,82000,true
+NEGATIVE,Negative,,117,dict.HIVResult.negative,82100,true
+INDETERMINATE,Indeterminate,,117,dict.HIVResult.indeterminate,82200,true
+REFRIGERATED,Refrigerated,Refrig,137,dictionary.condition.Regrigerated,84000,true
+NOT_REFRIGERATED,Not refrigerated,notRefrig,137,dictionary.condition.notRegrigerated,84100,true
+FROZEN,Frozen,Frozen,137,dictionary.condition.frozen,84200,true
+LEAKED_SAMPLE,Leaked Sample,leaked,137,dictionary.condition.leakedTube,84300,true
+BROKEN_TUBES,Broken Tubes,broken,137,dictionary.condition.brokenTube,84400,true
+OUEST,Ouest,,157,,86000,true
+NORD,Nord,,157,,86100,true
+SUD,Sud,,157,,86200,true
+ARTIBONITE,Artibonite,,157,,86300,true
+SUD_EST,Sud-Est,,157,,86400,true
+NORD'OUEST,Nord'Ouest,,157,,86500,true
+CENTRE,Centre,,157,,86600,true
+GRAND'ANSE,Grand'Anse,,157,,86700,true
+NORD'EST,Nord'Est,,157,,86800,true
+NIPPES,Nippes,,157,,86900,true
+HEMOLYSIS,Hemolysis,Hemo,137,dictionary.condition.hematolysis,87000,true
+COAGULATED,Coagulated,Coag,137,dictionary.condition.coagulated,87100,true
+INSUFFIENT_AMOUNT,Insuffient Amount,Insuff,137,dictionary.condition.insufficient,87200,true
+CONTAMINATED,Contaminated,Contamin,137,dictionary.condition.contaminated,87300,true
+INADEQUATE_SAMPLING,Inadequate Sampling,Inadequ,137,dictionary.condition.inadequate,87400,true
+OVERTURNED_SAMPLE,Overturned Sample,Overturned,137,dictionary.condition.overturned,87500,true
+OTHER,Other,Other,137,dictionary.condition.other,87600,true
+SAMPLE_WITHOUT_FORM,Sample without Form,NoForm,137,dictionary.condition.sampleNoForm,87700,true
+FORM_WITHOUT_SAMPLE,Form without Sample,NoSample,137,dictionary.condition.formNoSample,87800,true
+COULEUR:_MARRON,Couleur: Marron,,3,dict.color.brown,88000,true
+COULEUR:_JAUNÂTRE,Couleur: Jaunâtre,,3,dict.color.yellowish,88100,true
+COULEUR:_VERDATRE,Couleur: Verdatre,,3,dict.color.greenish,88200,true
+COULEUR:_BLANCHÂTRE,Couleur: Blanchâtre,,3,dict.color.whitish,88300,true
+CONSISTANCE:_MOLLE,Consistance: molle,,3,dict.consistency.soft,88400,true
+CONSISTANCE:_GLAIREUSE,Consistance: glaireuse,,3,dict.consistency.slimy,88500,true
+CONSISTANCE:_PÂTEUSE,Consistance: pâteuse,,3,dict.consistency.pasty,88600,true
+CONSISTANCE:_FERME,Consistance: ferme,,3,dict.consistency.firm,88700,true
+CONSISTANCE:_LIQUIDE,Consistance: liquide,,3,dict.consistency.liquid,88800,true
+CONSISTANCE:_SEMI_LIQUIDE,Consistance: semi-liquide,,3,dict.consistency.semiliquid,88900,true
+RARE,Rare,,,,90000,true
+OXALATE_DE_CA,Oxalate de Ca,,,,98000,true
+PHOSPHATE_AMORPHES,Phosphate Amorphes,,,,98100,true
+PHOSPHATE_TRIPLES,Phosphate Triples,,,,98200,true
+PHOSPHATE_DE_CA,Phosphate de Ca,,,,98300,true
+PHOSPHATE_DE_MG,Phosphate de Mg,,,,98400,true
+SULFATE_DE_CA,Sulfate de Ca,,,,98500,true
+URATES_AMORPHES,Urates Amorphes,,,,98600,true
+URATES_D'AMMONIUM,Urates d'Ammonium,,,,98700,true
+ACID_URIQUE,Acid Urique,,,,98800,true
+INVALIDE,Invalide,,,,100000,true
+FR_FR,fr-FR,fr-FR,197,,104000,true
+EN_US,en-US,en-US,197,,104100,true
+NONE,none,,217,dictionary.education.none,108000,true
+PRIMARY,primary,,217,dictionary.education.primary,108100,true
+SECONDARY,secondary,,217,dictionary.education.secondary,108200,true
+UPPER,upper,,217,dictionary.education.upper,108300,true
+SINGLE,single,,218,dictionary.marriage.single,108400,true
+MARRIED,married,,218,dictionary.marriage.married,108500,true
+LIVINGWITH,livingWith,,218,dictionary.marriage.livingWith,108600,true
+DIVORCED,divorced,,218,dictionary.marriage.divorced,108700,true
+WIDOWED,widowed,,218,dictionary.marriage.widowed,108800,true
+DNA,DNA,,218,dictionary.marriage.DNA,108900,true
+IVOIRIAN,Ivoirian,,219,dictionary.nationality.Ivoirian,109000,true
+WEST_AFRICAN,West African,,219,dictionary.nationality.african.west,109100,true
+AFRICAN,African,,219,dictionary.nationality.african,109200,true
+OTHER,other,,219,dictionary.nationality.other,109300,true
+PAIDINFULL,paidInFull,,177,dictionary.patient.payment.full,102000,false
+PAIDPARTIAL,paidPartial,,177,dictionary.patient.payment.partial,102100,false
+PAIDNONE,paidNone,,177,dictionary.patient.payment.none,102200,false
+NORMALCASH,normalCash,,177,dictionary.patient.payment.normal.cash,112000,true
+REDUCEDCASH,reducedCash,,177,dictionary.patient.payment.reduced.cash,112100,true
+NORMALINSURANCE,normalInsurance,,177,dictionary.patient.payment.normal.insurance,112200,true
+REDUCEDINSURANCE,reducedInsurance,,177,dictionary.patient.payment.reduced.insurance,112300,true
+MEASUREMENT_NOT_AVAILABLE_DUE_TO_TECHNICAL_PROBLEM,Measurement not available due to technical problem. Please submit another sample.,,257,dictionary.reject.result.technical.problem,114000,true
+SAMPLE___REQUEST_FORM_NOT___MISIDENTIFIED_._PLEASE,Sample / request form not / misidentified . Please submit another sample.,,257,dictionary.reject.result.form.misidentified,114100,true
+SAMPLE___REQUEST_FORM_INCOMPATIBLE_._PLEASE_SUBMIT,Sample / request form incompatible . Please submit another sample.,,257,dictionary.reject.result.form.incompatible,114200,true
+FREE_SAMPLE_REQUEST_FORM_OR_VICE_VERSA._PLEASE_SUB,Free sample request form or vice versa. Please submit another sample.,,257,dictionary.reject.result.free.request.form,114300,true
+SAMPLE_TRANSPORTED___STORED_INCORRECTLY._PLEASE_SU,Sample transported / stored incorrectly. Please submit another sample.,,257,dictionary.reject.result.stored.incorrectly,114400,true
+IDENTIFICATION_OF_IMPROPER_SAMPLE._PLEASE_SUBMIT_A,Identification of improper sample. Please submit another sample.,,257,dictionary.reject.result.identification.improper,114500,true
+SAMPLE_WAS_COLLECTED_IN_THE_WRONG_TUBE._PLEASE_SUB,Sample was collected in the wrong tube. Please submit another sample.,,257,dictionary.reject.result.wrong.tube,114600,true
+DRACUNCULUS_MEDINENSIS,Dracunculus Medinensis,DRAC MED,38,dictionary.result.Dracunculus_Medinensis,55300,true
+INCORRECT_QUANTITY_OF_THE_SAMPLE._PLEASE_SUBMIT_AN,Incorrect quantity of the sample. Please submit another sample.,,257,dictionary.reject.result.incorrect.quantity,114700,true
+THE_SAMPLE_RECEIVED_IS_NOT_SUITABLE_FOR_TEST_REQUE,The sample received is not suitable for test requested . Please submit the appropriate sample.,,257,dictionary.reject.result.not.suitable,114800,true
+THE_SAMPLE_RECEIVED_IS_COAGULATED_._PLEASE_SUBMIT_,The sample received is coagulated . Please submit another sample.,,257,dictionary.reject.result.coagulated,114900,true
+THE_RECEIVED_SAMPLE_WAS_REFRIGERATED_._PLEASE_SUBM,The received sample was refrigerated . Please submit another sample.,,257,dictionary.reject.result.was.referigerated,115000,true
+TUBE_RECEIVED_ARRIVED_BROKEN_OR_SPILLED_._PLEASE_S,Tube received arrived broken or spilled . Please submit another sample.,,257,dictionary.reject.result.broken.tube,115100,true
+THE_RECEIVED_SAMPLE_IS_HEMOLYZED_._PLEASE_SUBMIT_A,The received sample is hemolyzed . Please submit another sample.,,257,dictionary.reject.result.hemolyzed,115200,true
+THE_SAMPLE_IS_CONTAMINATED._PLEASE_SUBMIT_ANOTHER_,The sample is contaminated. Please submit another sample.,,257,dictionary.reject.result.contaminated,115300,true
+THE_SAMPLE_RECEIVED_WAS_INSUFFICIENT_VOLUME_._PLEA,The sample received was insufficient volume . Please submit another sample.,,257,dictionary.reject.result.insufficient.volume,115400,true
+"FOLLOWING_A_MISTAKE_IN_SAMPLE_INTAKE,_A_NOT_REQUES","Following a mistake in sample intake, a not requested test has been scheduled but not executed.",,257,dictionary.reject.result.mistake.not.executed,115500,true
+PLEASE_SUBMIT_ANOTHER_SAMPLE._NEED_TO_RE_TEST_.,Please submit another sample. Need to re-test .,,257,dictionary.reject.result.re-test,115600,true
+THE_SAMPLE_RECEIVED_IS_JAUNDICED._PLEASE_SUBMIT_AN,The sample received is jaundiced. Please submit another sample.,,257,dictionary.reject.result.jaundiced,115233,true
+THE_SAMPLE_RECEIVED_IS_LIPEMIC._PLEASE_SUBMIT_ANOT,The sample received is lipemic. Please submit another sample.,,257,dictionary.reject.result.lipemic,115266,true
+OTHER.,Other.,,257,dictionary.reject.result.other,116200,true
+ROUTINE_TESTING,Routine Testing,Routine,277,dictionary.program.routine,10,true
+HIV_PROGRAM___INITIAL_VISIT,HIV Program - Initial Visit,Initial Visit,277,dictionary.program.initial,20,true
+HIV_PROGRAM_FOLLOW_UP,HIV Program Follow up,Follow up,277,dictionary.program.followUp,30,true
+P51,P51,P51,38,dictionary.result.P51,64100,true
+FILAMENT_MYCELIUM,Filament Mycelium,MYCELIUM,38,dictionary.result.Filament_Mycelium,66300,true
+LEVURES_BOURGEONNANTE,Levures bourgeonnante,BOURGEON,38,dictionary.result.Levures_bourgeonnante,68000,true
+TRACE,Trace,TRACE,38,dictionary.result.Trace,50200,true
+AB,AB,AB,38,dictionary.result.AB,50400,true
+WUCHERIA_BANCROFTI,Wucheria Bancrofti,WUCH BANC,38,dictionary.result.Wucheria_Bancrofti,50600,true
+MANZONELLA_OZARDI,Manzonella Ozardi,MANZ OZ,38,dictionary.result.Manzonella_Ozardi,50700,true
+FORME_TROPHOZOITE,Forme trophozoite,F TROPH,38,dictionary.result.Forme_trophozoite,50800,true
+FORME_GAMETOCYTE,Forme Gametocyte,F GAM,38,dictionary.result.Forme_Gametocyte,50900,true
+FORME_SHIZOGONIQUE,Forme Shizogonique,F SHIZ,38,dictionary.result.Forme_Shizogonique,51000,true
+INTERMEDIARE,Intermediare,INTER,38,dictionary.result.Intermediare,51100,true
+EN_AMAS,En Amas,AMAS,38,dictionary.result.En_Amas,51600,true
+LIQUIDE,Liquide,LIQU,38,dictionary.result.Liquide,51700,true
+DIARRHEIQUE,Diarrheique,DIAR,38,dictionary.result.Diarrheique,51800,true
+MOLLE,Molle,MOLL,38,dictionary.result.Molle,51900,true
+MOULÉE,Moulée,MOUL,38,dictionary.result.Moulee,52100,true
+DURE,Dure,DURE,38,dictionary.result.Dure,52200,true
+ISOSPORA_BELLI,Isospora Belli,ISO BELLI,38,dictionary.result.Isospora_Belli,52300,true
+CRYPTOSPORIDIUM_PARVUM,Cryptosporidium Parvum,CRYP PARV,38,dictionary.result.Cryptosporidium_Parvum,52400,true
+CRYPTOSPORIDIUM_CAYETANENSIS,Cryptosporidium Cayetanensis,CRYP CAY,38,dictionary.result.Cryptosporidium_Cayetanensis,52500,true
+CYCLOSPORA,Cyclospora,CYCLOSPORA,38,dictionary.result.Cyclospora,52600,true
+CRYPTOSPORIDIUM_CANUM,Cryptosporidium canum,CRYP CANUM,38,dictionary.result.Cryptosporidium_canum,52700,true
+TOXOPLASMA_GONDII,Toxoplasma Gondii,TOX GONDII,38,dictionary.result.Toxoplasma_Gondii,52800,true
+CRYPTOSPORIDIUM_ANDERSONI,Cryptosporidium andersoni,CRYP ANDE,38,dictionary.result.Cryptosporidium_andersoni,52900,true
+CRYPTOSPORIDIUM_BAILEY,Cryptosporidium bailey,CRYP BAIL,38,dictionary.result.Cryptosporidium_bailey,53100,true
+CRYPTOSPORIDIUM_CANIS,Cryptosporidium canis,CRYP CANIS,38,dictionary.result.Cryptosporidium_canis,53200,true
+CRYPTOSPORIDIUM_FELIS,Cryptosporidium felis,CRYP FELIS,38,dictionary.result.Cryptosporidium_felis,53300,true
+CRYPTOSPORIDIUM_GALLI,Cryptosporidium galli,CRYP GALLI,38,dictionary.result.Cryptosporidium_galli,53400,true
+CRYPTOSPORIDIUM_HOMINIS,Cryptosporidium hominis,CRYP HOMIN,38,dictionary.result.Cryptosporidium_hominis,53500,true
+CRYPTOSPORIDIUM_MELEAGRIDIS,Cryptosporidium meleagridis,CRYP MELEA,38,dictionary.result.Cryptosporidium_meleagridis,53600,true
+CRYPTOSPORIDIUM_MURIS,Cryptosporidium muris,CRYP MURIS,38,dictionary.result.Cryptosporidium_muris,53700,true
+CRYPTOSPORIDIUM_SAUROPHILUM,Cryptosporidium saurophilum,CRYP SAUR,38,dictionary.result.Cryptosporidium_saurophilum,53800,true
+CRYPTOSPORIDIUM_SERPENTIS,Cryptosporidium serpentis,CRYP SERP,38,dictionary.result.Cryptosporidium_serpentis,53900,true
+CRYPTOSPORIDIUM_WRAIRI,Cryptosporidium wrairi,CRYP WRAIR,38,dictionary.result.Cryptosporidium_wrairi,54000,true
+TRES_POSITIVE,Tres Positive,TRES POS,38,dictionary.result.Tres_Positive,54100,true
+POSITIF,Positif,POSITIF,38,dictionary.result.Positif,54200,true
+FAIBLEMENT_POSITIF,Faiblement Positif,F POS,38,dictionary.result.Faiblement_Positif,54300,true
+NEGATIF,Negatif,NEG,38,dictionary.result.Negatif,54400,true
+NORMAL,Normal,NORM,38,dictionary.result.Normal,54500,true
+ANORMAL,Anormal,ANORM,38,dictionary.result.Anormal,54600,true
+ASCARIS_LUMBRICOIDES,Ascaris Lumbricoides,ASC LUMB,38,dictionary.result.Ascaris_Lumbricoides,54700,true
+ENTEROBIUS_VERMICULARIS,Enterobius Vermicularis,ENT VERM,38,dictionary.result.Enterobius_Vermicularis,54800,true
+NECATOR_AMERICANUS,Necator Americanus,NEC AM,38,dictionary.result.Necator_Americanus,54900,true
+ANCYCLOSTOMA_DUODENALE,Ancyclostoma Duodenale,ANC DU,38,dictionary.result.Ancyclostoma_Duodenale,55000,true
+TRICHNELLA_SPIRALIS,Trichnella Spiralis,TRICH SPIR,38,dictionary.result.Trichnella_Spiralis,55100,true
+TOXOCARA_CANIS,Toxocara Canis,TOX CAN,38,dictionary.result.Toxocara_Canis,55200,true
+ENTAMOEBA_HISTOLITICA,Entamoeba Histolitica,ENT HIST,38,dictionary.result.Entamoeba_Histolitica,55400,true
+ENTAMOEBA_COLI,Entamoeba Coli,ENT COLI,38,dictionary.result.Entamoeba_Coli,55500,true
+IODAMOEBA,Iodamoeba,IODAMOEBA,38,dictionary.result.Iodamoeba,55600,true
+GIARDIA,Giardia,GIARDIA,38,dictionary.result.Giardia,55700,true
+LAMBLIA,Lamblia,LAMBLIA,38,dictionary.result.Lamblia,55800,true
+TRICHOMONAS_INTESTINALIS,Trichomonas Intestinalis,TRICH INT,38,dictionary.result.Trichomonas_Intestinalis,55900,true
+TROUBLE,Trouble,TROUBLE,38,dictionary.result.Trouble,56000,true
+POSITIF_++,Positif (++),++,38,dictionary.result.Positif_(++),51300,true
+POSITIF_+++,Positif (+++),+++,38,dictionary.result.Positif_(+++),51400,true
+POSITIF_++++,Positif (++++),++++,38,dictionary.result.Positif_(++++),51500,true
+CLAIR,Clair,CLAIR,38,dictionary.result.Clair,56100,true
+LIPEMIQUE,lipemique,LIPEMIQUE,38,dictionary.result.lipemique,56200,true
+ICTERIQUE,icterique,ICTERIQUE,38,dictionary.result.icterique,56300,true
+AUTRE,Autre,AUTRE,38,dictionary.result.Autre,56400,true
+INDETERMINÉ,Indeterminé,IND,38,dictionary.result.Indetermine,56500,true
+JAUNE_PAILLE,Jaune Paille,JAU PAI,38,dictionary.result.Jaune_Paille,56600,true
+JAUNE_CITRIN,Jaune Citrin,JAU CIT,38,dictionary.result.Jaune_Citrin,56700,true
+JAUNE_FONCEE,Jaune Foncee,JAU FONC,38,dictionary.result.Jaune_Foncee,56800,true
+ROUGE,Rouge,ROUG,38,dictionary.result.Rouge,56900,true
+MARRON,Marron,MARR,38,dictionary.result.Marron,57000,true
+FONCE,Fonce,FONCE,38,dictionary.result.Fonce,57100,true
+GRANULEUX,Granuleux,GRAN,38,dictionary.result.Granuleux,57200,true
+CIREUX,Cireux,CIREUX,38,dictionary.result.Cireux,57300,true
+O+,O+,O,38,dictionary.result.O+,50500,true
+HYALIN,Hyalin,HYALIN,38,dictionary.result.Hyalin,57400,true
+POSITIF_+,Positif (+),+,38,dictionary.result.Positif_(+),51200,true
+ENTAMOEBA_HARTMANI,Entamoeba Hartmani,ENT HART,38,dictionary.result.Entamoeba_Hartmani,57500,true
+ENDOLIMAX_NANA,Endolimax Nana,END NANA,38,dictionary.result.Endolimax_Nana,57600,true
+DIENTAMOEBA_FRAGILIS,Dientamoeba Fragilis,DIEN FRAG,38,dictionary.result.Dientamoeba_Fragilis,57700,true
+CHILOMASTIX_MESNILI,Chilomastix Mesnili,CHIL MES,38,dictionary.result.Chilomastix_Mesnili,57800,true
+BALANTIDIUM_COLI,Balantidium Coli,BAL COLI,38,dictionary.result.Balantidium_Coli,57900,true
+ANKYLOSTOME_DUODENALE,Ankylostome Duodenale,ANK DUO,38,dictionary.result.Ankylostome_Duodenale,58000,true
+GP120,GP120,GP120,38,dictionary.result.GP120,62000,true
+P31,P31,P31,38,dictionary.result.P31,62100,true
+GP41,GP41,GP41,38,dictionary.result.GP41,60200,true
+P24,P24,P24,38,dictionary.result.P24,64200,true
+P17,P17,P17,38,dictionary.result.P17,62200,true
+LEUCOCYTAIRE,Leucocytaire,LEUCOCYTA,38,dictionary.result.Leucocytaire,66500,true
+HEMATIQUE,Hematique,HEMATIQUE,38,dictionary.result.Hematique,66600,true
+FORME_GAMETOCYTE_+,Forme Gametocyte +,F GAM +,38,dictionary.result.Forme_Gametocyte_+,66700,true
+FORME_GAMETOCYTE_++,Forme Gametocyte ++,F GAM ++,38,dictionary.result.Forme_Gametocyte_++,66800,true
+FORME_GAMETOCYTE_+++,Forme Gametocyte +++,F GAM +++,38,dictionary.result.Forme_Gametocyte_+++,66900,true
+FORME_TROPHOZOITE_+,Forme Trophozoite +,FT +,38,dictionary.result.Forme_Trophozoite_+,67000,true
+FORME_TROPHOZOITE_++,Forme Trophozoite ++,FT ++,38,dictionary.result.Forme_Trophozoite_++,67100,true
+FORME_TROPHOZOITE_+++,Forme Trophozoite +++,FT +++,38,dictionary.result.Forme_Trophozoite_+++,67200,true
+FORME_SCHIZOGONIQUE_+,Forme Schizogonique +,F SCH +,38,dictionary.result.Forme_Schizogonique_+,67300,true
+FORME_SCHIZOGONIQUE_++,Forme Schizogonique ++,F SCH ++,38,dictionary.result.Forme_Schizogonique_++,67400,true
+FORME_SCHIZOGONIQUE_+++,Forme Schizogonique +++,F SCH +++,38,dictionary.result.Forme_Schizogonique_+++,67500,true
+VERDATRE,Verdatre,VERDATRE,38,dictionary.result.Verdatre,68100,true
+FILAMENT_MYCELIUM_+,filament mycelium +,FIL MYC +,38,dictionary.result.filament_mycelium_+,68200,true
+FILAMENT_MYCELIUM_++,Filament Mycelium ++,FIL MYC ++,38,dictionary.result.Filament_Mycelium_++,68300,true
+FILAMENT_MYCELIUM_+++,Filament Mycelium +++,FIL MYC+++,38,dictionary.result.Filament_Mycelium_+++,68700,true
+LEVURES_BOURGEONNANTE_+,Levures Bourgeonnante +,BOURG +,38,dictionary.result.Levures_Bourgeonnante_+,68800,true
+LEVURES_BOURGENNANTE_++,Levures Bourgennante ++,BOURG ++,38,dictionary.result.Levures_Bourgennante_++,68900,true
+LEVURES_BOURGEONNANTE_+++,Levures Bourgeonnante +++,BOURG +++,38,dictionary.result.Levures_Bourgeonnante_+++,69000,true
+1_40,1/40,1/40,38,dictionary.result.1/40,70000,true
+1_80,1/80,1/80,38,dictionary.result.1/80,70100,true
+1_160,1/160,1/160,38,dictionary.result.1/160,70200,true
+1_320,1/320,1/320,38,dictionary.result.1/320,70300,true
+SANGUILANT,Sanguilant,SANGUILANT,38,dictionary.result.Sanguilant,74000,true
+ROUGEATRE,Rougeatre,ROUGEATRE,38,dictionary.result.Rougeatre,74100,true
+JAUNATRE,Jaunatre,JAUNATRE,38,dictionary.result.Jaunatre,74200,true
+ABSENCE,Absence,ABSENCE,38,dictionary.result.Absence,74400,true
+A+,A+,,38,dictionary.result.A+,50000,true
+B+,B+,B,38,dictionary.result.B+,50300,true
+A_,A-,A-,38,dictionary.result.A-,76000,true
+B_,B-,B-,38,dictionary.result.B-,76100,true
+O_,O-,O-,38,dictionary.result.O-,76200,true
+SPORES,Spores,SPORES,38,dictionary.result.Spores,78000,true
+LEVURES_SIMPLE,Levures Simple,LEVURES S,38,dictionary.result.Levures_Simple,78300,true
+ONCHOCERA_VOLVULUS,Onchocera Volvulus,ONCH VOLV,38,dictionary.result.Onchocera_Volvulus,78500,true
+LOA_LOA,Loa Loa,LOA LOA,38,dictionary.result.Loa_Loa,78600,true
+PRÉSENCE,Présence,PRESENCE,38,dictionary.result.Presence,74300,true
+POSITIF_VIH_1,Positif VIH 1,,38,dictionary.result.Positif_VIH_1,106000,true
+POSITIF_VIH_2,Positif VIH 2,,38,dictionary.result.Positif_VIH_2,106100,true
+INDETERMINE,Indetermine,,38,dictionary.result.Indetermine,106300,true
+POSITIF_+,Positif +,,38,dictionary.result.Positif_+,110000,true
+POSITIF_++,Positif ++,,38,dictionary.result.Positif_++,110100,true
+POSITIF_+++,Positif +++,,38,dictionary.result.Positif_+++,110200,true
+NÉGATIF,Négatif,,38,dictionary.result.Negatif,110300,true
+INDÉTERMINÉ,Indéterminé,,38,dictionary.result.Indetermine,110400,true
+POSITIF_VIH1,Positif VIH1,,38,dictionary.result.Positif_VIH1,110500,true
+POSITIFVIH2,PositifVIH2,,38,dictionary.result.PositifVIH2,110600,true
+POSITIF_VIH1_ET_VIH2,Positif VIH1 et VIH2,,38,dictionary.result.Positif_VIH1_et_VIH2,110700,true
+POSITIF_VIH2,Positif VIH2,,38,dictionary.result.Positif_VIH2,110800,true
+POSITIF_HIV1,Positif HIV1,,38,dictionary.result.Positif_HIV1,110900,true
+POSITIF_VIH_1_ET_2,Positif VIH 1 et 2,,38,dictionary.result.Positif_VIH_1_et_2,106200,true
+1___PCR_TO_CONFIRM_FIRST_POSITIVE_PCR_TEST_RESULT,1 - PCR to confirm first Positive PCR test result,confirmPCR,258,EID.confirmationPCR,88200,true
+1_=_AZT_+_NVP,1 = AZT + NVP,infaztNVP,281,EID.infantAztNvp,91800,true
+1_=_EXCLUSIVLY_BREASTFEEDING,1 = Exclusivly Breastfeeding,olyBrstFed,278,EID.onlyBreastfeeding,90400,true
+1_=_HIV_1,1 = HIV-1,eidHiv1,279,EID.hiv1,90900,true
+1_=_NVP,1 = NVP,eidNVP,280,EID.nvp,91400,true
+1_=_VACCINATION,1 = Vaccination,vaccinatn,287,EID.vaccination,90000,true
+1ST_LINE,1st Line,line1,158,arvRegime.firstLine,74400,true
+2___PCR_SIX_WEEKS_AFTER_STOPPING_BREASTFEEDING,2 - PCR six weeks after stopping breastfeeding,sixWeekPCR,258,EID.sixWeeksPCR,88300,true
+2_=_AZT_+_NVP_+_3TC,2 = AZT + NVP + 3TC,eid.aztNvp,280,EID.aztNvp,91500,true
+2_=_HIV_2,2 = HIV-2,ediHiv2,279,EID.hiv2,91000,true
+2_=_MIXED_FEEDING,2 = Mixed Feeding,mixedFed,278,EID.mixedfeeding,90500,true
+2_=_NVP_SINGLE_DOSE,2 = NVP Single Dose,nvpSingle,281,EID.nvpSingleDose,91900,true
+2_=_PEDIATRICIAN,2 = Pediatrician,pediatricn,287,EID.pediatrician,90100,true
+2ND_LINE,2nd Line,line2,158,arvRegime.secondLine,74500,true
+3___PCR_AFTER_INDETERMINATE_RESULT,3 - PCR after indeterminate result,indeterPCR,258,EID.indeterminatePCR,88400,true
+3_=_DIETITIAN,3 = Dietitian,dietitian,287,EID.dietitian,90200,true
+3_=_HAART,3 = HAART,eid.haart,280,EID.haart,91600,true
+3_=_NEVER_BREASTFED,3 = Never breastfed,nvrBrstfd,278,EID.neverBreastfed,90600,true
+3_=_OTHER,3 = Other,infARVOthr,281,EID.infantARVOther,92000,true
+3RD_LINE,3rd Line,line3,158,arvRegime.thirdLine,74600,true
+4_=_OTHERSPECIFY,4 = Other(Specify),otherSpcfy,287,EID.otherSpecify,90300,true
+4_=_STOPPED_BREASTFEEDING_LESS_THAN_6_WEEKS_AGO,4 = Stopped breastfeeding Less than 6 weeks ago,Brstfedlt6,317,EID.stoppedBreastfedless6weeks,90700,true
+5_=_STOPPED_BREASTFEEDING_MORE_THAN_6_WEEKS_AGO,5 = Stopped breastfeeding More than 6 weeks ago,Brstfedmt6,317,EID.stoppedBreastfedmore6weeks,90800,true
+7___NOT_APPLICABLE_FOR_FIRST_PCR_TEST,7 - Not Applicable for First PCR Test,nonAppPCR,258,EID.nonApplicablePCR,88500,true
+9_=_INCONCLUSIVE,9 = Inconclusive,inconclsve,279,EID.inconclusive,91300,true
+A_COUGH_LASTING_MORE_THAN_A_MONTH?,A cough lasting more than a month?,cough,244,diseases.RTN.cough,78300,true
+A_DIARRHEA_LASTING_MORE_THAN_A_MONTH?,A diarrhea lasting more than a month?,diarrhea,244,diseases.RTN.diarrhea,78100,true
+A_FEVER_LASTING_MORE_THAN_A_MONTH?,A fever lasting more than a month?,fever,244,diseases.RTN.fever,78200,true
+ACONDA_REQUEST,ACONDA Request,ACONDA,297,special.request.reason.ACONDA,100300,true
+ADIAZINE®_SULFADIAZINE_+_PYRIMETHAMINE_+_FOLINIC_A,Adiazine® (Sulfadiazine) + pyrimethamine + folinic acid,adiPyrFolA,240,arvProphyl.adiazinePyrimethamineFolinicAcid,72200,true
+AES_FR_AIDS_PROPHYLAXIS,AES (FR) (AIDs Prophylaxis),AES,83,prophylaxis.AES,65700,true
+AIDS_STAGE_A_ADULT,AIDS Stage A (Adult),AIDSStgA-A,84,AIDSStage.adultA,65900,true
+AIDS_STAGE_A_INFANT,AIDS Stage A (Infant),AIDSStgA-I,84,AIDSStage.infantA,66300,true
+AIDS_STAGE_B_ADULT,AIDS Stage B (Adult),AIDSStgB-A,84,AIDSStage.adultB,66000,true
+AIDS_STAGE_B_INFANT,AIDS Stage B (Infant),AIDSStgB-I,84,AIDSStage.infantB,66400,true
+AIDS_STAGE_C_ADULT,AIDS Stage C (Adult),AIDSStgC-A,84,AIDSStage.adultC,66100,true
+AIDS_STAGE_C_INFANT,AIDS Stage C (Infant),AIDSStgC-I,84,AIDSStage.infantC,66500,true
+AIDS_STAGE_N_INFANT,AIDS Stage N (Infant),AIDSStgN-I,84,AIDSStage.infantN,66200,true
+ANOTHER_NATIONALITY,another nationality,other,79,nationality.Other,76000,true
+ANPHOTERICINE_B,Anphotericine B,anphoterB,242,arvProphyl.anphotericineB,72300,true
+CACHEXIA?,Cachexia?,cachexie,178,diseases.RTN.cachexia,79300,true
+CEREBRAL_TOXOPLAMOSIS_:_DEMOGRAPHIC_ANSWER_TO_AVR_,Cerebral Toxoplamosis : Demographic Answer to AVR disease question,CrblToxo,82,disease.cerebralToxoplamosis,64800,true
+CERVICAL_CANCER_:_DEMOGRAPHIC_ANSWER_TO_AVR_DISEAS,Cervical Cancer : Demographic Answer to AVR disease question,CervCancer,82,disease.cervicalCancer,65200,true
+CHRONIC_DIARRHEA_:_DEMOGRAPHIC_ANSWER_TO_ARV_DISEA,Chronic Diarrhea : Demographic Answer to ARV disease question,DiarrheaC,82,disease.diarrhea,94000,true
+COLLEGE_OR_UNIVERSITY,College or University,PostSecond,240,education.postSecondary,62300,true
+CRYOPTOCOCCAL_MENINGITIS_:_DEMOGRAPHIC_ANSWER_TO_A,Cryoptococcal Meningitis : Demographic Answer to AVR disease question,CryptoMen,82,disease.cryoptococcalMeningitis,64900,true
+CRYPTOCOCCUS_MENINGITIS?,cryptococcus meningitis?,cryptoMen,244,diseases.RTN.cryptococcusMeningitis,78700,true
+D_=_HIV_1+2,D = HIV 1+2,eidHivd,279,EID.hivD,91100,true
+DALACINE®_CLINDAMYCINE_+_PYRIMETHAMINE_+_FOLINIC_A,Dalacine® (clindamycine) + pyrimethamine + folinic acid,dalPyrFolA,242,arvProphyl.dalacinePyrimethamineFolinicAcid,72100,true
+DEMENTIA_OR_A_NEUROLOGICAL_DEFICIT_ASSOCIATED_WITH,Dementia or a neurological deficit associated with HIV?,HIVDement,178,diseases.RTN.hivDementia,80000,true
+"DEMOGRAPHIC_RESPONSE_N_A_YES,_NO_OR_N_A","Demographic Response N/A (Yes, No or N/A)",NA,80,answer.notApplicable,64300,true
+DEMOGRAPHIC_RESPONSE_NO_IN_YES_OR_NO,Demographic Response No (in Yes or No),No,81,answer.no,64500,true
+"DEMOGRAPHIC_RESPONSE_NO_YES,_NO_OR_N_A","Demographic Response No (Yes, No or N/A)",No,80,answer.no,64200,true
+DEMOGRAPHIC_RESPONSE_YES_IN_YES_OR_NO,Demographic Response Yes (in Yes or No),Yes,81,answer.yes,64400,true
+"DEMOGRAPHIC_RESPONSE_YES_IN_YES,_NO_OR_N_A","Demographic Response Yes (in Yes, No or N/A)",Yes,80,answer.yes,64100,true
+EGPAF_REQUEST,EGPAF Request,EGPAF,297,special.request.reason.EGPAF,100400,true
+EXPULMONARY_TB_:_DEMOGRAPHIC_ANSWER_TO_AVR_DISEASE,Expulmonary TB : Demographic Answer to AVR disease question,TBExpul,82,disease.tbExpulmonary,64700,true
+EXTERNAL_REQUEST,External Request,extnlReqst,297,special.request.reason.externalRequest,100200,true
+EXTRAPULMONARY_TUBERCULOSIS,Extrapulmonary tuberculosis,expulTB,244,diseases.RTN.expulmonaryTuberculosis,78500,true
+FIRST_PCR,First PCR,firstPCR,267,EID.firstPCR,88000,true
+FLUCONAZOLE,Fluconazole,flucona,242,arvProphyl.fluconazole,72000,true
+GENERAL_PRURIGO_:_DEMOGRAPHIC_ANSWER_TO_AVR_DISEAS,General Prurigo : Demographic Answer to AVR disease question,GenPrurigo,82,disease.generalPrurigo,65000,true
+HERPES_CHRONIC_PROGRESSIVE_OR_GENERALIZED?,Herpes (chronic progressive or generalized)?,herpes,178,diseases.RTN.herpes,79600,true
+HIV_STATUS_HIV_1_AND_HIV_2,HIV Status HIV-1 and HIV-2,HIVDual,241,HIVStatus.HIVDual,70200,true
+HIV_STATUS_HIV_1_INFECTION,HIV Status HIV-1 infection,HIV-1,241,HIVStatus.HIV_1,70000,true
+HIV_STATUS_HIV_2_INFECTION,HIV Status HIV-2 infection,HIV-2,241,HIVStatus.HIV_2,70100,true
+HIV1,HIV1,,198,dict.HIVResult.hiv1,82400,true
+HIV2,HIV2,,198,dict.HIVResult.hiv2,82500,true
+HIVD,HIVD,,198,dict.HIVResult.hivd,82600,true
+INCONCLUSIVE,INCONCLUSIVE,,3,,9400,true
+INVASIVE_CANCER_OF_THE_CERVIX_OR_THE_UTERUS?,Invasive cancer of the cervix or the uterus?,curvixC,244,diseases.RTN.curvixCancer,79100,true
+IS_THE_PATIENT'S_MOTHER_KNOWN_TO_BE_INFECTED_BY_HI,Is the patient's mother known to be infected by HIV?,matHIV,244,diseases.RTN.maternalHIV,79200,true
+IST_?_:_DEMOGRAPHIC_ANSWER_TO_AVR_DISEASE_QUESTION,IST (?) : Demographic Answer to AVR disease question,IST,82,disease.IST,65100,true
+IVORIAN,Ivorian,Ivorian,243,nationality.simple.CI,74000,true
+KAPOSI'S_SARCOMA_:_DEMOGRAPHIC_ANSWER_TO_AVR_DISEA,Kaposi's sarcoma : Demographic Answer to AVR disease question,KaposiSarc,82,disease.KaposisSarcoma,65400,true
+KAPOSI'S_SARCOMA?,Kaposi's Sarcoma?,sarcKapo,178,diseases.RTN.kaposisSarcoma,79800,true
+MARITAL_STATUS_DIVORCED,Marital Status Divorced,divorced,78,marital.divorced,102000,true
+MARITAL_STATUS_SINGLE_FOR_ARV,Marital Status Single (for ARV),celibate,78,marital.single,62400,true
+MARTIAL_STATUS_COHABITING_FOR_ARV,Martial Status cohabiting (for ARV),cohab,78,marital.cohabitating,62600,true
+MARTIAL_STATUS_MARRIED_FOR_ARV,Martial Status Married (for ARV),married,78,marital.married,62500,true
+MARTIAL_STATUS_N_A_FOR_CHILDREN_FOR_ARV,Martial Status N/A for children (for ARV),NA,78,marital.n_a,62800,true
+MARTIAL_STATUS_WINDOWER_FOR_ARV,Martial Status window(er) (for ARV),widow,78,marital.widow,62700,true
+N_A,N/A,na,242,answer.notApplicable,72500,true
+NO_SCHOOLING,No Schooling,NoSchool,240,education.noSchool,62000,true
+NOT_APPLICABLE_AIDS_PROPHYLAXIS,Not applicable (AIDS Prophylaxis),NA,83,answer.notApplicable,65800,true
+OROPHARYNGEAL_CANDIDIASIS_:_DEMOGRAPHIC_ANSWER_TO_,Oropharyngeal Candidiasis : Demographic Answer to AVR disease question,OpharCand,82,disease.oropharyngealCandidiasis,65300,true
+OROPHARYNGEAL_CANDIDIASIS?,Oropharyngeal candidiasis?,thrush,178,diseases.RTN.thrush,79400,true
+OTHER_AFRICAN,Other African,African,243,nationality.simple.OtherAfrican,74200,true
+P_=_HIV_POS,P = HIV-POS,hivpos,279,EID.hivP,91200,true
+PAIN_ON_SWALLOWING?,Pain on swallowing?,swallPaint,244,diseases.RTN.painfulSwallowing,78600,true
+PRIMARY_SCHOOL,Primary School,Primary,240,education.primary,62100,true
+PULMONARY_TB_:_DEMOGRAPHIC_ANSWER_TO_AVR_DISEASE_Q,Pulmonary TB : Demographic Answer to AVR disease question,TBPul,82,disease.tbPulmonary,64600,true
+PULMONARY_TUBERCULOSIS?,Pulmonary tuberculosis?,pulTB,244,diseases.RTN.pulmonaryTuberculosis,78400,true
+QA_EVENT_TYPE,QA Event Type,,36,,98100,true
+"RECURRENT_INFECTIONS_OTITE,_PHARYNGITE?","recurrent infections (otite, pharyngite)?",recInfect,244,diseases.RTN.recurrentInfections,79000,true
+RECURRENT_PNEUMONIA?,Recurrent pneumonia?,recPneumon,244,diseases.RTN.recurrentPneumonia,78800,true
+RETRO_CI_STAFF,Retro CI Staff,retroCStaf,297,special.request.reason.retroCIStaff,100000,true
+SECOND_PCR,Second PCR,secondPCR,267,EID.secondPCR,88100,true
+SECONDARY_SCHOOL,Secondary School,Secondary,240,education.secondary,62200,true
+SEPSIS?,Sepsis?,sespis,244,diseases.RTN.sespis,78900,true
+SHINGLES_:_DEMOGRAPHIC_ANSWER_TO_AVR_DISEASE_QUEST,shingles : Demographic Answer to AVR disease question,Shingles,82,disease.shingles,65500,true
+SIGNIFICANT_WEIGHT_LOSS?,Significant weight loss?,weightLoss,244,diseases.RTN.weightLoss,78000,true
+US_EMBASSY,US Embassy,USEmbassy,297,special.request.reason.USEmbassy,100100,true
+VALID,Valid,,245,dict.PosNegIndInv.valid,82350,true
+WIDESPREAD_DERMITITIS_PRUIPINEUSE?,Widespread Dermititis pruipineuse?,dermPruip,178,diseases.RTN.generalDermititisPruipineuse,79500,true
+ZONA?,Zona?,zona,178,diseases.RTN.zona,79700,true
+INVALID,Invalid,,245,dict.PosNegIndInv.invalid,82300,true
+INVALID,Invalid,,198,dict.HIVResult.invalid,82900,true
+NEGATIVE,Negative,,246,dict.HIV1NInd.negative,86100,true
+INDETERMINATE,Indeterminate,,246,dict.HIV1NInd.indeterminate,86200,true
+VL_UNDER_ARV_CONTROL,VL under ARV control,null,400,sample.entry.project.vl.arv,1,true
+VIROLOGICAL_FAILURE,Virological Failure,null,400,sample.entry.project.vl.virologicalfail,2,true
+CLINICAL_FAILURE,Clinical Failure,null,400,sample.entry.project.vl.clinicalfail,3,true
+IMMUNOLOGICAL_FAILURE,Immunological Failure,null,400,sample.entry.project.vl.immunologicalfail,4,true
+VL_REASON_OTHER,VL Reason Other,null,400,sample.entry.project.vl.other,5,true
+THE_PAPER_FORM_DOESN'T_HAVE_ANY_EXPLICIT_ANSWER.,the paper form doesn't have any explicit answer.,NotSpeced,,answer.notSpecified,106000,true
+B1,B1,B1,403,,10,true
+J0,J0,J0,403,,20,true
+J15,J15,J15,403,,30,true
+M1,M1,M1,403,,40,true
+M3,M3,M3,403,,50,true
+M6,M6,M6,403,,60,true
+M12,M12,M12,403,,70,true
+OTHER,Other,Other,403,labOrder.hiv.followup.byPeriod.other,80,true
+NOT_APPLICABLE,Not Applicable,NA,317,answer.notApplicable,90900,true
+UNKNOWN,Unknown,Unknown,281,answer.unknown,92200,true
+4_=_NONE,4 = None,infARVNone,281,EID.infantARVNone,92100,true
+UNKNOWN,Unknown,Unknown,280,answer.unknown,92200,true
+4_=_NONE,4 = None,eid.none,280,EID.none,91700,true
+B,B,B,38,dictionary.result.B,50350,true
+O,O,O,38,dictionary.result.O,50450,true

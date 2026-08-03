@@ -13,6 +13,7 @@ const concepts_controller_1 = require("./concepts.controller");
 const concepts_service_1 = require("./concepts.service");
 const loinc_seeder_1 = require("./seeders/loinc.seeder");
 const icd_seeder_1 = require("./seeders/icd.seeder");
+const dictionary_seeder_1 = require("./seeders/dictionary.seeder");
 const google_sheets_service_1 = require("../../common/services/google-sheets.service");
 const entities_1 = require("./entities");
 const seed_loinc_command_1 = require("./commands/seed-loinc.command");
@@ -32,8 +33,8 @@ exports.ConceptsModule = ConceptsModule = __decorate([
             ]),
         ],
         controllers: [concepts_controller_1.ConceptsController],
-        providers: [concepts_service_1.ConceptsService, loinc_seeder_1.LoincSeederService, icd_seeder_1.ICDSeederService, seed_loinc_command_1.SeedLoincCommand, seed_icd_command_1.SeedICDCommand, google_sheets_service_1.GoogleSheetsService],
-        exports: [concepts_service_1.ConceptsService, loinc_seeder_1.LoincSeederService, icd_seeder_1.ICDSeederService],
+        providers: [concepts_service_1.ConceptsService, loinc_seeder_1.LoincSeederService, icd_seeder_1.ICDSeederService, dictionary_seeder_1.DictionarySeederService, seed_loinc_command_1.SeedLoincCommand, seed_icd_command_1.SeedICDCommand, google_sheets_service_1.GoogleSheetsService],
+        exports: [concepts_service_1.ConceptsService, loinc_seeder_1.LoincSeederService, icd_seeder_1.ICDSeederService, dictionary_seeder_1.DictionarySeederService],
     })
 ], ConceptsModule);
 //# sourceMappingURL=concepts.module.js.map

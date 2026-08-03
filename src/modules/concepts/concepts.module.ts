@@ -4,6 +4,7 @@ import { ConceptsController } from './concepts.controller';
 import { ConceptsService } from './concepts.service';
 import { LoincSeederService } from './seeders/loinc.seeder';
 import { ICDSeederService } from './seeders/icd.seeder';
+import { DictionarySeederService } from './seeders/dictionary.seeder';
 import { GoogleSheetsService } from '../../common/services/google-sheets.service';
 import {
   ConceptCodingEntity,
@@ -26,7 +27,7 @@ import { SeedICDCommand } from './commands/seed-icd.command';
     ]),
   ],
   controllers: [ConceptsController],
-  providers: [ConceptsService, LoincSeederService, ICDSeederService, SeedLoincCommand, SeedICDCommand, GoogleSheetsService],
-  exports: [ConceptsService, LoincSeederService, ICDSeederService],
+  providers: [ConceptsService, LoincSeederService, ICDSeederService, DictionarySeederService, SeedLoincCommand, SeedICDCommand, GoogleSheetsService],
+  exports: [ConceptsService, LoincSeederService, ICDSeederService, DictionarySeederService],
 })
 export class ConceptsModule {}
