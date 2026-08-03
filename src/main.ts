@@ -40,8 +40,8 @@ async function bootstrap() {
   console.log(`Healthcare Concepts service listening on port ${port}`);
   console.log(`Swagger docs: http://localhost:${port}/api/docs`);
   console.log(`API Explorer: http://localhost:${port}/api/explorer`);
-  if (Boolean(app.get(ConfigService).get('SEED_ON_START')))
-  app.get(SeedOrchestratorService).seedAll()
+  // if (Boolean(app.get(ConfigService).get('SEED_ON_START')))
+  // app.get(SeedOrchestratorService).seedAll()
 
 
   // const seeder = app.get(FacilitySeederService);
