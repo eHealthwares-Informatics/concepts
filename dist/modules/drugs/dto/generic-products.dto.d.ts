@@ -11,11 +11,17 @@ export declare class CreateGenericProductDto {
     name: string;
     pharmaceuticsId: string;
     therapeuticClass?: string;
+    pharmaceuticalClass?: string;
     dosageForm?: string;
     strength?: string;
     generalUse?: string;
     adultDosage?: string;
     pediatricDosage?: string;
+    appendixDosages?: string;
+    emdexCode?: string;
+    formulationId?: string;
+    dosageFormId?: string;
+    manufacturerId?: string;
     isPrescriptionRequired?: boolean;
     isControlledSubstance?: boolean;
 }
@@ -24,11 +30,17 @@ export declare class UpdateGenericProductDto {
     name?: string;
     pharmaceuticsId?: string;
     therapeuticClass?: string;
+    pharmaceuticalClass?: string;
     dosageForm?: string;
     strength?: string;
     generalUse?: string;
     adultDosage?: string;
     pediatricDosage?: string;
+    appendixDosages?: string;
+    emdexCode?: string;
+    formulationId?: string;
+    dosageFormId?: string;
+    manufacturerId?: string;
     isPrescriptionRequired?: boolean;
     isControlledSubstance?: boolean;
 }

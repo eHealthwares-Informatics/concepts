@@ -15,9 +15,13 @@ const facilities_module_1 = require("./modules/facilities/facilities.module");
 const api_explorer_module_1 = require("./modules/api-explorer/api-explorer.module");
 const seed_module_1 = require("./seed/seed.module");
 const drugs_module_1 = require("./modules/drugs/drugs.module");
-const entities_1 = require("./modules/concepts/entities");
-const entities_2 = require("./modules/facilities/entities");
-const entities_3 = require("./modules/drugs/entities");
+const pharmacies_module_1 = require("./modules/pharmacies/pharmacies.module");
+const entities_1 = require("./modules/pharmacies/entities");
+const entities_2 = require("./modules/localities/entities");
+const localities_module_1 = require("./modules/localities/localities.module");
+const entities_3 = require("./modules/concepts/entities");
+const entities_4 = require("./modules/facilities/entities");
+const entities_5 = require("./modules/drugs/entities");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -39,21 +43,27 @@ exports.AppModule = AppModule = __decorate([
                     username: configService.get('DB_USER', 'postgres'),
                     password: configService.get('DB_PASSWORD', 'postgres'),
                     entities: [
-                        entities_1.ConceptCodingEntity,
-                        entities_1.ConceptAttributeEntity,
-                        entities_1.ConceptAttributeValueEntity,
-                        entities_1.ExternalConceptMappingEntity,
-                        entities_1.ImportTrackingEntity,
-                        entities_2.FacilityEntity,
-                        entities_2.FacilityAttributeEntity,
-                        entities_2.StateEntity,
-                        entities_2.WardEntity,
-                        entities_2.LgaEntity,
-                        entities_2.FacilityTypeEntity,
-                        entities_2.FacilityLevelEntity,
-                        entities_3.PharmaceuticsEntity,
-                        entities_3.DrugComponentEntity,
-                        entities_3.GenericProductEntity,
+                        entities_3.ConceptCodingEntity,
+                        entities_3.ConceptAttributeEntity,
+                        entities_3.ConceptAttributeValueEntity,
+                        entities_3.ExternalConceptMappingEntity,
+                        entities_3.ImportTrackingEntity,
+                        entities_4.FacilityEntity,
+                        entities_4.StateEntity,
+                        entities_4.WardEntity,
+                        entities_4.LgaEntity,
+                        entities_4.FacilityTypeEntity,
+                        entities_4.FacilityLevelEntity,
+                        entities_5.PharmaceuticsEntity,
+                        entities_5.DrugComponentEntity,
+                        entities_5.GenericProductEntity,
+                        entities_5.FormulationEntity,
+                        entities_5.DosageFormEntity,
+                        entities_5.ManufacturerEntity,
+                        entities_1.PharmacyEntity,
+                        entities_2.LocalityEntity,
+                        entities_2.LocalityAdminEntity,
+                        entities_2.LocalityRelationEntity,
                     ],
                     synchronize: true,
                 }),
@@ -61,6 +71,8 @@ exports.AppModule = AppModule = __decorate([
             concepts_module_1.ConceptsModule,
             facilities_module_1.FacilitiesModule,
             drugs_module_1.DrugsModule,
+            pharmacies_module_1.PharmaciesModule,
+            localities_module_1.LocalitiesModule,
             api_explorer_module_1.ApiExplorerModule,
             seed_module_1.SeedModule,
         ],

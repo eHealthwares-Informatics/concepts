@@ -88,10 +88,10 @@ let DrugSeederService = DrugSeederService_1 = class DrugSeederService {
                     code,
                     clinicalName: info.clinicalName,
                     drugClass: info.drugClass,
-                    pharmaceutics: info.pharmacology,
+                    pharmacology: info.pharmacology,
                     indications: info.indications,
                     contraindications: info.contraindications,
-                    mechanism: info.mechanism,
+                    mechanismOfAction: info.mechanism,
                     drugComponents: componentEntities,
                 });
                 const saved = await this.pharmaceuticsRepository.save(created);
@@ -111,6 +111,8 @@ let DrugSeederService = DrugSeederService_1 = class DrugSeederService {
                 const created = this.genericRepository.create({
                     code,
                     name: drug.name,
+                    therapeuticClass: asNonEmptyString(drug.genericClass),
+                    pharmaceuticalClass: asNonEmptyString(drug.pharmaceuticalClass),
                     generalUse: drug.generalUse,
                     adultDosage: drug.adultDosage,
                     pediatricDosage: drug.pediatricDosage,
@@ -123,7 +125,11 @@ let DrugSeederService = DrugSeederService_1 = class DrugSeederService {
                 stats.genericProducts++;
             }
             this.logger.log(`Seeded: ${stats.drugComponents} components, ${stats.pharmaceutics} pharmaceutics, ${stats.genericProducts} generic products`);
-            return { success: true, message: `Seeded ${stats.genericProducts} generic products, ${stats.pharmaceutics} pharmaceutics, ${stats.drugComponents} components`, stats };
+            return {
+                success: true,
+                message: `Seeded ${stats.genericProducts} generic products, ${stats.pharmaceutics} pharmaceutics, ${stats.drugComponents} components`,
+                stats,
+            };
         }
         catch (err) {
             this.logger.error(`Drug seeding failed: ${err.message}`);

@@ -17,25 +17,57 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
 const entities_1 = require("../entities");
-const toPharmaceuticsType = (entity) => ({
-    id: entity.id,
-    code: entity.code,
-    commonBrandName: entity.commonBrandName,
-    commonGenericName: entity.commonGenericName,
-    clinicalName: entity.clinicalName,
-    drugClass: entity.drugClass,
-    chemicalConstituents: entity.chemicalConstituents,
-    pharmaceutics: entity.pharmaceutics,
-    indications: entity.indications,
-    contraindications: entity.contraindications,
-    mechanism: entity.mechanism,
-    missedDose: entity.missedDose,
-    drugInteractions: entity.drugInteractions,
-    dosage: entity.dosage,
-    createdAt: entity.createdAt.toISOString(),
-    updatedAt: entity.updatedAt.toISOString(),
-    deletedAt: entity.deletedAt ? entity.deletedAt.toISOString() : null,
-});
+function toPharmaceuticsType(e) {
+    return {
+        id: e.id,
+        code: e.code,
+        clinicalName: e.clinicalName,
+        brandNames: e.brandNames,
+        drugClass: e.drugClass,
+        bodySystem: e.bodySystem,
+        formulations: e.formulations,
+        chemicalConstituents: e.chemicalConstituents,
+        pharmacology: e.pharmacology,
+        commonGenericName: e.commonGenericName,
+        indications: e.indications,
+        contraindications: e.contraindications,
+        precautions: e.precautions,
+        warnings: e.warnings,
+        mechanismOfAction: e.mechanismOfAction,
+        adverseEffects: e.adverseEffects,
+        drugInteractions: e.drugInteractions,
+        ivIncompatibilities: e.ivIncompatibilities,
+        foodInteractions: e.foodInteractions,
+        traditionalMedicineEffects: e.traditionalMedicineEffects,
+        dosage: e.dosage,
+        dosePerAgeRange: e.dosePerAgeRange,
+        dosePerWeightRange: e.dosePerWeightRange,
+        missedDose: e.missedDose,
+        bodyWeightAndAge: e.bodyWeightAndAge,
+        physiologicalVariables: e.physiologicalVariables,
+        pharmacokineticVariables: e.pharmacokineticVariables,
+        diseaseVariables: e.diseaseVariables,
+        environmentalVariables: e.environmentalVariables,
+        extremesOfAge: e.extremesOfAge,
+        intercurrentIllness: e.intercurrentIllness,
+        adherenceInfo: e.adherenceInfo,
+        prescriptionReasons: e.prescriptionReasons,
+        recommendations: e.recommendations,
+        generalDrugUse: e.generalDrugUse,
+        patientCounseling: e.patientCounseling,
+        nursingConsiderations: e.nursingConsiderations,
+        recommendedLabel: e.recommendedLabel,
+        isControlledSubstance: e.isControlledSubstance,
+        pregnancyEffects: e.pregnancyEffects,
+        breastfeedingEffects: e.breastfeedingEffects,
+        interactiveEffects: e.interactiveEffects,
+        renalImpairment: e.renalImpairment,
+        hepaticImpairment: e.hepaticImpairment,
+        createdAt: e.createdAt.toISOString(),
+        updatedAt: e.updatedAt.toISOString(),
+        deletedAt: e.deletedAt ? e.deletedAt.toISOString() : null,
+    };
+}
 let PharmaceuticsService = class PharmaceuticsService {
     pharmaceuticsRepository;
     drugComponentRepository;
@@ -45,13 +77,13 @@ let PharmaceuticsService = class PharmaceuticsService {
     }
     async list(query) {
         const qb = this.pharmaceuticsRepository
-            .createQueryBuilder('pharmaceutics')
-            .leftJoinAndSelect('pharmaceutics.drugComponents', 'drugComponents')
-            .where('pharmaceutics.deleted_at IS NULL')
+            .createQueryBuilder('p')
+            .leftJoinAndSelect('p.drugComponents', 'dc')
+            .where('p.deleted_at IS NULL')
             .skip(query.offset)
             .take(query.limit);
         if (query.search) {
-            qb.andWhere('(pharmaceutics.code ILIKE :search OR pharmaceutics.clinical_name ILIKE :search OR pharmaceutics.common_generic_name ILIKE :search)', { search: `%${query.search}%` });
+            qb.andWhere('(p.code ILIKE :s OR p.clinical_name ILIKE :s OR p.common_generic_name ILIKE :s OR p.brand_names ILIKE :s)', { s: `%${query.search}%` });
         }
         const [data, total] = await qb.getManyAndCount();
         return { data: data.map(toPharmaceuticsType), total };
@@ -83,18 +115,48 @@ let PharmaceuticsService = class PharmaceuticsService {
         const drugComponents = await this.resolveDrugComponents(payload.drugComponentIds);
         const entity = this.pharmaceuticsRepository.create({
             code: payload.code,
-            commonBrandName: payload.commonBrandName ?? null,
-            commonGenericName: payload.commonGenericName ?? null,
             clinicalName: payload.clinicalName ?? null,
+            brandNames: payload.brandNames ?? null,
             drugClass: payload.drugClass ?? null,
+            bodySystem: payload.bodySystem ?? null,
+            formulations: payload.formulations ?? null,
             chemicalConstituents: payload.chemicalConstituents ?? null,
-            pharmaceutics: payload.pharmaceutics ?? null,
+            pharmacology: payload.pharmacology ?? null,
+            commonGenericName: payload.commonGenericName ?? null,
             indications: payload.indications ?? null,
             contraindications: payload.contraindications ?? null,
-            mechanism: payload.mechanism ?? null,
-            missedDose: payload.missedDose ?? null,
+            precautions: payload.precautions ?? null,
+            warnings: payload.warnings ?? null,
+            mechanismOfAction: payload.mechanismOfAction ?? null,
+            adverseEffects: payload.adverseEffects ?? null,
             drugInteractions: payload.drugInteractions ?? null,
+            ivIncompatibilities: payload.ivIncompatibilities ?? null,
+            foodInteractions: payload.foodInteractions ?? null,
+            traditionalMedicineEffects: payload.traditionalMedicineEffects ?? null,
             dosage: payload.dosage ?? null,
+            dosePerAgeRange: payload.dosePerAgeRange ?? null,
+            dosePerWeightRange: payload.dosePerWeightRange ?? null,
+            missedDose: payload.missedDose ?? null,
+            bodyWeightAndAge: payload.bodyWeightAndAge ?? null,
+            physiologicalVariables: payload.physiologicalVariables ?? null,
+            pharmacokineticVariables: payload.pharmacokineticVariables ?? null,
+            diseaseVariables: payload.diseaseVariables ?? null,
+            environmentalVariables: payload.environmentalVariables ?? null,
+            extremesOfAge: payload.extremesOfAge ?? null,
+            intercurrentIllness: payload.intercurrentIllness ?? null,
+            adherenceInfo: payload.adherenceInfo ?? null,
+            prescriptionReasons: payload.prescriptionReasons ?? null,
+            recommendations: payload.recommendations ?? null,
+            generalDrugUse: payload.generalDrugUse ?? null,
+            patientCounseling: payload.patientCounseling ?? null,
+            nursingConsiderations: payload.nursingConsiderations ?? null,
+            recommendedLabel: payload.recommendedLabel ?? null,
+            isControlledSubstance: payload.isControlledSubstance ?? false,
+            pregnancyEffects: payload.pregnancyEffects ?? null,
+            breastfeedingEffects: payload.breastfeedingEffects ?? null,
+            interactiveEffects: payload.interactiveEffects ?? null,
+            renalImpairment: payload.renalImpairment ?? null,
+            hepaticImpairment: payload.hepaticImpairment ?? null,
             drugComponents,
         });
         const saved = await this.pharmaceuticsRepository.save(entity);
@@ -119,30 +181,28 @@ let PharmaceuticsService = class PharmaceuticsService {
                 throw new common_1.BadRequestException('Pharmaceutics code already exists');
             item.code = payload.code;
         }
-        if (payload.commonBrandName !== undefined)
-            item.commonBrandName = payload.commonBrandName ?? null;
-        if (payload.commonGenericName !== undefined)
-            item.commonGenericName = payload.commonGenericName ?? null;
-        if (payload.clinicalName !== undefined)
-            item.clinicalName = payload.clinicalName ?? null;
-        if (payload.drugClass !== undefined)
-            item.drugClass = payload.drugClass ?? null;
-        if (payload.chemicalConstituents !== undefined)
-            item.chemicalConstituents = payload.chemicalConstituents ?? null;
-        if (payload.pharmaceutics !== undefined)
-            item.pharmaceutics = payload.pharmaceutics ?? null;
-        if (payload.indications !== undefined)
-            item.indications = payload.indications ?? null;
-        if (payload.contraindications !== undefined)
-            item.contraindications = payload.contraindications ?? null;
-        if (payload.mechanism !== undefined)
-            item.mechanism = payload.mechanism ?? null;
-        if (payload.missedDose !== undefined)
-            item.missedDose = payload.missedDose ?? null;
-        if (payload.drugInteractions !== undefined)
-            item.drugInteractions = payload.drugInteractions ?? null;
-        if (payload.dosage !== undefined)
-            item.dosage = payload.dosage ?? null;
+        const nullableFields = [
+            'clinicalName', 'brandNames', 'drugClass', 'bodySystem', 'formulations',
+            'chemicalConstituents', 'pharmacology', 'commonGenericName',
+            'indications', 'contraindications', 'precautions', 'warnings',
+            'mechanismOfAction', 'adverseEffects', 'drugInteractions',
+            'ivIncompatibilities', 'foodInteractions', 'traditionalMedicineEffects',
+            'dosage', 'dosePerAgeRange', 'dosePerWeightRange', 'missedDose',
+            'bodyWeightAndAge', 'physiologicalVariables', 'pharmacokineticVariables',
+            'diseaseVariables', 'environmentalVariables', 'extremesOfAge', 'intercurrentIllness',
+            'adherenceInfo', 'prescriptionReasons', 'recommendations', 'generalDrugUse',
+            'patientCounseling', 'nursingConsiderations', 'recommendedLabel',
+            'pregnancyEffects', 'breastfeedingEffects', 'interactiveEffects',
+            'renalImpairment', 'hepaticImpairment',
+        ];
+        for (const field of nullableFields) {
+            if (payload[field] !== undefined) {
+                item[field] = payload[field] ?? null;
+            }
+        }
+        if (payload.isControlledSubstance !== undefined) {
+            item.isControlledSubstance = payload.isControlledSubstance;
+        }
         if (payload.drugComponentIds !== undefined) {
             item.drugComponents = await this.resolveDrugComponents(payload.drugComponentIds);
         }

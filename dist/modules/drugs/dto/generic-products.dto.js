@@ -64,11 +64,17 @@ class CreateGenericProductDto {
     name;
     pharmaceuticsId;
     therapeuticClass;
+    pharmaceuticalClass;
     dosageForm;
     strength;
     generalUse;
     adultDosage;
     pediatricDosage;
+    appendixDosages;
+    emdexCode;
+    formulationId;
+    dosageFormId;
+    manufacturerId;
     isPrescriptionRequired;
     isControlledSubstance;
 }
@@ -103,6 +109,12 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
+], CreateGenericProductDto.prototype, "pharmaceuticalClass", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
 ], CreateGenericProductDto.prototype, "dosageForm", void 0);
 __decorate([
     (0, swagger_1.ApiPropertyOptional)(),
@@ -129,6 +141,36 @@ __decorate([
     __metadata("design:type", String)
 ], CreateGenericProductDto.prototype, "pediatricDosage", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreateGenericProductDto.prototype, "appendixDosages", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreateGenericProductDto.prototype, "emdexCode", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreateGenericProductDto.prototype, "formulationId", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreateGenericProductDto.prototype, "dosageFormId", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreateGenericProductDto.prototype, "manufacturerId", void 0);
+__decorate([
     (0, swagger_1.ApiPropertyOptional)({ default: false }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsBoolean)(),
@@ -145,11 +187,17 @@ class UpdateGenericProductDto {
     name;
     pharmaceuticsId;
     therapeuticClass;
+    pharmaceuticalClass;
     dosageForm;
     strength;
     generalUse;
     adultDosage;
     pediatricDosage;
+    appendixDosages;
+    emdexCode;
+    formulationId;
+    dosageFormId;
+    manufacturerId;
     isPrescriptionRequired;
     isControlledSubstance;
 }
@@ -184,6 +232,12 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
+], UpdateGenericProductDto.prototype, "pharmaceuticalClass", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
 ], UpdateGenericProductDto.prototype, "dosageForm", void 0);
 __decorate([
     (0, swagger_1.ApiPropertyOptional)(),
@@ -209,6 +263,36 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], UpdateGenericProductDto.prototype, "pediatricDosage", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateGenericProductDto.prototype, "appendixDosages", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateGenericProductDto.prototype, "emdexCode", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateGenericProductDto.prototype, "formulationId", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateGenericProductDto.prototype, "dosageFormId", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateGenericProductDto.prototype, "manufacturerId", void 0);
 __decorate([
     (0, swagger_1.ApiPropertyOptional)(),
     (0, class_validator_1.IsOptional)(),

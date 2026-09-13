@@ -14,11 +14,13 @@ const typeorm_1 = require("typeorm");
 const concept_enum_1 = require("../../../common/enums/concept.enum");
 const concept_coding_entity_1 = require("./concept-coding.entity");
 const concept_attribute_entity_1 = require("./concept-attribute.entity");
+const facility_entity_1 = require("../../facilities/entities/facility.entity");
 let ConceptAttributeValueEntity = class ConceptAttributeValueEntity {
     id;
     conceptCode;
     concept;
     attribute;
+    facility;
     value;
     valueFormat;
     createdAt;
@@ -45,6 +47,11 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: 'attribute_id' }),
     __metadata("design:type", concept_attribute_entity_1.ConceptAttributeEntity)
 ], ConceptAttributeValueEntity.prototype, "attribute", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => facility_entity_1.FacilityEntity, (facility) => facility.attributes, { nullable: true }),
+    (0, typeorm_1.JoinColumn)({ name: 'facility_id' }),
+    __metadata("design:type", facility_entity_1.FacilityEntity)
+], ConceptAttributeValueEntity.prototype, "facility", void 0);
 __decorate([
     (0, typeorm_1.Column)('text'),
     __metadata("design:type", String)

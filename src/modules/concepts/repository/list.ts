@@ -69,7 +69,7 @@ function parseFilter(raw: string) {
 
   return {
     type: type && value ? type : 'EQUALS',
-    value: type && value ? type : raw,
+    value: type && value ? value : raw,
     valueTo,
   }
 }

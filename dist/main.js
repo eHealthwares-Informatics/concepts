@@ -5,8 +5,6 @@ const core_1 = require("@nestjs/core");
 const common_1 = require("@nestjs/common");
 const app_module_1 = require("./app.module");
 const swagger_1 = require("@nestjs/swagger");
-const seed_orchestrator_service_1 = require("./seed/seed-orchestrator.service");
-const config_1 = require("@nestjs/config");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.enableCors();
@@ -32,8 +30,6 @@ async function bootstrap() {
     console.log(`Healthcare Concepts service listening on port ${port}`);
     console.log(`Swagger docs: http://localhost:${port}/api/docs`);
     console.log(`API Explorer: http://localhost:${port}/api/explorer`);
-    if (Boolean(app.get(config_1.ConfigService).get('SEED_ON_START')))
-        app.get(seed_orchestrator_service_1.SeedOrchestratorService).seedAll();
 }
 bootstrap();
 //# sourceMappingURL=main.js.map

@@ -9,15 +9,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ConceptsModule = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
-const concepts_controller_1 = require("./concepts.controller");
-const concepts_service_1 = require("./concepts.service");
+const entities_1 = require("./entities");
 const loinc_seeder_1 = require("./seeders/loinc.seeder");
 const icd_seeder_1 = require("./seeders/icd.seeder");
 const dictionary_seeder_1 = require("./seeders/dictionary.seeder");
 const google_sheets_service_1 = require("../../common/services/google-sheets.service");
-const entities_1 = require("./entities");
-const seed_loinc_command_1 = require("./commands/seed-loinc.command");
-const seed_icd_command_1 = require("./commands/seed-icd.command");
 let ConceptsModule = class ConceptsModule {
 };
 exports.ConceptsModule = ConceptsModule;
@@ -30,11 +26,19 @@ exports.ConceptsModule = ConceptsModule = __decorate([
                 entities_1.ConceptAttributeValueEntity,
                 entities_1.ExternalConceptMappingEntity,
                 entities_1.ImportTrackingEntity,
+                entities_1.ConceptAttributeValueEntity,
+                entities_1.StateCodingEntity,
+                entities_1.LgaCodingEntity,
+                entities_1.WardCodingEntity,
             ]),
         ],
-        controllers: [concepts_controller_1.ConceptsController],
-        providers: [concepts_service_1.ConceptsService, loinc_seeder_1.LoincSeederService, icd_seeder_1.ICDSeederService, dictionary_seeder_1.DictionarySeederService, seed_loinc_command_1.SeedLoincCommand, seed_icd_command_1.SeedICDCommand, google_sheets_service_1.GoogleSheetsService],
-        exports: [concepts_service_1.ConceptsService, loinc_seeder_1.LoincSeederService, icd_seeder_1.ICDSeederService, dictionary_seeder_1.DictionarySeederService],
+        providers: [loinc_seeder_1.LoincSeederService, icd_seeder_1.ICDSeederService, dictionary_seeder_1.DictionarySeederService, google_sheets_service_1.GoogleSheetsService],
+        exports: [
+            typeorm_1.TypeOrmModule,
+            loinc_seeder_1.LoincSeederService,
+            icd_seeder_1.ICDSeederService,
+            dictionary_seeder_1.DictionarySeederService,
+        ],
     })
 ], ConceptsModule);
 //# sourceMappingURL=concepts.module.js.map

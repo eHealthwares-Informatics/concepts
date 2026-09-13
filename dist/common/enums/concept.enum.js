@@ -19,5 +19,7 @@ var CodingConcept;
     CodingConcept["OPERATIONAL_STATUS"] = "OPERATIONAL_STATUS";
     CodingConcept["REGISTRATION_STATUS"] = "REGISTRATION_STATUS";
     CodingConcept["LICENSE_STATUS"] = "LICENSE_STATUS";
+    CodingConcept["FACILITY"] = "FACILITY";
+    CodingConcept["PHARMACY"] = "PHARMACY";
 })(CodingConcept || (exports.CodingConcept = CodingConcept = {}));
 //# sourceMappingURL=concept.enum.js.map

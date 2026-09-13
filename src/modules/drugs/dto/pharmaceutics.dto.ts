@@ -1,6 +1,6 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
-import { IsArray, IsInt, IsOptional, IsString, Max, MaxLength, Min } from 'class-validator';
+import { IsArray, IsBoolean, IsInt, IsOptional, IsString, Max, MaxLength, Min } from 'class-validator';
 
 export class ListPharmaceuticsDto {
   @ApiPropertyOptional({ default: 1 })
@@ -34,15 +34,7 @@ export class CreatePharmaceuticsDto {
   @MaxLength(64)
   code!: string;
 
-  @ApiPropertyOptional()
-  @IsOptional()
-  @IsString()
-  commonBrandName?: string;
-
-  @ApiPropertyOptional()
-  @IsOptional()
-  @IsString()
-  commonGenericName?: string;
+  // ── Identity & classification ──────────────────────────────────────────
 
   @ApiPropertyOptional()
   @IsOptional()
@@ -52,7 +44,22 @@ export class CreatePharmaceuticsDto {
   @ApiPropertyOptional()
   @IsOptional()
   @IsString()
+  brandNames?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
   drugClass?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  bodySystem?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  formulations?: string;
 
   @ApiPropertyOptional()
   @IsOptional()
@@ -62,7 +69,14 @@ export class CreatePharmaceuticsDto {
   @ApiPropertyOptional()
   @IsOptional()
   @IsString()
-  pharmaceutics?: string;
+  pharmacology?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  commonGenericName?: string;
+
+  // ── Clinical monograph ─────────────────────────────────────────────────
 
   @ApiPropertyOptional()
   @IsOptional()
@@ -77,12 +91,22 @@ export class CreatePharmaceuticsDto {
   @ApiPropertyOptional()
   @IsOptional()
   @IsString()
-  mechanism?: string;
+  precautions?: string;
 
   @ApiPropertyOptional()
   @IsOptional()
   @IsString()
-  missedDose?: string;
+  warnings?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  mechanismOfAction?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  adverseEffects?: string;
 
   @ApiPropertyOptional()
   @IsOptional()
@@ -92,7 +116,149 @@ export class CreatePharmaceuticsDto {
   @ApiPropertyOptional()
   @IsOptional()
   @IsString()
+  ivIncompatibilities?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  foodInteractions?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  traditionalMedicineEffects?: string;
+
+  // ── Dosing ─────────────────────────────────────────────────────────────
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
   dosage?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  dosePerAgeRange?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  dosePerWeightRange?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  missedDose?: string;
+
+  // ── Patient variables ──────────────────────────────────────────────────
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  bodyWeightAndAge?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  physiologicalVariables?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  pharmacokineticVariables?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  diseaseVariables?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  environmentalVariables?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  extremesOfAge?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  intercurrentIllness?: string;
+
+  // ── Adherence & prescribing ────────────────────────────────────────────
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  adherenceInfo?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  prescriptionReasons?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  recommendations?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  generalDrugUse?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  patientCounseling?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  nursingConsiderations?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  recommendedLabel?: string;
+
+  // ── Regulatory ─────────────────────────────────────────────────────────
+
+  @ApiPropertyOptional({ default: false })
+  @IsOptional()
+  @IsBoolean()
+  isControlledSubstance?: boolean;
+
+  // ── Appendices ─────────────────────────────────────────────────────────
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  pregnancyEffects?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  breastfeedingEffects?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  interactiveEffects?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  renalImpairment?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  hepaticImpairment?: string;
+
+  // ── Relations ──────────────────────────────────────────────────────────
 
   @ApiPropertyOptional({ type: [String] })
   @IsOptional()

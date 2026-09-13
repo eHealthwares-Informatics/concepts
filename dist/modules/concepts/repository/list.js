@@ -36,7 +36,7 @@ function parseFilter(raw) {
     const [type, value, valueTo] = raw.split('|');
     return {
         type: type && value ? type : 'EQUALS',
-        value: type && value ? type : raw,
+        value: type && value ? value : raw,
         valueTo,
     };
 }

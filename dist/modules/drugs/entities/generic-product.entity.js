@@ -12,19 +12,30 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.GenericProductEntity = void 0;
 const typeorm_1 = require("typeorm");
 const pharmaceutics_entity_1 = require("./pharmaceutics.entity");
+const formulation_entity_1 = require("./formulation.entity");
+const dosage_form_entity_1 = require("./dosage-form.entity");
+const manufacturer_entity_1 = require("./manufacturer.entity");
 let GenericProductEntity = class GenericProductEntity {
     id;
     code;
     name;
     therapeuticClass;
+    pharmaceuticalClass;
     dosageForm;
     strength;
     generalUse;
     adultDosage;
     pediatricDosage;
+    appendixDosages;
+    emdexCode;
+    atcCode;
+    ndfGenericCode;
     isPrescriptionRequired;
     isControlledSubstance;
     pharmaceutics;
+    formulation;
+    dosageFormRef;
+    manufacturer;
     createdAt;
     updatedAt;
     deletedAt;
@@ -47,6 +58,10 @@ __decorate([
     __metadata("design:type", Object)
 ], GenericProductEntity.prototype, "therapeuticClass", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ name: 'pharmaceutical_class', type: 'text', nullable: true }),
+    __metadata("design:type", Object)
+], GenericProductEntity.prototype, "pharmaceuticalClass", void 0);
+__decorate([
     (0, typeorm_1.Column)({ name: 'dosage_form', type: 'text', nullable: true }),
     __metadata("design:type", Object)
 ], GenericProductEntity.prototype, "dosageForm", void 0);
@@ -55,17 +70,33 @@ __decorate([
     __metadata("design:type", Object)
 ], GenericProductEntity.prototype, "strength", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'general_use', type: 'text' }),
-    __metadata("design:type", String)
+    (0, typeorm_1.Column)({ name: 'general_use', type: 'text', nullable: true }),
+    __metadata("design:type", Object)
 ], GenericProductEntity.prototype, "generalUse", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'adult_dosage', type: 'text' }),
-    __metadata("design:type", String)
+    (0, typeorm_1.Column)({ name: 'adult_dosage', type: 'text', nullable: true }),
+    __metadata("design:type", Object)
 ], GenericProductEntity.prototype, "adultDosage", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'pediatric_dosage', type: 'text' }),
-    __metadata("design:type", String)
+    (0, typeorm_1.Column)({ name: 'pediatric_dosage', type: 'text', nullable: true }),
+    __metadata("design:type", Object)
 ], GenericProductEntity.prototype, "pediatricDosage", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ name: 'appendix_dosages', type: 'text', nullable: true }),
+    __metadata("design:type", Object)
+], GenericProductEntity.prototype, "appendixDosages", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ name: 'emdex_code', type: 'text', nullable: true }),
+    __metadata("design:type", Object)
+], GenericProductEntity.prototype, "emdexCode", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ name: 'atc_code', type: 'text', nullable: true }),
+    __metadata("design:type", Object)
+], GenericProductEntity.prototype, "atcCode", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ name: 'ndf_generic_code', type: 'text', nullable: true }),
+    __metadata("design:type", Object)
+], GenericProductEntity.prototype, "ndfGenericCode", void 0);
 __decorate([
     (0, typeorm_1.Column)({ name: 'is_prescription_required', type: 'boolean', default: false }),
     __metadata("design:type", Boolean)
@@ -75,12 +106,33 @@ __decorate([
     __metadata("design:type", Boolean)
 ], GenericProductEntity.prototype, "isControlledSubstance", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => pharmaceutics_entity_1.PharmaceuticsEntity, (pharmaceutics) => pharmaceutics.genericProducts, {
+    (0, typeorm_1.ManyToOne)(() => pharmaceutics_entity_1.PharmaceuticsEntity, (p) => p.genericProducts, {
         nullable: false,
     }),
     (0, typeorm_1.JoinColumn)({ name: 'pharmaceutics_id' }),
     __metadata("design:type", pharmaceutics_entity_1.PharmaceuticsEntity)
 ], GenericProductEntity.prototype, "pharmaceutics", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => formulation_entity_1.FormulationEntity, (f) => f.genericProducts, {
+        nullable: true,
+    }),
+    (0, typeorm_1.JoinColumn)({ name: 'formulation_id' }),
+    __metadata("design:type", Object)
+], GenericProductEntity.prototype, "formulation", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => dosage_form_entity_1.DosageFormEntity, (df) => df.genericProducts, {
+        nullable: true,
+    }),
+    (0, typeorm_1.JoinColumn)({ name: 'dosage_form_id' }),
+    __metadata("design:type", Object)
+], GenericProductEntity.prototype, "dosageFormRef", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => manufacturer_entity_1.ManufacturerEntity, (m) => m.genericProducts, {
+        nullable: true,
+    }),
+    (0, typeorm_1.JoinColumn)({ name: 'manufacturer_id' }),
+    __metadata("design:type", Object)
+], GenericProductEntity.prototype, "manufacturer", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)({ name: 'created_at' }),
     __metadata("design:type", Date)

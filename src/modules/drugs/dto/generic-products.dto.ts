@@ -63,6 +63,11 @@ export class CreateGenericProductDto {
   @ApiPropertyOptional()
   @IsOptional()
   @IsString()
+  pharmaceuticalClass?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
   dosageForm?: string;
 
   @ApiPropertyOptional()
@@ -84,6 +89,31 @@ export class CreateGenericProductDto {
   @IsOptional()
   @IsString()
   pediatricDosage?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  appendixDosages?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  emdexCode?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  formulationId?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  dosageFormId?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  manufacturerId?: string;
 
   @ApiPropertyOptional({ default: false })
   @IsOptional()
@@ -121,6 +151,11 @@ export class UpdateGenericProductDto {
   @ApiPropertyOptional()
   @IsOptional()
   @IsString()
+  pharmaceuticalClass?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
   dosageForm?: string;
 
   @ApiPropertyOptional()
@@ -142,6 +177,31 @@ export class UpdateGenericProductDto {
   @IsOptional()
   @IsString()
   pediatricDosage?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  appendixDosages?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  emdexCode?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  formulationId?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  dosageFormId?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  manufacturerId?: string;
 
   @ApiPropertyOptional()
   @IsOptional()

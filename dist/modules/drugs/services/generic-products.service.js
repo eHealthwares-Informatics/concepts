@@ -17,41 +17,79 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
 const entities_1 = require("../entities");
-const toGenericProductType = (entity) => ({
-    id: entity.id,
-    code: entity.code,
-    name: entity.name,
-    therapeuticClass: entity.therapeuticClass,
-    dosageForm: entity.dosageForm,
-    strength: entity.strength,
-    generalUse: entity.generalUse,
-    adultDosage: entity.adultDosage,
-    pediatricDosage: entity.pediatricDosage,
-    isPrescriptionRequired: entity.isPrescriptionRequired,
-    isControlledSubstance: entity.isControlledSubstance,
-    pharmaceutics: {
-        id: entity.pharmaceutics.id,
-        code: entity.pharmaceutics.code,
-        commonBrandName: entity.pharmaceutics.commonBrandName,
-        commonGenericName: entity.pharmaceutics.commonGenericName,
-        clinicalName: entity.pharmaceutics.clinicalName,
-        drugClass: entity.pharmaceutics.drugClass,
-        chemicalConstituents: entity.pharmaceutics.chemicalConstituents,
-        pharmaceutics: entity.pharmaceutics.pharmaceutics,
-        indications: entity.pharmaceutics.indications,
-        contraindications: entity.pharmaceutics.contraindications,
-        mechanism: entity.pharmaceutics.mechanism,
-        missedDose: entity.pharmaceutics.missedDose,
-        drugInteractions: entity.pharmaceutics.drugInteractions,
-        dosage: entity.pharmaceutics.dosage,
-        createdAt: entity.pharmaceutics.createdAt.toISOString(),
-        updatedAt: entity.pharmaceutics.updatedAt.toISOString(),
-        deletedAt: entity.pharmaceutics.deletedAt ? entity.pharmaceutics.deletedAt.toISOString() : null,
-    },
-    createdAt: entity.createdAt.toISOString(),
-    updatedAt: entity.updatedAt.toISOString(),
-    deletedAt: entity.deletedAt ? entity.deletedAt.toISOString() : null,
-});
+function toPharmaceuticsType(e) {
+    return {
+        id: e.id,
+        code: e.code,
+        clinicalName: e.clinicalName,
+        brandNames: e.brandNames,
+        drugClass: e.drugClass,
+        bodySystem: e.bodySystem,
+        formulations: e.formulations,
+        chemicalConstituents: e.chemicalConstituents,
+        pharmacology: e.pharmacology,
+        commonGenericName: e.commonGenericName,
+        indications: e.indications,
+        contraindications: e.contraindications,
+        precautions: e.precautions,
+        warnings: e.warnings,
+        mechanismOfAction: e.mechanismOfAction,
+        adverseEffects: e.adverseEffects,
+        drugInteractions: e.drugInteractions,
+        ivIncompatibilities: e.ivIncompatibilities,
+        foodInteractions: e.foodInteractions,
+        traditionalMedicineEffects: e.traditionalMedicineEffects,
+        dosage: e.dosage,
+        dosePerAgeRange: e.dosePerAgeRange,
+        dosePerWeightRange: e.dosePerWeightRange,
+        missedDose: e.missedDose,
+        bodyWeightAndAge: e.bodyWeightAndAge,
+        physiologicalVariables: e.physiologicalVariables,
+        pharmacokineticVariables: e.pharmacokineticVariables,
+        diseaseVariables: e.diseaseVariables,
+        environmentalVariables: e.environmentalVariables,
+        extremesOfAge: e.extremesOfAge,
+        intercurrentIllness: e.intercurrentIllness,
+        adherenceInfo: e.adherenceInfo,
+        prescriptionReasons: e.prescriptionReasons,
+        recommendations: e.recommendations,
+        generalDrugUse: e.generalDrugUse,
+        patientCounseling: e.patientCounseling,
+        nursingConsiderations: e.nursingConsiderations,
+        recommendedLabel: e.recommendedLabel,
+        isControlledSubstance: e.isControlledSubstance,
+        pregnancyEffects: e.pregnancyEffects,
+        breastfeedingEffects: e.breastfeedingEffects,
+        interactiveEffects: e.interactiveEffects,
+        renalImpairment: e.renalImpairment,
+        hepaticImpairment: e.hepaticImpairment,
+        createdAt: e.createdAt.toISOString(),
+        updatedAt: e.updatedAt.toISOString(),
+        deletedAt: e.deletedAt ? e.deletedAt.toISOString() : null,
+    };
+}
+function toGenericProductType(entity) {
+    return {
+        id: entity.id,
+        code: entity.code,
+        name: entity.name,
+        therapeuticClass: entity.therapeuticClass,
+        pharmaceuticalClass: entity.pharmaceuticalClass,
+        dosageForm: entity.dosageForm,
+        strength: entity.strength,
+        generalUse: entity.generalUse,
+        adultDosage: entity.adultDosage,
+        pediatricDosage: entity.pediatricDosage,
+        appendixDosages: entity.appendixDosages,
+        emdexCode: entity.emdexCode,
+        isPrescriptionRequired: entity.isPrescriptionRequired,
+        isControlledSubstance: entity.isControlledSubstance,
+        pharmaceutics: toPharmaceuticsType(entity.pharmaceutics),
+        createdAt: entity.createdAt.toISOString(),
+        updatedAt: entity.updatedAt.toISOString(),
+        deletedAt: entity.deletedAt ? entity.deletedAt.toISOString() : null,
+    };
+}
 let GenericProductsService = class GenericProductsService {
     genericProductRepository;
     pharmaceuticsRepository;
@@ -61,15 +99,15 @@ let GenericProductsService = class GenericProductsService {
     }
     async list(query) {
         const qb = this.genericProductRepository
-            .createQueryBuilder('generic_product')
-            .leftJoinAndSelect('generic_product.pharmaceutics', 'pharmacology_info')
-            .where('generic_product.deleted_at IS NULL')
-            .orderBy(`generic_product.${query.sortBy ?? 'name'}`, query.sortOrder === 'desc' ? 'DESC' : 'ASC')
+            .createQueryBuilder('gp')
+            .leftJoinAndSelect('gp.pharmaceutics', 'p')
+            .where('gp.deleted_at IS NULL')
+            .orderBy(`gp.${query.sortBy ?? 'name'}`, query.sortOrder === 'desc' ? 'DESC' : 'ASC')
             .skip(query.offset)
             .take(query.limit);
         if (query.search) {
-            qb.andWhere('(generic_product.code LIKE :search OR generic_product.name LIKE :search)', {
-                search: `%${query.search}%`,
+            qb.andWhere('(gp.code ILIKE :s OR gp.name ILIKE :s OR gp.emdex_code ILIKE :s)', {
+                s: `%${query.search}%`,
             });
         }
         const [data, total] = await qb.getManyAndCount();
@@ -103,26 +141,29 @@ let GenericProductsService = class GenericProductsService {
             where: { id: payload.pharmaceuticsId, deletedAt: (0, typeorm_2.IsNull)() },
         });
         if (!pharmaceutics)
-            throw new common_1.BadRequestException('Pharmaceutics info not found');
+            throw new common_1.BadRequestException('Pharmaceutics not found');
         const entity = this.genericProductRepository.create({
             code: payload.code,
             name: payload.name,
             therapeuticClass: payload.therapeuticClass ?? null,
+            pharmaceuticalClass: payload.pharmaceuticalClass ?? null,
             dosageForm: payload.dosageForm ?? null,
             strength: payload.strength ?? null,
             generalUse: payload.generalUse ?? '',
             adultDosage: payload.adultDosage ?? '',
             pediatricDosage: payload.pediatricDosage ?? '',
+            appendixDosages: payload.appendixDosages ?? null,
+            emdexCode: payload.emdexCode ?? null,
             isPrescriptionRequired: payload.isPrescriptionRequired ?? false,
             isControlledSubstance: payload.isControlledSubstance ?? false,
             pharmaceutics,
         });
-        const savedEntity = await this.genericProductRepository.save(entity);
-        const fullEntity = await this.genericProductRepository.findOneOrFail({
-            where: { id: savedEntity.id, deletedAt: (0, typeorm_2.IsNull)() },
+        const saved = await this.genericProductRepository.save(entity);
+        const full = await this.genericProductRepository.findOneOrFail({
+            where: { id: saved.id, deletedAt: (0, typeorm_2.IsNull)() },
             relations: { pharmaceutics: true },
         });
-        return toGenericProductType(fullEntity);
+        return toGenericProductType(full);
     }
     async update(id, payload) {
         const item = await this.genericProductRepository.findOne({
@@ -144,13 +185,15 @@ let GenericProductsService = class GenericProductsService {
                 where: { id: payload.pharmaceuticsId, deletedAt: (0, typeorm_2.IsNull)() },
             });
             if (!pharmaceutics)
-                throw new common_1.BadRequestException('Pharmaceutics info not found');
+                throw new common_1.BadRequestException('Pharmaceutics not found');
             item.pharmaceutics = pharmaceutics;
         }
         if (payload.name !== undefined)
             item.name = payload.name;
         if (payload.therapeuticClass !== undefined)
             item.therapeuticClass = payload.therapeuticClass ?? null;
+        if (payload.pharmaceuticalClass !== undefined)
+            item.pharmaceuticalClass = payload.pharmaceuticalClass ?? null;
         if (payload.dosageForm !== undefined)
             item.dosageForm = payload.dosageForm ?? null;
         if (payload.strength !== undefined)
@@ -161,16 +204,20 @@ let GenericProductsService = class GenericProductsService {
             item.adultDosage = payload.adultDosage;
         if (payload.pediatricDosage !== undefined)
             item.pediatricDosage = payload.pediatricDosage;
+        if (payload.appendixDosages !== undefined)
+            item.appendixDosages = payload.appendixDosages ?? null;
+        if (payload.emdexCode !== undefined)
+            item.emdexCode = payload.emdexCode ?? null;
         if (payload.isPrescriptionRequired !== undefined)
             item.isPrescriptionRequired = payload.isPrescriptionRequired;
         if (payload.isControlledSubstance !== undefined)
             item.isControlledSubstance = payload.isControlledSubstance;
-        const savedItem = await this.genericProductRepository.save(item);
-        const fullEntity = await this.genericProductRepository.findOneOrFail({
-            where: { id: savedItem.id, deletedAt: (0, typeorm_2.IsNull)() },
+        const saved = await this.genericProductRepository.save(item);
+        const full = await this.genericProductRepository.findOneOrFail({
+            where: { id: saved.id, deletedAt: (0, typeorm_2.IsNull)() },
             relations: { pharmaceutics: true },
         });
-        return toGenericProductType(fullEntity);
+        return toGenericProductType(full);
     }
     async remove(id) {
         const result = await this.genericProductRepository.softDelete({ id });

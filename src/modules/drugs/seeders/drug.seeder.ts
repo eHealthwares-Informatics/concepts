@@ -76,6 +76,7 @@ export class DrugSeederService {
     try {
       const cache = await this.loadCaches();
 
+      // 1. Seed drug components (active ingredients)
       for (const componentName of Object.keys(genericDrugData.drugComponentIndex)) {
         const name = asNonEmptyString(componentName);
         if (!name || cache.componentByName.has(name)) continue;
@@ -85,6 +86,7 @@ export class DrugSeederService {
         stats.drugComponents++;
       }
 
+      // 2. Seed pharmaceutics (pharmacology class monographs)
       const componentsByPharmacologyCode = buildPharmacologyComponentMap();
 
       for (const [rawCode, info] of Object.entries(genericDrugData.pharmaceuticsIndex)) {
@@ -100,10 +102,10 @@ export class DrugSeederService {
           code,
           clinicalName: info.clinicalName,
           drugClass: info.drugClass,
-          pharmaceutics: info.pharmacology,
+          pharmacology: info.pharmacology,
           indications: info.indications,
           contraindications: info.contraindications,
-          mechanism: info.mechanism,
+          mechanismOfAction: info.mechanism,
           drugComponents: componentEntities,
         });
         const saved = await this.pharmaceuticsRepository.save(created);
@@ -111,6 +113,7 @@ export class DrugSeederService {
         stats.pharmaceutics++;
       }
 
+      // 3. Seed generic products (specific formulations)
       for (const drug of genericDrugData.drugs) {
         const code = asNonEmptyString(drug.code);
         if (!code || cache.genericByCode.has(code)) continue;
@@ -124,6 +127,8 @@ export class DrugSeederService {
         const created = this.genericRepository.create({
           code,
           name: drug.name,
+          therapeuticClass: asNonEmptyString(drug.genericClass),
+          pharmaceuticalClass: asNonEmptyString(drug.pharmaceuticalClass),
           generalUse: drug.generalUse,
           adultDosage: drug.adultDosage,
           pediatricDosage: drug.pediatricDosage,
@@ -136,9 +141,15 @@ export class DrugSeederService {
         stats.genericProducts++;
       }
 
-      this.logger.log(`Seeded: ${stats.drugComponents} components, ${stats.pharmaceutics} pharmaceutics, ${stats.genericProducts} generic products`);
+      this.logger.log(
+        `Seeded: ${stats.drugComponents} components, ${stats.pharmaceutics} pharmaceutics, ${stats.genericProducts} generic products`,
+      );
 
-      return { success: true, message: `Seeded ${stats.genericProducts} generic products, ${stats.pharmaceutics} pharmaceutics, ${stats.drugComponents} components`, stats };
+      return {
+        success: true,
+        message: `Seeded ${stats.genericProducts} generic products, ${stats.pharmaceutics} pharmaceutics, ${stats.drugComponents} components`,
+        stats,
+      };
     } catch (err: any) {
       this.logger.error(`Drug seeding failed: ${err.message}`);
       return { success: false, message: err.message, stats };

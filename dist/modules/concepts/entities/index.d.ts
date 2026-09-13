@@ -1,5 +1,8 @@
-export * from './concept-coding.entity';
-export * from './concept-attribute.entity';
-export * from './concept-attribute-value.entity';
-export * from './external-concept-mapping.entity';
-export * from './import-tracking.entity';
+export { StateCodingEntity } from './admin-level.entity';
+export { LgaCodingEntity } from './admin-level.entity';
+export { WardCodingEntity } from './admin-level.entity';
+export { ConceptCodingEntity } from './concept-coding.entity';
+export { ConceptAttributeEntity } from './concept-attribute.entity';
+export { ConceptAttributeValueEntity } from './concept-attribute-value.entity';
+export { ExternalConceptMappingEntity } from './external-concept-mapping.entity';
+export { ImportTrackingEntity } from './import-tracking.entity';

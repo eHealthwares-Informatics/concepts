@@ -47,18 +47,48 @@ __decorate([
 ], ListPharmaceuticsDto.prototype, "search", void 0);
 class CreatePharmaceuticsDto {
     code;
-    commonBrandName;
-    commonGenericName;
     clinicalName;
+    brandNames;
     drugClass;
+    bodySystem;
+    formulations;
     chemicalConstituents;
-    pharmaceutics;
+    pharmacology;
+    commonGenericName;
     indications;
     contraindications;
-    mechanism;
-    missedDose;
+    precautions;
+    warnings;
+    mechanismOfAction;
+    adverseEffects;
     drugInteractions;
+    ivIncompatibilities;
+    foodInteractions;
+    traditionalMedicineEffects;
     dosage;
+    dosePerAgeRange;
+    dosePerWeightRange;
+    missedDose;
+    bodyWeightAndAge;
+    physiologicalVariables;
+    pharmacokineticVariables;
+    diseaseVariables;
+    environmentalVariables;
+    extremesOfAge;
+    intercurrentIllness;
+    adherenceInfo;
+    prescriptionReasons;
+    recommendations;
+    generalDrugUse;
+    patientCounseling;
+    nursingConsiderations;
+    recommendedLabel;
+    isControlledSubstance;
+    pregnancyEffects;
+    breastfeedingEffects;
+    interactiveEffects;
+    renalImpairment;
+    hepaticImpairment;
     drugComponentIds;
 }
 exports.CreatePharmaceuticsDto = CreatePharmaceuticsDto;
@@ -73,19 +103,13 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreatePharmaceuticsDto.prototype, "commonBrandName", void 0);
-__decorate([
-    (0, swagger_1.ApiPropertyOptional)(),
-    (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
-], CreatePharmaceuticsDto.prototype, "commonGenericName", void 0);
-__decorate([
-    (0, swagger_1.ApiPropertyOptional)(),
-    (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
 ], CreatePharmaceuticsDto.prototype, "clinicalName", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "brandNames", void 0);
 __decorate([
     (0, swagger_1.ApiPropertyOptional)(),
     (0, class_validator_1.IsOptional)(),
@@ -97,13 +121,31 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "bodySystem", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "formulations", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
 ], CreatePharmaceuticsDto.prototype, "chemicalConstituents", void 0);
 __decorate([
     (0, swagger_1.ApiPropertyOptional)(),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreatePharmaceuticsDto.prototype, "pharmaceutics", void 0);
+], CreatePharmaceuticsDto.prototype, "pharmacology", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "commonGenericName", void 0);
 __decorate([
     (0, swagger_1.ApiPropertyOptional)(),
     (0, class_validator_1.IsOptional)(),
@@ -121,13 +163,25 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreatePharmaceuticsDto.prototype, "mechanism", void 0);
+], CreatePharmaceuticsDto.prototype, "precautions", void 0);
 __decorate([
     (0, swagger_1.ApiPropertyOptional)(),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreatePharmaceuticsDto.prototype, "missedDose", void 0);
+], CreatePharmaceuticsDto.prototype, "warnings", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "mechanismOfAction", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "adverseEffects", void 0);
 __decorate([
     (0, swagger_1.ApiPropertyOptional)(),
     (0, class_validator_1.IsOptional)(),
@@ -139,7 +193,163 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "ivIncompatibilities", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "foodInteractions", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "traditionalMedicineEffects", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
 ], CreatePharmaceuticsDto.prototype, "dosage", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "dosePerAgeRange", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "dosePerWeightRange", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "missedDose", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "bodyWeightAndAge", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "physiologicalVariables", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "pharmacokineticVariables", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "diseaseVariables", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "environmentalVariables", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "extremesOfAge", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "intercurrentIllness", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "adherenceInfo", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "prescriptionReasons", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "recommendations", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "generalDrugUse", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "patientCounseling", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "nursingConsiderations", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "recommendedLabel", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)({ default: false }),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsBoolean)(),
+    __metadata("design:type", Boolean)
+], CreatePharmaceuticsDto.prototype, "isControlledSubstance", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "pregnancyEffects", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "breastfeedingEffects", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "interactiveEffects", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "renalImpairment", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreatePharmaceuticsDto.prototype, "hepaticImpairment", void 0);
 __decorate([
     (0, swagger_1.ApiPropertyOptional)({ type: [String] }),
     (0, class_validator_1.IsOptional)(),

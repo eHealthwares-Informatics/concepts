@@ -12,11 +12,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FacilityAttributeEntity = void 0;
 const typeorm_1 = require("typeorm");
 const facility_entity_1 = require("./facility.entity");
+const concept_attribute_entity_1 = require("../../concepts/entities/concept-attribute.entity");
 let FacilityAttributeEntity = class FacilityAttributeEntity {
     id;
     facility;
-    attributeCode;
-    value;
+    attribute;
     createdAt;
     updatedAt;
 };
@@ -31,13 +31,10 @@ __decorate([
     __metadata("design:type", facility_entity_1.FacilityEntity)
 ], FacilityAttributeEntity.prototype, "facility", void 0);
 __decorate([
-    (0, typeorm_1.Column)('varchar', { length: 100 }),
-    __metadata("design:type", String)
-], FacilityAttributeEntity.prototype, "attributeCode", void 0);
-__decorate([
-    (0, typeorm_1.Column)('text'),
-    __metadata("design:type", String)
-], FacilityAttributeEntity.prototype, "value", void 0);
+    (0, typeorm_1.ManyToOne)(() => concept_attribute_entity_1.ConceptAttributeEntity),
+    (0, typeorm_1.JoinColumn)({ name: 'attribute_code', referencedColumnName: 'code' }),
+    __metadata("design:type", concept_attribute_entity_1.ConceptAttributeEntity)
+], FacilityAttributeEntity.prototype, "attribute", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
@@ -48,6 +45,6 @@ __decorate([
 ], FacilityAttributeEntity.prototype, "updatedAt", void 0);
 exports.FacilityAttributeEntity = FacilityAttributeEntity = __decorate([
     (0, typeorm_1.Entity)('facility_attributes'),
-    (0, typeorm_1.Index)(['facility', 'attributeCode'])
+    (0, typeorm_1.Index)(['facility', 'attribute'])
 ], FacilityAttributeEntity);
 //# sourceMappingURL=facility-attribute.entity.js.map

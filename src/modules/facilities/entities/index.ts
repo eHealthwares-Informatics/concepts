@@ -1,7 +1,6 @@
-export * from './facility.entity';
-export * from './facility-attribute.entity';
-export * from './state.entity';
-export * from './ward.entity';
-export * from './lga.entity';
-export * from './facility-type.entity';
-export * from './facility-level.entity';
+export { FacilityEntity } from './facility.entity';
+export { StateEntity } from './state.entity';
+export { LgaEntity } from './lga.entity';
+export { WardEntity } from './ward.entity';
+export { FacilityTypeEntity } from './facility-type.entity';
+export { FacilityLevelEntity } from './facility-level.entity';

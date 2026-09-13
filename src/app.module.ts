@@ -6,6 +6,14 @@ import { FacilitiesModule } from './modules/facilities/facilities.module';
 import { ApiExplorerModule } from './modules/api-explorer/api-explorer.module';
 import { SeedModule } from './seed/seed.module';
 import { DrugsModule } from './modules/drugs/drugs.module';
+import { PharmaciesModule } from './modules/pharmacies/pharmacies.module';
+import { PharmacyEntity } from './modules/pharmacies/entities';
+import {
+  LocalityAdminEntity,
+  LocalityEntity,
+  LocalityRelationEntity,
+} from './modules/localities/entities';
+import { LocalitiesModule } from './modules/localities/localities.module';
 import {
   ConceptAttributeEntity,
   ConceptAttributeValueEntity,
@@ -15,7 +23,6 @@ import {
 } from './modules/concepts/entities';
 import {
   FacilityEntity,
-  FacilityAttributeEntity,
   StateEntity,
   WardEntity,
   LgaEntity,
@@ -26,6 +33,9 @@ import {
   PharmaceuticsEntity,
   DrugComponentEntity,
   GenericProductEntity,
+  FormulationEntity,
+  DosageFormEntity,
+  ManufacturerEntity,
 } from './modules/drugs/entities';
 
 @Module({
@@ -51,7 +61,6 @@ import {
           ExternalConceptMappingEntity,
           ImportTrackingEntity,
           FacilityEntity,
-          FacilityAttributeEntity,
           StateEntity,
           WardEntity,
           LgaEntity,
@@ -60,6 +69,13 @@ import {
           PharmaceuticsEntity,
           DrugComponentEntity,
           GenericProductEntity,
+          FormulationEntity,
+          DosageFormEntity,
+          ManufacturerEntity,
+          PharmacyEntity,
+          LocalityEntity,
+          LocalityAdminEntity,
+          LocalityRelationEntity,
         ],
         synchronize: true,
       }),
@@ -67,6 +83,8 @@ import {
     ConceptsModule,
     FacilitiesModule,
     DrugsModule,
+    PharmaciesModule,
+    LocalitiesModule,
     ApiExplorerModule,
     SeedModule,
   ],

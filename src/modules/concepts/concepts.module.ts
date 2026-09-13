@@ -1,20 +1,19 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ConceptsController } from './concepts.controller';
-import { ConceptsService } from './concepts.service';
-import { LoincSeederService } from './seeders/loinc.seeder';
-import { ICDSeederService } from './seeders/icd.seeder';
-import { DictionarySeederService } from './seeders/dictionary.seeder';
-import { GoogleSheetsService } from '../../common/services/google-sheets.service';
 import {
   ConceptCodingEntity,
   ConceptAttributeEntity,
   ConceptAttributeValueEntity,
   ExternalConceptMappingEntity,
   ImportTrackingEntity,
+  StateCodingEntity,
+  LgaCodingEntity,
+  WardCodingEntity,
 } from './entities';
-import { SeedLoincCommand } from './commands/seed-loinc.command';
-import { SeedICDCommand } from './commands/seed-icd.command';
+import { LoincSeederService } from './seeders/loinc.seeder';
+import { ICDSeederService } from './seeders/icd.seeder';
+import { DictionarySeederService } from './seeders/dictionary.seeder';
+import { GoogleSheetsService } from '../../common/services/google-sheets.service';
 
 @Module({
   imports: [
@@ -24,10 +23,18 @@ import { SeedICDCommand } from './commands/seed-icd.command';
       ConceptAttributeValueEntity,
       ExternalConceptMappingEntity,
       ImportTrackingEntity,
+      ConceptAttributeValueEntity,
+      StateCodingEntity,
+      LgaCodingEntity,
+      WardCodingEntity,
     ]),
   ],
-  controllers: [ConceptsController],
-  providers: [ConceptsService, LoincSeederService, ICDSeederService, DictionarySeederService, SeedLoincCommand, SeedICDCommand, GoogleSheetsService],
-  exports: [ConceptsService, LoincSeederService, ICDSeederService, DictionarySeederService],
+  providers: [LoincSeederService, ICDSeederService, DictionarySeederService, GoogleSheetsService],
+  exports: [
+    TypeOrmModule,
+    LoincSeederService,
+    ICDSeederService,
+    DictionarySeederService,
+  ],
 })
 export class ConceptsModule {}

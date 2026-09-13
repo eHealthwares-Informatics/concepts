@@ -1,24 +1,16 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./facility.entity"), exports);
-__exportStar(require("./facility-attribute.entity"), exports);
-__exportStar(require("./state.entity"), exports);
-__exportStar(require("./ward.entity"), exports);
-__exportStar(require("./lga.entity"), exports);
-__exportStar(require("./facility-type.entity"), exports);
-__exportStar(require("./facility-level.entity"), exports);
+exports.FacilityLevelEntity = exports.FacilityTypeEntity = exports.WardEntity = exports.LgaEntity = exports.StateEntity = exports.FacilityEntity = void 0;
+var facility_entity_1 = require("./facility.entity");
+Object.defineProperty(exports, "FacilityEntity", { enumerable: true, get: function () { return facility_entity_1.FacilityEntity; } });
+var state_entity_1 = require("./state.entity");
+Object.defineProperty(exports, "StateEntity", { enumerable: true, get: function () { return state_entity_1.StateEntity; } });
+var lga_entity_1 = require("./lga.entity");
+Object.defineProperty(exports, "LgaEntity", { enumerable: true, get: function () { return lga_entity_1.LgaEntity; } });
+var ward_entity_1 = require("./ward.entity");
+Object.defineProperty(exports, "WardEntity", { enumerable: true, get: function () { return ward_entity_1.WardEntity; } });
+var facility_type_entity_1 = require("./facility-type.entity");
+Object.defineProperty(exports, "FacilityTypeEntity", { enumerable: true, get: function () { return facility_type_entity_1.FacilityTypeEntity; } });
+var facility_level_entity_1 = require("./facility-level.entity");
+Object.defineProperty(exports, "FacilityLevelEntity", { enumerable: true, get: function () { return facility_level_entity_1.FacilityLevelEntity; } });
 //# sourceMappingURL=index.js.map
