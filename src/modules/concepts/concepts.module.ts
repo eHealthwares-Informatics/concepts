@@ -10,6 +10,8 @@ import {
   LgaCodingEntity,
   WardCodingEntity,
 } from './entities';
+import { ConceptsController } from './concepts.controller';
+import { ConceptsService } from './concepts.service';
 import { LoincSeederService } from './seeders/loinc.seeder';
 import { ICDSeederService } from './seeders/icd.seeder';
 import { DictionarySeederService } from './seeders/dictionary.seeder';
@@ -29,9 +31,17 @@ import { GoogleSheetsService } from '../../common/services/google-sheets.service
       WardCodingEntity,
     ]),
   ],
-  providers: [LoincSeederService, ICDSeederService, DictionarySeederService, GoogleSheetsService],
+  controllers: [ConceptsController],
+  providers: [
+    ConceptsService,
+    LoincSeederService,
+    ICDSeederService,
+    DictionarySeederService,
+    GoogleSheetsService,
+  ],
   exports: [
     TypeOrmModule,
+    ConceptsService,
     LoincSeederService,
     ICDSeederService,
     DictionarySeederService,

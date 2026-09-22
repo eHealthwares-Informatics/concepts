@@ -79,6 +79,11 @@ export class FacilitiesService {
         { ownershipCode: query.ownership_code },
       );
     }
+    if (query.name_like) {
+      qb.andWhere('f.facilityName ILIKE :nameLike', {
+        nameLike: `%${query.name_like}%`,
+      });
+    }
 
     
 
@@ -166,7 +171,59 @@ export class FacilitiesService {
     // Smaller of the two orientations wins, with the correction flag.
     const best = `LEAST(${direct}, ${swapped})`;
 
-    const rows = await this.facilityRepository
+    const rows = await this.nearbyRows({ lat, lng, radiusKm, limit });
+    return rows;
+  }
+
+  /**
+   * Facilities nearest to a given facility (haversine around its own stored
+   * coordinates). `nameLike` constrains the subset — e.g. `hospital` for the
+   * hospitals registry. Returns [] when the anchor facility has no coordinates.
+   */
+  async findNearbyFacility(
+    facilityId: string,
+    opts: { radiusKm?: number; limit?: number; nameLike?: string } = {},
+  ) {
+    const facility = await this.facilityRepository.findOne({
+      where: { id: facilityId },
+      select: ['id', 'latitude', 'longitude', 'facilityName'],
+    });
+    if (!facility) throw new NotFoundException('Facility not found');
+    if (facility.latitude == null || facility.longitude == null) return [];
+
+    return this.nearbyRows({
+      lat: Number(facility.latitude),
+      lng: Number(facility.longitude),
+      radiusKm: opts.radiusKm ?? 25,
+      limit: opts.limit ?? 50,
+      nameLike: opts.nameLike,
+      excludeId: facilityId,
+    });
+  }
+
+  /** Shared haversine nearest-search (handles the transposed-coordinate band). */
+  private async nearbyRows(opts: {
+    lat: number;
+    lng: number;
+    radiusKm: number;
+    limit: number;
+    nameLike?: string;
+    excludeId?: string;
+  }) {
+    const { lat, lng, radiusKm, limit, nameLike, excludeId } = opts;
+    // Haversine on an arbitrary (lat_expr, lng_expr) pair.
+    const hav = (latExpr: string, lngExpr: string) =>
+      `(6371 * acos(least(1.0, greatest(-1.0,
+        cos(radians(:plat)) * cos(radians(${latExpr})) * cos(radians(${lngExpr}) - radians(:plng))
+        + sin(radians(:plat)) * sin(radians(${latExpr}))
+      ))))`;
+
+    const direct = hav('f.latitude', 'f.longitude');
+    const swapped = hav('f.longitude', 'f.latitude');
+    // Smaller of the two orientations wins, with the correction flag.
+    const best = `LEAST(${direct}, ${swapped})`;
+
+    const qb = this.facilityRepository
       .createQueryBuilder('f')
       .leftJoin('f.state', 's')
       .leftJoin('f.lga', 'l')
@@ -200,7 +257,16 @@ export class FacilitiesService {
       .addSelect(best, 'distance_km')
       .setParameter('plat', lat)
       .setParameter('plng', lng)
-      .andWhere('f.latitude IS NOT NULL AND f.longitude IS NOT NULL')
+      .andWhere('f.latitude IS NOT NULL AND f.longitude IS NOT NULL');
+
+    if (nameLike) {
+      qb.andWhere('f.facilityName ILIKE :nameLike', { nameLike: `%${nameLike}%` });
+    }
+    if (excludeId) {
+      qb.andWhere('f.id != :excludeId', { excludeId });
+    }
+
+    const rows = await qb
       .orderBy('distance_km', 'ASC')
       .limit(limit)
       .getRawMany<Record<string, string | boolean | null>>();

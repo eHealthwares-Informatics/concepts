@@ -241,6 +241,34 @@ export class FacilitiesController {
     return { data: await this.facilitiesService.getFacilityLevels() };
   }
 
+  @Get(':facilityId/nearby')
+  @ApiOperation({
+    summary: 'Facilities near a facility',
+    description:
+      'Haversine nearest-search around a facility\u2019s own coordinates (transposed-coordinate ' +
+      'band handled). Optional `nameLike` constrains the subset, e.g. `hospital` for the ' +
+      'hospitals registry. Returns [] when the anchor facility has no coordinates.',
+  })
+  @ApiParam({ name: 'facilityId', type: String })
+  @ApiQuery({ name: 'radius', required: false, type: Number, description: 'Radius in km (default 25)' })
+  @ApiQuery({ name: 'limit', required: false, type: Number, description: 'Max rows (default 50, max 100)' })
+  @ApiQuery({ name: 'nameLike', required: false, type: String, description: 'Name substring filter, e.g. hospital' })
+  @ApiResponse({ status: 200, description: 'Array of nearby facilities with distanceKm' })
+  async nearbyFacility(
+    @Param('facilityId') facilityId: string,
+    @Query('radius') radius?: string,
+    @Query('limit') limit?: string,
+    @Query('nameLike') nameLike?: string,
+  ) {
+    return {
+      data: await this.facilitiesService.findNearbyFacility(facilityId, {
+        radiusKm: Number(radius || 25),
+        limit: Math.min(Math.max(Number(limit || 50), 1), 100),
+        nameLike: nameLike || undefined,
+      }),
+    };
+  }
+
   @Get(':id')
   @ApiOperation({
     summary: 'Get facility by ID',

@@ -67,6 +67,14 @@ export class FacilityListQueryDto {
   @IsString()
   ownership_code?: string;
 
+  @ApiPropertyOptional({
+    description:
+      'Case-insensitive substring on facility name (e.g. nameLike=hospital for the hospitals registry).',
+  })
+  @IsOptional()
+  @IsString()
+  name_like?: string;
+
   @ApiPropertyOptional({ description: 'Page number', default: 1 })
   @IsOptional()
   @Type(() => Number)

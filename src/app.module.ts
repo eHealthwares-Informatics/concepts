@@ -8,6 +8,8 @@ import { SeedModule } from './seed/seed.module';
 import { DrugsModule } from './modules/drugs/drugs.module';
 import { PharmaciesModule } from './modules/pharmacies/pharmacies.module';
 import { PharmacyEntity } from './modules/pharmacies/entities';
+import { DiagnosticCentersModule } from './modules/diagnostic-centers/diagnostic-centers.module';
+import { DiagnosticCenterEntity } from './modules/diagnostic-centers/entities';
 import {
   LocalityAdminEntity,
   LocalityEntity,
@@ -77,6 +79,7 @@ import {
           DosageFormEntity,
           ManufacturerEntity,
           PharmacyEntity,
+          DiagnosticCenterEntity,
           LocalityEntity,
           LocalityAdminEntity,
           LocalityRelationEntity,
@@ -88,6 +91,7 @@ import {
     FacilitiesModule,
     DrugsModule,
     PharmaciesModule,
+    DiagnosticCentersModule,
     LocalitiesModule,
     ApiExplorerModule,
     SeedModule,
