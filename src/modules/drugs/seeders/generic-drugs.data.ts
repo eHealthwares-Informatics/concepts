@@ -23,6 +23,8 @@ export type GenericDrug = {
   appendixDosages: any[];
   pharmaceuticsCode: string[];
   drugComponentNames: string[];
+  emdexCode: string | null;
+  source: string | null;
 };
 
 export type GenericDrugSeedData = {
@@ -35,6 +37,8 @@ export const genericDrugData: GenericDrugSeedData = {
   "drugs": [
     {
       "code": "GN-00001",
+      "emdexCode": "J05AF06",
+      "source": null,
       "name": "Abacavir",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Nucleoside + nucleotide reverse transcriptase inhibitors",
@@ -51,6 +55,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00002",
+      "emdexCode": null,
+      "source": null,
       "name": "Abacavir + Efavirenz + Lamivudine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -69,6 +75,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00003",
+      "emdexCode": null,
+      "source": null,
       "name": "Abacavir + Lamivudine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Fixed-dose combinations (adult First line)",
@@ -86,6 +94,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00004",
+      "emdexCode": null,
+      "source": null,
       "name": "Abiraterone",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -102,6 +112,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00005",
+      "emdexCode": "S02AA10",
+      "source": null,
       "name": "Acetic acid",
       "genericClass": "Medicines For Ear, Nose And Throat",
       "pharmaceuticalClass": "General",
@@ -118,6 +130,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00006",
+      "emdexCode": "V03AB23",
+      "source": null,
       "name": "Acetylcysteine",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Specific",
@@ -134,6 +148,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00007",
+      "emdexCode": "N02BA01",
+      "source": null,
       "name": "Acetylsalicylic acid",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Anti-platelet medicines",
@@ -150,6 +166,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00008",
+      "emdexCode": "J05AB01;S01AD03",
+      "source": null,
       "name": "Aciclovir",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antiherpes medicines",
@@ -166,6 +184,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00009",
+      "emdexCode": "L01DA01",
+      "source": null,
       "name": "Actinomycin-D",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -182,6 +202,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00010",
+      "emdexCode": null,
+      "source": null,
       "name": "Adalimumab",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -198,6 +220,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00011",
+      "emdexCode": "P02CA03",
+      "source": null,
       "name": "Albendazole",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antifilarials",
@@ -214,6 +238,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00012",
+      "emdexCode": null,
+      "source": null,
       "name": "Alfuzosin",
       "genericClass": "Urinary And Erectile Dysfunctions Medicines",
       "pharmaceuticalClass": "General",
@@ -230,6 +256,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00013",
+      "emdexCode": "M04AA01",
+      "source": null,
       "name": "Allopurinol",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Non-steroidal anti-inflammatory, gout and rheumatoid medicines",
@@ -246,6 +274,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00014",
+      "emdexCode": null,
+      "source": null,
       "name": "Alteplase",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Thrombolytic medicines",
@@ -262,6 +292,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00015",
+      "emdexCode": null,
+      "source": null,
       "name": "Aluminium diacetate",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Medicines affecting skin differentiation and proliferation",
@@ -278,6 +310,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00016",
+      "emdexCode": "A02AB01",
+      "source": null,
       "name": "Aluminium hydroxide + magnesium hydroxide",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -295,6 +329,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00017",
+      "emdexCode": "J01GB06",
+      "source": null,
       "name": "Amikacin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Anti-tuberculosis medicines",
@@ -311,6 +347,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00018",
+      "emdexCode": null,
+      "source": null,
       "name": "Amiloride",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -327,6 +365,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00019",
+      "emdexCode": null,
+      "source": null,
       "name": "Aminobenzoic acid",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Sunscreen agents",
@@ -343,6 +383,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00020",
+      "emdexCode": null,
+      "source": null,
       "name": "Aminoglutethimide",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Other hormone inhibitors",
@@ -359,6 +401,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00021",
+      "emdexCode": "N06AA09",
+      "source": null,
       "name": "Amitriptyline",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines used in depressive disorders",
@@ -375,6 +419,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00022",
+      "emdexCode": null,
+      "source": null,
       "name": "Amlodipine",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -391,6 +437,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00023",
+      "emdexCode": "J01CA04",
+      "source": null,
       "name": "Amoxicillin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -407,6 +455,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00024",
+      "emdexCode": "J01CR02",
+      "source": null,
       "name": "Amoxicillin + Clavulanic acid",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -424,6 +474,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00025",
+      "emdexCode": "J02AA01;J02AA01",
+      "source": null,
       "name": "Amphotericin B",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antifungal medicines (systemic)",
@@ -440,6 +492,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00026",
+      "emdexCode": "J01CA01",
+      "source": null,
       "name": "Ampicillin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -456,6 +510,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00027",
+      "emdexCode": "J06BB05",
+      "source": null,
       "name": "Anti-rabies immunoglobulin",
       "genericClass": "Blood Products Of Human Origin And Plasma Substitutes",
       "pharmaceuticalClass": "Human immunoglobulins",
@@ -472,6 +528,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00028",
+      "emdexCode": "J06BB02",
+      "source": null,
       "name": "Anti-tetanus immunoglobulin",
       "genericClass": "Blood Products Of Human Origin And Plasma Substitutes",
       "pharmaceuticalClass": "Human immunoglobulins",
@@ -488,6 +546,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00029",
+      "emdexCode": null,
+      "source": null,
       "name": "Anti-Tetanus serum",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Sera and immunoglobulins",
@@ -504,6 +564,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00030",
+      "emdexCode": null,
+      "source": null,
       "name": "Arachis oil + Paradichlorobenzene + Chlorobutanol + Turpentine oil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -523,6 +585,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00031",
+      "emdexCode": null,
+      "source": null,
       "name": "Artemether",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "For treatment",
@@ -539,6 +603,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00032",
+      "emdexCode": "P01Be52",
+      "source": null,
       "name": "Artemether + Lumefantrine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "For treatment",
@@ -556,6 +622,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00033",
+      "emdexCode": "P01Be03",
+      "source": null,
       "name": "Artesunate",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "For treatment",
@@ -572,6 +640,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00034",
+      "emdexCode": null,
+      "source": null,
       "name": "Artesunate + amodiaquine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "For treatment",
@@ -589,6 +659,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00035",
+      "emdexCode": "A11GA01",
+      "source": null,
       "name": "Ascorbic acid",
       "genericClass": "Vitamins And Minerals",
       "pharmaceuticalClass": "General",
@@ -605,6 +677,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00036",
+      "emdexCode": "L01XX02",
+      "source": null,
       "name": "Asparaginase",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -621,6 +695,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00037",
+      "emdexCode": null,
+      "source": null,
       "name": "Atenolol",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -637,6 +713,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00038",
+      "emdexCode": null,
+      "source": null,
       "name": "Atorvastatin",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Lipid-lowering agents",
@@ -653,6 +731,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00039",
+      "emdexCode": null,
+      "source": null,
       "name": "Atovaquone + Proguanil",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Prophylaxis",
@@ -670,6 +750,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00040",
+      "emdexCode": null,
+      "source": null,
       "name": "Atracurium",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Skeletal muscle relaxants and cholinesterase inhibitors",
@@ -686,6 +768,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00041",
+      "emdexCode": "A03BA01;A03BA01;S01FA01",
+      "source": null,
       "name": "Atropine",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Preoperative medication and anaesthetic adjuvants",
@@ -702,6 +786,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00042",
+      "emdexCode": "L04AX01",
+      "source": null,
       "name": "Azathioprine",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -718,6 +804,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00043",
+      "emdexCode": "J01FA10",
+      "source": null,
       "name": "Azithromycin",
       "genericClass": "Ophthalmological Preparations",
       "pharmaceuticalClass": "Anti-infective agents",
@@ -734,6 +822,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00044",
+      "emdexCode": null,
+      "source": null,
       "name": "Baclofen",
       "genericClass": "Inhibitors",
       "pharmaceuticalClass": "General",
@@ -750,6 +840,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00045",
+      "emdexCode": "V08BA01",
+      "source": null,
       "name": "Barium sulfate",
       "genericClass": "Diagnostic Agents",
       "pharmaceuticalClass": "Radiocontrast media",
@@ -766,6 +858,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00046",
+      "emdexCode": null,
+      "source": null,
       "name": "Barrier methods",
       "genericClass": "Hormones And Synthetic Substitutes",
       "pharmaceuticalClass": "General",
@@ -782,6 +876,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00047",
+      "emdexCode": "J07AN01;",
+      "source": null,
       "name": "BCG vaccine",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Vaccines",
@@ -798,6 +894,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00048",
+      "emdexCode": null,
+      "source": null,
       "name": "Beclomethasone",
       "genericClass": "Respiratory Medicines",
       "pharmaceuticalClass": "General",
@@ -814,6 +912,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00049",
+      "emdexCode": null,
+      "source": null,
       "name": "Bedaquiline",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Anti-tuberculosis medicines",
@@ -830,6 +930,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00050",
+      "emdexCode": null,
+      "source": null,
       "name": "Bendrofluazide",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -846,6 +948,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00051",
+      "emdexCode": "J01Ce08",
+      "source": null,
       "name": "Benzathine benzylpenicillin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -862,6 +966,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00052",
+      "emdexCode": null,
+      "source": null,
       "name": "Benzhexol",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Antidotes to antipsychotic medicines",
@@ -878,6 +984,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00053",
+      "emdexCode": "D01Ae20",
+      "source": null,
       "name": "Benzoic acid + salicylic acid",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Antifungal medicines",
@@ -895,6 +1003,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00054",
+      "emdexCode": null,
+      "source": null,
       "name": "Benzoin",
       "genericClass": "Antiseptics And Disinfectants",
       "pharmaceuticalClass": "General",
@@ -911,6 +1021,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00055",
+      "emdexCode": "D10Ae01",
+      "source": null,
       "name": "Benzoyl peroxide",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Anti-acne medicines",
@@ -927,6 +1039,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00056",
+      "emdexCode": "P03AX01",
+      "source": null,
       "name": "Benzyl benzoate",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Scabicides and pediculicides",
@@ -943,6 +1057,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00057",
+      "emdexCode": "J01Ce01",
+      "source": null,
       "name": "Benzylpenicillin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -959,6 +1075,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00058",
+      "emdexCode": "D07AC01",
+      "source": null,
       "name": "Betamethasone",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Anti-inflammatory and antipruritic medicines",
@@ -975,6 +1093,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00059",
+      "emdexCode": null,
+      "source": null,
       "name": "Bethanecol",
       "genericClass": "Urinary And Erectile Dysfunctions Medicines",
       "pharmaceuticalClass": "General",
@@ -991,6 +1111,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00060",
+      "emdexCode": null,
+      "source": null,
       "name": "Bevacizumab",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -1007,6 +1129,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00061",
+      "emdexCode": null,
+      "source": null,
       "name": "Bicalutamide",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -1023,6 +1147,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00062",
+      "emdexCode": null,
+      "source": null,
       "name": "Biotin",
       "genericClass": "Vitamins, Minerals And Nutritionals",
       "pharmaceuticalClass": "General",
@@ -1050,6 +1176,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00063",
+      "emdexCode": null,
+      "source": null,
       "name": "Biperiden",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Antidotes to antipsychotic medicines",
@@ -1066,6 +1194,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00064",
+      "emdexCode": null,
+      "source": null,
       "name": "Biphasic isophane insulin",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Insulin preparations",
@@ -1082,6 +1212,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00065",
+      "emdexCode": "L01DC01",
+      "source": null,
       "name": "Bleomycin",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -1098,6 +1230,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00066",
+      "emdexCode": null,
+      "source": null,
       "name": "Bortezomib",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -1114,6 +1248,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00067",
+      "emdexCode": null,
+      "source": null,
       "name": "Bromazepam",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines for anxiety disorders",
@@ -1130,6 +1266,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00068",
+      "emdexCode": "R03BA02;R01AD05",
+      "source": null,
       "name": "Budesonide",
       "genericClass": "Medicines Acting On The Respiratory Tract",
       "pharmaceuticalClass": "Antiasthmatic medicines",
@@ -1146,6 +1284,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00069",
+      "emdexCode": "N01BB01",
+      "source": null,
       "name": "Bupivacaine",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Local anaesthetics",
@@ -1162,6 +1302,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00070",
+      "emdexCode": null,
+      "source": null,
       "name": "Buprenorphine",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines used in substance dependence programmes (See Restricted Medicines List)",
@@ -1178,6 +1320,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00071",
+      "emdexCode": null,
+      "source": null,
       "name": "Buserelin",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -1194,6 +1338,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00072",
+      "emdexCode": null,
+      "source": null,
       "name": "Busulfan (Busulphan)",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -1210,6 +1356,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00073",
+      "emdexCode": null,
+      "source": null,
       "name": "Calamine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -1226,6 +1374,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00074",
+      "emdexCode": null,
+      "source": null,
       "name": "Calamine + Zinc oxide",
       "genericClass": "Dermatologicals",
       "pharmaceuticalClass": "General",
@@ -1243,6 +1393,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00075",
+      "emdexCode": "D04AX",
+      "source": null,
       "name": "Calamine lotion",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Anti-inflammatory and antipruritic medicines",
@@ -1259,6 +1411,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00076",
+      "emdexCode": "A12AA03",
+      "source": null,
       "name": "Calcium gluconate",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Specific",
@@ -1275,6 +1429,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00077",
+      "emdexCode": null,
+      "source": null,
       "name": "Calcium salts",
       "genericClass": "Vitamins And Minerals",
       "pharmaceuticalClass": "General",
@@ -1291,6 +1447,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00078",
+      "emdexCode": null,
+      "source": null,
       "name": "Capecitabine",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -1307,6 +1465,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00079",
+      "emdexCode": "J04AB30",
+      "source": null,
       "name": "Capreomycin (Cm)",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Anti-tuberculosis medicines",
@@ -1323,6 +1483,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00080",
+      "emdexCode": null,
+      "source": null,
       "name": "Captopril",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -1339,6 +1501,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00081",
+      "emdexCode": "N03AF01",
+      "source": null,
       "name": "Carbamazepine",
       "genericClass": "Anticonvulsants + Anti-Epileptics",
       "pharmaceuticalClass": "General",
@@ -1355,6 +1519,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00082",
+      "emdexCode": null,
+      "source": null,
       "name": "Carbetocin",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Uterotonics",
@@ -1371,6 +1537,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00083",
+      "emdexCode": null,
+      "source": null,
       "name": "Carbimazole",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Antithyroid medicines",
@@ -1387,6 +1555,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00084",
+      "emdexCode": "L01XA02",
+      "source": null,
       "name": "Carboplatin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -1403,6 +1573,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00085",
+      "emdexCode": null,
+      "source": null,
       "name": "Carvedilol",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Medicines used in heart failure",
@@ -1419,6 +1591,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00086",
+      "emdexCode": null,
+      "source": null,
       "name": "Cefixime",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -1435,6 +1609,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00087",
+      "emdexCode": null,
+      "source": null,
       "name": "Cefpodoxime",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -1451,6 +1627,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00088",
+      "emdexCode": "J01DD02",
+      "source": null,
       "name": "Ceftazidime",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial Medicine",
@@ -1467,6 +1645,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00089",
+      "emdexCode": "J01DD04",
+      "source": null,
       "name": "Ceftriaxone",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -1483,6 +1663,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00090",
+      "emdexCode": null,
+      "source": null,
       "name": "Cefuroxime",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -1499,6 +1681,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00091",
+      "emdexCode": null,
+      "source": null,
       "name": "Celecoxib",
       "genericClass": "Medicines For Rheumatic And Musculoskeletal Diseases",
       "pharmaceuticalClass": "Non-Steriodal Anti-inflammatory drugs",
@@ -1515,6 +1699,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00092",
+      "emdexCode": null,
+      "source": null,
       "name": "Cetrimide + chlorhexidine",
       "genericClass": "Antiseptics And Disinfectants",
       "pharmaceuticalClass": "General",
@@ -1532,6 +1718,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00093",
+      "emdexCode": "A07BA01",
+      "source": null,
       "name": "Charcoal ( activated)",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Non-specific",
@@ -1548,6 +1736,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00094",
+      "emdexCode": "J01BA01",
+      "source": null,
       "name": "Chloramphenicol",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -1564,6 +1754,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00095",
+      "emdexCode": "D08AC02",
+      "source": null,
       "name": "Chlorhexidine",
       "genericClass": "Antiseptics And Disinfectants",
       "pharmaceuticalClass": "General",
@@ -1580,6 +1772,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00096",
+      "emdexCode": "D08Ae05",
+      "source": null,
       "name": "Chloroxylenol",
       "genericClass": "Antiseptic And Disinfectant Solutions",
       "pharmaceuticalClass": "General",
@@ -1596,6 +1790,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00097",
+      "emdexCode": "R06AB04",
+      "source": null,
       "name": "Chlorphenamine maleate",
       "genericClass": "Cold Relief",
       "pharmaceuticalClass": "General",
@@ -1612,6 +1808,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00098",
+      "emdexCode": "N05AA01",
+      "source": null,
       "name": "Chlorpromazine",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines used in psychotic disorders",
@@ -1628,6 +1826,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00099",
+      "emdexCode": null,
+      "source": null,
       "name": "Chlortetracycline",
       "genericClass": "Eye Drops",
       "pharmaceuticalClass": "General",
@@ -1644,6 +1844,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00100",
+      "emdexCode": "A11CC05",
+      "source": null,
       "name": "Cholecalciferol",
       "genericClass": "Vitamins And Minerals",
       "pharmaceuticalClass": "General",
@@ -1660,6 +1862,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00101",
+      "emdexCode": "J07Ae01",
+      "source": null,
       "name": "Cholera vaccine",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Vaccines",
@@ -1676,6 +1880,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00102",
+      "emdexCode": null,
+      "source": null,
       "name": "Chorhexidine",
       "genericClass": "Antiseptic And Disinfectant Solutions",
       "pharmaceuticalClass": "General",
@@ -1692,6 +1898,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00103",
+      "emdexCode": null,
+      "source": null,
       "name": "Chorionic gonadotropin",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Medicines acting on pituitary-ovarian axis",
@@ -1708,6 +1916,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00104",
+      "emdexCode": "L04AA01",
+      "source": null,
       "name": "Ciclosporin (cyclosporin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -1724,6 +1934,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00105",
+      "emdexCode": null,
+      "source": null,
       "name": "Cinnarizine",
       "genericClass": "Antiallergics And Medicines Used In Anaphylaxis",
       "pharmaceuticalClass": "Antihistamines",
@@ -1740,6 +1952,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00106",
+      "emdexCode": "J01MA02;S02AA15",
+      "source": null,
       "name": "Ciprofloxacin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -1756,6 +1970,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00107",
+      "emdexCode": null,
+      "source": null,
       "name": "Cisplatin",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -1772,6 +1988,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00108",
+      "emdexCode": null,
+      "source": null,
       "name": "Clarithromycin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -1788,6 +2006,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00109",
+      "emdexCode": "J01FF01",
+      "source": null,
       "name": "Clindamycin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -1804,6 +2024,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00110",
+      "emdexCode": null,
+      "source": null,
       "name": "Clobetasol",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Anti-inflammatory and antipruritic Medicines",
@@ -1820,6 +2042,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00111",
+      "emdexCode": "J04BA01",
+      "source": null,
       "name": "Clofazimine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antileprosy medicines",
@@ -1836,6 +2060,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00112",
+      "emdexCode": null,
+      "source": null,
       "name": "Clomipramine",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines used for obsessive compulsive disorders",
@@ -1852,6 +2078,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00113",
+      "emdexCode": null,
+      "source": null,
       "name": "Clonazepam",
       "genericClass": "Anticonvulsants + Anti-Epileptics",
       "pharmaceuticalClass": "General",
@@ -1868,6 +2096,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00114",
+      "emdexCode": null,
+      "source": null,
       "name": "Clonidine",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Preoperative medication and anaesthetic adjuvants",
@@ -1884,6 +2114,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00115",
+      "emdexCode": null,
+      "source": null,
       "name": "Clopidogrel",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Anti-platelet medicines",
@@ -1900,6 +2132,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00116",
+      "emdexCode": null,
+      "source": null,
       "name": "Clotrimazole",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antifungal medicines (systemic)",
@@ -1916,6 +2150,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00117",
+      "emdexCode": "J01CF02",
+      "source": null,
       "name": "Cloxacillin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -1932,6 +2168,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00118",
+      "emdexCode": null,
+      "source": null,
       "name": "Co-trimoxazole",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "General",
@@ -1948,6 +2186,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00119",
+      "emdexCode": null,
+      "source": null,
       "name": "Coagulation factor IX",
       "genericClass": "Blood Products Of Human Origin And Plasma Substitutes",
       "pharmaceuticalClass": "Blood coagulation factors",
@@ -1964,6 +2204,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00120",
+      "emdexCode": null,
+      "source": null,
       "name": "Coagulation factor VIII",
       "genericClass": "Blood Products Of Human Origin And Plasma Substitutes",
       "pharmaceuticalClass": "Blood coagulation factors",
@@ -1980,6 +2222,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00121",
+      "emdexCode": "D05AA",
+      "source": null,
       "name": "Coal tar",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Medicines affecting skin differentiation and proliferation",
@@ -1996,6 +2240,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00122",
+      "emdexCode": null,
+      "source": null,
       "name": "Cod liver oil",
       "genericClass": "Vitamins, Minerals And Nutritionals",
       "pharmaceuticalClass": "General",
@@ -2012,6 +2258,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00123",
+      "emdexCode": null,
+      "source": null,
       "name": "Colchicine",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Non-steroidal anti-inflammatory, gout and rheumatoid medicines",
@@ -2028,6 +2276,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00124",
+      "emdexCode": null,
+      "source": null,
       "name": "Condoms",
       "genericClass": "Miscellaneous",
       "pharmaceuticalClass": "General",
@@ -2044,6 +2294,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00125",
+      "emdexCode": null,
+      "source": null,
       "name": "Cotton wool",
       "genericClass": "Dressings",
       "pharmaceuticalClass": "General",
@@ -2060,6 +2312,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00126",
+      "emdexCode": null,
+      "source": null,
       "name": "Crotamiton",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Scabicides and pediculicides",
@@ -2076,6 +2330,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00127",
+      "emdexCode": "R06Ae03",
+      "source": null,
       "name": "Cyclizine",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Medicines for other symptoms common in palliative care",
@@ -2092,6 +2348,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00128",
+      "emdexCode": "L01AA01",
+      "source": null,
       "name": "Cyclophosphamide",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -2108,6 +2366,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00129",
+      "emdexCode": "J04AB01",
+      "source": null,
       "name": "Cycloserine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Anti-tuberculosis medicines",
@@ -2124,6 +2384,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00130",
+      "emdexCode": "L01BC01",
+      "source": null,
       "name": "Cytarabine",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -2140,6 +2402,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00131",
+      "emdexCode": null,
+      "source": null,
       "name": "Dabigatran",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "Medicines affecting coagulation",
@@ -2156,6 +2420,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00132",
+      "emdexCode": "L01AX04",
+      "source": null,
       "name": "Dacabazine (DTIC)",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -2172,6 +2438,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00133",
+      "emdexCode": null,
+      "source": null,
       "name": "Daclatasvir",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Medicines for hepatitis C",
@@ -2188,6 +2456,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00134",
+      "emdexCode": null,
+      "source": null,
       "name": "Danazol",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Medicines acting on pituitary-ovarian axis",
@@ -2204,6 +2474,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00135",
+      "emdexCode": "J04BA02",
+      "source": null,
       "name": "Dapsone",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antileprosy medicines",
@@ -2220,6 +2492,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00136",
+      "emdexCode": null,
+      "source": null,
       "name": "Darrows",
       "genericClass": "Disturbances",
       "pharmaceuticalClass": "Parenteral",
@@ -2236,6 +2510,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00137",
+      "emdexCode": "L01DB02",
+      "source": null,
       "name": "Daunorubicin",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -2252,6 +2528,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00138",
+      "emdexCode": null,
+      "source": null,
       "name": "Degarelix",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -2268,6 +2546,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00139",
+      "emdexCode": null,
+      "source": null,
       "name": "Delamanid",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Anti-tuberculosis medicines",
@@ -2284,6 +2564,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00140",
+      "emdexCode": null,
+      "source": null,
       "name": "Dequalinium hydrochloride",
       "genericClass": "Throat Antiseptic Preparations",
       "pharmaceuticalClass": "General",
@@ -2300,6 +2582,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00141",
+      "emdexCode": "V03AC01",
+      "source": null,
       "name": "Desferoxamine",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Specific",
@@ -2316,6 +2600,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00142",
+      "emdexCode": null,
+      "source": null,
       "name": "Desmopressin",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "Medicines affecting coagulation",
@@ -2332,6 +2618,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00143",
+      "emdexCode": "H02AB02;H02AB02;H02AB02;H02AB02",
+      "source": null,
       "name": "Dexamethasone",
       "genericClass": "Antiallergics And Medicines Used In Anaphylaxis",
       "pharmaceuticalClass": "Anti-anaphylactics",
@@ -2348,6 +2636,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00144",
+      "emdexCode": null,
+      "source": null,
       "name": "Dextran 70",
       "genericClass": "Blood Products Of Human Origin And Plasma Substitutes",
       "pharmaceuticalClass": "Plasma substitutes",
@@ -2364,6 +2654,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00145",
+      "emdexCode": "N05BA01;N05BA01;N05BA01",
+      "source": null,
       "name": "Diazepam",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Preoperative medication and anaesthetic adjuvants",
@@ -2380,6 +2672,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00146",
+      "emdexCode": null,
+      "source": null,
       "name": "Dichloroxylenol + chlorophenol",
       "genericClass": "Antiseptics And Disinfectants",
       "pharmaceuticalClass": "General",
@@ -2397,6 +2691,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00147",
+      "emdexCode": null,
+      "source": null,
       "name": "Diclofenac",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Non-steroidal anti-inflammatory, gout and rheumatoid medicines",
@@ -2413,6 +2709,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00148",
+      "emdexCode": "J05AF02",
+      "source": null,
       "name": "Didanosine (ddI)",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Nucleoside + nucleotide reverse transcriptase inhibitors",
@@ -2429,6 +2727,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00149",
+      "emdexCode": "P02CB02",
+      "source": null,
       "name": "Diethylcarbamazine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antifilarials",
@@ -2445,6 +2745,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00150",
+      "emdexCode": null,
+      "source": null,
       "name": "Diethylstilbestrol",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Estrogens",
@@ -2461,6 +2763,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00151",
+      "emdexCode": "C01AA05",
+      "source": null,
       "name": "Digoxin",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Medicines used in heart failure",
@@ -2477,6 +2781,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00152",
+      "emdexCode": null,
+      "source": null,
       "name": "Dihydroartemisinin + piperaquine phosphate",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "General",
@@ -2494,6 +2800,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00153",
+      "emdexCode": null,
+      "source": null,
       "name": "Dihydrocodeine",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Narcotic analgesics",
@@ -2510,6 +2818,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00154",
+      "emdexCode": "P01AC01",
+      "source": null,
       "name": "Diloxanide",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Amoebicide and antigiardiasis medicines",
@@ -2526,6 +2836,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00155",
+      "emdexCode": null,
+      "source": null,
       "name": "Diltiazem",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Anti-anginal medicines",
@@ -2542,6 +2854,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00156",
+      "emdexCode": "V03AB09",
+      "source": null,
       "name": "Dimercaprol",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Specific",
@@ -2558,6 +2872,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00157",
+      "emdexCode": null,
+      "source": null,
       "name": "Diphenhydramine preparations",
       "genericClass": "Cold Relief",
       "pharmaceuticalClass": "General",
@@ -2574,6 +2890,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00158",
+      "emdexCode": "J06AA01",
+      "source": null,
       "name": "Diphtheria antitoxin",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Sera and immunoglobulins",
@@ -2590,6 +2908,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00159",
+      "emdexCode": null,
+      "source": null,
       "name": "Dipivefrin",
       "genericClass": "Ophthalmological Preparations",
       "pharmaceuticalClass": "Topical antiglaucoma medicines",
@@ -2606,6 +2926,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00160",
+      "emdexCode": null,
+      "source": null,
       "name": "Dithranol",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Medicines affecting skin differentiation and proliferation",
@@ -2622,6 +2944,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00161",
+      "emdexCode": null,
+      "source": null,
       "name": "Dobutamine",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Medicines used in heart failure",
@@ -2638,6 +2962,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00162",
+      "emdexCode": null,
+      "source": null,
       "name": "Docetaxel",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -2654,6 +2980,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00163",
+      "emdexCode": "A06AA02",
+      "source": null,
       "name": "Docusate sodium",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Medicines for other symptoms common in palliative care",
@@ -2670,6 +2998,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00164",
+      "emdexCode": null,
+      "source": null,
       "name": "Domiphen bromide",
       "genericClass": "Throat Antiseptic Preparations",
       "pharmaceuticalClass": "General",
@@ -2686,6 +3016,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00165",
+      "emdexCode": "C01CA04",
+      "source": null,
       "name": "Dopamine",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Medicines used in heart failure",
@@ -2702,6 +3034,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00166",
+      "emdexCode": null,
+      "source": null,
       "name": "Doxepin",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Anti-inflammatory and antipruritic Medicines",
@@ -2718,6 +3052,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00167",
+      "emdexCode": "L01DB01",
+      "source": null,
       "name": "Doxorubicin",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -2734,6 +3070,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00168",
+      "emdexCode": "J01AA02;J01AA02;J01AA02",
+      "source": null,
       "name": "Doxycycline",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -2750,6 +3088,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00169",
+      "emdexCode": null,
+      "source": null,
       "name": "Dusting powder",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Antifungal medicines",
@@ -2766,6 +3106,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00170",
+      "emdexCode": null,
+      "source": null,
       "name": "Edrophonium",
       "genericClass": "Medicines For Rheumatic And Musculoskeletal Diseases",
       "pharmaceuticalClass": "Diagnostic agent for myasthenia gravis",
@@ -2782,6 +3124,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00171",
+      "emdexCode": "J05AG03",
+      "source": null,
       "name": "Efavirenz",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Non-nucleoside reverse transcriptase inhibitors",
@@ -2798,6 +3142,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00172",
+      "emdexCode": "P01CX03",
+      "source": null,
       "name": "Eflornithine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Medicines for the treatment of second stage African trypanosomiasis",
@@ -2814,6 +3160,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00173",
+      "emdexCode": null,
+      "source": null,
       "name": "Elastic plaster dressings",
       "genericClass": "Dressings",
       "pharmaceuticalClass": "General",
@@ -2830,6 +3178,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00174",
+      "emdexCode": "C09AA02",
+      "source": null,
       "name": "Enalapril",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -2846,6 +3196,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00175",
+      "emdexCode": null,
+      "source": null,
       "name": "Entecavir",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Medicines for hepatitis B",
@@ -2862,6 +3214,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00176",
+      "emdexCode": null,
+      "source": null,
       "name": "Epimestrol",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Medicines acting on pituitary-ovarian axis",
@@ -2878,6 +3232,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00177",
+      "emdexCode": "C01CA24;S01eA01;C01CA24",
+      "source": null,
       "name": "Epinephrine (Adrenaline)",
       "genericClass": "Antiallergics And Medicines Used In Anaphylaxis",
       "pharmaceuticalClass": "Anti-anaphylactics",
@@ -2894,6 +3250,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00178",
+      "emdexCode": null,
+      "source": null,
       "name": "Epirubicin",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -2910,6 +3268,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00179",
+      "emdexCode": null,
+      "source": null,
       "name": "Ergometrine",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Uterotonics",
@@ -2926,6 +3286,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00180",
+      "emdexCode": null,
+      "source": null,
       "name": "Ergotamine",
       "genericClass": "Antimigraine Medicines",
       "pharmaceuticalClass": "For treatment of acute attack",
@@ -2942,6 +3304,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00181",
+      "emdexCode": "J01FA01",
+      "source": null,
       "name": "Erythromycin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -2958,6 +3322,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00182",
+      "emdexCode": null,
+      "source": null,
       "name": "Erythropoiesis-stimulating agents",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "Antianaemia medicines (Haematinics)",
@@ -2974,6 +3340,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00183",
+      "emdexCode": null,
+      "source": null,
       "name": "Erythropoietin",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "Antianaemia medicines (Haematinics)",
@@ -2990,6 +3358,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00184",
+      "emdexCode": null,
+      "source": null,
       "name": "Etanercept",
       "genericClass": "Medicines For Rheumatic And Musculoskeletal Diseases",
       "pharmaceuticalClass": "Biologicals",
@@ -3006,6 +3376,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00185",
+      "emdexCode": "J04AK02",
+      "source": null,
       "name": "Ethambutol",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antituberculosis medicines",
@@ -3022,6 +3394,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00186",
+      "emdexCode": "J04AD03",
+      "source": null,
       "name": "Ethionamide",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Anti-tuberculosis medicines",
@@ -3038,6 +3412,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00187",
+      "emdexCode": "N03AD01",
+      "source": null,
       "name": "Ethosuximide",
       "genericClass": "Anticonvulsants + Anti-Epileptics",
       "pharmaceuticalClass": "General",
@@ -3054,6 +3430,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00188",
+      "emdexCode": "L01CB01",
+      "source": null,
       "name": "Etoposide(VP-16)",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -3070,6 +3448,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00189",
+      "emdexCode": null,
+      "source": null,
       "name": "Eusol",
       "genericClass": "Antiseptics And Disinfectants",
       "pharmaceuticalClass": "General",
@@ -3086,6 +3466,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00190",
+      "emdexCode": null,
+      "source": null,
       "name": "Febuxostat",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Non-steroidal anti-inflammatory, gout and rheumatoid medicines",
@@ -3102,6 +3484,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00191",
+      "emdexCode": null,
+      "source": null,
       "name": "Fentanyl",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Narcotic analgesics",
@@ -3118,6 +3502,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00192",
+      "emdexCode": null,
+      "source": null,
       "name": "Ferric ammonium citrate",
       "genericClass": "Anti-Anaemia",
       "pharmaceuticalClass": "General",
@@ -3134,6 +3520,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00193",
+      "emdexCode": "B03AA;",
+      "source": null,
       "name": "Ferrous salt",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "Antianaemia medicines (Haematinics)",
@@ -3150,6 +3538,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00194",
+      "emdexCode": null,
+      "source": null,
       "name": "Ferrous salts",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "General",
@@ -3166,6 +3556,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00195",
+      "emdexCode": null,
+      "source": null,
       "name": "Finasteride",
       "genericClass": "Urinary And Erectile Dysfunctions Medicines",
       "pharmaceuticalClass": "General",
@@ -3182,6 +3574,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00196",
+      "emdexCode": null,
+      "source": null,
       "name": "Flucloxacillin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -3198,6 +3592,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00197",
+      "emdexCode": "J02AC01",
+      "source": null,
       "name": "Fluconazole",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antifungal medicines (systemic)",
@@ -3214,6 +3610,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00198",
+      "emdexCode": null,
+      "source": null,
       "name": "Fludarabine",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -3230,6 +3628,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00199",
+      "emdexCode": "H02AA02",
+      "source": null,
       "name": "Fludrocortisone",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Adrenal hormones and synthetic substitutes",
@@ -3246,6 +3646,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00200",
+      "emdexCode": null,
+      "source": null,
       "name": "Flumazenil",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Specific",
@@ -3262,6 +3664,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00201",
+      "emdexCode": null,
+      "source": null,
       "name": "Fluocinolone",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Anti-inflammatory and antipruritic Medicines",
@@ -3278,6 +3682,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00202",
+      "emdexCode": "S01JA01",
+      "source": null,
       "name": "Fluorescein",
       "genericClass": "Diagnostic Agents",
       "pharmaceuticalClass": "Ophthalmic medicines",
@@ -3294,6 +3700,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00203",
+      "emdexCode": null,
+      "source": null,
       "name": "Fluorescein sodium",
       "genericClass": "Ophthalmological Preparations",
       "pharmaceuticalClass": "Diagnostic eye medicines",
@@ -3310,6 +3718,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00204",
+      "emdexCode": "L01BC02",
+      "source": null,
       "name": "Fluorouracil",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -3326,6 +3736,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00205",
+      "emdexCode": "N06AB03",
+      "source": null,
       "name": "Fluoxetine",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines used in depressive disorders",
@@ -3342,6 +3754,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00206",
+      "emdexCode": null,
+      "source": null,
       "name": "Fluphenazine",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines used in psychotic disorders",
@@ -3358,6 +3772,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00207",
+      "emdexCode": null,
+      "source": null,
       "name": "Flutamide",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -3374,6 +3790,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00208",
+      "emdexCode": null,
+      "source": null,
       "name": "Fluticasone furoate",
       "genericClass": "Medicines For Ear, Nose And Throat",
       "pharmaceuticalClass": "General",
@@ -3390,6 +3808,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00209",
+      "emdexCode": "B03BB01",
+      "source": null,
       "name": "Folic acid",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "Antianaemia medicines (Haematinics)",
@@ -3427,6 +3847,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00210",
+      "emdexCode": null,
+      "source": null,
       "name": "Fomepizole",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Specific",
@@ -3443,6 +3865,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00211",
+      "emdexCode": null,
+      "source": null,
       "name": "Formaldehyde",
       "genericClass": "Antiseptics And Disinfectants",
       "pharmaceuticalClass": "General",
@@ -3459,6 +3883,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00212",
+      "emdexCode": "C03CA01;C03CA01",
+      "source": null,
       "name": "Furosemide",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Medicines used in heart failure",
@@ -3475,6 +3901,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00213",
+      "emdexCode": null,
+      "source": null,
       "name": "Gatifloxacin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Anti-tuberculosis medicines",
@@ -3491,6 +3919,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00214",
+      "emdexCode": null,
+      "source": null,
       "name": "Gemcitabine",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -3507,6 +3937,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00215",
+      "emdexCode": "J01GB03;S01AA11",
+      "source": null,
       "name": "Gentamicin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -3523,6 +3955,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00216",
+      "emdexCode": "D01Ae02",
+      "source": null,
       "name": "Gentian violet",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Anti-infective medicines",
@@ -3539,6 +3973,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00217",
+      "emdexCode": null,
+      "source": null,
       "name": "Glibenclamide",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Oral antidiabetic medicines",
@@ -3555,6 +3991,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00218",
+      "emdexCode": null,
+      "source": null,
       "name": "Gliclazide",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Oral antidiabetic medicines",
@@ -3571,6 +4009,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00219",
+      "emdexCode": null,
+      "source": null,
       "name": "Glimepyride",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -3587,6 +4027,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00220",
+      "emdexCode": null,
+      "source": null,
       "name": "Glucagon",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Medicines for hypoglycaemia",
@@ -3603,6 +4045,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00221",
+      "emdexCode": "B05BA03",
+      "source": null,
       "name": "Glucose",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Oral rehydration",
@@ -3619,6 +4063,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00222",
+      "emdexCode": "B05BB02",
+      "source": null,
       "name": "Glucose with sodium chloride",
       "genericClass": "Disturbances",
       "pharmaceuticalClass": "Parenteral",
@@ -3635,6 +4081,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00223",
+      "emdexCode": null,
+      "source": null,
       "name": "Glutaraldehyde",
       "genericClass": "Antiseptics And Disinfectants",
       "pharmaceuticalClass": "General",
@@ -3651,6 +4099,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00224",
+      "emdexCode": null,
+      "source": null,
       "name": "Glyceryl trinitrate",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Anti-anginal medicines",
@@ -3667,6 +4117,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00225",
+      "emdexCode": null,
+      "source": null,
       "name": "Goserelin",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -3683,6 +4135,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00226",
+      "emdexCode": "N05AD01",
+      "source": null,
       "name": "Haloperidol",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines used in psychotic disorders",
@@ -3699,6 +4153,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00227",
+      "emdexCode": "N01AB01",
+      "source": null,
       "name": "Halothane",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Inhalational medicines",
@@ -3715,6 +4171,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00228",
+      "emdexCode": "B01AB01",
+      "source": null,
       "name": "Heparin sodium",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "Medicines affecting coagulation",
@@ -3731,6 +4189,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00229",
+      "emdexCode": null,
+      "source": null,
       "name": "Hepatitis B immunoglobulin",
       "genericClass": "Blood Products Of Human Origin And Plasma Substitutes",
       "pharmaceuticalClass": "Human immunoglobulins",
@@ -3747,6 +4207,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00230",
+      "emdexCode": null,
+      "source": null,
       "name": "Hexetidine",
       "genericClass": "Throat Antiseptic Preparations",
       "pharmaceuticalClass": "General",
@@ -3763,6 +4225,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00231",
+      "emdexCode": null,
+      "source": null,
       "name": "Hexetidine solution",
       "genericClass": "Dental Medicines",
       "pharmaceuticalClass": "Mouthwashes",
@@ -3779,6 +4243,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00232",
+      "emdexCode": null,
+      "source": null,
       "name": "Histamine phosphate",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Diagnostic agents for gastric function",
@@ -3795,6 +4261,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00233",
+      "emdexCode": null,
+      "source": null,
       "name": "Homatropine",
       "genericClass": "Ophthalmological Preparations",
       "pharmaceuticalClass": "Mydriatic medicines",
@@ -3811,6 +4279,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00234",
+      "emdexCode": null,
+      "source": null,
       "name": "HPV vaccine",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Vaccines",
@@ -3827,6 +4297,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00235",
+      "emdexCode": "J06BA02",
+      "source": null,
       "name": "Human immunoglobulin",
       "genericClass": "Blood Products Of Human Origin And Plasma Substitutes",
       "pharmaceuticalClass": "Human immunoglobulins",
@@ -3843,6 +4315,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00236",
+      "emdexCode": null,
+      "source": null,
       "name": "Hydralazine",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -3859,6 +4333,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00237",
+      "emdexCode": "C03AA03",
+      "source": null,
       "name": "Hydrochlorothiazide",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -3875,6 +4351,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00238",
+      "emdexCode": "H02AB09;H02AB09;D07AA02;H02AB09",
+      "source": null,
       "name": "Hydrocortisone",
       "genericClass": "Antiallergics And Medicines Used In Anaphylaxis",
       "pharmaceuticalClass": "Anti-anaphylactics",
@@ -3891,6 +4369,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00239",
+      "emdexCode": null,
+      "source": null,
       "name": "Hydromorphone",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines used in substance dependence programmes",
@@ -3907,6 +4387,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00240",
+      "emdexCode": "B03BA03",
+      "source": null,
       "name": "Hydroxocobalamin",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "Antianaemia medicines (Haematinics)",
@@ -3923,6 +4405,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00241",
+      "emdexCode": null,
+      "source": null,
       "name": "Hydroxychloroquine",
       "genericClass": "Medicines For Rheumatic And Musculoskeletal Diseases",
       "pharmaceuticalClass": "Disease-modifying agents used in rheumatic disorders (DMARDs)",
@@ -3939,6 +4423,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00242",
+      "emdexCode": null,
+      "source": null,
       "name": "Hydroxyurea",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "Medicines for haemoglobinopathies",
@@ -3955,6 +4441,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00243",
+      "emdexCode": null,
+      "source": null,
       "name": "Hyoscine hydrobromide",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Medicines for other symptoms common in palliative care",
@@ -3971,6 +4459,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00244",
+      "emdexCode": null,
+      "source": null,
       "name": "Hyoscine N-butylbromide",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "General",
@@ -3987,6 +4477,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00245",
+      "emdexCode": null,
+      "source": null,
       "name": "Idoxuridine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antiherpes medicines",
@@ -4003,6 +4495,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00246",
+      "emdexCode": null,
+      "source": null,
       "name": "Ifosfamide",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -4019,6 +4513,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00247",
+      "emdexCode": null,
+      "source": null,
       "name": "Imatinib",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -4035,6 +4531,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00248",
+      "emdexCode": "J01DH51",
+      "source": null,
       "name": "Imipenem + Cilastatin (Imp + Cln)",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial Medicine",
@@ -4052,6 +4550,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00249",
+      "emdexCode": null,
+      "source": null,
       "name": "Indapamide",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -4068,6 +4568,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00250",
+      "emdexCode": null,
+      "source": null,
       "name": "Indinavir",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Protease inhibitors",
@@ -4084,6 +4586,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00251",
+      "emdexCode": null,
+      "source": null,
       "name": "Insulin, aspart",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Insulin preparations",
@@ -4100,6 +4604,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00252",
+      "emdexCode": null,
+      "source": null,
       "name": "Insulin glargine",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Insulin preparations",
@@ -4116,6 +4622,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00253",
+      "emdexCode": null,
+      "source": null,
       "name": "Insulin, glulisine",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Insulin preparations",
@@ -4132,6 +4640,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00254",
+      "emdexCode": "A10AB",
+      "source": null,
       "name": "Insulin, soluble",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Insulin preparations",
@@ -4148,6 +4658,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00255",
+      "emdexCode": "A10AC",
+      "source": null,
       "name": "Intermediate-acting insulin",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Insulin preparations",
@@ -4164,6 +4676,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00256",
+      "emdexCode": "B05DA",
+      "source": null,
       "name": "Intraperitoneal dialysis solution (of appropriate composition)",
       "genericClass": "Peritoneal Dialysis Solution",
       "pharmaceuticalClass": "General",
@@ -4180,6 +4694,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00257",
+      "emdexCode": "H03CA",
+      "source": null,
       "name": "Iodine",
       "genericClass": "Antiseptics And Disinfectants",
       "pharmaceuticalClass": "General",
@@ -4196,6 +4712,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00258",
+      "emdexCode": null,
+      "source": null,
       "name": "Ipratropium bromide",
       "genericClass": "Medicines Acting On The Respiratory Tract",
       "pharmaceuticalClass": "Antiasthmatic medicines",
@@ -4212,6 +4730,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00259",
+      "emdexCode": null,
+      "source": null,
       "name": "Irinotecan",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -4228,6 +4748,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00260",
+      "emdexCode": null,
+      "source": null,
       "name": "Iron dextran",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "Anti-Anaemia Medicines",
@@ -4244,6 +4766,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00261",
+      "emdexCode": null,
+      "source": null,
       "name": "Iron sucrose",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "Anti-Anaemia Medicines",
@@ -4260,6 +4784,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00262",
+      "emdexCode": "J04AC01",
+      "source": null,
       "name": "Isoniazid",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antituberculosis medicines",
@@ -4276,6 +4802,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00263",
+      "emdexCode": null,
+      "source": null,
       "name": "Isosorbide dinitrate",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Anti-anginal medicines",
@@ -4292,6 +4820,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00264",
+      "emdexCode": "P02CF01",
+      "source": null,
       "name": "Ivermectin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antifilarials",
@@ -4308,6 +4838,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00265",
+      "emdexCode": "J01GB04",
+      "source": null,
       "name": "Kanamycin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Anti-tuberculosis medicines",
@@ -4324,6 +4856,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00266",
+      "emdexCode": "N01AX03",
+      "source": null,
       "name": "Ketamine",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Injectable medicines",
@@ -4340,6 +4874,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00267",
+      "emdexCode": null,
+      "source": null,
       "name": "Ketoprofen",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Non-steroidal anti-inflammatory, gout and rheumatoid medicines",
@@ -4356,6 +4892,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00268",
+      "emdexCode": null,
+      "source": null,
       "name": "Ketotifen",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Anti-inflammatory and antipruritic Medicines",
@@ -4372,6 +4910,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00269",
+      "emdexCode": null,
+      "source": null,
       "name": "Labetalol",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -4388,6 +4928,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00270",
+      "emdexCode": null,
+      "source": null,
       "name": "Lactulose",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Laxatives",
@@ -4404,6 +4946,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00271",
+      "emdexCode": "J05AF05",
+      "source": null,
       "name": "Lamivudine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Nucleoside + nucleotide reverse transcriptase inhibitors",
@@ -4420,6 +4964,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00272",
+      "emdexCode": "J05AR05",
+      "source": null,
       "name": "Lamivudine + Nevirapine + Zidovudine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Fixed-dose combinations (adult First line)",
@@ -4438,6 +4984,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00273",
+      "emdexCode": "J05AR01",
+      "source": null,
       "name": "Lamivudine + Zidovudine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Fixed-dose combinations (adult First line)",
@@ -4455,6 +5003,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00274",
+      "emdexCode": null,
+      "source": null,
       "name": "Latanoprost",
       "genericClass": "Ophthalmological Preparations",
       "pharmaceuticalClass": "Miotics and antiglaucoma medicines",
@@ -4471,6 +5021,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00275",
+      "emdexCode": null,
+      "source": null,
       "name": "Leflunomide",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Non-steroidal anti-inflammatory, gout and rheumatoid medicines",
@@ -4487,6 +5039,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00276",
+      "emdexCode": null,
+      "source": null,
       "name": "Letrozole",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -4503,6 +5057,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00277",
+      "emdexCode": null,
+      "source": null,
       "name": "Leuprolide",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -4519,6 +5075,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00278",
+      "emdexCode": "P02Ce01",
+      "source": null,
       "name": "Levamisole",
       "genericClass": "Antihelminthics",
       "pharmaceuticalClass": "General",
@@ -4535,6 +5093,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00279",
+      "emdexCode": null,
+      "source": null,
       "name": "Levodopa + Carbidopa",
       "genericClass": "Medicines For Parkinsonism And Other Neurological Disorders",
       "pharmaceuticalClass": "Antiparkinsonism medicines",
@@ -4552,6 +5112,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00280",
+      "emdexCode": null,
+      "source": null,
       "name": "Levofloxacin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -4568,6 +5130,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00281",
+      "emdexCode": null,
+      "source": null,
       "name": "Levonorgestrel",
       "genericClass": "Contraceptives",
       "pharmaceuticalClass": "General",
@@ -4584,6 +5148,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00282",
+      "emdexCode": "H03AA01",
+      "source": null,
       "name": "Levothyroxine",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Thyroid hormone",
@@ -4600,6 +5166,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00283",
+      "emdexCode": null,
+      "source": null,
       "name": "Lidnocaine ( hydrochloride)",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -4616,6 +5184,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00284",
+      "emdexCode": null,
+      "source": null,
       "name": "Linezolid",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Anti-tuberculosis medicines",
@@ -4632,6 +5202,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00285",
+      "emdexCode": null,
+      "source": null,
       "name": "Liothyronine",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Thyroid hormone",
@@ -4648,6 +5220,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00286",
+      "emdexCode": null,
+      "source": null,
       "name": "Liquid paraffin",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Laxatives",
@@ -4664,6 +5238,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00287",
+      "emdexCode": null,
+      "source": null,
       "name": "Lisinopril",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -4680,6 +5256,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00288",
+      "emdexCode": null,
+      "source": null,
       "name": "Lithium carbonate",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines used in bipolar disorders",
@@ -4696,6 +5274,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00289",
+      "emdexCode": null,
+      "source": null,
       "name": "Loperamide",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Medicines for reducing intestinal motility",
@@ -4712,6 +5292,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00290",
+      "emdexCode": "J05Ae03;",
+      "source": null,
       "name": "Lopinavir + Ritonavir",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Protease inhibitors",
@@ -4729,6 +5311,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00291",
+      "emdexCode": null,
+      "source": null,
       "name": "Lopinavir + ritonavir(LPV + r",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -4747,6 +5331,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00292",
+      "emdexCode": null,
+      "source": null,
       "name": "Loratadine",
       "genericClass": "Antiallergics And Medicines Used In Anaphylaxis",
       "pharmaceuticalClass": "Anti-histamines",
@@ -4763,6 +5349,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00293",
+      "emdexCode": "D08AG",
+      "source": null,
       "name": "Lugol's solution",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Antithyroid medicines",
@@ -4779,6 +5367,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00294",
+      "emdexCode": null,
+      "source": null,
       "name": "lumefantrine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -4795,6 +5385,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00295",
+      "emdexCode": "A02AA04",
+      "source": null,
       "name": "Magnesium hydroxide",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Antacids",
@@ -4811,6 +5403,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00296",
+      "emdexCode": null,
+      "source": null,
       "name": "Magnesium sulfate",
       "genericClass": "Anticonvulsants + Anti-Epileptics",
       "pharmaceuticalClass": "General",
@@ -4827,6 +5421,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00297",
+      "emdexCode": null,
+      "source": null,
       "name": "Magnesium sulphate",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -4843,6 +5439,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00298",
+      "emdexCode": null,
+      "source": null,
       "name": "Magnesium trisilicate",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Antacids",
@@ -4859,6 +5457,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00299",
+      "emdexCode": "B05BC01",
+      "source": null,
       "name": "Mannitol",
       "genericClass": "Diuretics",
       "pharmaceuticalClass": "General",
@@ -4875,6 +5475,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00300",
+      "emdexCode": "J07BD52;",
+      "source": null,
       "name": "Measles vaccine",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Vaccines",
@@ -4891,6 +5493,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00301",
+      "emdexCode": null,
+      "source": null,
       "name": "Mebendazole",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Intestinal anthelminthics",
@@ -4907,6 +5511,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00302",
+      "emdexCode": null,
+      "source": null,
       "name": "Mechlorethamine",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -4923,6 +5529,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00303",
+      "emdexCode": null,
+      "source": null,
       "name": "Medroxyprogesterone",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Estrogens",
@@ -4939,6 +5547,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00304",
+      "emdexCode": "P01BC02;P01BC02",
+      "source": null,
       "name": "Mefloquine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Prophylaxis",
@@ -4955,6 +5565,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00305",
+      "emdexCode": "P01CD01",
+      "source": null,
       "name": "Melarsoprol",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Medicines for the treatment of second stage African trypanosomiasis",
@@ -4971,6 +5583,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00306",
+      "emdexCode": null,
+      "source": null,
       "name": "Melphalan",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -4987,6 +5601,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00307",
+      "emdexCode": "J07AH",
+      "source": null,
       "name": "Meningococcal meningitis vaccine",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Vaccines",
@@ -5003,6 +5619,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00308",
+      "emdexCode": null,
+      "source": null,
       "name": "Menthol",
       "genericClass": "Dressings, Consumables And Miscellaneous",
       "pharmaceuticalClass": "General",
@@ -5019,6 +5637,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00309",
+      "emdexCode": null,
+      "source": null,
       "name": "Menthol + Ascorbic acid + Hydrous citric acid",
       "genericClass": "Throat Antiseptic Preparations",
       "pharmaceuticalClass": "General",
@@ -5037,6 +5657,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00310",
+      "emdexCode": null,
+      "source": null,
       "name": "Menthol + Eucalyptus oil + Camphor + Thymol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -5056,6 +5678,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00311",
+      "emdexCode": "L01BB02",
+      "source": null,
       "name": "Mercaptopurine",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -5072,6 +5696,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00312",
+      "emdexCode": null,
+      "source": null,
       "name": "Meropenem",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial Medicine",
@@ -5088,6 +5714,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00313",
+      "emdexCode": null,
+      "source": null,
       "name": "Mesna",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -5104,6 +5732,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00314",
+      "emdexCode": "A10BA02",
+      "source": null,
       "name": "Metformin",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Oral antidiabetic medicines",
@@ -5120,6 +5750,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00315",
+      "emdexCode": null,
+      "source": null,
       "name": "Methadone",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines used in substance dependence programmes (See Restricted Medicines List)",
@@ -5136,6 +5768,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00316",
+      "emdexCode": null,
+      "source": null,
       "name": "Methionine",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Specific",
@@ -5152,6 +5786,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00317",
+      "emdexCode": null,
+      "source": null,
       "name": "Methocarbamol",
       "genericClass": "Inhibitors",
       "pharmaceuticalClass": "General",
@@ -5168,6 +5804,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00318",
+      "emdexCode": "L04AX03",
+      "source": null,
       "name": "Methotrexate",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -5184,6 +5822,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00319",
+      "emdexCode": null,
+      "source": null,
       "name": "Methyl salicylate",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Anti-inflammatory and antipruritic medicines",
@@ -5200,6 +5840,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00320",
+      "emdexCode": null,
+      "source": null,
       "name": "Methyl salicylate compound preparations",
       "genericClass": "Rubefacients And Inhalers",
       "pharmaceuticalClass": "General",
@@ -5216,6 +5858,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00321",
+      "emdexCode": null,
+      "source": null,
       "name": "Methylammonium chloride (methylene blue)",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Specific",
@@ -5232,6 +5876,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00322",
+      "emdexCode": null,
+      "source": null,
       "name": "Methylated spirit",
       "genericClass": "Antiseptics And Disinfectants",
       "pharmaceuticalClass": "General",
@@ -5248,6 +5894,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00323",
+      "emdexCode": null,
+      "source": null,
       "name": "Methylcellulose",
       "genericClass": "Ophthalmological Preparations",
       "pharmaceuticalClass": "Miscellaneous eye preparation",
@@ -5264,6 +5912,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00324",
+      "emdexCode": null,
+      "source": null,
       "name": "Methyldopa",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -5280,6 +5930,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00325",
+      "emdexCode": null,
+      "source": null,
       "name": "Methylprednisolone",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Adrenal hormones and synthetic substitutes",
@@ -5296,6 +5948,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00326",
+      "emdexCode": null,
+      "source": null,
       "name": "Methylpsoralen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -5312,6 +5966,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00327",
+      "emdexCode": "A03FA01",
+      "source": null,
       "name": "Metoclopramide",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Antiemetic medicines",
@@ -5328,6 +5984,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00328",
+      "emdexCode": null,
+      "source": null,
       "name": "Metoprolol",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Anti-anginal medicines",
@@ -5344,6 +6002,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00329",
+      "emdexCode": "J01XD01;P01AB01",
+      "source": null,
       "name": "Metronidazole",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antiamoebic and antigiardiasis medicines",
@@ -5360,6 +6020,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00330",
+      "emdexCode": null,
+      "source": null,
       "name": "Metyrapone",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Diagnostic agents for endocrine disorders",
@@ -5376,6 +6038,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00331",
+      "emdexCode": "D01AC02",
+      "source": null,
       "name": "Miconazole",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antifungal medicines (systemic)",
@@ -5392,6 +6056,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00332",
+      "emdexCode": null,
+      "source": null,
       "name": "Miconazole + hydrocortisone",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Antifungal medicines",
@@ -5409,6 +6075,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00333",
+      "emdexCode": "N05CD08",
+      "source": null,
       "name": "Midazolam",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Preoperative medication and anaesthetic adjuvants",
@@ -5425,6 +6093,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00334",
+      "emdexCode": null,
+      "source": null,
       "name": "Mifepristone",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Other hormone inhibitors",
@@ -5441,6 +6111,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00335",
+      "emdexCode": null,
+      "source": null,
       "name": "Mifepristone + Misoprostol",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "For Management of incomplete abortion and miscarriage",
@@ -5458,6 +6130,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00336",
+      "emdexCode": null,
+      "source": null,
       "name": "Misoprostol",
       "genericClass": "Oxytocics",
       "pharmaceuticalClass": "General",
@@ -5474,6 +6148,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00337",
+      "emdexCode": null,
+      "source": null,
       "name": "Mitoxantrone",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -5490,6 +6166,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00338",
+      "emdexCode": null,
+      "source": null,
       "name": "Monosulfiram",
       "genericClass": "Gastric Acid Suppressant",
       "pharmaceuticalClass": "General",
@@ -5506,6 +6184,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00339",
+      "emdexCode": "N02AA01;N02AA01;N02AA01",
+      "source": null,
       "name": "Morphine",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Preoperative medication and anaesthetic adjuvants",
@@ -5522,6 +6202,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00340",
+      "emdexCode": null,
+      "source": null,
       "name": "Moxifloxacin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Anti-tuberculosis medicines",
@@ -5538,6 +6220,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00341",
+      "emdexCode": null,
+      "source": null,
       "name": "Multi vitamins",
       "genericClass": "Vitamins, Minerals And Nutritionals",
       "pharmaceuticalClass": "General",
@@ -5554,6 +6238,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00342",
+      "emdexCode": null,
+      "source": null,
       "name": "Mupirocin",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Anti-infective medicines",
@@ -5570,6 +6256,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00343",
+      "emdexCode": null,
+      "source": null,
       "name": "Mycophenolate Mofetil",
       "genericClass": "Medicines For Rheumatic And Musculoskeletal Diseases",
       "pharmaceuticalClass": "Disease-modifying agents used in rheumatic disorders (DMARDs)",
@@ -5586,6 +6274,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00344",
+      "emdexCode": null,
+      "source": null,
       "name": "Naloxone",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Specific",
@@ -5602,6 +6292,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00345",
+      "emdexCode": null,
+      "source": null,
       "name": "Naltrexone",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines used in substance dependence programmes (See Restricted Medicines List)",
@@ -5618,6 +6310,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00346",
+      "emdexCode": null,
+      "source": null,
       "name": "Naproxen",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Non-steroidal anti-inflammatory, gout and rheumatoid medicines",
@@ -5634,6 +6328,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00347",
+      "emdexCode": null,
+      "source": null,
       "name": "Natamycin",
       "genericClass": "Ophthalmological Preparations",
       "pharmaceuticalClass": "Anti-infective agents",
@@ -5650,6 +6346,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00348",
+      "emdexCode": null,
+      "source": null,
       "name": "Neomycin",
       "genericClass": "Medicines For Ear, Nose And Throat",
       "pharmaceuticalClass": "General",
@@ -5666,6 +6364,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00349",
+      "emdexCode": "D06AX04",
+      "source": null,
       "name": "Neomycin + Bacitracin",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "General",
@@ -5683,6 +6383,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00350",
+      "emdexCode": "N07AA01",
+      "source": null,
       "name": "Neostigmine",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Skeletal muscle relaxants and cholinesterase inhibitors",
@@ -5699,6 +6401,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00351",
+      "emdexCode": null,
+      "source": null,
       "name": "Nicotinamide",
       "genericClass": "Vitamins, Minerals And Nutritionals",
       "pharmaceuticalClass": "General",
@@ -5736,6 +6440,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00352",
+      "emdexCode": null,
+      "source": null,
       "name": "Nifedipine",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -5752,6 +6458,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00353",
+      "emdexCode": "P01CC01",
+      "source": null,
       "name": "Nifurtimox",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Medicines for the treatment of second stage African trypanosomiasis",
@@ -5768,6 +6476,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00354",
+      "emdexCode": null,
+      "source": null,
       "name": "Nimodipine",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -5784,6 +6494,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00355",
+      "emdexCode": "J01Xe01",
+      "source": null,
       "name": "Nitrofurantoin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial medicines",
@@ -5800,6 +6512,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00356",
+      "emdexCode": "N01AX13",
+      "source": null,
       "name": "Nitrous oxide",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Inhalational medicines",
@@ -5816,6 +6530,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00357",
+      "emdexCode": "A07AA02",
+      "source": null,
       "name": "Nystatin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antifungal medicines (systemic)",
@@ -5832,6 +6548,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00358",
+      "emdexCode": null,
+      "source": null,
       "name": "Octreotide",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Other hormone inhibitor",
@@ -5848,6 +6566,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00359",
+      "emdexCode": null,
+      "source": null,
       "name": "Olopatadine",
       "genericClass": "Ophthalmological Preparations",
       "pharmaceuticalClass": "Anti-inflammatory and anti-allergic medicines",
@@ -5864,6 +6584,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00360",
+      "emdexCode": "A02BC01",
+      "source": null,
       "name": "Omeprazole",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Antiulcer medicines",
@@ -5880,6 +6602,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00361",
+      "emdexCode": "A04AA01",
+      "source": null,
       "name": "Ondansetron",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -5896,6 +6620,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00362",
+      "emdexCode": null,
+      "source": null,
       "name": "Oxamniquine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Intestinal anthelminthics",
@@ -5912,6 +6638,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00363",
+      "emdexCode": null,
+      "source": null,
       "name": "Oxycodone",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines used in substance dependence programmes",
@@ -5928,6 +6656,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00364",
+      "emdexCode": "V03AN01",
+      "source": null,
       "name": "Oxygen",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Inhalational medicines",
@@ -5944,6 +6674,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00365",
+      "emdexCode": null,
+      "source": null,
       "name": "Oxytocin",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Uterotonics",
@@ -5960,6 +6692,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00366",
+      "emdexCode": "J04AA01",
+      "source": null,
       "name": "p-aminosalicylic acid",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antituberculosis medicines",
@@ -5976,6 +6710,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00367",
+      "emdexCode": null,
+      "source": null,
       "name": "Paclitaxel",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -5992,6 +6728,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00368",
+      "emdexCode": null,
+      "source": null,
       "name": "Pancuronium",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Skeletal muscle relaxants and cholinesterase inhibitors",
@@ -6008,6 +6746,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00369",
+      "emdexCode": null,
+      "source": null,
       "name": "Pantothenic acid",
       "genericClass": "Vitamins, Minerals And Nutritionals",
       "pharmaceuticalClass": "General",
@@ -6045,6 +6785,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00370",
+      "emdexCode": "N02Be01;N02Be01",
+      "source": null,
       "name": "Paracetamol",
       "genericClass": "Antimigraine Medicines",
       "pharmaceuticalClass": "For treatment of acute attack",
@@ -6061,6 +6803,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00371",
+      "emdexCode": null,
+      "source": null,
       "name": "Paraldehyde",
       "genericClass": "Anticonvulsants",
       "pharmaceuticalClass": "General",
@@ -6077,6 +6821,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00372",
+      "emdexCode": null,
+      "source": null,
       "name": "Pegylated interferon alpha-2b",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Other antivirals",
@@ -6093,6 +6839,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00373",
+      "emdexCode": null,
+      "source": null,
       "name": "Pengrastrin",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Diagnostic agents for gastric function",
@@ -6109,6 +6857,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00374",
+      "emdexCode": "P01CX01",
+      "source": null,
       "name": "Pentamidine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Medicines for the treatment of first stage African trypanosomiasis",
@@ -6125,6 +6875,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00375",
+      "emdexCode": null,
+      "source": null,
       "name": "Pentazocine",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Narcotic analgesics",
@@ -6141,6 +6893,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00376",
+      "emdexCode": "P03AC04",
+      "source": null,
       "name": "Permethrin",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Scabicides and pediculicides",
@@ -6157,6 +6911,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00377",
+      "emdexCode": null,
+      "source": null,
       "name": "Pethidine",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Narcotic analgesics",
@@ -6173,6 +6929,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00378",
+      "emdexCode": "N03AA02",
+      "source": null,
       "name": "Phenobarbital",
       "genericClass": "Anticonvulsants + Anti-Epileptics",
       "pharmaceuticalClass": "General",
@@ -6189,6 +6947,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00379",
+      "emdexCode": "J01Ce02",
+      "source": null,
       "name": "Phenoxymethylpenicillin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial Medicine",
@@ -6205,6 +6965,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00380",
+      "emdexCode": null,
+      "source": null,
       "name": "Phenylephrine",
       "genericClass": "Ophthalmological Preparations",
       "pharmaceuticalClass": "Mydriatic medicines",
@@ -6221,6 +6983,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00381",
+      "emdexCode": "B02BA01",
+      "source": null,
       "name": "Phytomenadione (Vit K1)",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Specific",
@@ -6237,6 +7001,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00382",
+      "emdexCode": null,
+      "source": null,
       "name": "Pilocarpine",
       "genericClass": "Ophthalmological Preparations",
       "pharmaceuticalClass": "Miotics and antiglaucoma medicines",
@@ -6253,6 +7019,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00383",
+      "emdexCode": null,
+      "source": null,
       "name": "Pimozide",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines used in bipolar disorders",
@@ -6269,6 +7037,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00384",
+      "emdexCode": null,
+      "source": null,
       "name": "Piperacillin + Tazobactam",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial Medicine",
@@ -6286,6 +7056,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00385",
+      "emdexCode": "D06BB04",
+      "source": null,
       "name": "Podophyllum resin",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Medicines affecting skin differentiation and proliferation",
@@ -6302,6 +7074,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00386",
+      "emdexCode": "J07BF01;",
+      "source": null,
       "name": "Poliomyelitis vaccine",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Vaccines",
@@ -6318,6 +7092,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00387",
+      "emdexCode": null,
+      "source": null,
       "name": "Polygeline",
       "genericClass": "Blood Products Of Human Origin And Plasma Substitutes",
       "pharmaceuticalClass": "Plasma substitutes",
@@ -6334,6 +7110,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00388",
+      "emdexCode": "A12BA01;B05XA01",
+      "source": null,
       "name": "Potassium chloride",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Oral rehydration",
@@ -6350,6 +7128,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00389",
+      "emdexCode": "D01BA;H03CA",
+      "source": null,
       "name": "Potassium iodide",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Antithyroid medicines",
@@ -6366,6 +7146,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00390",
+      "emdexCode": "D08AX06",
+      "source": null,
       "name": "Potassium permanganate",
       "genericClass": "Antiseptics And Disinfectants",
       "pharmaceuticalClass": "General",
@@ -6382,6 +7164,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00391",
+      "emdexCode": "D08AG02",
+      "source": null,
       "name": "Povidone iodine",
       "genericClass": "Antiseptics And Disinfectants",
       "pharmaceuticalClass": "General",
@@ -6398,6 +7182,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00392",
+      "emdexCode": null,
+      "source": null,
       "name": "Pralidoxime",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Specific",
@@ -6414,6 +7200,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00393",
+      "emdexCode": "P02BA01;P02BA01",
+      "source": null,
       "name": "Praziquantel",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antischistosomals and other antitrematode medicines",
@@ -6430,6 +7218,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00394",
+      "emdexCode": "H02AB06;H02AB06;S01BA04",
+      "source": null,
       "name": "Prednisolone",
       "genericClass": "Antiallergics And Medicines Used In Anaphylaxis",
       "pharmaceuticalClass": "Anti-histamines",
@@ -6446,6 +7236,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00395",
+      "emdexCode": null,
+      "source": null,
       "name": "Pregabalin",
       "genericClass": "Anticonvulsants + Anti-Epileptics",
       "pharmaceuticalClass": "General",
@@ -6462,6 +7254,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00396",
+      "emdexCode": null,
+      "source": null,
       "name": "Prilocaine",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Local anaesthetics",
@@ -6478,6 +7272,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00397",
+      "emdexCode": null,
+      "source": null,
       "name": "Procainamide",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Anti-arrhythmic medicines",
@@ -6494,6 +7290,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00398",
+      "emdexCode": "L01XB01",
+      "source": null,
       "name": "Procarbazine",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -6510,6 +7308,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00399",
+      "emdexCode": null,
+      "source": null,
       "name": "Progestogens",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Estrogens",
@@ -6526,6 +7326,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00400",
+      "emdexCode": "P01BB01",
+      "source": null,
       "name": "Proguanil",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Prophylaxis",
@@ -6542,6 +7344,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00401",
+      "emdexCode": null,
+      "source": null,
       "name": "Promethazine",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Preoperative medication and anaesthetic adjuvants",
@@ -6558,6 +7362,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00402",
+      "emdexCode": null,
+      "source": null,
       "name": "Propofol",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Injectable medicines",
@@ -6574,6 +7380,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00403",
+      "emdexCode": null,
+      "source": null,
       "name": "Propranolol",
       "genericClass": "Antimigraine Medicines",
       "pharmaceuticalClass": "For prophylaxis",
@@ -6590,6 +7398,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00404",
+      "emdexCode": null,
+      "source": null,
       "name": "Propylthiouracil",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Antithyroid medicines",
@@ -6606,6 +7416,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00405",
+      "emdexCode": "V03AB14",
+      "source": null,
       "name": "Protamine sulfate",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Specific",
@@ -6622,6 +7434,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00406",
+      "emdexCode": null,
+      "source": null,
       "name": "Protamine sulphate",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "Medicines affecting coagulation",
@@ -6638,6 +7452,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00407",
+      "emdexCode": null,
+      "source": null,
       "name": "Prothionamide",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Anti-tuberculosis medicines",
@@ -6654,6 +7470,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00408",
+      "emdexCode": "P02CC01",
+      "source": null,
       "name": "Pyrantel pamoate",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Intestinal anthelminthics",
@@ -6670,6 +7488,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00409",
+      "emdexCode": "J04AK01",
+      "source": null,
       "name": "Pyrazinamide",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antituberculosis medicines",
@@ -6686,6 +7506,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00410",
+      "emdexCode": "N07AA02",
+      "source": null,
       "name": "Pyridostigmine",
       "genericClass": "Medicines For Parkinsonism And Other Neurological Disorders",
       "pharmaceuticalClass": "Medicines for myasthenia gravis",
@@ -6702,6 +7524,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00411",
+      "emdexCode": "A11HA02",
+      "source": null,
       "name": "Pyridoxine",
       "genericClass": "Vitamins And Minerals",
       "pharmaceuticalClass": "General",
@@ -6718,6 +7542,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00412",
+      "emdexCode": "P01BD01",
+      "source": null,
       "name": "Pyrimethamine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antipneumocystosis and antitoxoplasmosis medicines",
@@ -6734,6 +7560,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00413",
+      "emdexCode": null,
+      "source": null,
       "name": "Pyrimethamine + sulfadoxine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "General",
@@ -6751,6 +7579,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00414",
+      "emdexCode": null,
+      "source": null,
       "name": "Pyronaridine tetraphosphate",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -6767,6 +7597,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00415",
+      "emdexCode": "P01BC01",
+      "source": null,
       "name": "Quinine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "For treatment",
@@ -6783,6 +7615,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00416",
+      "emdexCode": null,
+      "source": null,
       "name": "Rabeprazole",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Antiulcer medicines",
@@ -6799,6 +7633,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00417",
+      "emdexCode": "J07BG01",
+      "source": null,
       "name": "Rabies vaccine",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Vaccines",
@@ -6815,6 +7651,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00418",
+      "emdexCode": "A02BA02",
+      "source": null,
       "name": "Ranitidine",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Antiulcer medicines",
@@ -6831,6 +7669,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00419",
+      "emdexCode": null,
+      "source": null,
       "name": "Rapid Diagnostic Test",
       "genericClass": "Diagnostic Agents",
       "pharmaceuticalClass": "General",
@@ -6847,6 +7687,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00420",
+      "emdexCode": "A07CA;A07CA",
+      "source": null,
       "name": "Rehydration Salts",
       "genericClass": "Anti-Diarrhoeal Medicines",
       "pharmaceuticalClass": "General",
@@ -6863,6 +7705,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00421",
+      "emdexCode": "A11CA01;",
+      "source": null,
       "name": "Retinol",
       "genericClass": "Vitamins And Minerals",
       "pharmaceuticalClass": "General",
@@ -6879,6 +7723,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00422",
+      "emdexCode": "J05AB04",
+      "source": null,
       "name": "Ribavirin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Other antivirals",
@@ -6895,6 +7741,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00423",
+      "emdexCode": "A11HA04",
+      "source": null,
       "name": "Riboflavin",
       "genericClass": "Vitamins And Minerals",
       "pharmaceuticalClass": "General",
@@ -6911,6 +7759,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00424",
+      "emdexCode": null,
+      "source": null,
       "name": "Rifabutin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antituberculosis medicines",
@@ -6927,6 +7777,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00425",
+      "emdexCode": null,
+      "source": null,
       "name": "Rifapentine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antituberculosis medicines",
@@ -6943,6 +7795,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00426",
+      "emdexCode": null,
+      "source": null,
       "name": "Ringers lactate",
       "genericClass": "Disturbances",
       "pharmaceuticalClass": "Parenteral",
@@ -6959,6 +7813,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00427",
+      "emdexCode": null,
+      "source": null,
       "name": "Risperidone",
       "genericClass": "Medicines For Mental And Behavioural Disorders",
       "pharmaceuticalClass": "Medicines used in psychotic disorders",
@@ -6975,6 +7831,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00428",
+      "emdexCode": null,
+      "source": null,
       "name": "Rituximab",
       "genericClass": "Medicines For Rheumatic And Musculoskeletal Diseases",
       "pharmaceuticalClass": "Biologicals",
@@ -6991,6 +7849,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00429",
+      "emdexCode": "J07BH01;",
+      "source": null,
       "name": "Rotavirus vaccine",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Vaccines",
@@ -7007,6 +7867,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00430",
+      "emdexCode": "J07BJ01;",
+      "source": null,
       "name": "Rubella vaccine",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Vaccines",
@@ -7023,6 +7885,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00431",
+      "emdexCode": "R03AC02",
+      "source": null,
       "name": "Salbutamol",
       "genericClass": "Medicines Acting On The Respiratory Tract",
       "pharmaceuticalClass": "Antiasthmatic medicines",
@@ -7039,6 +7903,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00432",
+      "emdexCode": "D01Ae12",
+      "source": null,
       "name": "Salicylic acid",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Medicines affecting skin differentiation and proliferation",
@@ -7055,6 +7921,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00433",
+      "emdexCode": null,
+      "source": null,
       "name": "Salmeterol + Fluticasone",
       "genericClass": "Medicines Acting On The Respiratory Tract",
       "pharmaceuticalClass": "Antiasthmatic medicines",
@@ -7072,6 +7940,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00434",
+      "emdexCode": "A06AB06",
+      "source": null,
       "name": "Senna",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Laxatives",
@@ -7088,6 +7958,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00435",
+      "emdexCode": null,
+      "source": null,
       "name": "Sevoflurane",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Inhalational medicines",
@@ -7104,6 +7976,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00436",
+      "emdexCode": null,
+      "source": null,
       "name": "Sildenafil",
       "genericClass": "Urinary And Erectile Dysfunctions Medicines",
       "pharmaceuticalClass": "General",
@@ -7120,6 +7994,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00437",
+      "emdexCode": "D06BA01",
+      "source": null,
       "name": "Silver sulfadiazine",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Anti-infective medicines",
@@ -7136,6 +8012,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00438",
+      "emdexCode": null,
+      "source": null,
       "name": "Silver sulphadiazine",
       "genericClass": "Dermatologicals",
       "pharmaceuticalClass": "General",
@@ -7152,6 +8030,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00439",
+      "emdexCode": null,
+      "source": null,
       "name": "Simvastatin",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Lipid-lowering agents",
@@ -7168,6 +8048,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00440",
+      "emdexCode": null,
+      "source": null,
       "name": "Sitagliptin",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Oral antidiabetic medicines",
@@ -7184,6 +8066,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00441",
+      "emdexCode": null,
+      "source": null,
       "name": "sodium",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antileishmaniasis medicines",
@@ -7200,6 +8084,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00442",
+      "emdexCode": "V03AB03",
+      "source": null,
       "name": "Sodium calcium edetate",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Specific",
@@ -7216,6 +8102,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00443",
+      "emdexCode": "B05XA03",
+      "source": null,
       "name": "Sodium chloride",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Oral rehydration",
@@ -7232,6 +8120,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00444",
+      "emdexCode": "B05XA02",
+      "source": null,
       "name": "Sodium hydrogen carbonate",
       "genericClass": "Disturbances",
       "pharmaceuticalClass": "Parenteral",
@@ -7248,6 +8138,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00445",
+      "emdexCode": null,
+      "source": null,
       "name": "Sodium hypochlorite",
       "genericClass": "Antiseptics And Disinfectants",
       "pharmaceuticalClass": "General",
@@ -7264,6 +8156,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00446",
+      "emdexCode": "P01CB01;",
+      "source": null,
       "name": "Sodium stibogluconate or Meglumine antimoniate",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -7280,6 +8174,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00447",
+      "emdexCode": "N03AG01",
+      "source": null,
       "name": "Sodium valproate",
       "genericClass": "Anticonvulsants + Anti-Epileptics",
       "pharmaceuticalClass": "General",
@@ -7296,6 +8192,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00448",
+      "emdexCode": null,
+      "source": null,
       "name": "Sofosbuvir",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Medicines for hepatitis C",
@@ -7312,6 +8210,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00449",
+      "emdexCode": "C03DA01",
+      "source": null,
       "name": "Spironolactone",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Medicines used in heart failure",
@@ -7328,6 +8228,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00450",
+      "emdexCode": null,
+      "source": null,
       "name": "Stilboestrol",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -7344,6 +8246,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00451",
+      "emdexCode": null,
+      "source": null,
       "name": "Streptokinase",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Thrombolytic medicines",
@@ -7360,6 +8264,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00452",
+      "emdexCode": "J01GA01",
+      "source": null,
       "name": "Streptomycin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antituberculosis medicines",
@@ -7376,6 +8282,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00453",
+      "emdexCode": null,
+      "source": null,
       "name": "Succimer",
       "genericClass": "Antidotes And Other Substances Used In Poisonings",
       "pharmaceuticalClass": "Specific",
@@ -7392,6 +8300,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00454",
+      "emdexCode": null,
+      "source": null,
       "name": "Sulfamethoxazole + Trimethoprim (Co- trimoxazole)",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial Medicine",
@@ -7409,6 +8319,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00455",
+      "emdexCode": null,
+      "source": null,
       "name": "Sulfasalazine",
       "genericClass": "Medicines For Rheumatic And Musculoskeletal Diseases",
       "pharmaceuticalClass": "Disease-modifying agents used in rheumatic disorders (DMARDs)",
@@ -7425,6 +8337,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00456",
+      "emdexCode": null,
+      "source": null,
       "name": "Sumatriptan",
       "genericClass": "Antimigraine Medicines",
       "pharmaceuticalClass": "For treatment of acute attack",
@@ -7441,6 +8355,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00457",
+      "emdexCode": "P01CX02",
+      "source": null,
       "name": "Suramin sodium",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Medicines for the treatment of first stage African trypanosomiasis",
@@ -7457,6 +8373,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00458",
+      "emdexCode": null,
+      "source": null,
       "name": "Surgical Blades",
       "genericClass": "Miscellaneous",
       "pharmaceuticalClass": "General",
@@ -7473,6 +8391,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00459",
+      "emdexCode": "M03AB01",
+      "source": null,
       "name": "Suxamethonium",
       "genericClass": "Anaesthetics, Preoperative Medicines And Medical Gases",
       "pharmaceuticalClass": "Skeletal muscle relaxants and cholinesterase inhibitors",
@@ -7489,6 +8409,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00460",
+      "emdexCode": null,
+      "source": null,
       "name": "Tacrolimus",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Psoriasis and vitiligo medicines",
@@ -7505,6 +8427,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00461",
+      "emdexCode": null,
+      "source": null,
       "name": "Tamoxifen",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -7521,6 +8445,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00462",
+      "emdexCode": null,
+      "source": null,
       "name": "Tazarotene",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Psoriasis and vitiligo medicines",
@@ -7537,6 +8463,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00463",
+      "emdexCode": null,
+      "source": null,
       "name": "Telmisartan",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Antihypertensive medicines",
@@ -7553,6 +8481,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00464",
+      "emdexCode": null,
+      "source": null,
       "name": "Tenofovir",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Fixed-dose combinations (adult First line)",
@@ -7569,6 +8499,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00465",
+      "emdexCode": null,
+      "source": null,
       "name": "Tenofovir + Lamivudine + Atazanavir + Ritonavir",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -7588,6 +8520,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00466",
+      "emdexCode": null,
+      "source": null,
       "name": "Tenofovir + Lamivudine + Dolutegravir",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -7606,6 +8540,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00467",
+      "emdexCode": null,
+      "source": null,
       "name": "Tenofovir + Lamivudine + Dolutegravir + Darunavir + Ritonavir",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -7626,6 +8562,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00468",
+      "emdexCode": null,
+      "source": null,
       "name": "Tenofovir + Lamivudine + Efavirenz",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -7644,6 +8582,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00469",
+      "emdexCode": null,
+      "source": null,
       "name": "Tenofovir + Lamivudine + Lopinavir + Ritonavir",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -7663,6 +8603,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00470",
+      "emdexCode": null,
+      "source": null,
       "name": "Tenofovir + Lamivudine + Zidovudine + Atazanavir + Ritonavir**",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -7683,6 +8625,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00471",
+      "emdexCode": null,
+      "source": null,
       "name": "Terbinafine",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Antifungal medicines",
@@ -7699,6 +8643,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00472",
+      "emdexCode": null,
+      "source": null,
       "name": "Terizidone",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Anti-tuberculosis medicines",
@@ -7715,6 +8661,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00473",
+      "emdexCode": "J07AJ52;",
+      "source": null,
       "name": "Tetanus vaccine",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Vaccines",
@@ -7731,6 +8679,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00474",
+      "emdexCode": "S01HA03",
+      "source": null,
       "name": "Tetracaine",
       "genericClass": "Ophthalmological Preparations",
       "pharmaceuticalClass": "Local anaesthetics",
@@ -7747,6 +8697,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00475",
+      "emdexCode": null,
+      "source": null,
       "name": "Tetracosactide",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "Diagnostic agents for gastric function",
@@ -7763,6 +8715,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00476",
+      "emdexCode": "S01AA09",
+      "source": null,
       "name": "Tetracycline",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial Medicine",
@@ -7779,6 +8733,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00477",
+      "emdexCode": null,
+      "source": null,
       "name": "Thiacetazone",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Anti-tuberculosis medicines",
@@ -7795,6 +8751,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00478",
+      "emdexCode": "A11DA01",
+      "source": null,
       "name": "Thiamine",
       "genericClass": "Vitamins And Minerals",
       "pharmaceuticalClass": "General",
@@ -7811,6 +8769,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00479",
+      "emdexCode": null,
+      "source": null,
       "name": "thioguanine",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -7827,6 +8787,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00480",
+      "emdexCode": null,
+      "source": null,
       "name": "Thyrotropin releasing hormone (TRH)",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Diagnostic agents for endocrine disorders",
@@ -7843,6 +8805,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00481",
+      "emdexCode": null,
+      "source": null,
       "name": "Timolol",
       "genericClass": "Ophthalmological Preparations",
       "pharmaceuticalClass": "Miotics and antiglaucoma medicines",
@@ -7859,6 +8823,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00482",
+      "emdexCode": null,
+      "source": null,
       "name": "Tinidazole",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antiamoebic and antigiardiasis medicines",
@@ -7875,6 +8841,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00483",
+      "emdexCode": null,
+      "source": null,
       "name": "Titanium dioxide",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Sunscreen agents",
@@ -7891,6 +8859,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00484",
+      "emdexCode": null,
+      "source": null,
       "name": "Tizanidine",
       "genericClass": "Inhibitors",
       "pharmaceuticalClass": "General",
@@ -7907,6 +8877,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00485",
+      "emdexCode": null,
+      "source": null,
       "name": "Tocilizumab",
       "genericClass": "Medicines For Rheumatic And Musculoskeletal Diseases",
       "pharmaceuticalClass": "Biologicals",
@@ -7923,6 +8895,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00486",
+      "emdexCode": null,
+      "source": null,
       "name": "Topiramate",
       "genericClass": "Anticonvulsants + Anti-Epileptics",
       "pharmaceuticalClass": "General",
@@ -7939,6 +8913,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00487",
+      "emdexCode": null,
+      "source": null,
       "name": "Torsemide",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Medicines used in heart failure",
@@ -7955,6 +8931,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00488",
+      "emdexCode": null,
+      "source": null,
       "name": "Tramadol",
       "genericClass": "Medicines For Pain And Palliative Care",
       "pharmaceuticalClass": "Narcotic analgesics",
@@ -7971,6 +8949,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00489",
+      "emdexCode": null,
+      "source": null,
       "name": "Tranexamic acid",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "Medicines affecting coagulation",
@@ -7987,6 +8967,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00490",
+      "emdexCode": null,
+      "source": null,
       "name": "Trastuzumab",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -8003,6 +8985,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00491",
+      "emdexCode": null,
+      "source": null,
       "name": "Tretinoin",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Anti-acne medicines",
@@ -8019,6 +9003,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00492",
+      "emdexCode": null,
+      "source": null,
       "name": "Triamcinolone",
       "genericClass": "Dental Medicines",
       "pharmaceuticalClass": "Anti-inflammatory dental medicines",
@@ -8035,6 +9021,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00493",
+      "emdexCode": null,
+      "source": null,
       "name": "Trichlorophenol",
       "genericClass": "Antiseptics And Disinfectants",
       "pharmaceuticalClass": "General",
@@ -8051,6 +9039,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00494",
+      "emdexCode": null,
+      "source": null,
       "name": "Tropicamide",
       "genericClass": "Diagnostic Agents",
       "pharmaceuticalClass": "Ophthalmic medicines",
@@ -8067,6 +9057,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00495",
+      "emdexCode": null,
+      "source": null,
       "name": "Tuberculin",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Diagnostic agents",
@@ -8083,6 +9075,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00496",
+      "emdexCode": "J07AP01;",
+      "source": null,
       "name": "Typhoid vaccine",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Vaccines",
@@ -8099,6 +9093,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00497",
+      "emdexCode": "D02Ae01",
+      "source": null,
       "name": "Urea",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "Medicines affecting skin differentiation and proliferation",
@@ -8115,6 +9111,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00498",
+      "emdexCode": "J01XA01",
+      "source": null,
       "name": "Vancomycin",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Antibacterial Medicine",
@@ -8131,6 +9129,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00499",
+      "emdexCode": null,
+      "source": null,
       "name": "Vasopressin",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Antidiuretic hormones",
@@ -8147,6 +9147,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00500",
+      "emdexCode": null,
+      "source": null,
       "name": "Verapamil",
       "genericClass": "Cardiovascular Medicines",
       "pharmaceuticalClass": "Anti-arrhythmic medicines",
@@ -8163,6 +9165,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00501",
+      "emdexCode": null,
+      "source": null,
       "name": "Vildagliptin",
       "genericClass": "Hormones, Other Endocrine Medicines And Contraceptives",
       "pharmaceuticalClass": "Oral antidiabetic medicines",
@@ -8179,6 +9183,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00502",
+      "emdexCode": "L01CA01",
+      "source": null,
       "name": "Vinblastine",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -8195,6 +9201,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00503",
+      "emdexCode": "L01CA02",
+      "source": null,
       "name": "Vincristine",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -8211,6 +9219,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00504",
+      "emdexCode": null,
+      "source": null,
       "name": "Vitamin A",
       "genericClass": "Vitamins And Minerals",
       "pharmaceuticalClass": "General",
@@ -8278,6 +9288,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00505",
+      "emdexCode": null,
+      "source": null,
       "name": "Vitamin B complex",
       "genericClass": "Vitamins, Minerals And Nutritionals",
       "pharmaceuticalClass": "General",
@@ -8294,6 +9306,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00506",
+      "emdexCode": null,
+      "source": null,
       "name": "Vitamin B1 (Thiamine)",
       "genericClass": "Vitamins, Minerals And Nutritionals",
       "pharmaceuticalClass": "- 3.5 mg",
@@ -8351,6 +9365,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00507",
+      "emdexCode": null,
+      "source": null,
       "name": "Vitamin B12 (Cyanocobalamin)",
       "genericClass": "Vitamins, Minerals And Nutritionals",
       "pharmaceuticalClass": "- 0.6 mg",
@@ -8398,6 +9414,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00508",
+      "emdexCode": null,
+      "source": null,
       "name": "Vitamin B2 (Riboflavin)",
       "genericClass": "Vitamins, Minerals And Nutritionals",
       "pharmaceuticalClass": "- 1 mg",
@@ -8445,6 +9463,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00509",
+      "emdexCode": null,
+      "source": null,
       "name": "Vitamin B6 (Pyridoxine hydrochloride)",
       "genericClass": "Vitamins, Minerals And Nutritionals",
       "pharmaceuticalClass": "- 1 mg",
@@ -8502,6 +9522,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00510",
+      "emdexCode": null,
+      "source": null,
       "name": "Vitamin C (Ascorbic acid)",
       "genericClass": "Vitamins And Minerals",
       "pharmaceuticalClass": "General",
@@ -8539,6 +9561,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00511",
+      "emdexCode": null,
+      "source": null,
       "name": "Vitamin D (Cholecalciferol)",
       "genericClass": "Vitamins, Minerals And Nutritionals",
       "pharmaceuticalClass": "- 2 micrograms",
@@ -8576,6 +9600,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00512",
+      "emdexCode": null,
+      "source": null,
       "name": "Vitamin E",
       "genericClass": "Vitamins, Minerals And Nutritionals",
       "pharmaceuticalClass": "- 5 micrograms",
@@ -8623,6 +9649,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00513",
+      "emdexCode": "B01AA03",
+      "source": null,
       "name": "Warfarin",
       "genericClass": "Medicines Affecting The Blood",
       "pharmaceuticalClass": "Medicines affecting coagulation",
@@ -8639,6 +9667,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00514",
+      "emdexCode": "R01AA07",
+      "source": null,
       "name": "Xylometazoline",
       "genericClass": "Medicines For Ear, Nose And Throat",
       "pharmaceuticalClass": "General",
@@ -8655,6 +9685,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00515",
+      "emdexCode": "J07BL01",
+      "source": null,
       "name": "Yellow fever vaccine",
       "genericClass": "Immunologicals",
       "pharmaceuticalClass": "Vaccines",
@@ -8671,6 +9703,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00516",
+      "emdexCode": "J05AF01",
+      "source": null,
       "name": "Zidovudine",
       "genericClass": "Anti-Infective Medicines",
       "pharmaceuticalClass": "Nucleoside + nucleotide reverse transcriptase inhibitors",
@@ -8687,6 +9721,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00517",
+      "emdexCode": null,
+      "source": null,
       "name": "Zidovudine + Lamivudine + Atazanavir + Ritonavir",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -8706,6 +9742,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00518",
+      "emdexCode": null,
+      "source": null,
       "name": "Zidovudine + Lamivudine + Efavirenz + Dolutegravir + Ritonavir",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -8726,6 +9764,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00519",
+      "emdexCode": null,
+      "source": null,
       "name": "Zidovudine + Lamivudine + Lopinavir + Ritonavir",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -8745,6 +9785,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00520",
+      "emdexCode": "A12CB01",
+      "source": null,
       "name": "Zinc",
       "genericClass": "Gastrointestinal Medicines",
       "pharmaceuticalClass": "General",
@@ -8761,6 +9803,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00521",
+      "emdexCode": null,
+      "source": null,
       "name": "Zinc (sulfate) + Low Osmolarity Oral Rehydration Salts",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -8778,6 +9822,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00522",
+      "emdexCode": null,
+      "source": null,
       "name": "Zinc chloride + zinc sulfate",
       "genericClass": "Dental Medicines",
       "pharmaceuticalClass": "Mouthwashes",
@@ -8795,6 +9841,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00523",
+      "emdexCode": null,
+      "source": null,
       "name": "Zinc oxide",
       "genericClass": "Dermatological Medicines",
       "pharmaceuticalClass": "General",
@@ -8811,6 +9859,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00524",
+      "emdexCode": null,
+      "source": null,
       "name": "Zinc oxide plaster",
       "genericClass": "Miscellaneous",
       "pharmaceuticalClass": "General",
@@ -8827,6 +9877,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00525",
+      "emdexCode": null,
+      "source": null,
       "name": "Zoledronic acid",
       "genericClass": "Antineoplastic, Immunosuppressive Medicines And Adjuvants",
       "pharmaceuticalClass": "General",
@@ -8843,6 +9895,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00526",
+      "emdexCode": null,
+      "source": null,
       "name": "Fortwin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -8859,6 +9913,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00527",
+      "emdexCode": null,
+      "source": null,
       "name": "2 2 1 Forte Syrup",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -8875,6 +9931,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00528",
+      "emdexCode": null,
+      "source": null,
       "name": "Drawer",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -8891,6 +9949,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00529",
+      "emdexCode": null,
+      "source": null,
       "name": "Neurogesic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -8907,6 +9967,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00530",
+      "emdexCode": null,
+      "source": null,
       "name": "Conference Chair",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -8923,6 +9985,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00531",
+      "emdexCode": null,
+      "source": null,
       "name": "Office Chair Black",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -8939,6 +10003,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00532",
+      "emdexCode": null,
+      "source": null,
       "name": "Corner Desk Black",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -8955,6 +10021,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00533",
+      "emdexCode": null,
+      "source": null,
       "name": "Desk Stand With",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -8971,6 +10039,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00534",
+      "emdexCode": null,
+      "source": null,
       "name": "Acoustic Bloc Screens",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -8987,6 +10057,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00535",
+      "emdexCode": null,
+      "source": null,
       "name": "Deep Relief 30gm",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9003,6 +10075,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00536",
+      "emdexCode": null,
+      "source": null,
       "name": "Office Design Software",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9019,6 +10093,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00537",
+      "emdexCode": null,
+      "source": null,
       "name": "Three Seat Sofa",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9035,6 +10111,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00538",
+      "emdexCode": null,
+      "source": null,
       "name": "Large Meeting Table",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9051,6 +10129,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00539",
+      "emdexCode": null,
+      "source": null,
       "name": "Four Person Desk",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9067,6 +10147,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00540",
+      "emdexCode": null,
+      "source": null,
       "name": "Warranty",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9083,6 +10165,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00541",
+      "emdexCode": null,
+      "source": null,
       "name": "Cable Management Box",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9099,6 +10183,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00542",
+      "emdexCode": null,
+      "source": null,
       "name": "Meta",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9115,6 +10201,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00543",
+      "emdexCode": null,
+      "source": null,
       "name": "Vit Coloured",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9131,6 +10219,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00544",
+      "emdexCode": null,
+      "source": null,
       "name": "Vit White",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9147,6 +10237,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00545",
+      "emdexCode": null,
+      "source": null,
       "name": "Vit",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9163,6 +10255,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00546",
+      "emdexCode": null,
+      "source": null,
       "name": "Mexzecam",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9179,6 +10273,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00547",
+      "emdexCode": null,
+      "source": null,
       "name": "Micadis",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9195,6 +10291,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00548",
+      "emdexCode": null,
+      "source": null,
       "name": "Micolette Supp",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9211,6 +10309,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00549",
+      "emdexCode": null,
+      "source": null,
       "name": "Microgynon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9227,6 +10327,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00550",
+      "emdexCode": null,
+      "source": null,
       "name": "Mederax Metoclopromide Hydrochloride",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9243,6 +10345,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00551",
+      "emdexCode": null,
+      "source": null,
       "name": "Bkb",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9259,6 +10363,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00552",
+      "emdexCode": null,
+      "source": null,
       "name": "Milk Of Magnesia",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9275,6 +10381,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00553",
+      "emdexCode": null,
+      "source": null,
       "name": "Millicap B/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9292,6 +10400,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00554",
+      "emdexCode": null,
+      "source": null,
       "name": "Minak Vigiral",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9308,6 +10418,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00555",
+      "emdexCode": null,
+      "source": null,
       "name": "Mirazith",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9324,6 +10436,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00556",
+      "emdexCode": null,
+      "source": null,
       "name": "Misoprotolol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9340,6 +10454,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00557",
+      "emdexCode": null,
+      "source": null,
       "name": "Mosegor",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9356,6 +10472,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00558",
+      "emdexCode": null,
+      "source": null,
       "name": "Motilium",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9372,6 +10490,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00559",
+      "emdexCode": null,
+      "source": null,
       "name": "Mucos Extrator",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9388,6 +10508,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00560",
+      "emdexCode": null,
+      "source": null,
       "name": "Mvs Prenatal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9404,6 +10526,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00561",
+      "emdexCode": null,
+      "source": null,
       "name": "Nalidon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9420,6 +10544,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00562",
+      "emdexCode": null,
+      "source": null,
       "name": "Neo Healer",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9436,6 +10562,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00563",
+      "emdexCode": null,
+      "source": null,
       "name": "Nervon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9452,6 +10580,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00564",
+      "emdexCode": null,
+      "source": null,
       "name": "Neuage",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9468,6 +10598,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00565",
+      "emdexCode": null,
+      "source": null,
       "name": "Neurobion Coated",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9484,6 +10616,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00566",
+      "emdexCode": null,
+      "source": null,
       "name": "Nexpro",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9500,6 +10634,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00567",
+      "emdexCode": null,
+      "source": null,
       "name": "Nidof",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9516,6 +10652,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00568",
+      "emdexCode": null,
+      "source": null,
       "name": "Nifedin Dexel",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9532,6 +10670,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00569",
+      "emdexCode": null,
+      "source": null,
       "name": "Nifedose",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9548,6 +10688,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00570",
+      "emdexCode": null,
+      "source": null,
       "name": "Postinor",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9564,6 +10706,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00571",
+      "emdexCode": null,
+      "source": null,
       "name": "Laclox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9580,6 +10724,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00572",
+      "emdexCode": null,
+      "source": null,
       "name": "Nifendel",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9596,6 +10742,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00573",
+      "emdexCode": null,
+      "source": null,
       "name": "Nilgar",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9612,6 +10760,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00574",
+      "emdexCode": null,
+      "source": null,
       "name": "Nilide",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9628,6 +10778,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00575",
+      "emdexCode": null,
+      "source": null,
       "name": "Nimica",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9644,6 +10796,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00576",
+      "emdexCode": null,
+      "source": null,
       "name": "Nimulid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9660,6 +10814,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00577",
+      "emdexCode": null,
+      "source": null,
       "name": "Nizoral",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9676,6 +10832,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00578",
+      "emdexCode": null,
+      "source": null,
       "name": "No Name",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9692,6 +10850,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00579",
+      "emdexCode": null,
+      "source": null,
       "name": "No Spa",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9708,6 +10868,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00580",
+      "emdexCode": null,
+      "source": null,
       "name": "Nobarctin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9724,6 +10886,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00581",
+      "emdexCode": null,
+      "source": null,
       "name": "Norbactin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9740,6 +10904,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00582",
+      "emdexCode": null,
+      "source": null,
       "name": "Noristeral",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9756,6 +10922,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00583",
+      "emdexCode": null,
+      "source": null,
       "name": "Normodipin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9772,6 +10940,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00584",
+      "emdexCode": null,
+      "source": null,
       "name": "Normogan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9788,6 +10958,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00585",
+      "emdexCode": null,
+      "source": null,
       "name": "Norvasc",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9804,6 +10976,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00586",
+      "emdexCode": null,
+      "source": null,
       "name": "Nosclav",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9820,6 +10994,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00587",
+      "emdexCode": null,
+      "source": null,
       "name": "Maxiquine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9836,6 +11012,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00588",
+      "emdexCode": null,
+      "source": null,
       "name": "Pyrantrin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9852,6 +11030,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00589",
+      "emdexCode": null,
+      "source": null,
       "name": "Calcitone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9868,6 +11048,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00590",
+      "emdexCode": null,
+      "source": null,
       "name": "Ibucap Cold Flu",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9884,6 +11066,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00591",
+      "emdexCode": null,
+      "source": null,
       "name": "Emzolyn",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9900,6 +11084,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00592",
+      "emdexCode": null,
+      "source": null,
       "name": "Amalar",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9916,6 +11102,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00593",
+      "emdexCode": null,
+      "source": null,
       "name": "Cerumol Ear",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9932,6 +11120,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00594",
+      "emdexCode": null,
+      "source": null,
       "name": "Chlorampenicol Ear",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9948,6 +11138,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00595",
+      "emdexCode": null,
+      "source": null,
       "name": "Painkil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9964,6 +11156,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00596",
+      "emdexCode": null,
+      "source": null,
       "name": "Pawafenac",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9980,6 +11174,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00597",
+      "emdexCode": null,
+      "source": null,
       "name": "Otomed Ear",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -9996,6 +11192,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00598",
+      "emdexCode": null,
+      "source": null,
       "name": "Neoskin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10012,6 +11210,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00599",
+      "emdexCode": null,
+      "source": null,
       "name": "Flu",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10028,6 +11228,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00600",
+      "emdexCode": null,
+      "source": null,
       "name": "Joneol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10044,6 +11246,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00601",
+      "emdexCode": null,
+      "source": null,
       "name": "Bunto Tonic Litre",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10060,6 +11264,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00602",
+      "emdexCode": null,
+      "source": null,
       "name": "Antallerge Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10076,6 +11282,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00603",
+      "emdexCode": null,
+      "source": null,
       "name": "Amatem",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10092,6 +11300,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00604",
+      "emdexCode": null,
+      "source": null,
       "name": "Nostres",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10108,6 +11318,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00605",
+      "emdexCode": null,
+      "source": null,
       "name": "Azitrex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10124,6 +11336,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00606",
+      "emdexCode": null,
+      "source": null,
       "name": "Nueage",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10140,6 +11354,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00607",
+      "emdexCode": null,
+      "source": null,
       "name": "Lycofer",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10156,6 +11372,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00608",
+      "emdexCode": null,
+      "source": null,
       "name": "Himalt",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10172,6 +11390,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00609",
+      "emdexCode": null,
+      "source": null,
       "name": "Bendrex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10188,6 +11408,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00610",
+      "emdexCode": null,
+      "source": null,
       "name": "Oceandrive",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10204,6 +11426,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00611",
+      "emdexCode": null,
+      "source": null,
       "name": "Ocefix",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10220,6 +11444,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00612",
+      "emdexCode": null,
+      "source": null,
       "name": "Oflomed",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10236,6 +11462,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00613",
+      "emdexCode": "J01MA01",
+      "source": null,
       "name": "Ofloxacin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10252,6 +11480,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00614",
+      "emdexCode": null,
+      "source": null,
       "name": "Oftab",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10268,6 +11498,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00615",
+      "emdexCode": null,
+      "source": null,
       "name": "Olfen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10284,6 +11516,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00616",
+      "emdexCode": null,
+      "source": null,
       "name": "Omecap",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10300,6 +11534,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00617",
+      "emdexCode": null,
+      "source": null,
       "name": "Omefast",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10316,6 +11552,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00618",
+      "emdexCode": null,
+      "source": null,
       "name": "Onaxo",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10332,6 +11570,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00619",
+      "emdexCode": null,
+      "source": null,
       "name": "Optalidon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10348,6 +11588,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00620",
+      "emdexCode": null,
+      "source": null,
       "name": "Orlis Orlistat",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10364,6 +11606,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00621",
+      "emdexCode": null,
+      "source": null,
       "name": "Orofer",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10380,6 +11624,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00622",
+      "emdexCode": null,
+      "source": null,
       "name": "Orphensic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10396,6 +11642,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00623",
+      "emdexCode": null,
+      "source": null,
       "name": "Oruvail",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10412,6 +11660,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00624",
+      "emdexCode": null,
+      "source": null,
       "name": "Osteo",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10428,6 +11678,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00625",
+      "emdexCode": null,
+      "source": null,
       "name": "Ostrin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10444,6 +11696,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00626",
+      "emdexCode": null,
+      "source": null,
       "name": "Oulofeme",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10460,6 +11714,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00627",
+      "emdexCode": null,
+      "source": null,
       "name": "Paincodeen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10476,6 +11732,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00628",
+      "emdexCode": null,
+      "source": null,
       "name": "Actifed",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10492,6 +11750,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00629",
+      "emdexCode": null,
+      "source": null,
       "name": "Paludol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10508,6 +11768,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00630",
+      "emdexCode": null,
+      "source": null,
       "name": "Paludrine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10524,6 +11786,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00631",
+      "emdexCode": null,
+      "source": null,
       "name": "Panfor Sr",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10540,6 +11804,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00632",
+      "emdexCode": null,
+      "source": null,
       "name": "Parafin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10556,6 +11822,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00633",
+      "emdexCode": null,
+      "source": null,
       "name": "Parlodel",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10572,6 +11840,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00634",
+      "emdexCode": null,
+      "source": null,
       "name": "Peflac Pefloxacin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10588,6 +11858,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00635",
+      "emdexCode": null,
+      "source": null,
       "name": "Pefloxacin Pemax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10604,6 +11876,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00636",
+      "emdexCode": null,
+      "source": null,
       "name": "Pemax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10620,6 +11894,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00637",
+      "emdexCode": null,
+      "source": null,
       "name": "Pepti",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10636,6 +11912,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00638",
+      "emdexCode": null,
+      "source": null,
       "name": "Perbloc",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10652,6 +11930,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00639",
+      "emdexCode": null,
+      "source": null,
       "name": "Perglim M1",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10668,6 +11948,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00640",
+      "emdexCode": null,
+      "source": null,
       "name": "Perglim M2",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10684,6 +11966,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00641",
+      "emdexCode": null,
+      "source": null,
       "name": "Periactin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10700,6 +11984,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00642",
+      "emdexCode": null,
+      "source": null,
       "name": "Perikalin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10716,6 +12002,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00643",
+      "emdexCode": null,
+      "source": null,
       "name": "Permertinal Dr Vamis",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10732,6 +12020,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00644",
+      "emdexCode": null,
+      "source": null,
       "name": "Pharmaton",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10748,6 +12038,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00645",
+      "emdexCode": null,
+      "source": null,
       "name": "Pilex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10764,6 +12056,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00646",
+      "emdexCode": null,
+      "source": null,
       "name": "Pionorm",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10780,6 +12074,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00647",
+      "emdexCode": null,
+      "source": null,
       "name": "Piozer Pioglitazone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10796,6 +12092,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00648",
+      "emdexCode": null,
+      "source": null,
       "name": "Plagerine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10812,6 +12110,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00649",
+      "emdexCode": null,
+      "source": null,
       "name": "Cal D3",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10828,6 +12128,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00650",
+      "emdexCode": null,
+      "source": null,
       "name": "Plasmotrim",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10844,6 +12146,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00651",
+      "emdexCode": null,
+      "source": null,
       "name": "Polycil Chewable Antacid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10860,6 +12164,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00652",
+      "emdexCode": null,
+      "source": null,
       "name": "Polyfort",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10876,6 +12182,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00653",
+      "emdexCode": null,
+      "source": null,
       "name": "Power",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10892,6 +12200,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00654",
+      "emdexCode": null,
+      "source": null,
       "name": "Powmax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10908,6 +12218,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00655",
+      "emdexCode": null,
+      "source": null,
       "name": "Prazotel",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10924,6 +12236,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00656",
+      "emdexCode": null,
+      "source": null,
       "name": "Pregvyte Mineral Suplement",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10940,6 +12254,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00657",
+      "emdexCode": null,
+      "source": null,
       "name": "Prilas",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10956,6 +12272,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00658",
+      "emdexCode": null,
+      "source": null,
       "name": "Primolut",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10972,6 +12290,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00659",
+      "emdexCode": null,
+      "source": null,
       "name": "Primpex Ds",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -10988,6 +12308,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00660",
+      "emdexCode": null,
+      "source": null,
       "name": "Probantine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11004,6 +12326,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00661",
+      "emdexCode": null,
+      "source": null,
       "name": "Prostatonin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11020,6 +12344,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00662",
+      "emdexCode": null,
+      "source": null,
       "name": "Proviron",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11036,6 +12362,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00663",
+      "emdexCode": null,
+      "source": null,
       "name": "Pylorest",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11052,6 +12380,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00664",
+      "emdexCode": null,
+      "source": null,
       "name": "Quintor",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11068,6 +12398,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00665",
+      "emdexCode": null,
+      "source": null,
       "name": "Rabelox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11084,6 +12416,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00666",
+      "emdexCode": null,
+      "source": null,
       "name": "Radiklo",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11100,6 +12434,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00667",
+      "emdexCode": null,
+      "source": null,
       "name": "Ramine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11116,6 +12452,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00668",
+      "emdexCode": null,
+      "source": null,
       "name": "Ramitace",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11132,6 +12470,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00669",
+      "emdexCode": null,
+      "source": null,
       "name": "Ranivan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11148,6 +12488,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00670",
+      "emdexCode": null,
+      "source": null,
       "name": "Ranopage Od",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11164,6 +12506,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00671",
+      "emdexCode": null,
+      "source": null,
       "name": "Ranopril",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11180,6 +12524,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00672",
+      "emdexCode": null,
+      "source": null,
       "name": "Raprox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11196,6 +12542,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00673",
+      "emdexCode": null,
+      "source": null,
       "name": "Regacom",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11212,6 +12560,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00674",
+      "emdexCode": null,
+      "source": null,
       "name": "Regrotone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11228,6 +12578,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00675",
+      "emdexCode": null,
+      "source": null,
       "name": "Rejuver",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11244,6 +12596,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00676",
+      "emdexCode": null,
+      "source": null,
       "name": "Relief",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11260,6 +12614,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00677",
+      "emdexCode": null,
+      "source": null,
       "name": "Reliva",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11276,6 +12632,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00678",
+      "emdexCode": null,
+      "source": null,
       "name": "Reload Kidz",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11292,6 +12650,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00679",
+      "emdexCode": null,
+      "source": null,
       "name": "Reload Mens 50+",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11308,6 +12668,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00680",
+      "emdexCode": null,
+      "source": null,
       "name": "Reload Mens Formula",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11324,6 +12686,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00681",
+      "emdexCode": null,
+      "source": null,
       "name": "Riconia",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11340,6 +12704,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00682",
+      "emdexCode": "J04AB02;J04AB02",
+      "source": null,
       "name": "Rifampicin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11356,6 +12722,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00683",
+      "emdexCode": null,
+      "source": null,
       "name": "Rimactal Inh",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11372,6 +12740,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00684",
+      "emdexCode": null,
+      "source": null,
       "name": "Risdal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11388,6 +12758,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00685",
+      "emdexCode": null,
+      "source": null,
       "name": "Rispzen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11404,6 +12776,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00686",
+      "emdexCode": null,
+      "source": null,
       "name": "Robinax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11420,6 +12794,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00687",
+      "emdexCode": null,
+      "source": null,
       "name": "Rogotinol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11436,6 +12812,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00688",
+      "emdexCode": null,
+      "source": null,
       "name": "Rohypnol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11452,6 +12830,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00689",
+      "emdexCode": null,
+      "source": null,
       "name": "Rolap Rosuvatatin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11468,6 +12848,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00690",
+      "emdexCode": null,
+      "source": null,
       "name": "Roliten",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11484,6 +12866,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00691",
+      "emdexCode": null,
+      "source": null,
       "name": "Rosart",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11500,6 +12884,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00692",
+      "emdexCode": null,
+      "source": null,
       "name": "Rovigon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11516,6 +12902,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00693",
+      "emdexCode": null,
+      "source": null,
       "name": "Sanclamide Brand Of",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11532,6 +12920,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00694",
+      "emdexCode": null,
+      "source": null,
       "name": "Sanformin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11548,6 +12938,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00695",
+      "emdexCode": null,
+      "source": null,
       "name": "Seccivid Secnidazole",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11564,6 +12956,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00696",
+      "emdexCode": null,
+      "source": null,
       "name": "Septrim",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11580,6 +12974,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00697",
+      "emdexCode": null,
+      "source": null,
       "name": "Septrin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11596,6 +12992,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00698",
+      "emdexCode": null,
+      "source": null,
       "name": "Setral",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11612,6 +13010,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00699",
+      "emdexCode": null,
+      "source": null,
       "name": "Silybon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11628,6 +13028,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00700",
+      "emdexCode": null,
+      "source": null,
       "name": "Simtab",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11644,6 +13046,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00701",
+      "emdexCode": null,
+      "source": null,
       "name": "Sineret",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11660,6 +13064,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00702",
+      "emdexCode": null,
+      "source": null,
       "name": "Sinerpres",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11676,6 +13082,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00703",
+      "emdexCode": null,
+      "source": null,
       "name": "Sinopril",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11692,6 +13100,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00704",
+      "emdexCode": null,
+      "source": null,
       "name": "Sinvaz",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11708,6 +13118,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00705",
+      "emdexCode": null,
+      "source": null,
       "name": "Siprosan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11724,6 +13136,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00706",
+      "emdexCode": null,
+      "source": null,
       "name": "Sirdalud",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11740,6 +13154,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00707",
+      "emdexCode": null,
+      "source": null,
       "name": "Skin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11756,6 +13172,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00708",
+      "emdexCode": null,
+      "source": null,
       "name": "Slow",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11772,6 +13190,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00709",
+      "emdexCode": null,
+      "source": null,
       "name": "Sloxin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11788,6 +13208,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00710",
+      "emdexCode": null,
+      "source": null,
       "name": "Smenaldex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11804,6 +13226,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00711",
+      "emdexCode": null,
+      "source": null,
       "name": "Somnapam",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11820,6 +13244,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00712",
+      "emdexCode": null,
+      "source": null,
       "name": "Sonagra",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11836,6 +13262,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00713",
+      "emdexCode": null,
+      "source": null,
       "name": "Soure Soft",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11852,6 +13280,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00714",
+      "emdexCode": null,
+      "source": null,
       "name": "Sparbact",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11868,6 +13298,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00715",
+      "emdexCode": null,
+      "source": null,
       "name": "Spardium",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11884,6 +13316,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00716",
+      "emdexCode": null,
+      "source": null,
       "name": "Spiracin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11900,6 +13334,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00717",
+      "emdexCode": null,
+      "source": null,
       "name": "Stamlo",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11916,6 +13352,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00718",
+      "emdexCode": null,
+      "source": null,
       "name": "Stemetil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11932,6 +13370,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00719",
+      "emdexCode": null,
+      "source": null,
       "name": "Stibestrol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11948,6 +13388,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00720",
+      "emdexCode": null,
+      "source": null,
       "name": "Stimol Citrulline Malate",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11964,6 +13406,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00721",
+      "emdexCode": null,
+      "source": null,
       "name": "Stimuno",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11980,6 +13424,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00722",
+      "emdexCode": null,
+      "source": null,
       "name": "Strepsil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -11996,6 +13442,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00723",
+      "emdexCode": null,
+      "source": null,
       "name": "Stugeron",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12012,6 +13460,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00724",
+      "emdexCode": null,
+      "source": null,
       "name": "Sulpadimidia",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12028,6 +13478,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00725",
+      "emdexCode": null,
+      "source": null,
       "name": "Super",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12044,6 +13496,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00726",
+      "emdexCode": null,
+      "source": null,
       "name": "Supra Livron",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12060,6 +13514,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00727",
+      "emdexCode": null,
+      "source": null,
       "name": "Supra Meb",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12076,6 +13532,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00728",
+      "emdexCode": null,
+      "source": null,
       "name": "Supramult",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12092,6 +13550,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00729",
+      "emdexCode": null,
+      "source": null,
       "name": "Sustanon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12108,6 +13568,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00730",
+      "emdexCode": null,
+      "source": null,
       "name": "Sweetex Sweetner",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12124,6 +13586,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00731",
+      "emdexCode": null,
+      "source": null,
       "name": "Swibetic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12140,6 +13604,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00732",
+      "emdexCode": null,
+      "source": null,
       "name": "Swidon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12156,6 +13622,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00733",
+      "emdexCode": null,
+      "source": null,
       "name": "Swivasc",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12172,6 +13640,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00734",
+      "emdexCode": null,
+      "source": null,
       "name": "Tabalon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12188,6 +13658,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00735",
+      "emdexCode": null,
+      "source": null,
       "name": "Tagament",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12204,6 +13676,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00736",
+      "emdexCode": null,
+      "source": null,
       "name": "Tagement",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12220,6 +13694,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00737",
+      "emdexCode": null,
+      "source": null,
       "name": "Tamusulosin Hydrochloride",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12236,6 +13712,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00738",
+      "emdexCode": null,
+      "source": null,
       "name": "Tandaflam",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12252,6 +13730,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00739",
+      "emdexCode": null,
+      "source": null,
       "name": "Tanderil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12268,6 +13748,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00740",
+      "emdexCode": null,
+      "source": null,
       "name": "Tarivid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12284,6 +13766,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00741",
+      "emdexCode": null,
+      "source": null,
       "name": "Tavegyl",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12300,6 +13784,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00742",
+      "emdexCode": null,
+      "source": null,
       "name": "Tegretol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12316,6 +13802,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00743",
+      "emdexCode": null,
+      "source": null,
       "name": "Tegrotol Cr",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12332,6 +13820,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00744",
+      "emdexCode": null,
+      "source": null,
       "name": "Temexin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12348,6 +13838,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00745",
+      "emdexCode": null,
+      "source": null,
       "name": "Tenolol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12364,6 +13856,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00746",
+      "emdexCode": null,
+      "source": null,
       "name": "Tenoretic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12380,6 +13874,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00747",
+      "emdexCode": null,
+      "source": null,
       "name": "Tenoskan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12396,6 +13892,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00748",
+      "emdexCode": null,
+      "source": null,
       "name": "Terramycin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12412,6 +13910,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00749",
+      "emdexCode": null,
+      "source": null,
       "name": "Tetradox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12428,6 +13928,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00750",
+      "emdexCode": null,
+      "source": null,
       "name": "Thiapril",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12444,6 +13946,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00751",
+      "emdexCode": null,
+      "source": null,
       "name": "Timexda",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12460,6 +13964,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00752",
+      "emdexCode": null,
+      "source": null,
       "name": "Tinexda",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12476,6 +13982,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00753",
+      "emdexCode": null,
+      "source": null,
       "name": "Tiniflox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12492,6 +14000,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00754",
+      "emdexCode": null,
+      "source": null,
       "name": "Tiniglex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12508,6 +14018,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00755",
+      "emdexCode": null,
+      "source": null,
       "name": "Tiocasid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12524,6 +14036,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00756",
+      "emdexCode": null,
+      "source": null,
       "name": "Tocovid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12540,6 +14054,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00757",
+      "emdexCode": null,
+      "source": null,
       "name": "Topril",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12556,6 +14072,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00758",
+      "emdexCode": null,
+      "source": null,
       "name": "Toranac",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12572,6 +14090,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00759",
+      "emdexCode": null,
+      "source": null,
       "name": "Tough And Go",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12588,6 +14108,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00760",
+      "emdexCode": null,
+      "source": null,
       "name": "Tradyl",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12604,6 +14126,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00761",
+      "emdexCode": null,
+      "source": null,
       "name": "Traflash",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12620,6 +14144,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00762",
+      "emdexCode": null,
+      "source": null,
       "name": "Tramal Retard",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12636,6 +14162,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00763",
+      "emdexCode": null,
+      "source": null,
       "name": "Tramez",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12652,6 +14180,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00764",
+      "emdexCode": null,
+      "source": null,
       "name": "Individual Workplace",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12668,6 +14198,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00765",
+      "emdexCode": null,
+      "source": null,
       "name": "Restaurant Expenses",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12684,6 +14216,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00766",
+      "emdexCode": null,
+      "source": null,
       "name": "Hotel Accommodation",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12700,6 +14234,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00767",
+      "emdexCode": null,
+      "source": null,
       "name": "Desk Organizer",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12716,6 +14252,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00768",
+      "emdexCode": null,
+      "source": null,
       "name": "Magnetic Board",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12732,6 +14270,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00769",
+      "emdexCode": null,
+      "source": null,
       "name": "Monitor Stand",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12748,6 +14288,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00770",
+      "emdexCode": null,
+      "source": null,
       "name": "Desk Pad",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12764,6 +14306,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00771",
+      "emdexCode": null,
+      "source": null,
       "name": "Whiteboard",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12780,6 +14324,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00772",
+      "emdexCode": null,
+      "source": null,
       "name": "Led Lamp",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12796,6 +14342,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00773",
+      "emdexCode": null,
+      "source": null,
       "name": "Newspaper Rack",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12812,6 +14360,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00774",
+      "emdexCode": null,
+      "source": null,
       "name": "Tips",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12828,6 +14378,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00775",
+      "emdexCode": null,
+      "source": null,
       "name": "Virtual Interior Design",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12844,6 +14396,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00776",
+      "emdexCode": null,
+      "source": null,
       "name": "Virtual Home Staging",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12860,6 +14414,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00777",
+      "emdexCode": null,
+      "source": null,
       "name": "Desk Combination",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12876,6 +14432,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00778",
+      "emdexCode": null,
+      "source": null,
       "name": "Tribarat",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12892,6 +14450,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00779",
+      "emdexCode": null,
+      "source": null,
       "name": "Tribinat",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12908,6 +14468,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00780",
+      "emdexCode": null,
+      "source": null,
       "name": "Triplucon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12924,6 +14486,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00781",
+      "emdexCode": null,
+      "source": null,
       "name": "Tumol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12940,6 +14504,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00782",
+      "emdexCode": null,
+      "source": null,
       "name": "Ulcertret",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12956,6 +14522,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00783",
+      "emdexCode": null,
+      "source": null,
       "name": "Unasyn",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12972,6 +14540,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00784",
+      "emdexCode": null,
+      "source": null,
       "name": "Valinex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -12988,6 +14558,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00785",
+      "emdexCode": null,
+      "source": null,
       "name": "Vamadopa",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13004,6 +14576,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00786",
+      "emdexCode": null,
+      "source": null,
       "name": "Vamis",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13020,6 +14594,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00787",
+      "emdexCode": null,
+      "source": null,
       "name": "Vanclox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13036,6 +14612,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00788",
+      "emdexCode": null,
+      "source": null,
       "name": "Ventolin Inhaler",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13052,6 +14630,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00789",
+      "emdexCode": null,
+      "source": null,
       "name": "Vicocin Lincomycin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13068,6 +14648,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00790",
+      "emdexCode": null,
+      "source": null,
       "name": "Vinco",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13084,6 +14666,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00791",
+      "emdexCode": null,
+      "source": null,
       "name": "Vira",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13100,6 +14684,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00792",
+      "emdexCode": null,
+      "source": null,
       "name": "Virest",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13116,6 +14702,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00793",
+      "emdexCode": null,
+      "source": null,
       "name": "Vision Mineral Supp",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13132,6 +14720,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00794",
+      "emdexCode": null,
+      "source": null,
       "name": "Visionace",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13148,6 +14738,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00795",
+      "emdexCode": null,
+      "source": null,
       "name": "Vulcan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13164,6 +14756,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00796",
+      "emdexCode": null,
+      "source": null,
       "name": "Waipa Act",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13180,6 +14774,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00797",
+      "emdexCode": null,
+      "source": null,
       "name": "Winofit",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13196,6 +14792,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00798",
+      "emdexCode": null,
+      "source": null,
       "name": "Wormidan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13212,6 +14810,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00799",
+      "emdexCode": null,
+      "source": null,
       "name": "Wormplan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13228,6 +14828,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00800",
+      "emdexCode": null,
+      "source": null,
       "name": "Xyloproct",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13244,6 +14846,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00801",
+      "emdexCode": null,
+      "source": null,
       "name": "Yomesan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13260,6 +14864,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00802",
+      "emdexCode": null,
+      "source": null,
       "name": "Zaditen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13276,6 +14882,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00803",
+      "emdexCode": null,
+      "source": null,
       "name": "Zantac",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13292,6 +14900,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00804",
+      "emdexCode": null,
+      "source": null,
       "name": "Zaryl",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13308,6 +14918,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00805",
+      "emdexCode": null,
+      "source": null,
       "name": "Zenusin Sr",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13324,6 +14936,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00806",
+      "emdexCode": null,
+      "source": null,
       "name": "Zestup Co",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13340,6 +14954,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00807",
+      "emdexCode": null,
+      "source": null,
       "name": "Zinazole",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13356,6 +14972,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00808",
+      "emdexCode": null,
+      "source": null,
       "name": "Zinnat",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13372,6 +14990,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00809",
+      "emdexCode": null,
+      "source": null,
       "name": "Zithromax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13388,6 +15008,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00810",
+      "emdexCode": null,
+      "source": null,
       "name": "Zoocef",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13404,6 +15026,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00811",
+      "emdexCode": null,
+      "source": null,
       "name": "Zoretic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13420,6 +15044,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00812",
+      "emdexCode": null,
+      "source": null,
       "name": "Zyncet",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13436,6 +15062,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00813",
+      "emdexCode": null,
+      "source": null,
       "name": "Zysty",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13452,6 +15080,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00814",
+      "emdexCode": null,
+      "source": null,
       "name": "Novasc",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13468,6 +15098,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00815",
+      "emdexCode": null,
+      "source": null,
       "name": "Radoflox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13484,6 +15116,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00816",
+      "emdexCode": null,
+      "source": null,
       "name": "Pregnacare Nigeria",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13500,6 +15134,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00817",
+      "emdexCode": null,
+      "source": null,
       "name": "Piriton",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13516,6 +15152,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00818",
+      "emdexCode": null,
+      "source": null,
       "name": "Ventolin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13532,6 +15170,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00819",
+      "emdexCode": null,
+      "source": null,
       "name": "Primpex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13548,6 +15188,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00820",
+      "emdexCode": null,
+      "source": null,
       "name": "Sprax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13564,6 +15206,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00821",
+      "emdexCode": null,
+      "source": null,
       "name": "Anusol Supp",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13580,6 +15224,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00822",
+      "emdexCode": null,
+      "source": null,
       "name": "Welfil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13596,6 +15242,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00823",
+      "emdexCode": null,
+      "source": null,
       "name": "Felvin Branded",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13612,6 +15260,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00824",
+      "emdexCode": null,
+      "source": null,
       "name": "Ulsakit",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13628,6 +15278,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00825",
+      "emdexCode": null,
+      "source": null,
       "name": "Canesten Vaginal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13644,6 +15296,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00826",
+      "emdexCode": null,
+      "source": null,
       "name": "Gynesatum",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13660,6 +15314,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00827",
+      "emdexCode": null,
+      "source": null,
       "name": "Gyno Daktarin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13676,6 +15332,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00828",
+      "emdexCode": null,
+      "source": null,
       "name": "Gyno Mikozal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13692,6 +15350,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00829",
+      "emdexCode": null,
+      "source": null,
       "name": "Gyno Trosyd Ovule",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13708,6 +15368,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00830",
+      "emdexCode": null,
+      "source": null,
       "name": "Valium",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13724,6 +15386,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00831",
+      "emdexCode": null,
+      "source": null,
       "name": "Mvs",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13740,6 +15404,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00832",
+      "emdexCode": null,
+      "source": null,
       "name": "Spasmin Hyosine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13756,6 +15422,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00833",
+      "emdexCode": null,
+      "source": null,
       "name": "Altinez + Pcol Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13773,6 +15441,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00834",
+      "emdexCode": null,
+      "source": null,
       "name": "Anstin Privin Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13789,6 +15459,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00835",
+      "emdexCode": null,
+      "source": null,
       "name": "Anterllerge Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13805,6 +15477,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00836",
+      "emdexCode": null,
+      "source": null,
       "name": "Aristobet Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13821,6 +15495,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00837",
+      "emdexCode": null,
+      "source": null,
       "name": "Aristomol Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13837,6 +15513,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00838",
+      "emdexCode": null,
+      "source": null,
       "name": "Beoptic Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13853,6 +15531,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00839",
+      "emdexCode": null,
+      "source": null,
       "name": "Betadrone Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13869,6 +15549,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00840",
+      "emdexCode": null,
+      "source": null,
       "name": "Betoptic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13885,6 +15567,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00841",
+      "emdexCode": null,
+      "source": null,
       "name": "Catalin Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13901,6 +15585,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00842",
+      "emdexCode": null,
+      "source": null,
       "name": "Cerumol Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13917,6 +15603,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00843",
+      "emdexCode": null,
+      "source": null,
       "name": "Chloraphenicol Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13933,6 +15621,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00844",
+      "emdexCode": null,
+      "source": null,
       "name": "Cifraxin Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13949,6 +15639,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00845",
+      "emdexCode": null,
+      "source": null,
       "name": "Ciprocet Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13965,6 +15657,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00846",
+      "emdexCode": null,
+      "source": null,
       "name": "Collomax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13981,6 +15675,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00847",
+      "emdexCode": null,
+      "source": null,
       "name": "Cusimolol Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -13997,6 +15693,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00848",
+      "emdexCode": null,
+      "source": null,
       "name": "Dacryne Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14013,6 +15711,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00849",
+      "emdexCode": null,
+      "source": null,
       "name": "Drumoptol Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14029,6 +15729,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00850",
+      "emdexCode": null,
+      "source": null,
       "name": "Efemoline Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14045,6 +15747,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00851",
+      "emdexCode": null,
+      "source": null,
       "name": "Erdon Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14061,6 +15765,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00852",
+      "emdexCode": null,
+      "source": null,
       "name": "Eyetreolent",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14077,6 +15783,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00853",
+      "emdexCode": null,
+      "source": null,
       "name": "Gentalab Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14093,6 +15801,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00854",
+      "emdexCode": null,
+      "source": null,
       "name": "Gentalek",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14109,6 +15819,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00855",
+      "emdexCode": null,
+      "source": null,
       "name": "Genticin Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14125,6 +15837,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00856",
+      "emdexCode": null,
+      "source": null,
       "name": "Gramicol Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14141,6 +15855,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00857",
+      "emdexCode": null,
+      "source": null,
       "name": "Ivecmecticin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14157,6 +15873,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00858",
+      "emdexCode": null,
+      "source": null,
       "name": "Ivy Betaneocin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14173,6 +15891,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00859",
+      "emdexCode": null,
+      "source": null,
       "name": "Ivycrom Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14189,6 +15909,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00860",
+      "emdexCode": null,
+      "source": null,
       "name": "Ivydexone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14205,6 +15927,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00861",
+      "emdexCode": null,
+      "source": null,
       "name": "Ivymoicel Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14221,6 +15945,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00862",
+      "emdexCode": null,
+      "source": null,
       "name": "Ivyphenicol Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14237,6 +15963,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00863",
+      "emdexCode": null,
+      "source": null,
       "name": "Ivysolone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14253,6 +15981,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00864",
+      "emdexCode": null,
+      "source": null,
       "name": "Ivytimol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14269,6 +15999,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00865",
+      "emdexCode": null,
+      "source": null,
       "name": "Ivyzine Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14285,6 +16017,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00866",
+      "emdexCode": null,
+      "source": null,
       "name": "Jamol Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14301,6 +16035,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00867",
+      "emdexCode": null,
+      "source": null,
       "name": "Lomeflox Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14317,6 +16053,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00868",
+      "emdexCode": null,
+      "source": null,
       "name": "Lvycron Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14333,6 +16071,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00869",
+      "emdexCode": null,
+      "source": null,
       "name": "Lvydence",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14349,6 +16089,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00870",
+      "emdexCode": null,
+      "source": null,
       "name": "Lvytinol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14365,6 +16107,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00871",
+      "emdexCode": null,
+      "source": null,
       "name": "Lvyzine E/d",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14382,6 +16126,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00872",
+      "emdexCode": null,
+      "source": null,
       "name": "Maxidex Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14398,6 +16144,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00873",
+      "emdexCode": null,
+      "source": null,
       "name": "Maxitrol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14414,6 +16162,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00874",
+      "emdexCode": null,
+      "source": null,
       "name": "Nosak Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14430,6 +16180,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00875",
+      "emdexCode": null,
+      "source": null,
       "name": "Nyolol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14446,6 +16198,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00876",
+      "emdexCode": null,
+      "source": null,
       "name": "Optachlor",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14462,6 +16216,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00877",
+      "emdexCode": null,
+      "source": null,
       "name": "Pharsine Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14478,6 +16234,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00878",
+      "emdexCode": null,
+      "source": null,
       "name": "Rogophen Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14494,6 +16252,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00879",
+      "emdexCode": null,
+      "source": null,
       "name": "Spersallerg Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14510,6 +16270,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00880",
+      "emdexCode": null,
+      "source": null,
       "name": "Stadex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14526,6 +16288,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00881",
+      "emdexCode": null,
+      "source": null,
       "name": "Stafen Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14542,6 +16306,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00882",
+      "emdexCode": null,
+      "source": null,
       "name": "Timoptol Eye Solut",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14558,6 +16324,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00883",
+      "emdexCode": null,
+      "source": null,
       "name": "Tiococid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14574,6 +16342,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00884",
+      "emdexCode": null,
+      "source": null,
       "name": "Travatan Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14590,6 +16360,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00885",
+      "emdexCode": null,
+      "source": null,
       "name": "Truspot Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14606,6 +16378,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00886",
+      "emdexCode": null,
+      "source": null,
       "name": "Visine B/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14623,6 +16397,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00887",
+      "emdexCode": null,
+      "source": null,
       "name": "Visine Eye S/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14640,6 +16416,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00888",
+      "emdexCode": null,
+      "source": null,
       "name": "Vistolent Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14656,6 +16434,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00889",
+      "emdexCode": null,
+      "source": null,
       "name": "Xalatan Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14672,6 +16452,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00890",
+      "emdexCode": null,
+      "source": null,
       "name": "Emproflox Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14688,6 +16470,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00891",
+      "emdexCode": null,
+      "source": null,
       "name": "Ivydexgent Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14704,6 +16488,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00892",
+      "emdexCode": null,
+      "source": null,
       "name": "Ivymoicell Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14720,6 +16506,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00893",
+      "emdexCode": null,
+      "source": null,
       "name": "Ivyxolol Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14736,6 +16524,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00894",
+      "emdexCode": null,
+      "source": null,
       "name": "Sonexa Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14752,6 +16542,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00895",
+      "emdexCode": null,
+      "source": null,
       "name": "Spersadex Comp Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14768,6 +16560,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00896",
+      "emdexCode": null,
+      "source": null,
       "name": "Ciflaxin Eye + Ear",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14785,6 +16579,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00897",
+      "emdexCode": null,
+      "source": null,
       "name": "Dextracin E/e",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14802,6 +16598,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00898",
+      "emdexCode": null,
+      "source": null,
       "name": "Drugent Eye + Ear",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14819,6 +16617,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00899",
+      "emdexCode": null,
+      "source": null,
       "name": "Hycomycin Eye + Ear",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14836,6 +16636,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00900",
+      "emdexCode": null,
+      "source": null,
       "name": "Mydriacyl Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14852,6 +16654,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00901",
+      "emdexCode": null,
+      "source": null,
       "name": "Sofradex Eye + Ear",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14869,6 +16673,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00902",
+      "emdexCode": null,
+      "source": null,
       "name": "Ca",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14885,6 +16691,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00903",
+      "emdexCode": null,
+      "source": null,
       "name": "Vista Eye + Ear",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14902,6 +16710,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00904",
+      "emdexCode": null,
+      "source": null,
       "name": "Astymin Infusion",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14918,6 +16728,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00905",
+      "emdexCode": null,
+      "source": null,
       "name": "Cenox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14934,6 +16746,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00906",
+      "emdexCode": null,
+      "source": null,
       "name": "Ciprotab Infusion",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14950,6 +16764,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00907",
+      "emdexCode": null,
+      "source": null,
       "name": "Dextrose In Saline",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14966,6 +16782,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00908",
+      "emdexCode": null,
+      "source": null,
       "name": "Dextrose In Water",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14982,6 +16800,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00909",
+      "emdexCode": null,
+      "source": null,
       "name": "Normal Saline",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -14998,6 +16818,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00910",
+      "emdexCode": null,
+      "source": null,
       "name": "Ringers",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15014,6 +16836,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00911",
+      "emdexCode": null,
+      "source": null,
       "name": "Ativan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15030,6 +16854,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00912",
+      "emdexCode": null,
+      "source": null,
       "name": "Abaktal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15046,6 +16872,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00913",
+      "emdexCode": null,
+      "source": null,
       "name": "Adrenaline",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15062,6 +16890,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00914",
+      "emdexCode": null,
+      "source": null,
       "name": "Aminophylline",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15078,6 +16908,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00915",
+      "emdexCode": null,
+      "source": null,
       "name": "Amoksiklav",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15094,6 +16926,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00916",
+      "emdexCode": null,
+      "source": null,
       "name": "Anti Snake Venum",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15110,6 +16944,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00917",
+      "emdexCode": null,
+      "source": null,
       "name": "Anti Rabbies Serum",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15126,6 +16962,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00918",
+      "emdexCode": null,
+      "source": null,
       "name": "Apresoline",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15142,6 +16980,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00919",
+      "emdexCode": null,
+      "source": null,
       "name": "Artejec",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15158,6 +16998,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00920",
+      "emdexCode": null,
+      "source": null,
       "name": "Ats 10000ivu",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15174,6 +17016,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00921",
+      "emdexCode": null,
+      "source": null,
       "name": "Ats 1500ivu",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15190,6 +17034,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00922",
+      "emdexCode": null,
+      "source": null,
       "name": "Ats 5000ivu",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15206,6 +17052,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00923",
+      "emdexCode": null,
+      "source": null,
       "name": "Augumentin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15222,6 +17070,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00924",
+      "emdexCode": null,
+      "source": null,
       "name": "Hyoscine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15238,6 +17088,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00925",
+      "emdexCode": null,
+      "source": null,
       "name": "Buscopan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15254,6 +17106,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00926",
+      "emdexCode": null,
+      "source": null,
       "name": "Benzyl Penicillin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15270,6 +17124,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00927",
+      "emdexCode": null,
+      "source": null,
       "name": "Cefroxime",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15286,6 +17142,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00928",
+      "emdexCode": "P01BA01;P01BA01",
+      "source": null,
       "name": "Chloroquine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15302,6 +17160,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00929",
+      "emdexCode": null,
+      "source": null,
       "name": "Cimetidine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15318,6 +17178,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00930",
+      "emdexCode": null,
+      "source": null,
       "name": "Depo Provera",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15334,6 +17196,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00931",
+      "emdexCode": null,
+      "source": null,
       "name": "Dicynone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15350,6 +17214,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00932",
+      "emdexCode": null,
+      "source": null,
       "name": "Durabolin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15366,6 +17232,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00933",
+      "emdexCode": null,
+      "source": null,
       "name": "Emal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15382,6 +17250,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00934",
+      "emdexCode": null,
+      "source": null,
       "name": "Ergomentrine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15398,6 +17268,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00935",
+      "emdexCode": null,
+      "source": null,
       "name": "Fansidar",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15414,6 +17286,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00936",
+      "emdexCode": null,
+      "source": null,
       "name": "Hcg",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15430,6 +17304,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00937",
+      "emdexCode": null,
+      "source": null,
       "name": "Hepabionta",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15446,6 +17322,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00938",
+      "emdexCode": null,
+      "source": null,
       "name": "Humulin 70/30",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15463,6 +17341,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00939",
+      "emdexCode": null,
+      "source": null,
       "name": "Imal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15479,6 +17359,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00940",
+      "emdexCode": null,
+      "source": null,
       "name": "Inferon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15495,6 +17377,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00941",
+      "emdexCode": null,
+      "source": null,
       "name": "Insulartard",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15511,6 +17395,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00942",
+      "emdexCode": null,
+      "source": null,
       "name": "Insulatard",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15527,6 +17413,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00943",
+      "emdexCode": null,
+      "source": null,
       "name": "Kenalog",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15543,6 +17431,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00944",
+      "emdexCode": null,
+      "source": null,
       "name": "Maxolone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15559,6 +17449,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00945",
+      "emdexCode": null,
+      "source": null,
       "name": "Menstrogen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15575,6 +17467,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00946",
+      "emdexCode": null,
+      "source": null,
       "name": "Metochlopromide Hydrochloride",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15591,6 +17485,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00947",
+      "emdexCode": null,
+      "source": null,
       "name": "Mixtad",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15607,6 +17503,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00948",
+      "emdexCode": null,
+      "source": null,
       "name": "Noristerat",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15623,6 +17521,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00949",
+      "emdexCode": null,
+      "source": null,
       "name": "Paluther Arthemeter",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15639,6 +17539,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00950",
+      "emdexCode": null,
+      "source": null,
       "name": "Phenobarbitone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15655,6 +17557,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00951",
+      "emdexCode": null,
+      "source": null,
       "name": "Phinomether",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15671,6 +17575,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00952",
+      "emdexCode": null,
+      "source": null,
       "name": "Reichclox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15687,6 +17593,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00953",
+      "emdexCode": null,
+      "source": null,
       "name": "Primolu Depot",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15703,6 +17611,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00954",
+      "emdexCode": null,
+      "source": null,
       "name": "Progesterone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15719,6 +17629,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00955",
+      "emdexCode": null,
+      "source": null,
       "name": "Proluton Depot",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15735,6 +17647,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00956",
+      "emdexCode": null,
+      "source": null,
       "name": "Quinnine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15751,6 +17665,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00957",
+      "emdexCode": null,
+      "source": null,
       "name": "Rocephine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15767,6 +17683,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00958",
+      "emdexCode": null,
+      "source": null,
       "name": "Snake Anti Serum",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15783,6 +17701,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00959",
+      "emdexCode": null,
+      "source": null,
       "name": "Teretine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15799,6 +17719,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00960",
+      "emdexCode": null,
+      "source": null,
       "name": "Testosterone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15815,6 +17737,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00961",
+      "emdexCode": null,
+      "source": null,
       "name": "Tetanus Toxoid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15831,6 +17755,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00962",
+      "emdexCode": null,
+      "source": null,
       "name": "Togamycin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15847,6 +17773,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00963",
+      "emdexCode": null,
+      "source": null,
       "name": "Trexamin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15863,6 +17791,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00964",
+      "emdexCode": null,
+      "source": null,
       "name": "Verorab Vaccine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15879,6 +17809,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00965",
+      "emdexCode": "V07AB",
+      "source": null,
       "name": "Water For",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15895,6 +17827,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00966",
+      "emdexCode": null,
+      "source": null,
       "name": "Zinacef",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15911,6 +17845,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00967",
+      "emdexCode": null,
+      "source": null,
       "name": "Rabipur Vaccine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15927,6 +17863,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00968",
+      "emdexCode": null,
+      "source": null,
       "name": "Accu Check Active",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15943,6 +17881,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00969",
+      "emdexCode": null,
+      "source": null,
       "name": "Circumcision Set",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15959,6 +17899,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00970",
+      "emdexCode": null,
+      "source": null,
       "name": "Combi",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15975,6 +17917,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00971",
+      "emdexCode": null,
+      "source": null,
       "name": "Gluco Dr Machine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -15991,6 +17935,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00972",
+      "emdexCode": null,
+      "source": null,
       "name": "Omron Machine Mx2",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16007,6 +17953,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00973",
+      "emdexCode": null,
+      "source": null,
       "name": "One Touch Ultra",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16023,6 +17971,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00974",
+      "emdexCode": null,
+      "source": null,
       "name": "Underlag Pad",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16039,6 +17989,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00975",
+      "emdexCode": null,
+      "source": null,
       "name": "Otrivin Nasal Children",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16055,6 +18007,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00976",
+      "emdexCode": null,
+      "source": null,
       "name": "Otrivin Nasal Adult",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16071,6 +18025,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00977",
+      "emdexCode": null,
+      "source": null,
       "name": "Xylo Mepha",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16087,6 +18043,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00978",
+      "emdexCode": null,
+      "source": null,
       "name": "Sinufed",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16103,6 +18061,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00979",
+      "emdexCode": null,
+      "source": null,
       "name": "Aminopep",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16119,6 +18079,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00980",
+      "emdexCode": null,
+      "source": null,
       "name": "Aminoplex Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16135,6 +18097,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00981",
+      "emdexCode": null,
+      "source": null,
       "name": "Amiro",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16151,6 +18115,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00982",
+      "emdexCode": null,
+      "source": null,
       "name": "Mekoamin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16167,6 +18133,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00983",
+      "emdexCode": null,
+      "source": null,
       "name": "Monomin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16183,6 +18151,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00984",
+      "emdexCode": null,
+      "source": null,
       "name": "Monover",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16199,6 +18169,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00985",
+      "emdexCode": null,
+      "source": null,
       "name": "Multamin Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16215,6 +18187,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00986",
+      "emdexCode": null,
+      "source": null,
       "name": "Octamin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16231,6 +18205,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00987",
+      "emdexCode": null,
+      "source": null,
       "name": "Floximox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16247,6 +18223,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00988",
+      "emdexCode": null,
+      "source": null,
       "name": "Lamox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16263,6 +18241,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00989",
+      "emdexCode": null,
+      "source": null,
       "name": "Astraclox Ampiclox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16279,6 +18259,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00990",
+      "emdexCode": null,
+      "source": null,
       "name": "Briskly Herbal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16295,6 +18277,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00991",
+      "emdexCode": null,
+      "source": null,
       "name": "Barbiclox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16311,6 +18295,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00992",
+      "emdexCode": null,
+      "source": null,
       "name": "Emzoclox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16327,6 +18313,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00993",
+      "emdexCode": null,
+      "source": null,
       "name": "Gecrol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16343,6 +18331,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00994",
+      "emdexCode": null,
+      "source": null,
       "name": "Gel C Suspension",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16359,6 +18349,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00995",
+      "emdexCode": null,
+      "source": null,
       "name": "Adm",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16375,6 +18367,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00996",
+      "emdexCode": null,
+      "source": null,
       "name": "Gelacid B/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16392,6 +18386,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00997",
+      "emdexCode": null,
+      "source": null,
       "name": "Gelacid S/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16409,6 +18405,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00998",
+      "emdexCode": null,
+      "source": null,
       "name": "Gestid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16425,6 +18423,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-00999",
+      "emdexCode": null,
+      "source": null,
       "name": "Locid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16441,6 +18441,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1000",
+      "emdexCode": null,
+      "source": null,
       "name": "Magsil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16457,6 +18459,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1001",
+      "emdexCode": null,
+      "source": null,
       "name": "Megacid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16473,6 +18477,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1002",
+      "emdexCode": null,
+      "source": null,
       "name": "Peptomag Usp",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16489,6 +18495,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1003",
+      "emdexCode": null,
+      "source": null,
       "name": "Polycil Antacid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16505,6 +18513,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1004",
+      "emdexCode": null,
+      "source": null,
       "name": "Polycrol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16521,6 +18531,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1005",
+      "emdexCode": null,
+      "source": null,
       "name": "Recler",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16537,6 +18549,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1006",
+      "emdexCode": null,
+      "source": null,
       "name": "Relcer Antacid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16553,6 +18567,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1007",
+      "emdexCode": null,
+      "source": null,
       "name": "Rulox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16569,6 +18585,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1008",
+      "emdexCode": null,
+      "source": null,
       "name": "De Shalom Anti",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16585,6 +18603,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1009",
+      "emdexCode": null,
+      "source": null,
       "name": "Bromex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16601,6 +18621,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1010",
+      "emdexCode": null,
+      "source": null,
       "name": "Cefamor",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16617,6 +18639,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1011",
+      "emdexCode": null,
+      "source": null,
       "name": "Fivarex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16633,6 +18657,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1012",
+      "emdexCode": null,
+      "source": null,
       "name": "Daily Living Bitters",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16649,6 +18675,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1013",
+      "emdexCode": null,
+      "source": null,
       "name": "Jawasil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16665,6 +18693,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1014",
+      "emdexCode": null,
+      "source": null,
       "name": "Evans Swedish Bitters",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16681,6 +18711,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1015",
+      "emdexCode": null,
+      "source": null,
       "name": "Swedish Bitters",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16697,6 +18729,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1016",
+      "emdexCode": null,
+      "source": null,
       "name": "Amciron Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16713,6 +18747,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1017",
+      "emdexCode": null,
+      "source": null,
       "name": "Astymin Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16729,6 +18765,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1018",
+      "emdexCode": null,
+      "source": null,
       "name": "Bentonic Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16745,6 +18783,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1019",
+      "emdexCode": null,
+      "source": null,
       "name": "Biotonic Bood Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16761,6 +18801,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1020",
+      "emdexCode": null,
+      "source": null,
       "name": "Biotonic Tonic B/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16778,6 +18820,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1021",
+      "emdexCode": null,
+      "source": null,
       "name": "Biotonic Tonic M/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16795,6 +18839,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1022",
+      "emdexCode": null,
+      "source": null,
       "name": "Biotonic Tonic S/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16812,6 +18858,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1023",
+      "emdexCode": null,
+      "source": null,
       "name": "Bloodtone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16828,6 +18876,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1024",
+      "emdexCode": null,
+      "source": null,
       "name": "Build Up Blood",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16844,6 +18894,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1025",
+      "emdexCode": null,
+      "source": null,
       "name": "Bunto Tonic Ms",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16860,6 +18912,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1026",
+      "emdexCode": null,
+      "source": null,
       "name": "Cyprigold Tonic M/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16877,6 +18931,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1027",
+      "emdexCode": null,
+      "source": null,
       "name": "Cyprigold Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16893,6 +18949,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1028",
+      "emdexCode": null,
+      "source": null,
       "name": "Darkins Heamoglobin Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16909,6 +18967,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1029",
+      "emdexCode": null,
+      "source": null,
       "name": "Detonic Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16925,6 +18985,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1030",
+      "emdexCode": null,
+      "source": null,
       "name": "Dexampple Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16941,6 +19003,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1031",
+      "emdexCode": null,
+      "source": null,
       "name": "Bunto Tonic S/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16958,6 +19022,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1032",
+      "emdexCode": null,
+      "source": null,
       "name": "Chemiron Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16974,6 +19040,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1033",
+      "emdexCode": null,
+      "source": null,
       "name": "Astyfer Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -16990,6 +19058,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1034",
+      "emdexCode": null,
+      "source": null,
       "name": "Dr Nelsons Blood",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17006,6 +19076,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1035",
+      "emdexCode": null,
+      "source": null,
       "name": "Eleron Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17022,6 +19094,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1036",
+      "emdexCode": null,
+      "source": null,
       "name": "Everyday Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17038,6 +19112,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1037",
+      "emdexCode": null,
+      "source": null,
       "name": "Ferbelan Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17054,6 +19130,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1038",
+      "emdexCode": null,
+      "source": null,
       "name": "Ferilex Junior Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17070,6 +19148,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1039",
+      "emdexCode": null,
+      "source": null,
       "name": "Ferilex Tonic B/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17087,6 +19167,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1040",
+      "emdexCode": null,
+      "source": null,
       "name": "Ferilex Tonic S/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17104,6 +19186,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1041",
+      "emdexCode": null,
+      "source": null,
       "name": "Feriplus Tonic B/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17121,6 +19205,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1042",
+      "emdexCode": null,
+      "source": null,
       "name": "Feriplus Tonic M/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17138,6 +19224,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1043",
+      "emdexCode": null,
+      "source": null,
       "name": "Feriplus Tonic S/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17155,6 +19243,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1044",
+      "emdexCode": null,
+      "source": null,
       "name": "Feritan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17171,6 +19261,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1045",
+      "emdexCode": null,
+      "source": null,
       "name": "Ferobin Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17187,6 +19279,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1046",
+      "emdexCode": null,
+      "source": null,
       "name": "Feroglobin Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17203,6 +19297,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1047",
+      "emdexCode": null,
+      "source": null,
       "name": "Ferotal Blood Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17219,6 +19315,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1048",
+      "emdexCode": null,
+      "source": null,
       "name": "Ferotal Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17235,6 +19333,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1049",
+      "emdexCode": null,
+      "source": null,
       "name": "Ferrotogen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17251,6 +19351,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1050",
+      "emdexCode": null,
+      "source": null,
       "name": "Heam Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17267,6 +19369,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1051",
+      "emdexCode": null,
+      "source": null,
       "name": "Heamaron Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17283,6 +19387,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1052",
+      "emdexCode": null,
+      "source": null,
       "name": "Hexorange Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17299,6 +19405,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1053",
+      "emdexCode": null,
+      "source": null,
       "name": "Hs Heamoglobin Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17315,6 +19423,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1054",
+      "emdexCode": null,
+      "source": null,
       "name": "Ironoglobin Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17331,6 +19441,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1055",
+      "emdexCode": null,
+      "source": null,
       "name": "Lifex Blood Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17347,6 +19459,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1056",
+      "emdexCode": null,
+      "source": null,
       "name": "Emzoron Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17363,6 +19477,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1057",
+      "emdexCode": null,
+      "source": null,
       "name": "Jawaron Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17379,6 +19495,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1058",
+      "emdexCode": null,
+      "source": null,
       "name": "Liqiud Iron Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17395,6 +19513,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1059",
+      "emdexCode": null,
+      "source": null,
       "name": "Living Bitters Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17411,6 +19531,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1060",
+      "emdexCode": null,
+      "source": null,
       "name": "Orheptal Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17427,6 +19549,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1061",
+      "emdexCode": null,
+      "source": null,
       "name": "Peacetone Tonic Bs",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17443,6 +19567,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1062",
+      "emdexCode": null,
+      "source": null,
       "name": "Peacetone Tonic Ms",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17459,6 +19585,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1063",
+      "emdexCode": null,
+      "source": null,
       "name": "Peacetone Tonic Ss",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17475,6 +19603,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1064",
+      "emdexCode": null,
+      "source": null,
       "name": "Primeron Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17491,6 +19621,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1065",
+      "emdexCode": null,
+      "source": null,
       "name": "Ranferon Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17507,6 +19639,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1066",
+      "emdexCode": null,
+      "source": null,
       "name": "Solotone Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17523,6 +19657,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1067",
+      "emdexCode": null,
+      "source": null,
       "name": "Hollandia Yogurt S/s",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17540,6 +19676,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1068",
+      "emdexCode": null,
+      "source": null,
       "name": "Vamobion Children Blood",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17556,6 +19694,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1069",
+      "emdexCode": null,
+      "source": null,
       "name": "King Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17572,6 +19712,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1070",
+      "emdexCode": null,
+      "source": null,
       "name": "Mim Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17588,6 +19730,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1071",
+      "emdexCode": null,
+      "source": null,
       "name": "Vamobion Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17604,6 +19748,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1072",
+      "emdexCode": null,
+      "source": null,
       "name": "Wate On Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17620,6 +19766,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1073",
+      "emdexCode": null,
+      "source": null,
       "name": "Wellman Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17636,6 +19784,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1074",
+      "emdexCode": null,
+      "source": null,
       "name": "Welltonic Bs",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17652,6 +19802,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1075",
+      "emdexCode": null,
+      "source": null,
       "name": "Welltonic Ms",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17668,6 +19820,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1076",
+      "emdexCode": null,
+      "source": null,
       "name": "Welltonic Tonic Ss",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17684,6 +19838,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1077",
+      "emdexCode": null,
+      "source": null,
       "name": "Wellwomantonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17700,6 +19856,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1078",
+      "emdexCode": null,
+      "source": null,
       "name": "Zologer Blood Tonic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17716,6 +19874,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1079",
+      "emdexCode": null,
+      "source": null,
       "name": "Maladrine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17732,6 +19892,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1080",
+      "emdexCode": null,
+      "source": null,
       "name": "Nivaquine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17748,6 +19910,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1081",
+      "emdexCode": null,
+      "source": null,
       "name": "Vinaquine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17764,6 +19928,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1082",
+      "emdexCode": null,
+      "source": null,
       "name": "Chloroquinne",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17780,6 +19946,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1083",
+      "emdexCode": null,
+      "source": null,
       "name": "Ascorex Expectorant",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17796,6 +19964,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1084",
+      "emdexCode": null,
+      "source": null,
       "name": "Avrolin Cough",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17812,6 +19982,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1085",
+      "emdexCode": null,
+      "source": null,
       "name": "Bentcof Expectorant",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17828,6 +20000,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1086",
+      "emdexCode": null,
+      "source": null,
       "name": "Benylin Expectorant",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17844,6 +20018,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1087",
+      "emdexCode": null,
+      "source": null,
       "name": "Biolin Expectorant",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17860,6 +20036,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1088",
+      "emdexCode": null,
+      "source": null,
       "name": "Clearcuf Expectorant",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17876,6 +20054,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1089",
+      "emdexCode": null,
+      "source": null,
       "name": "Coff Off",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17892,6 +20072,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1090",
+      "emdexCode": null,
+      "source": null,
       "name": "Coscopin Cough Linctus",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17908,6 +20090,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1091",
+      "emdexCode": null,
+      "source": null,
       "name": "Dana Xpel Expectorant",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17924,6 +20108,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1092",
+      "emdexCode": null,
+      "source": null,
       "name": "Diphenkof Expectorant",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17940,6 +20126,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1093",
+      "emdexCode": null,
+      "source": null,
       "name": "Tomtom",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17956,6 +20144,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1094",
+      "emdexCode": null,
+      "source": null,
       "name": "Greenlin Dry Cough",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17972,6 +20162,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1095",
+      "emdexCode": null,
+      "source": null,
       "name": "Parkalin Expectorant",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -17988,6 +20180,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1096",
+      "emdexCode": null,
+      "source": null,
       "name": "Rablyn Expecturant",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18004,6 +20198,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1097",
+      "emdexCode": null,
+      "source": null,
       "name": "Toplin Expectorant",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18020,6 +20216,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1098",
+      "emdexCode": null,
+      "source": null,
       "name": "Ultilin Expectorant",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18036,6 +20234,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1099",
+      "emdexCode": null,
+      "source": null,
       "name": "Tutolin Expectorant",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18052,6 +20252,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1100",
+      "emdexCode": null,
+      "source": null,
       "name": "Collipan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18068,6 +20270,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1101",
+      "emdexCode": null,
+      "source": null,
       "name": "Vltilim Expactorant",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18084,6 +20288,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1102",
+      "emdexCode": null,
+      "source": null,
       "name": "Avrocof Cough",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18100,6 +20306,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1103",
+      "emdexCode": null,
+      "source": null,
       "name": "Benylin Cough",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18116,6 +20324,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1104",
+      "emdexCode": null,
+      "source": null,
       "name": "Biolin Cough",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18132,6 +20342,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1105",
+      "emdexCode": null,
+      "source": null,
       "name": "Bonakoff Cough",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18148,6 +20360,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1106",
+      "emdexCode": null,
+      "source": null,
       "name": "Cencold",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18164,6 +20378,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1107",
+      "emdexCode": null,
+      "source": null,
       "name": "Chericof",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18180,6 +20396,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1108",
+      "emdexCode": null,
+      "source": null,
       "name": "Clearcuf Cough For",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18196,6 +20414,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1109",
+      "emdexCode": null,
+      "source": null,
       "name": "Cofcol Cough",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18212,6 +20432,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1110",
+      "emdexCode": null,
+      "source": null,
       "name": "Coflax Cough Linctus",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18228,6 +20450,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1111",
+      "emdexCode": null,
+      "source": null,
       "name": "Cofmix Cough",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18244,6 +20468,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1112",
+      "emdexCode": null,
+      "source": null,
       "name": "Echart",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18260,6 +20486,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1113",
+      "emdexCode": null,
+      "source": null,
       "name": "Hemdyn",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18276,6 +20504,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1114",
+      "emdexCode": null,
+      "source": null,
       "name": "Arnet",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18292,6 +20522,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1115",
+      "emdexCode": null,
+      "source": null,
       "name": "Aldoxil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18308,6 +20540,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1116",
+      "emdexCode": null,
+      "source": null,
       "name": "Asmanol Branded",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18324,6 +20558,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1117",
+      "emdexCode": null,
+      "source": null,
       "name": "Cofex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18340,6 +20576,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1118",
+      "emdexCode": null,
+      "source": null,
       "name": "Essential",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18356,6 +20594,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1119",
+      "emdexCode": null,
+      "source": null,
       "name": "Asmanol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18372,6 +20612,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1120",
+      "emdexCode": null,
+      "source": null,
       "name": "Ciprojopan Tabx10",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18388,6 +20630,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1121",
+      "emdexCode": null,
+      "source": null,
       "name": "Sprinolactone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18404,6 +20648,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1122",
+      "emdexCode": null,
+      "source": null,
       "name": "Aldomet",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18420,6 +20666,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1123",
+      "emdexCode": null,
+      "source": null,
       "name": "Ambihar",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18436,6 +20684,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1124",
+      "emdexCode": null,
+      "source": null,
       "name": "Amitryptiline Tryptizole",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18452,6 +20702,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1125",
+      "emdexCode": null,
+      "source": null,
       "name": "Ancoloxin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18468,6 +20720,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1126",
+      "emdexCode": null,
+      "source": null,
       "name": "Anuerine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18484,6 +20738,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1127",
+      "emdexCode": null,
+      "source": null,
       "name": "Gelusil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18500,6 +20756,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1128",
+      "emdexCode": null,
+      "source": null,
       "name": "Daraprim",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18516,6 +20774,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1129",
+      "emdexCode": "P01BA06",
+      "source": null,
       "name": "Amodiaquinne",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18532,6 +20792,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1130",
+      "emdexCode": null,
+      "source": null,
       "name": "Artane",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18548,6 +20810,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1131",
+      "emdexCode": null,
+      "source": null,
       "name": "Aspirin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18564,6 +20828,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1132",
+      "emdexCode": null,
+      "source": null,
       "name": "Beecodeen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18580,6 +20846,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1133",
+      "emdexCode": null,
+      "source": null,
       "name": "Buta",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18596,6 +20864,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1134",
+      "emdexCode": null,
+      "source": null,
       "name": "Chymoral",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18612,6 +20882,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1135",
+      "emdexCode": null,
+      "source": null,
       "name": "Ketrax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18628,6 +20900,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1136",
+      "emdexCode": null,
+      "source": null,
       "name": "Levax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18644,6 +20918,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1137",
+      "emdexCode": null,
+      "source": null,
       "name": "Retrax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18660,6 +20936,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1138",
+      "emdexCode": null,
+      "source": null,
       "name": "Epanutin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18676,6 +20954,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1139",
+      "emdexCode": null,
+      "source": null,
       "name": "Franol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18692,6 +20972,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1140",
+      "emdexCode": "M01Ae01;M01Ae01;M01Ae01;C01eB16",
+      "source": null,
       "name": "Ibuprofen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18708,6 +20990,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1141",
+      "emdexCode": null,
+      "source": null,
       "name": "Inderal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18724,6 +21008,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1142",
+      "emdexCode": null,
+      "source": null,
       "name": "Indocid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18740,6 +21026,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1143",
+      "emdexCode": null,
+      "source": null,
       "name": "Chlopromazine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18756,6 +21044,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1144",
+      "emdexCode": null,
+      "source": null,
       "name": "Frusemide",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18772,6 +21062,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1145",
+      "emdexCode": null,
+      "source": null,
       "name": "Lasix",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18788,6 +21080,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1146",
+      "emdexCode": null,
+      "source": null,
       "name": "Moduretic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18804,6 +21098,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1147",
+      "emdexCode": null,
+      "source": null,
       "name": "Nitrazepam",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18820,6 +21116,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1148",
+      "emdexCode": null,
+      "source": null,
       "name": "Banocide",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18836,6 +21134,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1149",
+      "emdexCode": null,
+      "source": null,
       "name": "Chlodiazepozide",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18852,6 +21152,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1150",
+      "emdexCode": null,
+      "source": null,
       "name": "Dexamethazone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18868,6 +21170,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1151",
+      "emdexCode": null,
+      "source": null,
       "name": "Dhc Dihydrocodiene",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18884,6 +21188,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1152",
+      "emdexCode": null,
+      "source": null,
       "name": "Ephedrine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18900,6 +21206,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1153",
+      "emdexCode": null,
+      "source": null,
       "name": "Fergon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18916,6 +21224,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1154",
+      "emdexCode": null,
+      "source": null,
       "name": "Ferrous",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18932,6 +21242,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1155",
+      "emdexCode": null,
+      "source": null,
       "name": "Sulphatriad",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18948,6 +21260,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1156",
+      "emdexCode": null,
+      "source": null,
       "name": "Thiazamide",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18964,6 +21278,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1157",
+      "emdexCode": null,
+      "source": null,
       "name": "Minizide",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18980,6 +21296,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1158",
+      "emdexCode": null,
+      "source": null,
       "name": "Pilicon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -18996,6 +21314,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1159",
+      "emdexCode": null,
+      "source": null,
       "name": "Pthylsulphathiazole",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19012,6 +21332,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1160",
+      "emdexCode": null,
+      "source": null,
       "name": "Pyrizinamide",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19028,6 +21350,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1161",
+      "emdexCode": null,
+      "source": null,
       "name": "S",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19044,6 +21368,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1162",
+      "emdexCode": null,
+      "source": null,
       "name": "Cynocobalamine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19060,6 +21386,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1163",
+      "emdexCode": null,
+      "source": null,
       "name": "Ampiclox 500gm",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19076,6 +21404,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1164",
+      "emdexCode": null,
+      "source": null,
       "name": "Jawaclox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19092,6 +21422,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1165",
+      "emdexCode": null,
+      "source": null,
       "name": "Oat Choco Whit",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19108,6 +21440,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1166",
+      "emdexCode": null,
+      "source": null,
       "name": "Letter Tray",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19124,6 +21458,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1167",
+      "emdexCode": null,
+      "source": null,
       "name": "Benylin With Codeine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19140,6 +21476,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1168",
+      "emdexCode": null,
+      "source": null,
       "name": "Bongrex Triplle Action",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19156,6 +21494,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1169",
+      "emdexCode": null,
+      "source": null,
       "name": "Celexin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19172,6 +21512,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1170",
+      "emdexCode": null,
+      "source": null,
       "name": "Cenacef",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19188,6 +21530,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1171",
+      "emdexCode": null,
+      "source": null,
       "name": "Champion",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19204,6 +21548,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1172",
+      "emdexCode": null,
+      "source": null,
       "name": "Clamide",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19220,6 +21566,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1173",
+      "emdexCode": null,
+      "source": null,
       "name": "Collomack Liquid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19236,6 +21584,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1174",
+      "emdexCode": null,
+      "source": null,
       "name": "Dacryne",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19252,6 +21602,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1175",
+      "emdexCode": null,
+      "source": null,
       "name": "Gremolid Antheid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19268,6 +21620,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1176",
+      "emdexCode": null,
+      "source": null,
       "name": "Malarex Tripple Action",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19284,6 +21638,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1177",
+      "emdexCode": null,
+      "source": null,
       "name": "Polygel",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19300,6 +21656,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1178",
+      "emdexCode": null,
+      "source": null,
       "name": "Regroton",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19316,6 +21674,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1179",
+      "emdexCode": null,
+      "source": null,
       "name": "Trino Ib",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19332,6 +21692,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1180",
+      "emdexCode": null,
+      "source": null,
       "name": "Trino Liquid Ib",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19348,6 +21710,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1181",
+      "emdexCode": null,
+      "source": null,
       "name": "Climpclox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19364,6 +21728,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1182",
+      "emdexCode": null,
+      "source": null,
       "name": "Water",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19380,6 +21746,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1183",
+      "emdexCode": null,
+      "source": null,
       "name": "Aldactone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19396,6 +21764,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1184",
+      "emdexCode": null,
+      "source": null,
       "name": "Bondumet",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19412,6 +21782,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1185",
+      "emdexCode": null,
+      "source": null,
       "name": "Greendopa",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19428,6 +21800,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1186",
+      "emdexCode": null,
+      "source": null,
       "name": "Anafranil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19444,6 +21818,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1187",
+      "emdexCode": null,
+      "source": null,
       "name": "Celebrex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19460,6 +21836,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1188",
+      "emdexCode": null,
+      "source": null,
       "name": "Rancotrim",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19476,6 +21854,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1189",
+      "emdexCode": null,
+      "source": null,
       "name": "Analgin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19492,6 +21872,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1190",
+      "emdexCode": null,
+      "source": null,
       "name": "Voltaren Retard",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19508,6 +21890,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1191",
+      "emdexCode": null,
+      "source": null,
       "name": "Ancopir",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19524,6 +21908,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1192",
+      "emdexCode": null,
+      "source": null,
       "name": "Axacef",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19540,6 +21926,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1193",
+      "emdexCode": null,
+      "source": null,
       "name": "Fungral",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19556,6 +21944,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1194",
+      "emdexCode": null,
+      "source": null,
       "name": "Ketofung",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19572,6 +21962,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1195",
+      "emdexCode": null,
+      "source": null,
       "name": "Ketonal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19588,6 +21980,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1196",
+      "emdexCode": null,
+      "source": null,
       "name": "2 2 1 Forte",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19604,6 +21998,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1197",
+      "emdexCode": null,
+      "source": null,
       "name": "Maloxine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19620,6 +22016,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1198",
+      "emdexCode": null,
+      "source": null,
       "name": "Alaxin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19636,6 +22034,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1199",
+      "emdexCode": null,
+      "source": null,
       "name": "Artemef",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19652,6 +22052,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1200",
+      "emdexCode": null,
+      "source": null,
       "name": "Artequine 600/750",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19669,6 +22071,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1201",
+      "emdexCode": null,
+      "source": null,
       "name": "Arthemeter",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19685,6 +22089,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1202",
+      "emdexCode": null,
+      "source": null,
       "name": "Kamphor",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19701,6 +22107,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1203",
+      "emdexCode": null,
+      "source": null,
       "name": "Bactrim",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19717,6 +22125,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1204",
+      "emdexCode": null,
+      "source": null,
       "name": "Coartal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19733,6 +22143,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1205",
+      "emdexCode": null,
+      "source": null,
       "name": "Cotexin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19749,6 +22161,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1206",
+      "emdexCode": null,
+      "source": null,
       "name": "Dart For Children",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19765,6 +22179,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1207",
+      "emdexCode": null,
+      "source": null,
       "name": "Larither",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19781,6 +22197,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1208",
+      "emdexCode": null,
+      "source": null,
       "name": "Lumartem",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19797,6 +22215,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1209",
+      "emdexCode": null,
+      "source": null,
       "name": "Tamether 40/240",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19814,6 +22234,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1210",
+      "emdexCode": null,
+      "source": null,
       "name": "Tamether 80/480",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19831,6 +22253,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1211",
+      "emdexCode": null,
+      "source": null,
       "name": "Amoquin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19847,6 +22271,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1212",
+      "emdexCode": null,
+      "source": null,
       "name": "Brominol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19863,6 +22289,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1213",
+      "emdexCode": null,
+      "source": null,
       "name": "Avomine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19879,6 +22307,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1214",
+      "emdexCode": null,
+      "source": null,
       "name": "Junolol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19895,6 +22325,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1215",
+      "emdexCode": null,
+      "source": null,
       "name": "Auglocef",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19911,6 +22343,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1216",
+      "emdexCode": null,
+      "source": null,
       "name": "Handkerchief",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19927,6 +22361,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1217",
+      "emdexCode": null,
+      "source": null,
       "name": "Brinerdin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19943,6 +22379,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1218",
+      "emdexCode": "J01DB01",
+      "source": null,
       "name": "Cephalexin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19959,6 +22397,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1219",
+      "emdexCode": null,
+      "source": null,
       "name": "Amtiba",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19975,6 +22415,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1220",
+      "emdexCode": null,
+      "source": null,
       "name": "Clomid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -19991,6 +22433,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1221",
+      "emdexCode": null,
+      "source": null,
       "name": "Co Proxamol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20007,6 +22451,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1222",
+      "emdexCode": null,
+      "source": null,
       "name": "Cumorit",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20023,6 +22469,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1223",
+      "emdexCode": null,
+      "source": null,
       "name": "Daonil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20039,6 +22487,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1224",
+      "emdexCode": null,
+      "source": null,
       "name": "Duofem",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20055,6 +22505,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1225",
+      "emdexCode": null,
+      "source": null,
       "name": "Glucophage",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20071,6 +22523,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1226",
+      "emdexCode": null,
+      "source": null,
       "name": "Lexotan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20087,6 +22541,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1227",
+      "emdexCode": null,
+      "source": null,
       "name": "Lincomycin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20103,6 +22559,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1228",
+      "emdexCode": null,
+      "source": null,
       "name": "Manix",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20119,6 +22577,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1229",
+      "emdexCode": null,
+      "source": null,
       "name": "My Fit",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20135,6 +22595,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1230",
+      "emdexCode": null,
+      "source": null,
       "name": "Wellman 50+",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20151,6 +22613,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1231",
+      "emdexCode": null,
+      "source": null,
       "name": "Wellwoman 50+",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20167,6 +22631,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1232",
+      "emdexCode": null,
+      "source": null,
       "name": "Naxen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20183,6 +22649,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1233",
+      "emdexCode": null,
+      "source": null,
       "name": "Dolo Neurobion",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20199,6 +22667,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1234",
+      "emdexCode": null,
+      "source": null,
       "name": "Adalat Retard",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20215,6 +22685,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1235",
+      "emdexCode": null,
+      "source": null,
       "name": "Nifegem Retard",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20231,6 +22703,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1236",
+      "emdexCode": null,
+      "source": null,
       "name": "Acdt Zero",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20247,6 +22721,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1237",
+      "emdexCode": null,
+      "source": null,
       "name": "Acefen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20263,6 +22739,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1238",
+      "emdexCode": null,
+      "source": null,
       "name": "Acefex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20279,6 +22757,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1239",
+      "emdexCode": null,
+      "source": null,
       "name": "Addyzoa",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20295,6 +22775,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1240",
+      "emdexCode": null,
+      "source": null,
       "name": "Adride",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20311,6 +22793,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1241",
+      "emdexCode": null,
+      "source": null,
       "name": "Alberol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20327,6 +22811,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1242",
+      "emdexCode": null,
+      "source": null,
       "name": "All Well",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20343,6 +22829,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1243",
+      "emdexCode": null,
+      "source": null,
       "name": "Amaryl",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20359,6 +22847,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1244",
+      "emdexCode": null,
+      "source": null,
       "name": "Amclavin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20375,6 +22865,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1245",
+      "emdexCode": null,
+      "source": null,
       "name": "Amedin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20391,6 +22883,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1246",
+      "emdexCode": null,
+      "source": null,
       "name": "Amidrex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20407,6 +22901,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1247",
+      "emdexCode": null,
+      "source": null,
       "name": "Amiled",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20423,6 +22919,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1248",
+      "emdexCode": null,
+      "source": null,
       "name": "Amilod",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20439,6 +22937,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1249",
+      "emdexCode": null,
+      "source": null,
       "name": "Amlong",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20455,6 +22955,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1250",
+      "emdexCode": null,
+      "source": null,
       "name": "Amlovar",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20471,6 +22973,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1251",
+      "emdexCode": null,
+      "source": null,
       "name": "Amlover",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20487,6 +22991,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1252",
+      "emdexCode": null,
+      "source": null,
       "name": "Amovin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20503,6 +23009,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1253",
+      "emdexCode": null,
+      "source": null,
       "name": "Amycin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20519,6 +23027,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1254",
+      "emdexCode": null,
+      "source": null,
       "name": "Anacin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20535,6 +23045,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1255",
+      "emdexCode": null,
+      "source": null,
       "name": "Anclovar",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20551,6 +23063,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1256",
+      "emdexCode": null,
+      "source": null,
       "name": "Ancovar",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20567,6 +23081,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1257",
+      "emdexCode": null,
+      "source": null,
       "name": "Andermin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20583,6 +23099,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1258",
+      "emdexCode": null,
+      "source": null,
       "name": "Anglocef",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20599,6 +23117,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1259",
+      "emdexCode": null,
+      "source": null,
       "name": "Anorol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20615,6 +23135,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1260",
+      "emdexCode": null,
+      "source": null,
       "name": "Arnex Tin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20631,6 +23153,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1261",
+      "emdexCode": null,
+      "source": null,
       "name": "Arthrotec",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20647,6 +23171,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1262",
+      "emdexCode": null,
+      "source": null,
       "name": "Artrin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20663,6 +23189,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1263",
+      "emdexCode": null,
+      "source": null,
       "name": "Avodart",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20679,6 +23207,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1264",
+      "emdexCode": null,
+      "source": null,
       "name": "Avomac",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20695,6 +23225,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1265",
+      "emdexCode": null,
+      "source": null,
       "name": "Bactron",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20711,6 +23243,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1266",
+      "emdexCode": null,
+      "source": null,
       "name": "Barole",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20727,6 +23261,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1267",
+      "emdexCode": null,
+      "source": null,
       "name": "Betafil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20743,6 +23279,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1268",
+      "emdexCode": null,
+      "source": null,
       "name": "Betaren Dexel",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20759,6 +23297,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1269",
+      "emdexCode": null,
+      "source": null,
       "name": "Bgvid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20775,6 +23315,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1270",
+      "emdexCode": null,
+      "source": null,
       "name": "Bioflor",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20791,6 +23333,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1271",
+      "emdexCode": null,
+      "source": null,
       "name": "Bioxime",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20807,6 +23351,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1272",
+      "emdexCode": null,
+      "source": null,
       "name": "Bonarex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20823,6 +23369,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1273",
+      "emdexCode": null,
+      "source": null,
       "name": "Morigad",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20839,6 +23387,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1274",
+      "emdexCode": null,
+      "source": null,
       "name": "Bromaplex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20855,6 +23405,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1275",
+      "emdexCode": null,
+      "source": null,
       "name": "Bromegon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20871,6 +23423,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1276",
+      "emdexCode": null,
+      "source": null,
       "name": "Cefunat",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20887,6 +23441,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1277",
+      "emdexCode": null,
+      "source": null,
       "name": "Celozol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20903,6 +23459,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1278",
+      "emdexCode": null,
+      "source": null,
       "name": "Cenocide",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20919,6 +23477,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1279",
+      "emdexCode": null,
+      "source": null,
       "name": "Cepherd",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20935,6 +23495,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1280",
+      "emdexCode": null,
+      "source": null,
       "name": "Cet",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20951,6 +23513,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1281",
+      "emdexCode": null,
+      "source": null,
       "name": "Cifenal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20967,6 +23531,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1282",
+      "emdexCode": null,
+      "source": null,
       "name": "Ciprobiotic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20983,6 +23549,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1283",
+      "emdexCode": null,
+      "source": null,
       "name": "Ciprocid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -20999,6 +23567,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1284",
+      "emdexCode": null,
+      "source": null,
       "name": "Ciprocil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21015,6 +23585,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1285",
+      "emdexCode": null,
+      "source": null,
       "name": "Ciprogem",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21031,6 +23603,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1286",
+      "emdexCode": null,
+      "source": null,
       "name": "Ciproheal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21047,6 +23621,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1287",
+      "emdexCode": null,
+      "source": null,
       "name": "Cipronol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21063,6 +23639,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1288",
+      "emdexCode": null,
+      "source": null,
       "name": "Ciprotab Tn",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21079,6 +23657,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1289",
+      "emdexCode": null,
+      "source": null,
       "name": "Ciprovam",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21095,6 +23675,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1290",
+      "emdexCode": null,
+      "source": null,
       "name": "Ciproxamed",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21111,6 +23693,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1291",
+      "emdexCode": null,
+      "source": null,
       "name": "Cladyl",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21127,6 +23711,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1292",
+      "emdexCode": null,
+      "source": null,
       "name": "Clamycef",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21143,6 +23729,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1293",
+      "emdexCode": null,
+      "source": null,
       "name": "Claret",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21159,6 +23747,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1294",
+      "emdexCode": null,
+      "source": null,
       "name": "Clarimax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21175,6 +23765,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1295",
+      "emdexCode": null,
+      "source": null,
       "name": "Claritron",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21191,6 +23783,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1296",
+      "emdexCode": null,
+      "source": null,
       "name": "Clemarin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21207,6 +23801,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1297",
+      "emdexCode": null,
+      "source": null,
       "name": "Climaz Vag",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21223,6 +23819,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1298",
+      "emdexCode": null,
+      "source": null,
       "name": "Clocef",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21239,6 +23837,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1299",
+      "emdexCode": null,
+      "source": null,
       "name": "Clofenac",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21255,6 +23855,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1300",
+      "emdexCode": null,
+      "source": null,
       "name": "Clomiphene Citrate Clifen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21271,6 +23873,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1301",
+      "emdexCode": null,
+      "source": null,
       "name": "Clotival",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21287,6 +23891,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1302",
+      "emdexCode": null,
+      "source": null,
       "name": "Clovigal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21303,6 +23909,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1303",
+      "emdexCode": null,
+      "source": null,
       "name": "Co Arinate",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21319,6 +23927,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1304",
+      "emdexCode": null,
+      "source": null,
       "name": "Codabamal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21335,6 +23945,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1305",
+      "emdexCode": null,
+      "source": null,
       "name": "Curefenac",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21351,6 +23963,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1306",
+      "emdexCode": null,
+      "source": null,
       "name": "Co Diovan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21367,6 +23981,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1307",
+      "emdexCode": null,
+      "source": null,
       "name": "Co Mepiryl",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21383,6 +23999,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1308",
+      "emdexCode": null,
+      "source": null,
       "name": "Com Pipomal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21399,6 +24017,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1309",
+      "emdexCode": null,
+      "source": null,
       "name": "Contiflo Od",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21415,6 +24035,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1310",
+      "emdexCode": null,
+      "source": null,
       "name": "Dabanac",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21431,6 +24053,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1311",
+      "emdexCode": null,
+      "source": null,
       "name": "Dabapain",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21447,6 +24071,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1312",
+      "emdexCode": null,
+      "source": null,
       "name": "Daflon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21463,6 +24089,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1313",
+      "emdexCode": null,
+      "source": null,
       "name": "Dalacin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21479,6 +24107,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1314",
+      "emdexCode": null,
+      "source": null,
       "name": "Daximin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21495,6 +24125,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1315",
+      "emdexCode": null,
+      "source": null,
       "name": "Dextracin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21511,6 +24143,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1316",
+      "emdexCode": null,
+      "source": null,
       "name": "Diabetmin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21527,6 +24161,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1317",
+      "emdexCode": null,
+      "source": null,
       "name": "Diabex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21543,6 +24179,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1318",
+      "emdexCode": null,
+      "source": null,
       "name": "Diamex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21559,6 +24197,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1319",
+      "emdexCode": null,
+      "source": null,
       "name": "Diapride",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21575,6 +24215,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1320",
+      "emdexCode": null,
+      "source": null,
       "name": "Dibetmin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21591,6 +24233,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1321",
+      "emdexCode": null,
+      "source": null,
       "name": "Dirotix",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21607,6 +24251,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1322",
+      "emdexCode": null,
+      "source": null,
       "name": "Dopatab",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21623,6 +24269,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1323",
+      "emdexCode": null,
+      "source": null,
       "name": "Ecoclox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21639,6 +24287,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1324",
+      "emdexCode": null,
+      "source": null,
       "name": "Elicorid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21655,6 +24305,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1325",
+      "emdexCode": null,
+      "source": null,
       "name": "Embaphage",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21671,6 +24323,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1326",
+      "emdexCode": null,
+      "source": null,
       "name": "Emibaphage",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21687,6 +24341,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1327",
+      "emdexCode": null,
+      "source": null,
       "name": "Emzoron",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21703,6 +24359,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1328",
+      "emdexCode": null,
+      "source": null,
       "name": "Enaladex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21719,6 +24377,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1329",
+      "emdexCode": null,
+      "source": null,
       "name": "Enapace",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21735,6 +24395,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1330",
+      "emdexCode": null,
+      "source": null,
       "name": "Enaretic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21751,6 +24413,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1331",
+      "emdexCode": null,
+      "source": null,
       "name": "Encephabol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21767,6 +24431,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1332",
+      "emdexCode": null,
+      "source": null,
       "name": "Enhanz",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21783,6 +24449,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1333",
+      "emdexCode": null,
+      "source": null,
       "name": "Eplim",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21799,6 +24467,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1334",
+      "emdexCode": null,
+      "source": null,
       "name": "Erithrin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21815,6 +24485,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1335",
+      "emdexCode": null,
+      "source": null,
       "name": "Erthrogen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21831,6 +24503,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1336",
+      "emdexCode": null,
+      "source": null,
       "name": "Erylid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21847,6 +24521,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1337",
+      "emdexCode": null,
+      "source": null,
       "name": "Erythr",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21863,6 +24539,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1338",
+      "emdexCode": null,
+      "source": null,
       "name": "Exforge",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21879,6 +24557,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1339",
+      "emdexCode": null,
+      "source": null,
       "name": "Famotidine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21895,6 +24575,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1340",
+      "emdexCode": null,
+      "source": null,
       "name": "Fegem",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21911,6 +24593,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1341",
+      "emdexCode": null,
+      "source": null,
       "name": "Fenac",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21927,6 +24611,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1342",
+      "emdexCode": null,
+      "source": null,
       "name": "Fenal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21943,6 +24629,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1343",
+      "emdexCode": null,
+      "source": null,
       "name": "Ferbelan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21959,6 +24647,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1344",
+      "emdexCode": null,
+      "source": null,
       "name": "Ferrodana Long",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21975,6 +24665,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1345",
+      "emdexCode": null,
+      "source": null,
       "name": "Fizzcol Lamp",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -21991,6 +24683,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1346",
+      "emdexCode": null,
+      "source": null,
       "name": "Flacoxto",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22007,6 +24701,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1347",
+      "emdexCode": null,
+      "source": null,
       "name": "Fladipine Retard",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22023,6 +24719,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1348",
+      "emdexCode": null,
+      "source": null,
       "name": "Flagentyl",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22039,6 +24737,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1349",
+      "emdexCode": null,
+      "source": null,
       "name": "Fleming",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22055,6 +24755,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1350",
+      "emdexCode": null,
+      "source": null,
       "name": "Flexodene",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22071,6 +24773,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1351",
+      "emdexCode": null,
+      "source": null,
       "name": "Flotac",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22087,6 +24791,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1352",
+      "emdexCode": null,
+      "source": null,
       "name": "Flotral",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22103,6 +24809,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1353",
+      "emdexCode": null,
+      "source": null,
       "name": "Floxapen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22119,6 +24827,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1354",
+      "emdexCode": null,
+      "source": null,
       "name": "Floxium",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22135,6 +24845,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1355",
+      "emdexCode": null,
+      "source": null,
       "name": "Forbetic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22151,6 +24863,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1356",
+      "emdexCode": null,
+      "source": null,
       "name": "Forpain",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22167,6 +24881,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1357",
+      "emdexCode": null,
+      "source": null,
       "name": "Frigenal Recgral",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22183,6 +24899,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1358",
+      "emdexCode": null,
+      "source": null,
       "name": "Funazole",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22199,6 +24917,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1359",
+      "emdexCode": null,
+      "source": null,
       "name": "Clav",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22215,6 +24935,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1360",
+      "emdexCode": null,
+      "source": null,
       "name": "Galcipro",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22231,6 +24953,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1361",
+      "emdexCode": null,
+      "source": null,
       "name": "Gapril",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22247,6 +24971,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1362",
+      "emdexCode": null,
+      "source": null,
       "name": "Gflox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22263,6 +24989,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1363",
+      "emdexCode": null,
+      "source": null,
       "name": "Glutamin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22279,6 +25007,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1364",
+      "emdexCode": null,
+      "source": null,
       "name": "Ginkgopan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22295,6 +25025,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1365",
+      "emdexCode": null,
+      "source": null,
       "name": "Glanial",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22311,6 +25043,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1366",
+      "emdexCode": null,
+      "source": null,
       "name": "Glizetic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22327,6 +25061,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1367",
+      "emdexCode": null,
+      "source": null,
       "name": "Glo Cod",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22343,6 +25079,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1368",
+      "emdexCode": null,
+      "source": null,
       "name": "Glorax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22359,6 +25097,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1369",
+      "emdexCode": null,
+      "source": null,
       "name": "Glothrox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22375,6 +25115,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1370",
+      "emdexCode": null,
+      "source": null,
       "name": "Chair Floor Protection",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22391,6 +25133,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1371",
+      "emdexCode": null,
+      "source": null,
       "name": "Gloxin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22407,6 +25151,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1372",
+      "emdexCode": null,
+      "source": null,
       "name": "Glucotab",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22423,6 +25169,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1373",
+      "emdexCode": null,
+      "source": null,
       "name": "Glucovance",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22439,6 +25187,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1374",
+      "emdexCode": null,
+      "source": null,
       "name": "Glumin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22455,6 +25205,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1375",
+      "emdexCode": null,
+      "source": null,
       "name": "Gomaxin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22471,6 +25223,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1376",
+      "emdexCode": null,
+      "source": null,
       "name": "Gremax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22487,6 +25241,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1377",
+      "emdexCode": null,
+      "source": null,
       "name": "Grinflam",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22503,6 +25259,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1378",
+      "emdexCode": null,
+      "source": null,
       "name": "Grinil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22519,6 +25277,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1379",
+      "emdexCode": null,
+      "source": null,
       "name": "Guamet",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22535,6 +25295,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1380",
+      "emdexCode": null,
+      "source": null,
       "name": "Gynamed",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22551,6 +25313,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1381",
+      "emdexCode": null,
+      "source": null,
       "name": "Gynotaab",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22567,6 +25331,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1382",
+      "emdexCode": null,
+      "source": null,
       "name": "Halfan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22583,6 +25349,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1383",
+      "emdexCode": null,
+      "source": null,
       "name": "Heliclam",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22599,6 +25367,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1384",
+      "emdexCode": null,
+      "source": null,
       "name": "Hobetic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22615,6 +25385,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1385",
+      "emdexCode": null,
+      "source": null,
       "name": "Hydrex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22631,6 +25403,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1386",
+      "emdexCode": null,
+      "source": null,
       "name": "Immunace",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22647,6 +25421,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1387",
+      "emdexCode": null,
+      "source": null,
       "name": "Interpril",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22663,6 +25439,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1388",
+      "emdexCode": null,
+      "source": null,
       "name": "Itranox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22679,6 +25457,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1389",
+      "emdexCode": null,
+      "source": null,
       "name": "Jobelyn",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22695,6 +25475,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1390",
+      "emdexCode": null,
+      "source": null,
       "name": "Jointace",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22711,6 +25493,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1391",
+      "emdexCode": null,
+      "source": null,
       "name": "Jointfree",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22727,6 +25511,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1392",
+      "emdexCode": null,
+      "source": null,
       "name": "Juxotan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22743,6 +25529,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1393",
+      "emdexCode": null,
+      "source": null,
       "name": "Kakaforte",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22759,6 +25547,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1394",
+      "emdexCode": null,
+      "source": null,
       "name": "Ketovail",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22775,6 +25565,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1395",
+      "emdexCode": null,
+      "source": null,
       "name": "Kofol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22791,6 +25583,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1396",
+      "emdexCode": null,
+      "source": null,
       "name": "Koldoff",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22807,6 +25601,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1397",
+      "emdexCode": null,
+      "source": null,
       "name": "Kolmed",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22823,6 +25619,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1398",
+      "emdexCode": null,
+      "source": null,
       "name": "Kovymobral",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22839,6 +25637,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1399",
+      "emdexCode": null,
+      "source": null,
       "name": "Levoquin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22855,6 +25655,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1400",
+      "emdexCode": null,
+      "source": null,
       "name": "Levotil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22871,6 +25673,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1401",
+      "emdexCode": null,
+      "source": null,
       "name": "Levoxin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22887,6 +25691,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1402",
+      "emdexCode": null,
+      "source": null,
       "name": "Flox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22903,6 +25709,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1403",
+      "emdexCode": null,
+      "source": null,
       "name": "Licogen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22919,6 +25727,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1404",
+      "emdexCode": null,
+      "source": null,
       "name": "Lifemin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22935,6 +25745,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1405",
+      "emdexCode": null,
+      "source": null,
       "name": "Lipitor",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22951,6 +25763,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1406",
+      "emdexCode": null,
+      "source": null,
       "name": "Liprotein",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22967,6 +25781,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1407",
+      "emdexCode": null,
+      "source": null,
       "name": "Liptor",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22983,6 +25799,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1408",
+      "emdexCode": null,
+      "source": null,
       "name": "Liv",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -22999,6 +25817,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1409",
+      "emdexCode": null,
+      "source": null,
       "name": "Lizopril",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23015,6 +25835,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1410",
+      "emdexCode": null,
+      "source": null,
       "name": "Logynon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23031,6 +25853,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1411",
+      "emdexCode": null,
+      "source": null,
       "name": "Lokmal Adult",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23047,6 +25871,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1412",
+      "emdexCode": null,
+      "source": null,
       "name": "Lokmal Junior",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23063,6 +25889,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1413",
+      "emdexCode": null,
+      "source": null,
       "name": "Longcef",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23079,6 +25907,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1414",
+      "emdexCode": null,
+      "source": null,
       "name": "Lordamin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23095,6 +25925,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1415",
+      "emdexCode": null,
+      "source": null,
       "name": "Lotrial",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23111,6 +25943,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1416",
+      "emdexCode": null,
+      "source": null,
       "name": "Lovapine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23127,6 +25961,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1417",
+      "emdexCode": null,
+      "source": null,
       "name": "Loxaprim",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23143,6 +25979,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1418",
+      "emdexCode": null,
+      "source": null,
       "name": "Lucon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23159,6 +25997,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1419",
+      "emdexCode": null,
+      "source": null,
       "name": "Ludium",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23175,6 +26015,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1420",
+      "emdexCode": null,
+      "source": null,
       "name": "Malagon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23191,6 +26033,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1421",
+      "emdexCode": null,
+      "source": null,
       "name": "Marcnol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23207,6 +26051,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1422",
+      "emdexCode": null,
+      "source": null,
       "name": "Maxpam",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23223,6 +26069,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1423",
+      "emdexCode": null,
+      "source": null,
       "name": "Mebaal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23239,6 +26087,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1424",
+      "emdexCode": null,
+      "source": null,
       "name": "Mebox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23255,6 +26105,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1425",
+      "emdexCode": null,
+      "source": null,
       "name": "Mefinac Retard",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23271,6 +26123,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1426",
+      "emdexCode": null,
+      "source": null,
       "name": "Mega",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23287,6 +26141,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1427",
+      "emdexCode": null,
+      "source": null,
       "name": "Melleril",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23303,6 +26159,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1428",
+      "emdexCode": null,
+      "source": null,
       "name": "Kufydryl Expectorant",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23319,6 +26177,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1429",
+      "emdexCode": null,
+      "source": null,
       "name": "Cofmix With Codiene",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23335,6 +26195,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1430",
+      "emdexCode": null,
+      "source": null,
       "name": "Tutolin With Codiene",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23351,6 +26213,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1431",
+      "emdexCode": null,
+      "source": null,
       "name": "Tuxil With Codeine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23367,6 +26231,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1432",
+      "emdexCode": null,
+      "source": null,
       "name": "Cypro Appeti",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23383,6 +26249,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1433",
+      "emdexCode": null,
+      "source": null,
       "name": "Mattew Worm Elxir",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23399,6 +26267,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1434",
+      "emdexCode": null,
+      "source": null,
       "name": "Nerve Bone Liniment",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23415,6 +26285,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1435",
+      "emdexCode": null,
+      "source": null,
       "name": "Faith Glycerine Of",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23431,6 +26303,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1436",
+      "emdexCode": null,
+      "source": null,
       "name": "Clear Breath",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23447,6 +26321,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1437",
+      "emdexCode": null,
+      "source": null,
       "name": "Apertone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23463,6 +26339,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1438",
+      "emdexCode": null,
+      "source": null,
       "name": "Pharmmadoc",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23479,6 +26357,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1439",
+      "emdexCode": null,
+      "source": null,
       "name": "Bond Fv Mixture",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23495,6 +26375,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1440",
+      "emdexCode": null,
+      "source": null,
       "name": "Zoleen Hair",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23511,6 +26393,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1441",
+      "emdexCode": null,
+      "source": null,
       "name": "Oriko Hair Dye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23527,6 +26411,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1442",
+      "emdexCode": null,
+      "source": null,
       "name": "Orino Hair Colour",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23543,6 +26429,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1443",
+      "emdexCode": null,
+      "source": null,
       "name": "Proton Hair Dye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23559,6 +26447,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1444",
+      "emdexCode": null,
+      "source": null,
       "name": "Youth Hair Dye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23575,6 +26465,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1445",
+      "emdexCode": null,
+      "source": null,
       "name": "Zicodark Hair Dye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23591,6 +26483,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1446",
+      "emdexCode": null,
+      "source": null,
       "name": "Darbur Amla Hair",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23607,6 +26501,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1447",
+      "emdexCode": null,
+      "source": null,
       "name": "Dark And Lovely",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23623,6 +26519,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1448",
+      "emdexCode": null,
+      "source": null,
       "name": "Nycil Baby Petroleum",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23639,6 +26537,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1449",
+      "emdexCode": null,
+      "source": null,
       "name": "Veet Hair Removal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23655,6 +26555,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1450",
+      "emdexCode": null,
+      "source": null,
       "name": "Cerelac Honey",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23671,6 +26573,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1451",
+      "emdexCode": null,
+      "source": null,
       "name": "Menthoclear Inhaler",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23687,6 +26591,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1452",
+      "emdexCode": null,
+      "source": null,
       "name": "Baygon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23703,6 +26609,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1453",
+      "emdexCode": null,
+      "source": null,
       "name": "Rambo Paper",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23719,6 +26627,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1454",
+      "emdexCode": null,
+      "source": null,
       "name": "Rambo Rambo",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23735,6 +26645,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1455",
+      "emdexCode": null,
+      "source": null,
       "name": "Mix Fruit Jam",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23751,6 +26663,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1456",
+      "emdexCode": null,
+      "source": null,
       "name": "Napa Cherry Jam",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23767,6 +26681,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1457",
+      "emdexCode": null,
+      "source": null,
       "name": "Napa Jam",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23783,6 +26699,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1458",
+      "emdexCode": null,
+      "source": null,
       "name": "Napa Orange Jam",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23799,6 +26717,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1459",
+      "emdexCode": null,
+      "source": null,
       "name": "Exotic Juice Litre",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23815,6 +26735,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1460",
+      "emdexCode": null,
+      "source": null,
       "name": "Fumman Juice Litre",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23831,6 +26753,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1461",
+      "emdexCode": null,
+      "source": null,
       "name": "Napa Mixed Fruit",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23847,6 +26771,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1462",
+      "emdexCode": null,
+      "source": null,
       "name": "After Cut",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23863,6 +26789,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1463",
+      "emdexCode": null,
+      "source": null,
       "name": "Bio Claire",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23879,6 +26807,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1464",
+      "emdexCode": null,
+      "source": null,
       "name": "Funbactone Body",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23895,6 +26825,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1465",
+      "emdexCode": null,
+      "source": null,
       "name": "Joy",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23911,6 +26843,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1466",
+      "emdexCode": null,
+      "source": null,
       "name": "Kick Off",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23927,6 +26861,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1467",
+      "emdexCode": null,
+      "source": null,
       "name": "Lite Lovely",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23943,6 +26879,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1468",
+      "emdexCode": null,
+      "source": null,
       "name": "Looking Good",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23959,6 +26897,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1469",
+      "emdexCode": null,
+      "source": null,
       "name": "Nycil Baby",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23975,6 +26915,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1470",
+      "emdexCode": null,
+      "source": null,
       "name": "Revlon Natural Honey",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -23991,6 +26933,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1471",
+      "emdexCode": null,
+      "source": null,
       "name": "Tura",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24007,6 +26951,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1472",
+      "emdexCode": null,
+      "source": null,
       "name": "Vovi",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24023,6 +26969,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1473",
+      "emdexCode": null,
+      "source": null,
       "name": "White Up",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24039,6 +26987,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1474",
+      "emdexCode": null,
+      "source": null,
       "name": "Know Chicken Maggi",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24055,6 +27005,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1475",
+      "emdexCode": null,
+      "source": null,
       "name": "Royco Maggi",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24071,6 +27023,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1476",
+      "emdexCode": null,
+      "source": null,
       "name": "Complan Milk",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24087,6 +27041,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1477",
+      "emdexCode": null,
+      "source": null,
       "name": "Cow Gate",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24103,6 +27059,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1478",
+      "emdexCode": null,
+      "source": null,
       "name": "Cowbell Milk Tin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24119,6 +27077,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1479",
+      "emdexCode": null,
+      "source": null,
       "name": "Cowbell Refill",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24135,6 +27095,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1480",
+      "emdexCode": null,
+      "source": null,
       "name": "Dano Fat",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24151,6 +27113,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1481",
+      "emdexCode": null,
+      "source": null,
       "name": "Dano Tin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24167,6 +27131,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1482",
+      "emdexCode": null,
+      "source": null,
       "name": "Jago Evaporated Tin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24183,6 +27149,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1483",
+      "emdexCode": null,
+      "source": null,
       "name": "Jago Refil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24199,6 +27167,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1484",
+      "emdexCode": null,
+      "source": null,
       "name": "Lahda Milk",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24215,6 +27185,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1485",
+      "emdexCode": null,
+      "source": null,
       "name": "Loya Refil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24231,6 +27203,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1486",
+      "emdexCode": null,
+      "source": null,
       "name": "Loya Tin Milk",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24247,6 +27221,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1487",
+      "emdexCode": null,
+      "source": null,
       "name": "Luna Evaporated Milk",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24263,6 +27239,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1488",
+      "emdexCode": null,
+      "source": null,
       "name": "Napa Evaporated Milk",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24279,6 +27257,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1489",
+      "emdexCode": null,
+      "source": null,
       "name": "Nido Refil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24295,6 +27275,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1490",
+      "emdexCode": null,
+      "source": null,
       "name": "Nido Tin Milk",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24311,6 +27293,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1491",
+      "emdexCode": null,
+      "source": null,
       "name": "Nunu Evaporated Milk",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24327,6 +27311,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1492",
+      "emdexCode": null,
+      "source": null,
       "name": "Nunu Refil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24343,6 +27329,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1493",
+      "emdexCode": null,
+      "source": null,
       "name": "Olympic Evaporated Milk",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24359,6 +27347,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1494",
+      "emdexCode": null,
+      "source": null,
       "name": "Peak Evaporated Milk",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24375,6 +27365,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1495",
+      "emdexCode": null,
+      "source": null,
       "name": "Peak Gold Tin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24391,6 +27383,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1496",
+      "emdexCode": null,
+      "source": null,
       "name": "Peak Milk Refil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24407,6 +27401,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1497",
+      "emdexCode": null,
+      "source": null,
       "name": "Peak Milk Tin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24423,6 +27419,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1498",
+      "emdexCode": null,
+      "source": null,
       "name": "Peak123 Milk Tin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24439,6 +27437,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1499",
+      "emdexCode": null,
+      "source": null,
       "name": "Peakmilk Ramadan Kareem",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24455,6 +27455,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1500",
+      "emdexCode": null,
+      "source": null,
       "name": "Real Milk Refil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24471,6 +27473,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1501",
+      "emdexCode": null,
+      "source": null,
       "name": "Regal Milk Refil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24487,6 +27491,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1502",
+      "emdexCode": null,
+      "source": null,
       "name": "Three Crown Evaporated",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24503,6 +27509,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1503",
+      "emdexCode": null,
+      "source": null,
       "name": "Coke 50cl",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24519,6 +27527,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1504",
+      "emdexCode": null,
+      "source": null,
       "name": "Malta Gold",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24535,6 +27545,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1505",
+      "emdexCode": null,
+      "source": null,
       "name": "Maltex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24551,6 +27563,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1506",
+      "emdexCode": null,
+      "source": null,
       "name": "Maltina",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24567,6 +27581,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1507",
+      "emdexCode": null,
+      "source": null,
       "name": "Napa White Oat",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24583,6 +27599,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1508",
+      "emdexCode": null,
+      "source": null,
       "name": "Clear Oil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24599,6 +27617,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1509",
+      "emdexCode": null,
+      "source": null,
       "name": "Funmilayo",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24615,6 +27635,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1510",
+      "emdexCode": null,
+      "source": null,
       "name": "Lemovate",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24631,6 +27653,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1511",
+      "emdexCode": null,
+      "source": null,
       "name": "Comfit Pad",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24647,6 +27671,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1512",
+      "emdexCode": null,
+      "source": null,
       "name": "Everyday Pad",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24663,6 +27689,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1513",
+      "emdexCode": null,
+      "source": null,
       "name": "Hankerchief Pocket",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24679,6 +27707,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1514",
+      "emdexCode": null,
+      "source": null,
       "name": "Perfume",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24695,6 +27725,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1515",
+      "emdexCode": null,
+      "source": null,
       "name": "Maliza With Rollon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24711,6 +27743,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1516",
+      "emdexCode": null,
+      "source": null,
       "name": "Vanilla Rollon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24727,6 +27761,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1517",
+      "emdexCode": null,
+      "source": null,
       "name": "Damatol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24743,6 +27779,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1518",
+      "emdexCode": null,
+      "source": null,
       "name": "Nycil New",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24759,6 +27797,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1519",
+      "emdexCode": null,
+      "source": null,
       "name": "Nycil Old",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24775,6 +27815,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1520",
+      "emdexCode": null,
+      "source": null,
       "name": "One Love",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24791,6 +27833,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1521",
+      "emdexCode": null,
+      "source": null,
       "name": "Pop Popular Facial",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24807,6 +27851,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1522",
+      "emdexCode": null,
+      "source": null,
       "name": "Pure Cocoa Refil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24823,6 +27869,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1523",
+      "emdexCode": null,
+      "source": null,
       "name": "Pure Cocoa Tin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24839,6 +27887,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1524",
+      "emdexCode": null,
+      "source": null,
       "name": "Tony Montana",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24855,6 +27905,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1525",
+      "emdexCode": null,
+      "source": null,
       "name": "Mild Flower Relaxer",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24871,6 +27923,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1526",
+      "emdexCode": null,
+      "source": null,
       "name": "Heel Balm",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24887,6 +27941,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1527",
+      "emdexCode": null,
+      "source": null,
       "name": "Karaole Balm",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24903,6 +27959,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1528",
+      "emdexCode": null,
+      "source": null,
       "name": "Rob Hot Balm",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24919,6 +27977,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1529",
+      "emdexCode": null,
+      "source": null,
       "name": "Robb Balm",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24935,6 +27995,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1530",
+      "emdexCode": null,
+      "source": null,
       "name": "Robb Inhaler",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24951,6 +28013,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1531",
+      "emdexCode": null,
+      "source": null,
       "name": "Robb Junior",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24967,6 +28031,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1532",
+      "emdexCode": null,
+      "source": null,
       "name": "Vilicin Balm",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24983,6 +28049,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1533",
+      "emdexCode": null,
+      "source": null,
       "name": "Robb Tin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -24999,6 +28067,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1534",
+      "emdexCode": null,
+      "source": null,
       "name": "Adhoc Roll On",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25015,6 +28085,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1535",
+      "emdexCode": null,
+      "source": null,
       "name": "All Day Deo",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25031,6 +28103,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1536",
+      "emdexCode": null,
+      "source": null,
       "name": "Bellangio Roll On",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25047,6 +28121,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1537",
+      "emdexCode": null,
+      "source": null,
       "name": "Bouquet Roll On",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25063,6 +28139,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1538",
+      "emdexCode": null,
+      "source": null,
       "name": "Enchanteur Roll On",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25079,6 +28157,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1539",
+      "emdexCode": null,
+      "source": null,
       "name": "Equity Roll On",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25095,6 +28175,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1540",
+      "emdexCode": null,
+      "source": null,
       "name": "Erato Roll On",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25111,6 +28193,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1541",
+      "emdexCode": null,
+      "source": null,
       "name": "Infinity Roll On",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25127,6 +28211,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1542",
+      "emdexCode": null,
+      "source": null,
       "name": "Nivea Roll On",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25143,6 +28229,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1543",
+      "emdexCode": null,
+      "source": null,
       "name": "Vanilla Roll On",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25159,6 +28247,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1544",
+      "emdexCode": null,
+      "source": null,
       "name": "Hypo Bleach",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25175,6 +28265,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1545",
+      "emdexCode": null,
+      "source": null,
       "name": "Teapot",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25191,6 +28283,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1546",
+      "emdexCode": null,
+      "source": null,
       "name": "Zip Detergent",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25207,6 +28301,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1547",
+      "emdexCode": null,
+      "source": null,
       "name": "Green Tea",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25223,6 +28319,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1548",
+      "emdexCode": null,
+      "source": null,
       "name": "Green Lemon And",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25239,6 +28337,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1549",
+      "emdexCode": null,
+      "source": null,
       "name": "Napa Ginger Tea",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25255,6 +28355,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1550",
+      "emdexCode": null,
+      "source": null,
       "name": "Napa Gold Label",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25271,6 +28373,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1551",
+      "emdexCode": null,
+      "source": null,
       "name": "Richoco Tea Refil",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25287,6 +28391,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1552",
+      "emdexCode": null,
+      "source": null,
       "name": "Toptea",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25303,6 +28409,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1553",
+      "emdexCode": null,
+      "source": null,
       "name": "R",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25319,6 +28427,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1554",
+      "emdexCode": null,
+      "source": null,
       "name": "Top Tea Bag",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25335,6 +28445,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1555",
+      "emdexCode": null,
+      "source": null,
       "name": "Heinz Tomato Ketchup",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25351,6 +28463,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1556",
+      "emdexCode": null,
+      "source": null,
       "name": "Batida Coconut Wine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25367,6 +28481,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1557",
+      "emdexCode": null,
+      "source": null,
       "name": "Exotic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25383,6 +28499,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1558",
+      "emdexCode": null,
+      "source": null,
       "name": "Joven Wine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25399,6 +28517,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1559",
+      "emdexCode": null,
+      "source": null,
       "name": "Kick Up Wine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25415,6 +28535,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1560",
+      "emdexCode": null,
+      "source": null,
       "name": "Veleta Wine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25431,6 +28553,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1561",
+      "emdexCode": null,
+      "source": null,
       "name": "Blood Bag",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25447,6 +28571,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1562",
+      "emdexCode": null,
+      "source": null,
       "name": "Conveen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25463,6 +28589,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1563",
+      "emdexCode": null,
+      "source": null,
       "name": "Envelope Nylon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25479,6 +28607,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1564",
+      "emdexCode": null,
+      "source": null,
       "name": "Dele Cottonwool",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25495,6 +28625,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1565",
+      "emdexCode": null,
+      "source": null,
       "name": "Feeding",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25511,6 +28643,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1566",
+      "emdexCode": null,
+      "source": null,
       "name": "Gauze Bandage",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25527,6 +28661,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1567",
+      "emdexCode": null,
+      "source": null,
       "name": "Glove",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25543,6 +28679,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1568",
+      "emdexCode": null,
+      "source": null,
       "name": "Nylon Envelope",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25559,6 +28697,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1569",
+      "emdexCode": null,
+      "source": null,
       "name": "Angy Yoyo",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25575,6 +28715,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1570",
+      "emdexCode": null,
+      "source": null,
       "name": "K Y Gel",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25591,6 +28733,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1571",
+      "emdexCode": null,
+      "source": null,
       "name": "Lofnac",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25607,6 +28751,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1572",
+      "emdexCode": null,
+      "source": null,
       "name": "Moov",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25623,6 +28769,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1573",
+      "emdexCode": null,
+      "source": null,
       "name": "Mycotea",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25639,6 +28787,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1574",
+      "emdexCode": null,
+      "source": null,
       "name": "Penicillin Eye",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25655,6 +28805,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1575",
+      "emdexCode": null,
+      "source": null,
       "name": "Volini",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25671,6 +28823,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1576",
+      "emdexCode": null,
+      "source": null,
       "name": "Whitefield",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25687,6 +28841,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1577",
+      "emdexCode": null,
+      "source": null,
       "name": "Zetgel Emulgel",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25703,6 +28859,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1578",
+      "emdexCode": null,
+      "source": null,
       "name": "Xanap",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25719,6 +28877,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1579",
+      "emdexCode": null,
+      "source": null,
       "name": "Aplev",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25735,6 +28895,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1580",
+      "emdexCode": null,
+      "source": null,
       "name": "Lekam",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25751,6 +28913,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1581",
+      "emdexCode": null,
+      "source": null,
       "name": "Coatal 20/120",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25768,6 +28932,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1582",
+      "emdexCode": null,
+      "source": null,
       "name": "Indomie Chikki Chikki",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25784,6 +28950,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1583",
+      "emdexCode": null,
+      "source": null,
       "name": "Indomie Golden",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25800,6 +28968,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1584",
+      "emdexCode": null,
+      "source": null,
       "name": "Indomie Honeywell",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25816,6 +28986,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1585",
+      "emdexCode": null,
+      "source": null,
       "name": "Moko Gv",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25832,6 +29004,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1586",
+      "emdexCode": null,
+      "source": null,
       "name": "Apacco",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25848,6 +29022,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1587",
+      "emdexCode": null,
+      "source": null,
       "name": "Liquid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25864,6 +29040,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1588",
+      "emdexCode": null,
+      "source": null,
       "name": "Tcp",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25880,6 +29058,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1589",
+      "emdexCode": null,
+      "source": null,
       "name": "Cold Ko",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25896,6 +29076,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1590",
+      "emdexCode": null,
+      "source": null,
       "name": "Alphabetic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25912,6 +29094,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1591",
+      "emdexCode": null,
+      "source": null,
       "name": "B K B",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25928,6 +29112,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1592",
+      "emdexCode": null,
+      "source": null,
       "name": "Complex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25944,6 +29130,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1593",
+      "emdexCode": null,
+      "source": null,
       "name": "Chaztfed",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25960,6 +29148,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1594",
+      "emdexCode": null,
+      "source": null,
       "name": "Clo Bko",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25976,6 +29166,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1595",
+      "emdexCode": null,
+      "source": null,
       "name": "Cofta",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -25992,6 +29184,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1596",
+      "emdexCode": null,
+      "source": null,
       "name": "Coldcod",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26008,6 +29202,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1597",
+      "emdexCode": null,
+      "source": null,
       "name": "Cypeni",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26024,6 +29220,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1598",
+      "emdexCode": null,
+      "source": null,
       "name": "Daga",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26040,6 +29238,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1599",
+      "emdexCode": null,
+      "source": null,
       "name": "Day By Day",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26056,6 +29256,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1600",
+      "emdexCode": null,
+      "source": null,
       "name": "Dequadin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26072,6 +29274,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1601",
+      "emdexCode": null,
+      "source": null,
       "name": "Diclozone",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26088,6 +29292,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1602",
+      "emdexCode": null,
+      "source": null,
       "name": "Ebu",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26104,6 +29310,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1603",
+      "emdexCode": null,
+      "source": null,
       "name": "Feloxin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26120,6 +29328,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1604",
+      "emdexCode": null,
+      "source": null,
       "name": "Fizzcol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26136,6 +29346,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1605",
+      "emdexCode": null,
+      "source": null,
       "name": "Hem",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26152,6 +29364,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1606",
+      "emdexCode": null,
+      "source": null,
       "name": "Ibuheal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26168,6 +29382,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1607",
+      "emdexCode": null,
+      "source": null,
       "name": "Inbu",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26184,6 +29400,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1608",
+      "emdexCode": null,
+      "source": null,
       "name": "Kold Off",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26200,6 +29418,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1609",
+      "emdexCode": null,
+      "source": null,
       "name": "Laila",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26216,6 +29436,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1610",
+      "emdexCode": null,
+      "source": null,
       "name": "Lapain",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26232,6 +29454,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1611",
+      "emdexCode": null,
+      "source": null,
       "name": "Maxibu",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26248,6 +29472,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1612",
+      "emdexCode": null,
+      "source": null,
       "name": "Mexanal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26264,6 +29490,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1613",
+      "emdexCode": null,
+      "source": null,
       "name": "Mixamol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26280,6 +29508,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1614",
+      "emdexCode": null,
+      "source": null,
       "name": "No Pain",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26296,6 +29526,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1615",
+      "emdexCode": null,
+      "source": null,
       "name": "Nolvagin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26312,6 +29544,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1616",
+      "emdexCode": null,
+      "source": null,
       "name": "Omafenan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26328,6 +29562,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1617",
+      "emdexCode": null,
+      "source": null,
       "name": "Novogold",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26344,6 +29580,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1618",
+      "emdexCode": null,
+      "source": null,
       "name": "Pectol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26360,6 +29598,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1619",
+      "emdexCode": null,
+      "source": null,
       "name": "Tanzol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26376,6 +29616,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1620",
+      "emdexCode": null,
+      "source": null,
       "name": "Tocod",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26392,6 +29634,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1621",
+      "emdexCode": null,
+      "source": null,
       "name": "Typhoo",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26408,6 +29652,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1622",
+      "emdexCode": null,
+      "source": null,
       "name": "Vamacold",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26424,6 +29670,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1623",
+      "emdexCode": null,
+      "source": null,
       "name": "Vamadox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26440,6 +29688,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1624",
+      "emdexCode": null,
+      "source": null,
       "name": "Vamicee",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26456,6 +29706,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1625",
+      "emdexCode": null,
+      "source": null,
       "name": "Zagam",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26472,6 +29724,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1626",
+      "emdexCode": null,
+      "source": null,
       "name": "Zamba",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26488,6 +29742,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1627",
+      "emdexCode": null,
+      "source": null,
       "name": "Zenzol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26504,6 +29760,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1628",
+      "emdexCode": null,
+      "source": null,
       "name": "Belt",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26520,6 +29778,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1629",
+      "emdexCode": null,
+      "source": null,
       "name": "Bulb Mini",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26536,6 +29796,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1630",
+      "emdexCode": null,
+      "source": null,
       "name": "Dazel Kit",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26552,6 +29814,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1631",
+      "emdexCode": null,
+      "source": null,
       "name": "Hibilon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26568,6 +29832,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1632",
+      "emdexCode": null,
+      "source": null,
       "name": "Nova Lite",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26584,6 +29850,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1633",
+      "emdexCode": null,
+      "source": null,
       "name": "Touch Light",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26600,6 +29868,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1634",
+      "emdexCode": null,
+      "source": null,
       "name": "Tummy Flat",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26616,6 +29886,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1635",
+      "emdexCode": null,
+      "source": null,
       "name": "Wanna Play",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26632,6 +29904,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1636",
+      "emdexCode": null,
+      "source": null,
       "name": "Yodi Nylon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26648,6 +29922,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1637",
+      "emdexCode": null,
+      "source": null,
       "name": "Tooth Pick",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26664,6 +29940,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1638",
+      "emdexCode": null,
+      "source": null,
       "name": "Dettol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26680,6 +29958,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1639",
+      "emdexCode": null,
+      "source": null,
       "name": "Hypo",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26696,6 +29976,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1640",
+      "emdexCode": null,
+      "source": null,
       "name": "Teddy Baby Maxi",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26712,6 +29994,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1641",
+      "emdexCode": null,
+      "source": null,
       "name": "Teddy Baby Midi",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26728,6 +30012,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1642",
+      "emdexCode": null,
+      "source": null,
       "name": "Teddy Baby Mini",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26744,6 +30030,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1643",
+      "emdexCode": null,
+      "source": null,
       "name": "Lactogen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26760,6 +30048,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1644",
+      "emdexCode": null,
+      "source": null,
       "name": "My Boy Baby",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26776,6 +30066,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1645",
+      "emdexCode": null,
+      "source": null,
       "name": "Nan",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26792,6 +30084,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1646",
+      "emdexCode": null,
+      "source": null,
       "name": "Zwan Chicken Luncheon",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26808,6 +30102,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1647",
+      "emdexCode": null,
+      "source": null,
       "name": "Cowbell Choco Tin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26824,6 +30120,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1648",
+      "emdexCode": null,
+      "source": null,
       "name": "Milo Tin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26840,6 +30138,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1649",
+      "emdexCode": null,
+      "source": null,
       "name": "Ovaltine Tin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26856,6 +30156,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1650",
+      "emdexCode": null,
+      "source": null,
       "name": "Chinchin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26872,6 +30174,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1651",
+      "emdexCode": null,
+      "source": null,
       "name": "Gillete Blade",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26888,6 +30192,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1652",
+      "emdexCode": null,
+      "source": null,
       "name": "Anoline Baby Jelly",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26904,6 +30210,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1653",
+      "emdexCode": null,
+      "source": null,
       "name": "Baby And Me",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26920,6 +30228,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1654",
+      "emdexCode": null,
+      "source": null,
       "name": "Mama Love Pomade",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26936,6 +30246,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1655",
+      "emdexCode": null,
+      "source": null,
       "name": "Cocomalt",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26952,6 +30264,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1656",
+      "emdexCode": null,
+      "source": null,
       "name": "Coffee Mix",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26968,6 +30282,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1657",
+      "emdexCode": null,
+      "source": null,
       "name": "Coffee Mate",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -26984,6 +30300,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1658",
+      "emdexCode": null,
+      "source": null,
       "name": "Omo",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27000,6 +30318,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1659",
+      "emdexCode": null,
+      "source": null,
       "name": "Penicillin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27016,6 +30336,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1660",
+      "emdexCode": null,
+      "source": null,
       "name": "Ivyxolol",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27032,6 +30354,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1661",
+      "emdexCode": null,
+      "source": null,
       "name": "Lobinax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27048,6 +30372,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1662",
+      "emdexCode": null,
+      "source": null,
       "name": "Levamizole",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27064,6 +30390,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1663",
+      "emdexCode": null,
+      "source": null,
       "name": "Zentel",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27080,6 +30408,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1664",
+      "emdexCode": null,
+      "source": null,
       "name": "Indomie Chicken",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27096,6 +30426,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1665",
+      "emdexCode": null,
+      "source": null,
       "name": "Vemfen",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27112,6 +30444,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1666",
+      "emdexCode": null,
+      "source": null,
       "name": "Napa Coffee",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27128,6 +30462,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1667",
+      "emdexCode": null,
+      "source": null,
       "name": "B D M T",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27144,6 +30480,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1668",
+      "emdexCode": null,
+      "source": null,
       "name": "Clabetic",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27160,6 +30498,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1669",
+      "emdexCode": null,
+      "source": null,
       "name": "Novalite",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27176,6 +30516,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1670",
+      "emdexCode": null,
+      "source": null,
       "name": "Globe",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27192,6 +30534,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1671",
+      "emdexCode": null,
+      "source": null,
       "name": "Office Lamp",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27208,6 +30552,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1672",
+      "emdexCode": null,
+      "source": null,
       "name": "Pedal Bin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27224,6 +30570,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1673",
+      "emdexCode": null,
+      "source": null,
       "name": "Danza",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27240,6 +30588,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1674",
+      "emdexCode": null,
+      "source": null,
       "name": "Tie",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27256,6 +30606,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1675",
+      "emdexCode": null,
+      "source": null,
       "name": "Cof Cold",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27272,6 +30624,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1676",
+      "emdexCode": null,
+      "source": null,
       "name": "Loxagyl",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27288,6 +30642,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1677",
+      "emdexCode": null,
+      "source": null,
       "name": "Lodipine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27304,6 +30660,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1678",
+      "emdexCode": null,
+      "source": null,
       "name": "Indomethacin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27320,6 +30678,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1679",
+      "emdexCode": null,
+      "source": null,
       "name": "Ampiclox Beecham",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27336,6 +30696,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1680",
+      "emdexCode": null,
+      "source": null,
       "name": "Clip",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27352,6 +30714,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1681",
+      "emdexCode": null,
+      "source": null,
       "name": "Ampiclox",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27368,6 +30732,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1682",
+      "emdexCode": null,
+      "source": null,
       "name": "Kacham",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27384,6 +30750,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1683",
+      "emdexCode": null,
+      "source": null,
       "name": "Fulcin",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27400,6 +30768,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1684",
+      "emdexCode": null,
+      "source": null,
       "name": "Aboniki Balm",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27416,6 +30786,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1685",
+      "emdexCode": null,
+      "source": null,
       "name": "Cenpain Night",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27432,6 +30804,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1686",
+      "emdexCode": null,
+      "source": null,
       "name": "Ibex",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27448,6 +30822,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1687",
+      "emdexCode": null,
+      "source": null,
       "name": "Danacid",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27464,6 +30840,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1688",
+      "emdexCode": null,
+      "source": null,
       "name": "Medik",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27480,6 +30858,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1689",
+      "emdexCode": null,
+      "source": null,
       "name": "Mim Tonc",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27496,6 +30876,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1690",
+      "emdexCode": null,
+      "source": null,
       "name": "Zolat",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27512,6 +30894,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1691",
+      "emdexCode": null,
+      "source": null,
       "name": "Peflotab",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27528,6 +30912,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1692",
+      "emdexCode": null,
+      "source": null,
       "name": "Mycoten Vaginal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27544,6 +30930,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1693",
+      "emdexCode": null,
+      "source": null,
       "name": "Thalazole",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27560,6 +30948,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1694",
+      "emdexCode": null,
+      "source": null,
       "name": "Viju Milk",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27576,6 +30966,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1695",
+      "emdexCode": null,
+      "source": null,
       "name": "Needle Only",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27592,6 +30984,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1696",
+      "emdexCode": null,
+      "source": null,
       "name": "Needle",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27608,6 +31002,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1697",
+      "emdexCode": null,
+      "source": null,
       "name": "Ketoconazole",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27624,6 +31020,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1698",
+      "emdexCode": null,
+      "source": null,
       "name": "Be Fit",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27640,6 +31038,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1699",
+      "emdexCode": null,
+      "source": null,
       "name": "Mixanal",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27656,6 +31056,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1700",
+      "emdexCode": null,
+      "source": null,
       "name": "Gv",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27672,6 +31074,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1701",
+      "emdexCode": null,
+      "source": null,
       "name": "Pentax",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27688,6 +31092,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1702",
+      "emdexCode": null,
+      "source": null,
       "name": "Feed Fine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27704,6 +31110,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1703",
+      "emdexCode": null,
+      "source": null,
       "name": "Ppep",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27720,6 +31128,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1704",
+      "emdexCode": null,
+      "source": null,
       "name": "Vega",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27736,6 +31146,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1705",
+      "emdexCode": null,
+      "source": null,
       "name": "Novagine",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27752,6 +31164,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1706",
+      "emdexCode": null,
+      "source": null,
       "name": "Anybond Glue Cv",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27768,6 +31182,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1707",
+      "emdexCode": null,
+      "source": null,
       "name": "Dicnac",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27784,6 +31200,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1708",
+      "emdexCode": null,
+      "source": null,
       "name": "Contact",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",
@@ -27800,6 +31218,8 @@ export const genericDrugData: GenericDrugSeedData = {
     },
     {
       "code": "GN-1709",
+      "emdexCode": null,
+      "source": null,
       "name": "Cenpai",
       "genericClass": "Unclassified",
       "pharmaceuticalClass": "General",

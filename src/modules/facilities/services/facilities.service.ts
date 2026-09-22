@@ -41,10 +41,21 @@ export class FacilitiesService {
     if (query.code) {
       qb.andWhere('f.facilityId = :code', { code: query.code });
     }
+    if (query.search) {
+      qb.andWhere('(f.facilityName ILIKE :search OR f.alternativeName ILIKE :search)', {
+        search: `%${query.search}%`,
+      });
+    }
+    if (query.state) {
+      qb.andWhere('s.code = :stateCode', { stateCode: query.state });
+    }
     if (query.ward) {
       qb.andWhere('w.code = :ward', {
         ward: query.ward,
       });
+    }
+    if (query.ward_name) {
+      qb.andWhere('w.name ILIKE :wardName', { wardName: query.ward_name });
     }
     if (query.lga) {
       qb.andWhere('l.code = :lga', {
@@ -109,8 +120,195 @@ export class FacilitiesService {
     return this.stateRepository.find({ order: { code: 'ASC' } });
   }
 
+  /**
+   * Facilities nearest to a coordinate, ordered by haversine distance.
+   *
+   * The source registry has latitude/longitude TRANSPOSED for a band of
+   * northern states (verified against true state centroids). Rather than
+   * trust any single orientation, the distance is computed against the
+   * *smaller* of the two possible readings (stored as-is vs swapped) and the
+   * row is flagged `coordinatesCorrected` when the swap was used. Stored
+   * data is never mutated.
+   */
+  async findNearby(
+    lat: number,
+    lng: number,
+    radiusKm: number,
+    limit: number,
+  ): Promise<
+    {
+      id: string;
+      facilityId: string;
+      facilityName: string | null;
+      latitude: number;
+      longitude: number;
+      coordinatesCorrected: boolean;
+      distanceKm: number;
+      state: { code: string; name: string } | null;
+      lga: { code: string; name: string } | null;
+      ward: { code: string; name: string } | null;
+      facilityType: { code: string; name: string } | null;
+      facilityLevel: { code: string; name: string } | null;
+      phoneNumber: string | null;
+      emailAddress: string | null;
+      website: string | null;
+    }[]
+  > {
+    // Haversine on an arbitrary (lat_expr, lng_expr) pair.
+    const hav = (latExpr: string, lngExpr: string) =>
+      `(6371 * acos(least(1.0, greatest(-1.0,
+        cos(radians(:plat)) * cos(radians(${latExpr})) * cos(radians(${lngExpr}) - radians(:plng))
+        + sin(radians(:plat)) * sin(radians(${latExpr}))
+      ))))`;
+
+    const direct = hav('f.latitude', 'f.longitude');
+    const swapped = hav('f.longitude', 'f.latitude');
+    // Smaller of the two orientations wins, with the correction flag.
+    const best = `LEAST(${direct}, ${swapped})`;
+
+    const rows = await this.facilityRepository
+      .createQueryBuilder('f')
+      .leftJoin('f.state', 's')
+      .leftJoin('f.lga', 'l')
+      .leftJoin('f.ward', 'w')
+      .leftJoin('f.facilityType', 'ft')
+      .leftJoin('f.facilityLevel', 'fl')
+      .select('f.id', 'id')
+      .addSelect('f.facilityId', 'facilityId')
+      .addSelect('f.facilityName', 'facilityName')
+      .addSelect('f.latitude', 'storedLat')
+      .addSelect('f.longitude', 'storedLng')
+      .addSelect('f.phoneNumber', 'phone_number')
+      .addSelect('f.emailAddress', 'email_address')
+      .addSelect('f.website', 'website')
+      .addSelect('s.code', 's_code')
+      .addSelect('s.name', 's_name')
+      .addSelect('l.code', 'l_code')
+      .addSelect('l.name', 'l_name')
+      .addSelect('w.code', 'w_code')
+      .addSelect('w.name', 'w_name')
+      .addSelect('ft.code', 'ft_code')
+      .addSelect('ft.name', 'ft_name')
+      .addSelect('fl.code', 'fl_code')
+      .addSelect('fl.name', 'fl_name')
+      .addSelect(
+        `(${swapped} <= ${direct})`,
+        'corrected',
+      )
+      .addSelect(`CASE WHEN ${swapped} <= ${direct} THEN f.longitude ELSE f.latitude END`, 'lat')
+      .addSelect(`CASE WHEN ${swapped} <= ${direct} THEN f.latitude ELSE f.longitude END`, 'lng')
+      .addSelect(best, 'distance_km')
+      .setParameter('plat', lat)
+      .setParameter('plng', lng)
+      .andWhere('f.latitude IS NOT NULL AND f.longitude IS NOT NULL')
+      .orderBy('distance_km', 'ASC')
+      .limit(limit)
+      .getRawMany<Record<string, string | boolean | null>>();
+
+    return rows
+      .map((r) => ({
+        id: String(r.id),
+        facilityId: String(r.facilityId),
+        facilityName: r.facilityName != null ? String(r.facilityName) : null,
+        latitude: Number(r.lat),
+        longitude: Number(r.lng),
+        coordinatesCorrected: Boolean(r.corrected),
+        distanceKm: Math.round(Number(r.distance_km) * 10) / 10,
+        state: r.s_code ? { code: String(r.s_code), name: String(r.s_name) } : null,
+        lga: r.l_code ? { code: String(r.l_code), name: String(r.l_name) } : null,
+        ward: r.w_code ? { code: String(r.w_code), name: String(r.w_name) } : null,
+        facilityType: r.ft_code
+          ? { code: String(r.ft_code), name: String(r.ft_name) }
+          : null,
+        facilityLevel: r.fl_code
+          ? { code: String(r.fl_code), name: String(r.fl_name) }
+          : null,
+        phoneNumber: r.phone_number != null ? String(r.phone_number) : null,
+        emailAddress: r.email_address != null ? String(r.email_address) : null,
+        website: r.website != null ? String(r.website) : null,
+      }))
+      .filter((r) => r.distanceKm <= radiusKm);
+  }
+
+  /**
+   * Average facility coordinates grouped by state or LGA — data-derived map
+   * centroids for area-level pins (e.g. pharmacies, which carry no point
+   * coordinates of their own).
+   */
+  async getCentroids(by: 'state' | 'lga' = 'state') {
+    const isState = by !== 'lga';
+    const joinAlias = isState ? 'cs' : 'cl';
+    const qb = this.facilityRepository
+      .createQueryBuilder('f')
+      .leftJoin(isState ? 'f.state' : 'f.lga', joinAlias)
+      .select(`${joinAlias}.code`, 'code')
+      .addSelect(`${joinAlias}.name`, 'name')
+      .addSelect('AVG(f.latitude)', 'latitude')
+      .addSelect('AVG(f.longitude)', 'longitude')
+      .addSelect('COUNT(*)', 'facilityCount')
+      .where(`${joinAlias}.id IS NOT NULL`)
+      .andWhere('f.latitude IS NOT NULL')
+      .andWhere('f.longitude IS NOT NULL')
+      .groupBy(`${joinAlias}.id`)
+      .addGroupBy(`${joinAlias}.code`)
+      .addGroupBy(`${joinAlias}.name`)
+      .orderBy(`${joinAlias}.name`, 'ASC');
+
+    const rows = await qb.getRawMany<Record<string, string | null>>();
+    return rows
+      .filter((r) => r.code != null)
+      .map((r) => ({
+        code: String(r.code),
+        name: r.name != null ? String(r.name) : String(r.code),
+        latitude: Number(r.latitude),
+        longitude: Number(r.longitude),
+        facilityCount: Number(r.facilityCount ?? 0),
+      }));
+  }
+
   async getWards() {
     return this.wardRepository.find({ order: { code: 'ASC' } });
+  }
+
+  /**
+   * Distinct ward names (with parent LGA code) for locator filter dropdowns.
+   * Derived from the facilities themselves — the wards table's own lgaCode/
+   * stateCode hierarchy columns are unpopulated in this dataset, but each
+   * facility's ward/LGA/state relations are real, so joining through the
+   * facilities gives correctly state/LGA-scoped ward options.
+   */
+  async getWardOptions(
+    search?: string,
+    lgaCode?: string,
+    stateCode?: string,
+    limit = 50,
+  ): Promise<{ name: string; lgaCode: string | null }[]> {
+    const qb = this.facilityRepository
+      .createQueryBuilder('f')
+      .innerJoin('f.ward', 'w')
+      .leftJoin('f.lga', 'l')
+      .leftJoin('f.state', 's')
+      .select('w.name', 'name')
+      .addSelect('MIN(l.code)', 'lgaCode')
+      .where("w.name IS NOT NULL AND w.name <> ''")
+      .groupBy('w.name')
+      // Numeric-code ward names (e.g. "13371") are common in the registry —
+      // push them behind human-readable names when no search narrows them.
+      .orderBy("(MIN(w.name) ~ '^[0-9]+$')", 'ASC')
+      .addOrderBy('w.name', 'ASC')
+      .limit(Math.min(Math.max(limit, 1), 200));
+    const trimmed = search?.trim();
+    if (trimmed) {
+      qb.andWhere('w.name ILIKE :s', { s: `%${trimmed}%` });
+    }
+    if (lgaCode) {
+      qb.andWhere('l.code = :lgaCode', { lgaCode });
+    }
+    if (stateCode) {
+      qb.andWhere('s.code = :stateCode', { stateCode });
+    }
+    const rows = await qb.getRawMany<Record<string, string | null>>();
+    return rows.map((r) => ({ name: String(r.name), lgaCode: r.lgaCode ?? null }));
   }
 
   async getLgas() {

@@ -55,6 +55,13 @@ export type PharmaceuticsType = {
   deletedAt: string | null;
 };
 
+export type DrugClassificationType = {
+  id: string;
+  code: string;
+  type: string;
+  name: string;
+};
+
 export type GenericProductType = {
   id: string;
   code: string;
@@ -68,9 +75,27 @@ export type GenericProductType = {
   pediatricDosage: string | null;
   appendixDosages: string | null;
   emdexCode: string | null;
+  atcCode: string | null;
+  ndfGenericCode: string | null;
+  genericDrug: GenericDrugType | null;
+  classifications: DrugClassificationType[];
   isPrescriptionRequired: boolean;
   isControlledSubstance: boolean;
-  pharmaceutics: PharmaceuticsType;
+  pharmaceutics: PharmaceuticsType | null;
+  createdAt: string;
+  updatedAt: string;
+  deletedAt: string | null;
+};
+
+export type GenericDrugType = {
+  id: string;
+  code: string;
+  name: string;
+  genericClass: string | null;
+  pharmaceuticalClass: string | null;
+  emdexCode: string | null;
+  source: string | null;
+  classifications: DrugClassificationType[];
   createdAt: string;
   updatedAt: string;
   deletedAt: string | null;

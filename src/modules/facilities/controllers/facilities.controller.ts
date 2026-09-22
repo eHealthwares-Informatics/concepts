@@ -133,6 +133,53 @@ export class FacilitiesController {
     return { data: await this.facilitiesService.getStates() };
   }
 
+  @Get('nearby')
+  @ApiOperation({
+    summary: 'Facilities nearest to a coordinate',
+    description:
+      'Haversine nearest-search ordered by distance. Handles the registry\u2019s ' +
+      'transposed-coordinate band transparently (flags corrected rows). Radius in km.',
+  })
+  @ApiQuery({ name: 'lat', required: true, type: Number })
+  @ApiQuery({ name: 'lng', required: true, type: Number })
+  @ApiQuery({ name: 'radius', required: false, type: Number, description: 'Radius in km (default 50)' })
+  @ApiQuery({ name: 'limit', required: false, type: Number, description: 'Max rows (default 20, max 100)' })
+  @ApiResponse({ status: 200, description: 'Array of nearby facilities with distanceKm' })
+  async nearby(
+    @Query('lat') lat: string,
+    @Query('lng') lng: string,
+    @Query('radius') radius?: string,
+    @Query('limit') limit?: string,
+  ) {
+    return {
+      data: await this.facilitiesService.findNearby(
+        Number(lat),
+        Number(lng),
+        Number(radius || 50),
+        Math.min(Math.max(Number(limit || 20), 1), 100),
+      ),
+    };
+  }
+
+  @Get('centroids')
+  @ApiOperation({
+    summary: 'Average facility coordinates by state or LGA',
+    description:
+      'Data-derived map centroids: average lat/lng of geo-tagged facilities grouped ' +
+      'by state (`?by=state`, default) or LGA (`?by=lga`). Useful for area-level pins ' +
+      'on maps when individual records lack coordinates.',
+  })
+  @ApiQuery({
+    name: 'by',
+    required: false,
+    enum: ['state', 'lga'],
+    description: 'Grouping level (defaults to state)',
+  })
+  @ApiResponse({ status: 200, description: 'Array of centroids with code, name, lat/lng, facility count' })
+  async listCentroids(@Query('by') by?: 'state' | 'lga') {
+    return { data: await this.facilitiesService.getCentroids(by === 'lga' ? 'lga' : 'state') };
+  }
+
   @Get('wards')
   @ApiOperation({
     summary: 'List all wards',
@@ -141,6 +188,27 @@ export class FacilitiesController {
   @ApiResponse({ status: 200, description: 'Array of wards' })
   async listWards() {
     return { data: await this.facilitiesService.getWards() };
+  }
+
+  @Get('wards-lite')
+  @ApiOperation({
+    summary: 'Ward names for filter dropdowns',
+    description:
+      'Distinct ward names (with LGA code where known), ordered and deduplicated — ' +
+      'sized for locator filter dropdowns. Optional `search` and `lga` narrowing.',
+  })
+  @ApiQuery({ name: 'search', required: false })
+  @ApiQuery({ name: 'lga', required: false })
+  @ApiQuery({ name: 'state', required: false })
+  @ApiQuery({ name: 'limit', required: false })
+  @ApiResponse({ status: 200, description: 'Array of { name, lgaCode }' })
+  async listWardOptions(
+    @Query('search') search?: string,
+    @Query('lga') lga?: string,
+    @Query('state') state?: string,
+    @Query('limit') limit?: string,
+  ) {
+    return { data: await this.facilitiesService.getWardOptions(search, lga, state, Number(limit || 50)) };
   }
 
   @Get('lgas')

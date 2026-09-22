@@ -4,6 +4,8 @@ export enum CodingConcept {
   SNOMED = 'SNOMED',
   EMDEx = 'EMDEx',
   ICD10 = 'ICD10',
+  ICD11 = 'ICD11',
+  CPT = 'CPT',
   RxNorm = 'RxNorm',
   DICTIONARY = 'DICTIONARY',
 

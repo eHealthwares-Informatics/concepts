@@ -10,15 +10,27 @@ export class FacilityListQueryDto {
 
   @ApiPropertyOptional({
     description:
+      'Free-text search on facility name / alternative name (case-insensitive contains).',
+  })
+  @IsOptional()
+  @IsString()
+  search?: string;
+
+  @ApiPropertyOptional({
+    description: 'Filter by state code (exact match on StateEntity.code).',
+  })
+  @IsOptional()
+  @IsString()
+  state?: string;
+
+  @ApiPropertyOptional({
+    description:
       'Filter by ward code. Joins through WardEntity and matches on code.',
   })
   @IsOptional()
   @IsString()
-  ward?: string;
-
-  @ApiPropertyOptional({
-    description:
-      'Filter by LGA code. Joins through LgaEntity and matches on code.',
+  ward?: string;  @ApiPropertyOptional({
+    description: 'Filter by LGA code. Joins through LgaEntity and matches on code.',
   })
   @IsOptional()
   @IsString()
@@ -26,7 +38,14 @@ export class FacilityListQueryDto {
 
   @ApiPropertyOptional({
     description:
-      'Filter by facility type code. Joins through FacilityTypeEntity and matches on code.',
+      'Filter by ward name. Joins through WardEntity and matches case-insensitively (wards have no parent code, so their names double as business keys).',
+  })
+  @IsOptional()
+  @IsString()
+  ward_name?: string;
+
+  @ApiPropertyOptional({
+    description: 'Filter by facility type code. Joins through FacilityTypeEntity and matches on code.',
   })
   @IsOptional()
   @IsString()

@@ -1,5 +1,5 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
-import { ApiOperation, ApiParam, ApiQuery, ApiTags } from '@nestjs/swagger';
+import { ApiOperation, ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { LocalitiesService } from '../services/localities.service';
 
 @ApiTags('Localities')
@@ -32,6 +32,21 @@ export class LocalitiesController {
       data: result.data,
       meta: { page: result.page, limit: result.limit, total: result.total },
     };
+  }
+
+  @Get('options')
+  @ApiOperation({
+    summary: 'Locality options for filter dropdowns',
+    description:
+      'Lightweight id/name list per locality type (`?type=area|neighbourhood|settlement`, ' +
+      'or omit for all), ordered by name.',
+  })
+  @ApiQuery({ name: 'type', required: false, enum: ['area', 'neighbourhood', 'settlement'] })
+  @ApiQuery({ name: 'search', required: false })
+  @ApiQuery({ name: 'limit', required: false })
+  @ApiResponse({ status: 200, description: 'Array of { id, name, type }' })
+  async options(@Query('type') type?: string, @Query('search') search?: string, @Query('limit') limit?: string) {
+    return { data: await this.localitiesService.getOptions(type, search, Number(limit || 50)) };
   }
 
   @Get(':localityId/nearby')

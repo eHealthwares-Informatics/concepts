@@ -70,6 +70,34 @@ export class LocalitiesService {
     return toLocalityType(row);
   }
 
+  /**
+   * Lightweight option list for locator filter dropdowns: id/name per locality
+   * type (area | neighbourhood | settlement), ordered by name. `search`
+   * narrows server-side so large lists stay cheap to browse.
+   */
+  async getOptions(
+    type?: string,
+    search?: string,
+    limit = 50,
+  ): Promise<{ id: string; name: string; type: string }[]> {
+    const qb = this.localityRepo
+      .createQueryBuilder('locality')
+      .select('locality.id', 'id')
+      .addSelect('locality.name', 'name')
+      .addSelect('locality.type', 'type')
+      .orderBy('locality.name', 'ASC')
+      .limit(Math.min(Math.max(limit, 1), 200));
+    if (type) {
+      qb.andWhere('locality.type = :type', { type });
+    }
+    const trimmed = search?.trim();
+    if (trimmed) {
+      qb.andWhere('locality.name ILIKE :s', { s: `%${trimmed}%` });
+    }
+    const rows = await qb.getRawMany<Record<string, string>>();
+    return rows.map((r) => ({ id: String(r.id), name: String(r.name), type: String(r.type) }));
+  }
+
   async nearby(id: string, limit = 50): Promise<NearbyLocalityType[]> {
     const exists = await this.localityRepo.findOne({ where: { id }, select: ['id'] });
     if (!exists) throw new NotFoundException('Locality not found');

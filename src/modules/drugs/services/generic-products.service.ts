@@ -1,10 +1,14 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { IsNull, Repository } from 'typeorm';
-import type { GenericProductType } from '../types/drugs.types';
+import type { DrugClassificationType, GenericDrugType, GenericProductType } from '../types/drugs.types';
 import { CreateGenericProductDto, ListGenericProductsDto, UpdateGenericProductDto } from '../dto/generic-products.dto';
-import { GenericProductEntity, PharmaceuticsEntity } from '../entities';
+import { GenericDrugEntity, GenericProductEntity, PharmaceuticsEntity } from '../entities';
 import { PharmaceuticsType } from '../types/drugs.types';
+
+function toDrugClassificationType(c: { id: string; code: string; type: string; name: string }): DrugClassificationType {
+  return { id: c.id, code: c.code, type: c.type, name: c.name };
+}
 
 function toPharmaceuticsType(e: PharmaceuticsEntity): PharmaceuticsType {
   return {
@@ -58,6 +62,23 @@ function toPharmaceuticsType(e: PharmaceuticsEntity): PharmaceuticsType {
   };
 }
 
+function toGenericDrugType(entity: GenericDrugEntity | null): GenericDrugType | null {
+  if (!entity) return null;
+  return {
+    id: entity.id,
+    code: entity.code,
+    name: entity.name,
+    genericClass: entity.genericClass,
+    pharmaceuticalClass: entity.pharmaceuticalClass,
+    emdexCode: entity.emdexCode,
+    source: entity.source,
+    classifications: (entity.classifications ?? []).map(toDrugClassificationType),
+    createdAt: entity.createdAt.toISOString(),
+    updatedAt: entity.updatedAt.toISOString(),
+    deletedAt: entity.deletedAt ? entity.deletedAt.toISOString() : null,
+  };
+}
+
 function toGenericProductType(entity: GenericProductEntity): GenericProductType {
   return {
     id: entity.id,
@@ -72,9 +93,13 @@ function toGenericProductType(entity: GenericProductEntity): GenericProductType 
     pediatricDosage: entity.pediatricDosage,
     appendixDosages: entity.appendixDosages,
     emdexCode: entity.emdexCode,
+    atcCode: entity.atcCode,
+    ndfGenericCode: entity.ndfGenericCode,
+    genericDrug: toGenericDrugType(entity.genericDrug ?? null),
+    classifications: (entity.classifications ?? []).map(toDrugClassificationType),
     isPrescriptionRequired: entity.isPrescriptionRequired,
     isControlledSubstance: entity.isControlledSubstance,
-    pharmaceutics: toPharmaceuticsType(entity.pharmaceutics),
+    pharmaceutics: entity.pharmaceutics ? toPharmaceuticsType(entity.pharmaceutics) : null,
     createdAt: entity.createdAt.toISOString(),
     updatedAt: entity.updatedAt.toISOString(),
     deletedAt: entity.deletedAt ? entity.deletedAt.toISOString() : null,
@@ -88,12 +113,15 @@ export class GenericProductsService {
     private readonly genericProductRepository: Repository<GenericProductEntity>,
     @InjectRepository(PharmaceuticsEntity)
     private readonly pharmaceuticsRepository: Repository<PharmaceuticsEntity>,
+    @InjectRepository(GenericDrugEntity)
+    private readonly genericDrugRepository: Repository<GenericDrugEntity>,
   ) {}
 
   async list(query: ListGenericProductsDto): Promise<{ data: GenericProductType[]; total: number }> {
     const qb = this.genericProductRepository
       .createQueryBuilder('gp')
       .leftJoinAndSelect('gp.pharmaceutics', 'p')
+      .leftJoinAndSelect('gp.genericDrug', 'gd')
       .where('gp.deleted_at IS NULL')
       .orderBy(`gp.${query.sortBy ?? 'name'}`, query.sortOrder === 'desc' ? 'DESC' : 'ASC')
       .skip(query.offset)
@@ -104,26 +132,32 @@ export class GenericProductsService {
         s: `%${query.search}%`,
       });
     }
+    if (query.genericDrugCode) {
+      qb.andWhere('gd.code = :gn', { gn: query.genericDrugCode });
+    }
 
     const [data, total] = await qb.getManyAndCount();
+    await this.hydrate(data);
     return { data: data.map(toGenericProductType), total };
   }
 
   async get(id: string): Promise<GenericProductType> {
     const item = await this.genericProductRepository.findOne({
       where: { id, deletedAt: IsNull() },
-      relations: { pharmaceutics: true },
+      relations: { pharmaceutics: true, genericDrug: true, classifications: true },
     });
     if (!item) throw new NotFoundException('Generic product not found');
+    await this.hydrateDrugs([item]);
     return toGenericProductType(item);
   }
 
   async getByCode(code: string): Promise<GenericProductType> {
     const item = await this.genericProductRepository.findOne({
       where: { code, deletedAt: IsNull() },
-      relations: { pharmaceutics: true },
+      relations: { pharmaceutics: true, genericDrug: true, classifications: true },
     });
     if (!item) throw new NotFoundException('Generic product not found');
+    await this.hydrateDrugs([item]);
     return toGenericProductType(item);
   }
 
@@ -217,5 +251,32 @@ export class GenericProductsService {
       relations: { pharmaceutics: true },
     });
     return items.map(toGenericProductType);
+  }
+
+  private async hydrate(products: GenericProductEntity[]): Promise<void> {
+    if (!products.length) return;
+    const ids = products.map((p) => p.id);
+    const rows = await this.genericProductRepository
+      .createQueryBuilder('gp')
+      .leftJoinAndSelect('gp.classifications', 'c')
+      .where('gp.id IN (:...ids)', { ids })
+      .getMany();
+    const byId = new Map(rows.map((r) => [r.id, r.classifications ?? []]));
+    for (const p of products) p.classifications = byId.get(p.id) ?? [];
+    await this.hydrateDrugs(products);
+  }
+
+  private async hydrateDrugs(products: GenericProductEntity[]): Promise<void> {
+    const drugIds = [...new Set(products.map((p) => p.genericDrug?.id).filter(Boolean))] as string[];
+    if (!drugIds.length) return;
+    const rows = await this.genericDrugRepository
+      .createQueryBuilder('gd')
+      .leftJoinAndSelect('gd.classifications', 'c')
+      .where('gd.id IN (:...ids)', { ids: drugIds })
+      .getMany();
+    const byId = new Map(rows.map((r) => [r.id, r.classifications ?? []]));
+    for (const p of products) {
+      if (p.genericDrug) p.genericDrug.classifications = byId.get(p.genericDrug.id) ?? [];
+    }
   }
 }

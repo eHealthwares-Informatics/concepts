@@ -23,6 +23,11 @@ export class ListGenericProductsDto {
   @IsString()
   search?: string;
 
+  @ApiPropertyOptional({ description: 'Filter by generic drug GN code' })
+  @IsOptional()
+  @IsString()
+  genericDrugCode?: string;
+
   @ApiPropertyOptional({ default: 'name' })
   @IsOptional()
   @IsString()

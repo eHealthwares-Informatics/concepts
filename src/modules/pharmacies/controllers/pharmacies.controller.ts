@@ -1,5 +1,5 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
-import { ApiOperation, ApiParam, ApiQuery, ApiTags } from '@nestjs/swagger';
+import { ApiOperation, ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { PharmaciesService } from '../services/pharmacies.service';
 
 @ApiTags('Pharmacies')
@@ -30,6 +30,34 @@ export class PharmaciesController {
     return {
       data: result.data,
       meta: { page: result.page, limit: result.limit, total: result.total },
+    };
+  }
+
+  @Get('nearby')
+  @ApiOperation({
+    summary: 'Pharmacies nearest to a coordinate',
+    description:
+      'Haversine nearest-search over premises with settlement coordinates, ordered by ' +
+      'distance (settlementY = latitude, settlementX = longitude per the register).',
+  })
+  @ApiQuery({ name: 'lat', required: true, type: Number })
+  @ApiQuery({ name: 'lng', required: true, type: Number })
+  @ApiQuery({ name: 'radius', required: false, type: Number, description: 'Radius in km (default 25)' })
+  @ApiQuery({ name: 'limit', required: false, type: Number, description: 'Max rows (default 20, max 100)' })
+  @ApiResponse({ status: 200, description: 'Array of nearby pharmacies with distanceKm' })
+  async nearbyCoordinates(
+    @Query('lat') lat: string,
+    @Query('lng') lng: string,
+    @Query('radius') radius?: string,
+    @Query('limit') limit?: string,
+  ) {
+    return {
+      data: await this.pharmaciesService.findNearby(
+        Number(lat),
+        Number(lng),
+        Number(radius || 25),
+        Math.min(Math.max(Number(limit || 20), 1), 100),
+      ),
     };
   }
 

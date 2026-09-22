@@ -4,6 +4,8 @@ import {
   DeleteDateColumn,
   Entity,
   JoinColumn,
+  JoinTable,
+  ManyToMany,
   ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -12,19 +14,21 @@ import { PharmaceuticsEntity } from './pharmaceutics.entity';
 import { FormulationEntity } from './formulation.entity';
 import { DosageFormEntity } from './dosage-form.entity';
 import { ManufacturerEntity } from './manufacturer.entity';
+import { GenericDrugEntity } from './generic-drug.entity';
+import { DrugClassificationEntity } from './drug-classification.entity';
 
 /**
- * Generic product entity — represents a specific drug product/formulation.
+ * Generic product entity — a specific drug product/formulation.
  *
- * Each product references a PharmaceuticsEntity (monograph) and carries
- * product-level details: dosage form, strength, regulatory status, etc.
+ * Each product references a PharmaceuticsEntity (monograph) and, when linked,
+ * a GenericDrugEntity (the GN generic) via generic_generic_drug_id.
  */
 @Entity('generic_products')
 export class GenericProductEntity {
   @PrimaryGeneratedColumn('uuid')
   id!: string;
 
-  /** Business key (GN-xxxxx from genericDrugs.csv). */
+  /** Business key (GP-xxxxx from generic_products.csv, EMDEx). */
   @Column({ type: 'text' })
   code!: string;
 
@@ -76,6 +80,22 @@ export class GenericProductEntity {
   @Column({ name: 'ndf_generic_code', type: 'text', nullable: true })
   ndfGenericCode!: string | null;
 
+  /** Therapeutic classification codes (drugs.com → THER-*). */
+  @Column({ name: 'therapeutic_category_codes', type: 'simple-array', nullable: true })
+  therapeuticCategoryCodes!: string[] | null;
+
+  /** Pharmaceutical classification codes (goodrx → PHA-*). */
+  @Column({ name: 'pharmaceutical_category_codes', type: 'simple-array', nullable: true })
+  pharmaceuticalCategoryCodes!: string[] | null;
+
+  /** NDF classification codes (curated from genericClass → NDF-*). */
+  @Column({ name: 'ndf_category_codes', type: 'simple-array', nullable: true })
+  ndfCategoryCodes!: string[] | null;
+
+  /** EMDEx (ATC body-system) classification codes (→ EMDX-*). */
+  @Column({ name: 'emdex_category_codes', type: 'simple-array', nullable: true })
+  emdexCategoryCodes!: string[] | null;
+
   /** Prescription required flag. */
   @Column({ name: 'is_prescription_required', type: 'boolean', default: false })
   isPrescriptionRequired!: boolean;
@@ -87,10 +107,10 @@ export class GenericProductEntity {
   // ── Relation to Pharmaceutics (monograph) ──────────────────────────────
 
   @ManyToOne(() => PharmaceuticsEntity, (p) => p.genericProducts, {
-    nullable: false,
+    nullable: true,
   })
   @JoinColumn({ name: 'pharmaceutics_id' })
-  pharmaceutics!: PharmaceuticsEntity;
+  pharmaceutics!: PharmaceuticsEntity | null;
 
   // ── Relation to Formulation (route/category) ───────────────────────────
 
@@ -115,6 +135,25 @@ export class GenericProductEntity {
   })
   @JoinColumn({ name: 'manufacturer_id' })
   manufacturer!: ManufacturerEntity | null;
+
+  // ── Relation to GenericDrug (GN) ───────────────────────────────────────
+
+  /** Generic drug (GN-xxxxx) this product maps to. One GP -> one GN. */
+  @ManyToOne(() => GenericDrugEntity, (g) => g.genericProducts, {
+    nullable: true,
+  })
+  @JoinColumn({ name: 'generic_drug_id' })
+  genericDrug!: GenericDrugEntity | null;
+
+  // ── Relation to DrugClassification (M:N) ───────────────────────────────
+
+  @ManyToMany(() => DrugClassificationEntity, (c) => c.genericProducts)
+  @JoinTable({
+    name: 'generic_product_classifications',
+    joinColumn: { name: 'generic_product_id', referencedColumnName: 'id' },
+    inverseJoinColumn: { name: 'drug_classification_id', referencedColumnName: 'id' },
+  })
+  classifications!: DrugClassificationEntity[];
 
   // ── Timestamps ─────────────────────────────────────────────────────────
 
