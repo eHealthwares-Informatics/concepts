@@ -26,7 +26,7 @@ async function bootstrap() {
       'Includes a comprehensive concept/terminology service (LOINC, SNOMED, ICD-10, etc.).',
     )
     .setVersion('1.0')
-    .setExternalDoc('API Explorer', '/api/explorer')
+    .setExternalDoc('API Explorer', '/explorer')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
