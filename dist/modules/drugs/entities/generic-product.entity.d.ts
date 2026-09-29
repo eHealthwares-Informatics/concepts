@@ -1,0 +1,37 @@
+import { PharmaceuticsEntity } from './pharmaceutics.entity';
+import { FormulationEntity } from './formulation.entity';
+import { DosageFormEntity } from './dosage-form.entity';
+import { ManufacturerEntity } from './manufacturer.entity';
+import { GenericDrugEntity } from './generic-drug.entity';
+import { DrugClassificationEntity } from './drug-classification.entity';
+export declare class GenericProductEntity {
+    id: string;
+    code: string;
+    name: string;
+    therapeuticClass: string | null;
+    pharmaceuticalClass: string | null;
+    dosageForm: string | null;
+    strength: string | null;
+    generalUse: string | null;
+    adultDosage: string | null;
+    pediatricDosage: string | null;
+    appendixDosages: string | null;
+    emdexCode: string | null;
+    atcCode: string | null;
+    ndfGenericCode: string | null;
+    therapeuticCategoryCodes: string[] | null;
+    pharmaceuticalCategoryCodes: string[] | null;
+    ndfCategoryCodes: string[] | null;
+    emdexCategoryCodes: string[] | null;
+    isPrescriptionRequired: boolean;
+    isControlledSubstance: boolean;
+    pharmaceutics: PharmaceuticsEntity | null;
+    formulation: FormulationEntity | null;
+    dosageFormRef: DosageFormEntity | null;
+    manufacturer: ManufacturerEntity | null;
+    genericDrug: GenericDrugEntity | null;
+    classifications: DrugClassificationEntity[];
+    createdAt: Date;
+    updatedAt: Date;
+    deletedAt: Date | null;
+}

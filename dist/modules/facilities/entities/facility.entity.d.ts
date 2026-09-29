@@ -1,0 +1,35 @@
+import { FacilityTypeEntity } from './facility-type.entity';
+import { FacilityLevelEntity } from './facility-level.entity';
+import { StateEntity } from './state.entity';
+import { LgaEntity } from './lga.entity';
+import { WardEntity } from './ward.entity';
+import { ConceptAttributeValueEntity } from '../../concepts/entities/concept-attribute-value.entity';
+export declare class FacilityEntity {
+    id: string;
+    facilityId: string;
+    uniqueId?: string;
+    facilityName?: string;
+    alternativeName?: string;
+    registrationNo?: string;
+    registrationStatus?: string;
+    emailAddress?: string;
+    phoneNumber?: string;
+    ownershipCode?: string;
+    ownershipTypeCode?: string;
+    operationalStatusCode?: string;
+    licenseStatus?: string;
+    latitude?: number;
+    longitude?: number;
+    website?: string;
+    alternateNumber?: string;
+    outpatient: boolean;
+    inpatient: boolean;
+    state?: StateEntity;
+    lga?: LgaEntity;
+    ward?: WardEntity;
+    facilityType?: FacilityTypeEntity;
+    facilityLevel?: FacilityLevelEntity;
+    attributes: ConceptAttributeValueEntity[];
+    createdAt: Date;
+    updatedAt: Date;
+}
