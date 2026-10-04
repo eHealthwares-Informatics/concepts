@@ -141,6 +141,7 @@ export class PharmaciesService {
     lng: number,
     radiusKm: number,
     limit: number,
+    searchQuery?: string,
   ): Promise<
     {
       id: string;
@@ -159,7 +160,14 @@ export class PharmaciesService {
       areaName: string | null;
     }[]
   > {
-    const rows = await this.pharmacyRepo
+    // Haversine distance; reused in the SELECT (alias) and the radius WHERE.
+    const distanceExpr = `(6371 * acos(least(1.0, greatest(-1.0,
+          cos(radians(:plat)) * cos(radians("settlementY"::double precision))
+          * cos(radians("settlementX"::double precision) - radians(:plng))
+          + sin(radians(:plat)) * sin(radians("settlementY"::double precision))
+        ))))`;
+
+    const qb = this.pharmacyRepo
       .createQueryBuilder('pharmacy')
       .leftJoin('pharmacy.lga', 'l')
       .leftJoin('pharmacy.areaLocality', 'a')
@@ -176,40 +184,43 @@ export class PharmaciesService {
       .addSelect('pharmacy."wardName"', 'ward_name')
       .addSelect('l.name', 'lga_name')
       .addSelect('a.name', 'area_name')
-      .addSelect(
-        `(6371 * acos(least(1.0, greatest(-1.0,
-          cos(radians(:plat)) * cos(radians("settlementY"::double precision))
-          * cos(radians("settlementX"::double precision) - radians(:plng))
-          + sin(radians(:plat)) * sin(radians("settlementY"::double precision))
-        ))))`,
-        'distance_km',
-      )
+      .addSelect(distanceExpr, 'distance_km')
       .setParameter('plat', lat)
       .setParameter('plng', lng)
       .andWhere("pharmacy.\"settlementY\" ~ '^[0-9]+(\\.[0-9]+)?$'")
       .andWhere("pharmacy.\"settlementX\" ~ '^[0-9]+(\\.[0-9]+)?$'")
+      // Apply the radius before LIMIT so near rows are not cut then dropped.
+      .andWhere(`${distanceExpr} <= :radius`, { radius: radiusKm });
+
+    const search = searchQuery?.trim();
+    if (search) {
+      qb.andWhere(
+        '(pharmacy.premisesName ILIKE :s OR pharmacy.premisesAddress ILIKE :s OR pharmacy.pharmacist ILIKE :s)',
+        { s: `%${search}%` },
+      );
+    }
+
+    const rows = await qb
       .orderBy('distance_km', 'ASC')
       .limit(limit)
       .getRawMany<Record<string, string | null>>();
 
-    return rows
-      .map((r) => ({
-        id: String(r.id),
-        premisesId: String(r.premisesId),
-        premisesName: r.premisesName != null ? String(r.premisesName) : null,
-        premisesAddress: r.premisesAddress != null ? String(r.premisesAddress) : null,
-        latitude: Number(r.lat),
-        longitude: Number(r.lng),
-        distanceKm: Math.round(Number(r.distance_km) * 10) / 10,
-        pharmacist: r.pharmacist != null ? String(r.pharmacist) : null,
-        category: r.category != null ? String(r.category) : null,
-        certificateNo: r.certificate_no != null ? String(r.certificate_no) : null,
-        stateName: r.state_name != null ? String(r.state_name) : null,
-        lgaName: r.lga_name != null ? String(r.lga_name) : null,
-        wardName: r.ward_name != null ? String(r.ward_name) : null,
-        areaName: r.area_name != null ? String(r.area_name) : null,
-      }))
-      .filter((r) => r.distanceKm <= radiusKm);
+    return rows.map((r) => ({
+      id: String(r.id),
+      premisesId: String(r.premisesId),
+      premisesName: r.premisesName != null ? String(r.premisesName) : null,
+      premisesAddress: r.premisesAddress != null ? String(r.premisesAddress) : null,
+      latitude: Number(r.lat),
+      longitude: Number(r.lng),
+      distanceKm: Math.round(Number(r.distance_km) * 10) / 10,
+      pharmacist: r.pharmacist != null ? String(r.pharmacist) : null,
+      category: r.category != null ? String(r.category) : null,
+      certificateNo: r.certificate_no != null ? String(r.certificate_no) : null,
+      stateName: r.state_name != null ? String(r.state_name) : null,
+      lgaName: r.lga_name != null ? String(r.lga_name) : null,
+      wardName: r.ward_name != null ? String(r.ward_name) : null,
+      areaName: r.area_name != null ? String(r.area_name) : null,
+    }));
   }
 
   async nearby(id: string, limit = 50): Promise<NearbyPharmacyType[]> {

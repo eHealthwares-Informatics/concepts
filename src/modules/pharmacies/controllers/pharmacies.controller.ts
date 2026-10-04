@@ -44,12 +44,18 @@ export class PharmaciesController {
   @ApiQuery({ name: 'lng', required: true, type: Number })
   @ApiQuery({ name: 'radius', required: false, type: Number, description: 'Radius in km (default 25)' })
   @ApiQuery({ name: 'limit', required: false, type: Number, description: 'Max rows (default 20, max 100)' })
+  @ApiQuery({
+    name: 'search',
+    required: false,
+    description: 'Free-text filter over premises name, address and pharmacist',
+  })
   @ApiResponse({ status: 200, description: 'Array of nearby pharmacies with distanceKm' })
   async nearbyCoordinates(
     @Query('lat') lat: string,
     @Query('lng') lng: string,
     @Query('radius') radius?: string,
     @Query('limit') limit?: string,
+    @Query('search') search?: string,
   ) {
     return {
       data: await this.pharmaciesService.findNearby(
@@ -57,6 +63,7 @@ export class PharmaciesController {
         Number(lng),
         Number(radius || 25),
         Math.min(Math.max(Number(limit || 20), 1), 100),
+        search,
       ),
     };
   }
