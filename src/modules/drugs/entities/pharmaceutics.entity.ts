@@ -102,6 +102,10 @@ export class PharmaceuticsEntity {
   @Column({ name: 'dosage', type: 'text', nullable: true })
   dosage!: string | null;
 
+  /** Structured NDF dose schedules for age/indication appendices. */
+  @Column({ name: 'appendix_dosages', type: 'text', nullable: true })
+  appendixDosages!: string | null;
+
   @Column({ name: 'dose_per_age_range', type: 'text', nullable: true })
   dosePerAgeRange!: string | null;
 

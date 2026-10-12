@@ -5,10 +5,10 @@ import { GenericProductEntity } from './generic-product.entity';
 /**
  * Drug classification entity — a therapeutic or pharmaceutical category.
  *
- * Business key is the `code` ("TC00001" therapeutic, "PC00001" pharmaceutical).
- * Classifications relate many-to-many to generic drugs (GN) and generic
- * products (GP) via the junction tables generic_drug_classifications and
- * generic_product_classifications.
+ * Business key is the source classification code (TC/PC/NC/EC and source
+ * specific variants). One classification can be reused by many GN/GP rows,
+ * and each GN/GP can have several classifications, so assignments are
+ * many-to-many through the two explicit junction tables.
  */
 @Entity('drug_classifications')
 @Unique('uq_drug_classifications_code', ['code'])
@@ -21,7 +21,7 @@ export class DrugClassificationEntity {
   @Column({ type: 'text' })
   code!: string;
 
-  /** 'therapeutic' | 'pharmaceutical'. */
+  /** Source scheme, e.g. therapeutic, pharmaceutical, ndf, emdex_pharmaceutical, or emdex. */
   @Column({ type: 'text' })
   type!: string;
 

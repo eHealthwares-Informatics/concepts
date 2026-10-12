@@ -41,6 +41,11 @@ import {
   DosageFormEntity,
   ManufacturerEntity,
 } from './modules/drugs/entities';
+import {
+  ClinicalGuidelineEntity,
+  GuidelineDrugLineEntity,
+  GuidelineEvidenceEntity,
+} from './modules/drugs/entities';
 
 @Module({
   imports: [
@@ -78,6 +83,9 @@ import {
           FormulationEntity,
           DosageFormEntity,
           ManufacturerEntity,
+          ClinicalGuidelineEntity,
+          GuidelineDrugLineEntity,
+          GuidelineEvidenceEntity,
           PharmacyEntity,
           DiagnosticCenterEntity,
           LocalityEntity,

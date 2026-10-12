@@ -135,6 +135,11 @@ export class CreatePharmaceuticsDto {
   @IsString()
   dosage?: string;
 
+  @ApiPropertyOptional({ description: 'Structured age/indication appendix schedules as JSON or source text.' })
+  @IsOptional()
+  @IsString()
+  appendixDosages?: string;
+
   @ApiPropertyOptional()
   @IsOptional()
   @IsString()

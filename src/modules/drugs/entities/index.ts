@@ -6,3 +6,5 @@ export { DrugClassificationEntity } from './drug-classification.entity';
 export { FormulationEntity } from './formulation.entity';
 export { DosageFormEntity } from './dosage-form.entity';
 export { ManufacturerEntity } from './manufacturer.entity';
+export { ClinicalGuidelineEntity, GuidelineDrugLineEntity } from './clinical-guideline.entity';
+export { GuidelineEvidenceEntity } from './guideline-evidence.entity';

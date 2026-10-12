@@ -26,6 +26,9 @@ import { FormulationsService } from './services/formulations.service';
 import { DosageFormsService } from './services/dosage-forms.service';
 import { ManufacturersService } from './services/manufacturers.service';
 import { DrugClassificationsService } from './services/drug-classifications.service';
+import { ClinicalGuidelinesService } from './services/clinical-guidelines.service';
+import { ClinicalGuidelinesController } from './controllers/clinical-guidelines.controller';
+import { ClinicalGuidelineEntity, GuidelineDrugLineEntity, GuidelineEvidenceEntity } from './entities';
 import { DrugSeederService } from './seeders/drug.seeder';
 import { SeedDrugCommand } from './commands/seed-drug.command';
 
@@ -40,6 +43,9 @@ import { SeedDrugCommand } from './commands/seed-drug.command';
       FormulationEntity,
       DosageFormEntity,
       ManufacturerEntity,
+      ClinicalGuidelineEntity,
+      GuidelineDrugLineEntity,
+      GuidelineEvidenceEntity,
     ]),
   ],
   controllers: [
@@ -51,6 +57,7 @@ import { SeedDrugCommand } from './commands/seed-drug.command';
     DosageFormsController,
     ManufacturersController,
     DrugClassificationsController,
+    ClinicalGuidelinesController,
   ],
   providers: [
     PharmaceuticsService,
@@ -61,6 +68,7 @@ import { SeedDrugCommand } from './commands/seed-drug.command';
     DosageFormsService,
     ManufacturersService,
     DrugClassificationsService,
+    ClinicalGuidelinesService,
     DrugSeederService,
     SeedDrugCommand,
   ],
@@ -73,6 +81,7 @@ import { SeedDrugCommand } from './commands/seed-drug.command';
     DosageFormsService,
     ManufacturersService,
     DrugClassificationsService,
+    ClinicalGuidelinesService,
     DrugSeederService,
   ],
 })
