@@ -1,6 +1,6 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
-import { IsBoolean, IsInt, IsNotEmpty, IsOptional, IsString, Max, MaxLength, Min } from 'class-validator';
+import { IsArray, IsBoolean, IsInt, IsNotEmpty, IsOptional, IsString, Max, MaxLength, Min } from 'class-validator';
 
 export class ListGenericProductsDto {
   @ApiPropertyOptional({ default: 1 })
@@ -60,15 +60,17 @@ export class CreateGenericProductDto {
   @IsNotEmpty()
   pharmaceuticsId!: string;
 
-  @ApiPropertyOptional()
+  @ApiPropertyOptional({ type: [String], description: 'Drug classification codes to associate with this GP.' })
   @IsOptional()
-  @IsString()
-  therapeuticClass?: string;
+  @IsArray()
+  @IsString({ each: true })
+  classificationCodes?: string[];
 
-  @ApiPropertyOptional()
+  @ApiPropertyOptional({ type: [String], description: 'Drug classification entity IDs to associate with this GP.' })
   @IsOptional()
-  @IsString()
-  pharmaceuticalClass?: string;
+  @IsArray()
+  @IsString({ each: true })
+  classificationIds?: string[];
 
   @ApiPropertyOptional()
   @IsOptional()
@@ -80,25 +82,10 @@ export class CreateGenericProductDto {
   @IsString()
   strength?: string;
 
-  @ApiPropertyOptional()
+  @ApiPropertyOptional({ description: 'Base UOM business code inherited by commercial items created from this GP.' })
   @IsOptional()
   @IsString()
-  generalUse?: string;
-
-  @ApiPropertyOptional()
-  @IsOptional()
-  @IsString()
-  adultDosage?: string;
-
-  @ApiPropertyOptional()
-  @IsOptional()
-  @IsString()
-  pediatricDosage?: string;
-
-  @ApiPropertyOptional()
-  @IsOptional()
-  @IsString()
-  appendixDosages?: string;
+  uomCode?: string;
 
   @ApiPropertyOptional()
   @IsOptional()
@@ -125,10 +112,6 @@ export class CreateGenericProductDto {
   @IsBoolean()
   isPrescriptionRequired?: boolean;
 
-  @ApiPropertyOptional({ default: false })
-  @IsOptional()
-  @IsBoolean()
-  isControlledSubstance?: boolean;
 }
 
 export class UpdateGenericProductDto {
@@ -148,15 +131,17 @@ export class UpdateGenericProductDto {
   @IsString()
   pharmaceuticsId?: string;
 
-  @ApiPropertyOptional()
+  @ApiPropertyOptional({ type: [String], description: 'Replace the GP classification links by classification code.' })
   @IsOptional()
-  @IsString()
-  therapeuticClass?: string;
+  @IsArray()
+  @IsString({ each: true })
+  classificationCodes?: string[];
 
-  @ApiPropertyOptional()
+  @ApiPropertyOptional({ type: [String], description: 'Replace GP classifications by entity ID.' })
   @IsOptional()
-  @IsString()
-  pharmaceuticalClass?: string;
+  @IsArray()
+  @IsString({ each: true })
+  classificationIds?: string[];
 
   @ApiPropertyOptional()
   @IsOptional()
@@ -168,25 +153,10 @@ export class UpdateGenericProductDto {
   @IsString()
   strength?: string;
 
-  @ApiPropertyOptional()
+  @ApiPropertyOptional({ description: 'Base UOM business code inherited by commercial items created from this GP.' })
   @IsOptional()
   @IsString()
-  generalUse?: string;
-
-  @ApiPropertyOptional()
-  @IsOptional()
-  @IsString()
-  adultDosage?: string;
-
-  @ApiPropertyOptional()
-  @IsOptional()
-  @IsString()
-  pediatricDosage?: string;
-
-  @ApiPropertyOptional()
-  @IsOptional()
-  @IsString()
-  appendixDosages?: string;
+  uomCode?: string;
 
   @ApiPropertyOptional()
   @IsOptional()
@@ -213,8 +183,4 @@ export class UpdateGenericProductDto {
   @IsBoolean()
   isPrescriptionRequired?: boolean;
 
-  @ApiPropertyOptional()
-  @IsOptional()
-  @IsBoolean()
-  isControlledSubstance?: boolean;
 }

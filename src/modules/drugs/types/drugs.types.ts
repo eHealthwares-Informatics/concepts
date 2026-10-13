@@ -22,6 +22,7 @@ export type PharmaceuticsType = {
   traditionalMedicineEffects: string | null;
   // Dosing
   dosage: string | null;
+  appendixDosages: string | null;
   dosePerAgeRange: string | null;
   dosePerWeightRange: string | null;
   missedDose: string | null;
@@ -66,10 +67,13 @@ export type GenericProductType = {
   id: string;
   code: string;
   name: string;
+  /** Compatibility projections derived from classifications; not stored columns. */
   therapeuticClass: string | null;
   pharmaceuticalClass: string | null;
   dosageForm: string | null;
   strength: string | null;
+  /** GP base UOM business code; used when creating a commercial item. */
+  uomCode: string | null;
   generalUse: string | null;
   adultDosage: string | null;
   pediatricDosage: string | null;
@@ -79,6 +83,8 @@ export type GenericProductType = {
   ndfGenericCode: string | null;
   genericDrug: GenericDrugType | null;
   classifications: DrugClassificationType[];
+  /** IDs are the classification foreign keys stored in generic_product_classifications. */
+  classificationIds: string[];
   isPrescriptionRequired: boolean;
   isControlledSubstance: boolean;
   pharmaceutics: PharmaceuticsType | null;
@@ -91,6 +97,7 @@ export type GenericDrugType = {
   id: string;
   code: string;
   name: string;
+  /** Compatibility projections derived from classifications; not stored columns. */
   genericClass: string | null;
   pharmaceuticalClass: string | null;
   emdexCode: string | null;

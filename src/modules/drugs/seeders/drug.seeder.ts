@@ -57,6 +57,31 @@ function buildPharmacologyComponentMap(): Map<string, string[]> {
   return output;
 }
 
+function buildMonographFieldsByCode(): Map<string, {
+  generalDrugUse: string | null;
+  dosage: string | null;
+  dosePerAgeRange: string | null;
+  appendixDosages: string | null;
+}> {
+  const fields = new Map<string, { generalDrugUse: string | null; dosage: string | null; dosePerAgeRange: string | null; appendixDosages: string | null }>();
+  for (const drug of genericDrugData.drugs) {
+    for (const rawCode of Array.isArray(drug.pharmaceuticsCode) ? drug.pharmaceuticsCode : []) {
+      const code = asNonEmptyString(rawCode);
+      if (!code || fields.has(code)) continue;
+      const appendix = Array.isArray(drug.appendixDosages) && drug.appendixDosages.length
+        ? JSON.stringify(drug.appendixDosages)
+        : null;
+      fields.set(code, {
+        generalDrugUse: asNonEmptyString(drug.generalUse),
+        dosage: asNonEmptyString(drug.adultDosage),
+        dosePerAgeRange: asNonEmptyString(drug.pediatricDosage),
+        appendixDosages: appendix,
+      });
+    }
+  }
+  return fields;
+}
+
 @Injectable()
 export class DrugSeederService {
   private readonly logger = new Logger(DrugSeederService.name);
@@ -88,6 +113,7 @@ export class DrugSeederService {
 
       // 2. Seed pharmaceutics (pharmacology class monographs)
       const componentsByPharmacologyCode = buildPharmacologyComponentMap();
+      const monographFieldsByCode = buildMonographFieldsByCode();
 
       for (const [rawCode, info] of Object.entries(genericDrugData.pharmaceuticsIndex)) {
         const code = asNonEmptyString(rawCode);
@@ -106,6 +132,7 @@ export class DrugSeederService {
           indications: info.indications,
           contraindications: info.contraindications,
           mechanismOfAction: info.mechanism,
+          ...monographFieldsByCode.get(code),
           drugComponents: componentEntities,
         });
         const saved = await this.pharmaceuticsRepository.save(created);
@@ -127,13 +154,7 @@ export class DrugSeederService {
         const created = this.genericRepository.create({
           code,
           name: drug.name,
-          therapeuticClass: asNonEmptyString(drug.genericClass),
-          pharmaceuticalClass: asNonEmptyString(drug.pharmaceuticalClass),
-          generalUse: drug.generalUse,
-          adultDosage: drug.adultDosage,
-          pediatricDosage: drug.pediatricDosage,
           isPrescriptionRequired: false,
-          isControlledSubstance: false,
           pharmaceutics,
         });
         const saved = await this.genericRepository.save(created);

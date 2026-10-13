@@ -1,9 +1,9 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { IsNull, Repository } from 'typeorm';
+import { In, IsNull, Repository } from 'typeorm';
 import type { DrugClassificationType, GenericDrugType, GenericProductType } from '../types/drugs.types';
 import { CreateGenericProductDto, ListGenericProductsDto, UpdateGenericProductDto } from '../dto/generic-products.dto';
-import { GenericDrugEntity, GenericProductEntity, PharmaceuticsEntity } from '../entities';
+import { DrugClassificationEntity, GenericDrugEntity, GenericProductEntity, PharmaceuticsEntity } from '../entities';
 import { PharmaceuticsType } from '../types/drugs.types';
 
 function toDrugClassificationType(c: { id: string; code: string; type: string; name: string }): DrugClassificationType {
@@ -33,6 +33,7 @@ function toPharmaceuticsType(e: PharmaceuticsEntity): PharmaceuticsType {
     foodInteractions: e.foodInteractions,
     traditionalMedicineEffects: e.traditionalMedicineEffects,
     dosage: e.dosage,
+    appendixDosages: e.appendixDosages,
     dosePerAgeRange: e.dosePerAgeRange,
     dosePerWeightRange: e.dosePerWeightRange,
     missedDose: e.missedDose,
@@ -64,15 +65,16 @@ function toPharmaceuticsType(e: PharmaceuticsEntity): PharmaceuticsType {
 
 function toGenericDrugType(entity: GenericDrugEntity | null): GenericDrugType | null {
   if (!entity) return null;
+  const classifications = entity.classifications ?? [];
   return {
     id: entity.id,
     code: entity.code,
     name: entity.name,
-    genericClass: entity.genericClass,
-    pharmaceuticalClass: entity.pharmaceuticalClass,
+    genericClass: classifications.find((c) => c.type === 'ndf')?.name ?? null,
+    pharmaceuticalClass: classifications.find((c) => c.type === 'emdex_pharmaceutical')?.name ?? null,
     emdexCode: entity.emdexCode,
     source: entity.source,
-    classifications: (entity.classifications ?? []).map(toDrugClassificationType),
+    classifications: classifications.map(toDrugClassificationType),
     createdAt: entity.createdAt.toISOString(),
     updatedAt: entity.updatedAt.toISOString(),
     deletedAt: entity.deletedAt ? entity.deletedAt.toISOString() : null,
@@ -80,25 +82,32 @@ function toGenericDrugType(entity: GenericDrugEntity | null): GenericDrugType | 
 }
 
 function toGenericProductType(entity: GenericProductEntity): GenericProductType {
+  const genericClassifications = entity.genericDrug?.classifications ?? [];
   return {
     id: entity.id,
     code: entity.code,
     name: entity.name,
-    therapeuticClass: entity.therapeuticClass,
-    pharmaceuticalClass: entity.pharmaceuticalClass,
+    therapeuticClass: genericClassifications.find((c) => c.type === 'ndf')?.name ?? null,
+    pharmaceuticalClass: genericClassifications.find((c) => c.type === 'emdex_pharmaceutical')?.name ?? null,
     dosageForm: entity.dosageForm,
     strength: entity.strength,
-    generalUse: entity.generalUse,
-    adultDosage: entity.adultDosage,
-    pediatricDosage: entity.pediatricDosage,
-    appendixDosages: entity.appendixDosages,
+    uomCode: entity.uomCode,
+    // Legacy API fields are projections from the linked monograph. They are
+    // not duplicated on the generic product row.
+    generalUse: entity.pharmaceutics?.generalDrugUse ?? null,
+    adultDosage: entity.pharmaceutics?.dosage ?? null,
+    pediatricDosage: [entity.pharmaceutics?.dosePerAgeRange, entity.pharmaceutics?.dosePerWeightRange]
+      .filter(Boolean)
+      .join('\n') || null,
+    appendixDosages: entity.pharmaceutics?.appendixDosages ?? null,
     emdexCode: entity.emdexCode,
     atcCode: entity.atcCode,
     ndfGenericCode: entity.ndfGenericCode,
     genericDrug: toGenericDrugType(entity.genericDrug ?? null),
     classifications: (entity.classifications ?? []).map(toDrugClassificationType),
+    classificationIds: (entity.classifications ?? []).map((classification) => classification.id),
     isPrescriptionRequired: entity.isPrescriptionRequired,
-    isControlledSubstance: entity.isControlledSubstance,
+    isControlledSubstance: entity.pharmaceutics?.isControlledSubstance ?? false,
     pharmaceutics: entity.pharmaceutics ? toPharmaceuticsType(entity.pharmaceutics) : null,
     createdAt: entity.createdAt.toISOString(),
     updatedAt: entity.updatedAt.toISOString(),
@@ -115,6 +124,8 @@ export class GenericProductsService {
     private readonly pharmaceuticsRepository: Repository<PharmaceuticsEntity>,
     @InjectRepository(GenericDrugEntity)
     private readonly genericDrugRepository: Repository<GenericDrugEntity>,
+    @InjectRepository(DrugClassificationEntity)
+    private readonly classificationRepository: Repository<DrugClassificationEntity>,
   ) {}
 
   async list(query: ListGenericProductsDto): Promise<{ data: GenericProductType[]; total: number }> {
@@ -172,27 +183,25 @@ export class GenericProductsService {
     });
     if (!pharmaceutics) throw new BadRequestException('Pharmaceutics not found');
 
+    const classifications = await this.resolveClassifications(payload.classificationCodes, payload.classificationIds);
+
     const entity = this.genericProductRepository.create({
       code: payload.code,
       name: payload.name,
-      therapeuticClass: payload.therapeuticClass ?? null,
-      pharmaceuticalClass: payload.pharmaceuticalClass ?? null,
       dosageForm: payload.dosageForm ?? null,
       strength: payload.strength ?? null,
-      generalUse: payload.generalUse ?? '',
-      adultDosage: payload.adultDosage ?? '',
-      pediatricDosage: payload.pediatricDosage ?? '',
-      appendixDosages: payload.appendixDosages ?? null,
+      uomCode: payload.uomCode ?? null,
       emdexCode: payload.emdexCode ?? null,
       isPrescriptionRequired: payload.isPrescriptionRequired ?? false,
-      isControlledSubstance: payload.isControlledSubstance ?? false,
       pharmaceutics,
+      classifications,
     });
     const saved = await this.genericProductRepository.save(entity);
     const full = await this.genericProductRepository.findOneOrFail({
       where: { id: saved.id, deletedAt: IsNull() },
-      relations: { pharmaceutics: true },
+      relations: { pharmaceutics: true, classifications: true, genericDrug: true },
     });
+    await this.hydrateDrugs([full]);
     return toGenericProductType(full);
   }
 
@@ -219,24 +228,23 @@ export class GenericProductsService {
       item.pharmaceutics = pharmaceutics;
     }
 
+    if (payload.classificationCodes !== undefined || payload.classificationIds !== undefined) {
+      item.classifications = await this.resolveClassifications(payload.classificationCodes, payload.classificationIds);
+    }
+
     if (payload.name !== undefined) item.name = payload.name;
-    if (payload.therapeuticClass !== undefined) item.therapeuticClass = payload.therapeuticClass ?? null;
-    if (payload.pharmaceuticalClass !== undefined) item.pharmaceuticalClass = payload.pharmaceuticalClass ?? null;
     if (payload.dosageForm !== undefined) item.dosageForm = payload.dosageForm ?? null;
     if (payload.strength !== undefined) item.strength = payload.strength ?? null;
-    if (payload.generalUse !== undefined) item.generalUse = payload.generalUse;
-    if (payload.adultDosage !== undefined) item.adultDosage = payload.adultDosage;
-    if (payload.pediatricDosage !== undefined) item.pediatricDosage = payload.pediatricDosage;
-    if (payload.appendixDosages !== undefined) item.appendixDosages = payload.appendixDosages ?? null;
+    if (payload.uomCode !== undefined) item.uomCode = payload.uomCode ?? null;
     if (payload.emdexCode !== undefined) item.emdexCode = payload.emdexCode ?? null;
     if (payload.isPrescriptionRequired !== undefined) item.isPrescriptionRequired = payload.isPrescriptionRequired;
-    if (payload.isControlledSubstance !== undefined) item.isControlledSubstance = payload.isControlledSubstance;
 
     const saved = await this.genericProductRepository.save(item);
     const full = await this.genericProductRepository.findOneOrFail({
       where: { id: saved.id, deletedAt: IsNull() },
-      relations: { pharmaceutics: true },
+      relations: { pharmaceutics: true, classifications: true, genericDrug: true },
     });
+    await this.hydrateDrugs([full]);
     return toGenericProductType(full);
   }
 
@@ -248,7 +256,7 @@ export class GenericProductsService {
   async searchAll(): Promise<GenericProductType[]> {
     const items = await this.genericProductRepository.find({
       where: { deletedAt: IsNull() },
-      relations: { pharmaceutics: true },
+      relations: { pharmaceutics: true, classifications: true, genericDrug: { classifications: true } },
     });
     return items.map(toGenericProductType);
   }
@@ -264,6 +272,34 @@ export class GenericProductsService {
     const byId = new Map(rows.map((r) => [r.id, r.classifications ?? []]));
     for (const p of products) p.classifications = byId.get(p.id) ?? [];
     await this.hydrateDrugs(products);
+  }
+
+  private async resolveClassifications(codes?: string[], ids?: string[]): Promise<DrugClassificationEntity[]> {
+    if (ids !== undefined) {
+      const uniqueIds = [...new Set(ids.map((id) => id.trim()).filter(Boolean))];
+      if (!uniqueIds.length) return [];
+      const rows = await this.classificationRepository.find({
+        where: { id: In(uniqueIds), deletedAt: IsNull() },
+      });
+      if (rows.length !== uniqueIds.length) {
+        const found = new Set(rows.map((row) => row.id));
+        const missing = uniqueIds.filter((id) => !found.has(id));
+        throw new BadRequestException(`Unknown classification IDs: ${missing.join(', ')}`);
+      }
+      return rows;
+    }
+    if (!codes?.length) return [];
+    const uniqueCodes = [...new Set(codes.map((code) => code.trim()).filter(Boolean))];
+    if (!uniqueCodes.length) return [];
+    const rows = await this.classificationRepository.find({
+      where: { code: In(uniqueCodes), deletedAt: IsNull() },
+    });
+    if (rows.length !== uniqueCodes.length) {
+      const found = new Set(rows.map((row) => row.code));
+      const missing = uniqueCodes.filter((code) => !found.has(code));
+      throw new BadRequestException(`Unknown classification codes: ${missing.join(', ')}`);
+    }
+    return rows;
   }
 
   private async hydrateDrugs(products: GenericProductEntity[]): Promise<void> {

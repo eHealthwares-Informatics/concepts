@@ -10,15 +10,16 @@ function toDrugClassificationType(c: { id: string; code: string; type: string; n
 }
 
 function toGenericDrugType(entity: GenericDrugEntity): GenericDrugType {
+  const classifications = entity.classifications ?? [];
   return {
     id: entity.id,
     code: entity.code,
     name: entity.name,
-    genericClass: entity.genericClass,
-    pharmaceuticalClass: entity.pharmaceuticalClass,
+    genericClass: classifications.find((c) => c.type === 'ndf')?.name ?? null,
+    pharmaceuticalClass: classifications.find((c) => c.type === 'emdex_pharmaceutical')?.name ?? null,
     emdexCode: entity.emdexCode,
     source: entity.source,
-    classifications: (entity.classifications ?? []).map(toDrugClassificationType),
+    classifications: classifications.map(toDrugClassificationType),
     createdAt: entity.createdAt.toISOString(),
     updatedAt: entity.updatedAt.toISOString(),
     deletedAt: entity.deletedAt ? entity.deletedAt.toISOString() : null,
@@ -35,14 +36,15 @@ export class GenericDrugsService {
   async list(query: ListGenericDrugsDto): Promise<{ data: GenericDrugType[]; total: number }> {
     const qb = this.repo
       .createQueryBuilder('gd')
+      .leftJoin('gd.classifications', 'classification')
       .where('gd.deleted_at IS NULL')
       .orderBy(`gd.${query.sortBy ?? 'name'}`, query.sortOrder === 'desc' ? 'DESC' : 'ASC')
       .skip(query.offset)
       .take(query.limit);
     if (query.search) {
-      qb.andWhere('(gd.code ILIKE :s OR gd.name ILIKE :s OR gd.generic_class ILIKE :s)', {
+      qb.andWhere('(gd.code ILIKE :s OR gd.name ILIKE :s OR classification.name ILIKE :s)', {
         s: `%${query.search}%`,
-      });
+      }).distinct(true);
     }
     const [data, total] = await qb.getManyAndCount();
     await this.withClassifications(data);

@@ -11,6 +11,7 @@ import {
 } from 'typeorm';
 import { GenericProductEntity } from './generic-product.entity';
 import { DrugClassificationEntity } from './drug-classification.entity';
+import { ClinicalGuidelineEntity } from './clinical-guideline.entity';
 
 /**
  * Generic drug entity — the active generic (GN-xxxxx from genericDrugs.csv).
@@ -31,14 +32,6 @@ export class GenericDrugEntity {
   @Column({ type: 'text' })
   name!: string;
 
-  /** Therapeutic class (from genericDrugs.csv). */
-  @Column({ name: 'generic_class', type: 'text', nullable: true })
-  genericClass!: string | null;
-
-  /** Pharmaceutical class. */
-  @Column({ name: 'pharmaceutical_class', type: 'text', nullable: true })
-  pharmaceuticalClass!: string | null;
-
   /** ATC code (genericDrugs.csv emdexCode). */
   @Column({ name: 'emdex_code', type: 'text', nullable: true })
   emdexCode!: string | null;
@@ -47,25 +40,10 @@ export class GenericDrugEntity {
   @Column({ type: 'text', nullable: true })
   source!: string | null;
 
-  /** Therapeutic classification codes (drugs.com → THER-*). */
-  @Column({ name: 'therapeutic_category_codes', type: 'simple-array', nullable: true })
-  therapeuticCategoryCodes!: string[] | null;
-
-  /** Pharmaceutical classification codes (goodrx → PHA-*). */
-  @Column({ name: 'pharmaceutical_category_codes', type: 'simple-array', nullable: true })
-  pharmaceuticalCategoryCodes!: string[] | null;
-
-  /** NDF classification codes (curated from genericClass → NDF-*). */
-  @Column({ name: 'ndf_category_codes', type: 'simple-array', nullable: true })
-  ndfCategoryCodes!: string[] | null;
-
-  /** EMDEx (ATC body-system) classification codes (→ EMDX-*). */
-  @Column({ name: 'emdex_category_codes', type: 'simple-array', nullable: true })
-  emdexCategoryCodes!: string[] | null;
-
   @OneToMany(() => GenericProductEntity, (gp) => gp.genericDrug)
   genericProducts!: GenericProductEntity[];
 
+  /** All source classifications (NDF, EMDEx and external schemes) via the join table. */
   @ManyToMany(() => DrugClassificationEntity, (c) => c.genericDrugs)
   @JoinTable({
     name: 'generic_drug_classifications',
@@ -73,6 +51,10 @@ export class GenericDrugEntity {
     inverseJoinColumn: { name: 'drug_classification_id', referencedColumnName: 'id' },
   })
   classifications!: DrugClassificationEntity[];
+
+  /** Guidelines (e.g. NSTG 2022 conditions) whose regimens reference this GN. */
+  @ManyToMany(() => ClinicalGuidelineEntity, (g) => g.genericDrugs, { lazy: true })
+  guidelines!: ClinicalGuidelineEntity[];
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt!: Date;

@@ -19,11 +19,11 @@ export class ListDrugClassificationsDto {
   limit?: number = 20;
 
   @ApiPropertyOptional({
-    enum: ['therapeutic', 'pharmaceutical', 'ndf_therapeutic', 'ndf_pharmaceutical'],
+    enum: ['therapeutic', 'pharmaceutical', 'ndf_therapeutic', 'emdex_pharmaceutical'],
   })
   @IsOptional()
-  @IsIn(['therapeutic', 'pharmaceutical', 'ndf_therapeutic', 'ndf_pharmaceutical'])
-  type?: 'therapeutic' | 'pharmaceutical' | 'ndf_therapeutic' | 'ndf_pharmaceutical';
+  @IsIn(['therapeutic', 'pharmaceutical', 'ndf_therapeutic', 'emdex_pharmaceutical'])
+  type?: 'therapeutic' | 'pharmaceutical' | 'ndf_therapeutic' | 'emdex_pharmaceutical';
 
   @ApiPropertyOptional()
   @IsOptional()
