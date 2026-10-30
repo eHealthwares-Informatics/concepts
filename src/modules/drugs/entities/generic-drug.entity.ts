@@ -40,6 +40,38 @@ export class GenericDrugEntity {
   @Column({ type: 'text', nullable: true })
   source!: string | null;
 
+  // ── Clinical clerk-suitability attributes ──────────────────────────────
+  // Consumed by the clinical module (complaint-led clerking): an OTC generic
+  // regimen that treatment packs may reference. All nullable so the existing
+  // catalogue seed (which knows nothing about clerking) keeps working.
+
+  /** Over-the-counter flag; prescription-only generics stay false. */
+  @Column({ name: 'is_otc', type: 'boolean', default: false })
+  isOtc!: boolean;
+
+  /** Active ingredient(s) with strengths, e.g. [{ ingredient, strength }]. */
+  @Column({ type: 'simple-json', nullable: true })
+  ingredients!: Record<string, any> | null;
+
+  /** Regimen-level strengths, e.g. ['0.025%', '0.05%']. */
+  @Column({ type: 'simple-array', nullable: true })
+  strengths!: string[] | null;
+
+  /** Administration routes, e.g. ['topical']. */
+  @Column({ type: 'simple-array', nullable: true })
+  routes!: string[] | null;
+
+  /** Dosage forms allowed for the regimen, e.g. ['cream', 'gel']. */
+  @Column({ name: 'dosage_forms', type: 'simple-array', nullable: true })
+  dosageForms!: string[] | null;
+
+  /**
+   * Clinical restrictions (OTC-only, age limits, pregnancy contraindication
+   * codes) evaluated by the assessment / pack eligibility engine.
+   */
+  @Column({ type: 'simple-json', nullable: true })
+  restrictions!: Record<string, any> | null;
+
   @OneToMany(() => GenericProductEntity, (gp) => gp.genericDrug)
   genericProducts!: GenericProductEntity[];
 

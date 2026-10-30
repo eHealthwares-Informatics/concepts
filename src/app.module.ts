@@ -16,6 +16,18 @@ import {
   LocalityRelationEntity,
 } from './modules/localities/entities';
 import { LocalitiesModule } from './modules/localities/localities.module';
+import { ClinicalModule } from './modules/clinical/clinical.module';
+import {
+  ClinicalEvidenceEntity,
+  ClinicalQuestionEntity,
+  ComplaintEntity,
+  ComplaintSymptomEntity,
+  ContraindicationEntity,
+  RedFlagRuleEntity,
+  SymptomEntity,
+  TreatmentPackEntity,
+  TreatmentPackItemEntity,
+} from './modules/clinical/entities';
 import {
   ConceptAttributeEntity,
   ConceptAttributeValueEntity,
@@ -91,6 +103,15 @@ import {
           LocalityEntity,
           LocalityAdminEntity,
           LocalityRelationEntity,
+          ComplaintEntity,
+          SymptomEntity,
+          ComplaintSymptomEntity,
+          ClinicalQuestionEntity,
+          RedFlagRuleEntity,
+          ContraindicationEntity,
+          TreatmentPackEntity,
+          TreatmentPackItemEntity,
+          ClinicalEvidenceEntity,
         ],
         synchronize: true,
       }),
@@ -101,6 +122,7 @@ import {
     PharmaciesModule,
     DiagnosticCentersModule,
     LocalitiesModule,
+    ClinicalModule,
     ApiExplorerModule,
     SeedModule,
   ],

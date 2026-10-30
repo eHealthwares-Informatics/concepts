@@ -11,6 +11,7 @@
     "seed:icd": "nest start --watch seed:icd",
     "seed:loinc": "nest start --watch seed:loinc",
     "seed:drug": "nest start --watch seed:drug",
+    "seed:clinical": "ts-node src/scripts/seed-clinical.ts",
     "seed:all": "nest start --watch seed:all",
     "start:dev": "nest start --watch seed:loinc",
     "start:debug": "nest start --debug --watch",
