@@ -83,6 +83,8 @@ export interface TreatmentPackItemType {
   itemType: 'GENERIC_MEDICINE' | 'SUPPORTIVE_CARE' | 'COUNSELLING';
   genericDrugId: string | null;
   genericDrugCode: string | null;
+  /** Human-readable generic name, resolved at recommendation time. */
+  genericDrugName?: string | null;
   supportiveCareRef: string | null;
   protocolRegimenCode: string | null;
   instructions: Record<string, any>;

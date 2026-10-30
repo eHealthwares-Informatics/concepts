@@ -4,6 +4,7 @@ import { ClinicalMedicationService } from './clinical-medication.service';
 import { TreatmentPackService } from './treatment-pack.service';
 import type { AvailableItemType, RecommendationResult } from '../types/clinical.types';
 import {
+  isAffirmativeAnswer,
   RecommendationResponseStatus,
   RxShopClerkingState,
   TriageOutcome,
@@ -70,7 +71,7 @@ export class RecommendationService {
     // RECOMMENDATIONS_AVAILABLE: resolve packs + product availability.
     const resolvedPacks = await this.packs.resolve(state.complaintCodes, {
       contraindications: (state.contraindications ?? [])
-        .filter((entry) => entry.value === true)
+        .filter((entry) => isAffirmativeAnswer(entry.value))
         .map((entry) => entry.code),
       additionalInfo: state.additionalInfo ?? {},
     });
@@ -98,6 +99,9 @@ export class RecommendationService {
     const drugs = await this.medications.findForItems(itemIds, itemCodes);
     const codeById = new Map(drugs.map((drug) => [drug.id, drug.code]));
     const idByCode = new Map(drugs.map((drug) => [drug.code.toUpperCase(), drug.id]));
+    const nameByCode = new Map(
+      drugs.map((drug) => [drug.code.toUpperCase(), drug.name]),
+    );
 
     for (const pack of resolvedPacks) {
       for (const item of pack.items) {
@@ -107,6 +111,10 @@ export class RecommendationService {
         if (!item.genericDrugId && item.genericDrugCode) {
           item.genericDrugId = idByCode.get(item.genericDrugCode.toUpperCase()) ?? null;
         }
+        // Callers render prescriptions to patients: carry the human name.
+        item.genericDrugName = item.genericDrugCode
+          ? nameByCode.get(item.genericDrugCode.toUpperCase()) ?? null
+          : null;
       }
     }
 

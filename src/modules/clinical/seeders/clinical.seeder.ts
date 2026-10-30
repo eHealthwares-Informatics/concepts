@@ -240,18 +240,201 @@ export class ClinicalSeederService {
         stats.treatmentPacks++;
       }
 
-      // ── Citation ───────────────────────────────────────────────────────
-      const evidenceRef = 'TreatmentPack:ACNE_SELF_CARE_001';
-      const existingEvidence = await this.evidence.findOne({
-        where: { referencedEntity: evidenceRef, source: 'NSTG' },
+      // ══ Complaint: headache (tension-type / simple analgesia) ══════════
+      await this.upsertComplaint(
+        {
+          code: 'HEADACHE',
+          name: 'Headache',
+          slug: 'headache',
+          category: 'Pain & Fever',
+          synonyms: ['head pain', 'cephalgia'],
+          localExpressions: ['head is paining me'],
+          status: ClinicalStatus.ACTIVE,
+          sourceRefs: ['NSTG 2022 headache'],
+          metadata: { protocol: 'NSTG-2022-v1', bodySystem: 'neurological' },
+        },
+        stats,
+      );
+
+      for (const symptom of [
+        {
+          code: 'SUDDEN_ONSET',
+          name: 'Sudden, worst-ever headache',
+          synonyms: ['thunderclap headache'],
+          category: 'Neurological',
+          interpretation: { bodySystem: 'neurological', redFlagAdjacent: true },
+        },
+        {
+          code: 'NECK_STIFFNESS',
+          name: 'Stiff neck',
+          synonyms: ['neck stiffness', 'cannot bend neck'],
+          category: 'Neurological',
+          interpretation: { bodySystem: 'neurological', redFlagAdjacent: true },
+        },
+      ]) {
+        await this.upsertSymptom(symptom, stats);
+      }
+
+      await this.upsertAssociation('HEADACHE', 'SUDDEN_ONSET', 'CONDITIONAL', stats);
+      await this.upsertAssociation('HEADACHE', 'NECK_STIFFNESS', 'CONDITIONAL', stats);
+
+      // ── Red flags: thunderclap headache and meningism escalate ─────────
+      const headacheRedFlags = [
+        {
+          code: 'HEADACHE_RF_THUNDERCLAP',
+          conditions: { complaintCodes: ['HEADACHE'], presentSymptoms: ['SUDDEN_ONSET'] },
+          message:
+            'A headache that peaks within a minute may be a bleed around the brain — refer for emergency assessment.',
+        },
+        {
+          code: 'HEADACHE_RF_NECK_STIFFNESS',
+          conditions: { complaintCodes: ['HEADACHE'], presentSymptoms: ['NECK_STIFFNESS'] },
+          message:
+            'Headache with a stiff neck may indicate meningitis — refer for emergency assessment.',
+        },
+      ];
+
+      for (const rule of headacheRedFlags) {
+        const existing = await this.redFlagRules.findOne({ where: { code: rule.code } });
+        if (existing) continue;
+        await this.redFlagRules.save(
+          this.redFlagRules.create({
+            code: rule.code,
+            conditions: rule.conditions,
+            severity: RedFlagSeverity.CRITICAL,
+            triageOutcome: TriageOutcome.EMERGENCY_ASSESSMENT,
+            requiredAction: 'REFER_IMMEDIATELY',
+            message: rule.message,
+            protocolVersion: 'NSTG-2022-v1',
+            evidence: { source: 'NSTG', edition: '2022' },
+            isEnabled: true,
+          }),
+        );
+        stats.redFlagRules++;
+      }
+
+      // ── Contraindication: liver disease excludes paracetamol ───────────
+      const liverDisease = await this.contraindications.findOne({
+        where: { code: 'LIVER_DISEASE' },
       });
-      if (!existingEvidence) {
+      if (!liverDisease) {
+        await this.contraindications.save(
+          this.contraindications.create({
+            code: 'LIVER_DISEASE',
+            applicability: { complaints: ['HEADACHE'] },
+            significance: 'ABSOLUTE',
+            medicineExclusions: ['PARACETAMOL_500_TABLET'],
+          }),
+        );
+        stats.contraindications++;
+      }
+
+      // ── Generic regimen + catalogue product mapping ────────────────────
+      const paracetamolCode = 'PARACETAMOL_500_TABLET';
+      let paracetamol = await this.drugs.findOne({ where: { code: paracetamolCode } });
+      if (!paracetamol) {
+        paracetamol = await this.drugs.save(
+          this.drugs.create({
+            code: paracetamolCode,
+            name: 'Paracetamol 500mg tablet',
+            source: 'clinical/seeder',
+            isOtc: true,
+            ingredients: [{ ingredient: 'Paracetamol', strength: '500mg' }],
+            strengths: ['500mg'],
+            routes: ['oral'],
+            dosageForms: ['tablet'],
+            restrictions: {
+              maxDailyDose: '4000mg',
+              contraindicationCode: 'LIVER_DISEASE',
+            },
+          }),
+        );
+        stats.genericMedicines++;
+      }
+
+      const paracetamolProductCode = 'GP-DEMO-PARACETAMOL-500';
+      const paracetamolProduct = await this.products.findOne({
+        where: { code: paracetamolProductCode },
+      });
+      if (!paracetamolProduct) {
+        await this.products.save(
+          this.products.create({
+            code: paracetamolProductCode,
+            name: 'Paracetamol 500mg tablet (100 pack)',
+            dosageForm: 'tablet',
+            strength: '500mg',
+            genericDrug: paracetamol,
+            clinicalMappingStatus: 'matched_by_name',
+            commercialItemCode: 'DEMO-PARA-500',
+            requiredAttributes: { form: 'tablet', strength: '500mg' },
+          }),
+        );
+        stats.productMappings++;
+      }
+
+      // ── Approved treatment pack ────────────────────────────────────────
+      const headachePack = await this.treatmentPacks.findOne({
+        where: { code: 'HEADACHE_SELF_CARE_001' },
+      });
+      if (!headachePack) {
+        await this.treatmentPacks.save(
+          this.treatmentPacks.create({
+            code: 'HEADACHE_SELF_CARE_001',
+            name: 'Headache — simple analgesia',
+            description:
+              'Paracetamol with rest and hydration advice for headache without red flags.',
+            complaintCodes: ['HEADACHE'],
+            eligibilityRules: { ageMin: 12 },
+            exclusionRules: { contraindications: ['LIVER_DISEASE'] },
+            evidence: { source: 'NSTG', edition: '2022', section: 'headache' },
+            status: TreatmentPackStatus.APPROVED,
+            version: 1,
+            items: [
+              {
+                itemType: 'GENERIC_MEDICINE',
+                genericDrugId: paracetamol.id,
+                genericDrugCode: paracetamol.code,
+                protocolRegimenCode: 'NSTG-2022:headache:first-line',
+                instructions: {
+                  dose: '1–2 tablets (500mg–1g)',
+                  frequency: 'Every 6 hours as needed',
+                  duration: 'Up to 3 days',
+                  maxDailyDose: '4000mg',
+                },
+                sequence: 0,
+                required: true,
+              },
+              {
+                itemType: 'COUNSELLING',
+                instructions: {
+                  topic: 'Hydration and rest',
+                  message:
+                    'Drink water, rest in a quiet room, and return if the headache worsens or new symptoms appear.',
+                },
+                sequence: 1,
+                required: false,
+              },
+            ],
+          }),
+        );
+        stats.treatmentPacks++;
+      }
+
+      // ── Citations ──────────────────────────────────────────────────────
+      for (const citation of [
+        { reference: 'TreatmentPack:ACNE_SELF_CARE_001', section: 'acne-vulgaris' },
+        { reference: 'TreatmentPack:HEADACHE_SELF_CARE_001', section: 'headache' },
+      ]) {
+        const existingEvidence = await this.evidence.findOne({
+          where: { referencedEntity: citation.reference, source: 'NSTG' },
+        });
+        if (existingEvidence) continue;
         await this.evidence.save(
           this.evidence.create({
-            referencedEntity: evidenceRef,
+            referencedEntity: citation.reference,
             source: 'NSTG',
             edition: '2022',
-            section: 'acne-vulgaris',
+            section: citation.section,
             publicationDate: '2022-01-01',
             reviewedBy: 'seed:clinical',
             protocolVersion: 'NSTG-2022-v1',

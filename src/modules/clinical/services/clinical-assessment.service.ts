@@ -2,6 +2,7 @@ import { Injectable, Logger } from '@nestjs/common';
 import { RedFlagRuleEntity } from '../entities';
 import type { ClinicalAssessmentResult } from '../types/clinical.types';
 import {
+  isAffirmativeAnswer,
   RecommendationResponseStatus,
   RxShopClerkingState,
   SymptomFindingStatus,
@@ -153,7 +154,7 @@ export class ClinicalAssessmentService {
       );
       const anyTrue = conditions.contraindications.some((condition: any) => {
         const value = answered.get(String(condition.code).toUpperCase());
-        return value === true || value === condition.matchValue;
+        return isAffirmativeAnswer(value) || value === condition.matchValue;
       });
       if (!anyTrue) return false;
     }

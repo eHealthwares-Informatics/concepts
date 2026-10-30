@@ -47,6 +47,22 @@ export enum RecommendationResponseStatus {
 /** Symptom finding state in clerking state. */
 export type SymptomFindingStatus = 'PRESENT' | 'ABSENT' | 'UNKNOWN';
 
+/**
+ * Answer coercion for contraindication screening.
+ *
+ * Clerking answers arrive from a questionnaire workflow, so a "yes" can be
+ * `true`, `"true"`, `"yes"` or `1` depending on the question's option values.
+ * Treat all of them as affirmative so pack exclusion never silently misses a
+ * positive screen.
+ */
+export function isAffirmativeAnswer(value: unknown): boolean {
+  if (value === true || value === 1) return true;
+  if (typeof value === 'string') {
+    return ['true', 'yes', 'y', '1'].includes(value.trim().toLowerCase());
+  }
+  return false;
+}
+
 /** Contraindication screening state in clerking state. */
 export type ContraindicationAnswerStatus = 'ANSWERED' | 'UNKNOWN' | 'NOT_ASKED';
 
