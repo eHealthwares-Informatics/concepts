@@ -50,6 +50,9 @@ The API defaults to **port 3011** (configurable via `PORT`).
 | `npm run start:dev` | Dev server (seeds LOINC on start) |
 | `npm run start:cli` | CLI entrypoint (`ts-node src/cli.ts`) |
 | `npm run build` | Compile TypeScript |
+| `npm test` | Run the unit test suite (jest + ts-jest) |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run test:cov` | Run tests with coverage |
 | `npm run start:prod` | Production start |
 | `npm run seed:facility` | Seed facility data |
 | `npm run seed:icd` | Seed ICD codes |
@@ -79,6 +82,14 @@ The API defaults to **port 3011** (configurable via `PORT`).
 | `GOOGLE_CLIENT_EMAIL` | — | Service account email |
 | `GOOGLE_PRIVATE_KEY` | — | Service account private key |
 | `ADMIN_API_KEY` | — | Required `x-api-key` for `/api/clinical` admin writes (complaints, packs, red-flag rules) |
+
+## Testing
+
+`npm test` runs jest over `src/**/*.spec.ts`. The clinical suite covers the
+assessment rules engine (missing-information gates, red-flag predicates,
+escalation ordering) and the recommendation matrix (pack resolution, generic
+name enrichment, product availability, contraindication screening) with fake
+repositories, so it needs no database.
 
 ## Database
 

@@ -13,6 +13,9 @@
     "seed:drug": "nest start --watch seed:drug",
     "seed:clinical": "ts-node src/scripts/seed-clinical.ts",
     "seed:all": "nest start --watch seed:all",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
     "start:dev": "nest start --watch seed:loinc",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main"
@@ -39,7 +42,33 @@
   },
   "devDependencies": {
     "@nestjs/cli": "^11.0.21",
+    "@types/jest": "^30.0.0",
     "@types/node": "^25.6.0",
+    "jest": "^30.5.2",
+    "ts-jest": "^29.4.15",
     "ts-node": "^10.9.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": [
+        "ts-jest",
+        {
+          "tsconfig": {
+            "module": "commonjs",
+            "moduleResolution": "node",
+            "resolvePackageJsonExports": false,
+            "isolatedModules": true
+          }
+        }
+      ]
+    },
+    "testEnvironment": "node"
   }
 }
