@@ -241,6 +241,44 @@ describe('RecommendationService', () => {
       }),
     ]);
     expect(medications.findForItems).toHaveBeenCalledWith([], ['TRETINOIN_TOPICAL_0025']);
+
+    // Prescriptions are array-valued: every pack item (medicine and counselling)
+    // becomes a line, never a single flattened medicine.
+    expect(result.prescriptions).toEqual([
+      {
+        packCode: 'ACNE_SELF_CARE_001',
+        packName: 'Acne — first-line self care',
+        itemType: 'GENERIC_MEDICINE',
+        medicineCode: 'TRETINOIN_TOPICAL_0025',
+        medicineName: 'Tretinoin 0.025% topical',
+        dose: 'Apply a thin layer',
+        frequency: 'At night',
+        duration: null,
+        instructions: { dose: 'Apply a thin layer', frequency: 'At night' },
+        sequence: 0,
+        required: true,
+      },
+      expect.objectContaining({
+        packCode: 'ACNE_SELF_CARE_001',
+        itemType: 'COUNSELLING',
+        medicineCode: null,
+        sequence: 1,
+      }),
+    ]);
+  });
+
+  it('returns no prescriptions when a red flag escalates', async () => {
+    const { service } = createService({
+      rules: [rule()],
+      packs: [pack()],
+    });
+
+    const result = await service.recommend(
+      state({ symptoms: [{ code: 'PAPULES', status: 'PRESENT' }, { code: 'SEVERE_PAIN', status: 'PRESENT' }] }),
+    );
+
+    expect(result.status).toBe(RecommendationResponseStatus.REFERRAL_REQUIRED);
+    expect(result.prescriptions).toBeUndefined();
   });
 
   it('returns an empty availability list when nothing is mapped', async () => {

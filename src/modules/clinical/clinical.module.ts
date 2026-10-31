@@ -14,6 +14,7 @@ import {
   TreatmentPackItemEntity,
 } from './entities/treatment-pack.entity';
 import { ClinicalAssessmentService } from './services/clinical-assessment.service';
+import { ClerkingPlanService } from './services/clerking-plan.service';
 import { ClinicalEvidenceService } from './services/clinical-evidence.service';
 import { ClinicalMedicationService } from './services/clinical-medication.service';
 import { ClinicalQuestionService } from './services/clinical-question.service';
@@ -26,6 +27,7 @@ import { TreatmentPackService } from './services/treatment-pack.service';
 import { ClinicalSeederService } from './seeders/clinical.seeder';
 import { SeedClinicalCommand } from './commands/seed-clinical.command';
 import { ClinicalAdminController } from './controllers/clinical-admin.controller';
+import { ClerkingController } from './controllers/clerking.controller';
 import { RecommendationController } from './controllers/recommendation.controller';
 
 /**
@@ -55,7 +57,7 @@ import { RecommendationController } from './controllers/recommendation.controlle
       GenericProductEntity,
     ]),
   ],
-  controllers: [ClinicalAdminController, RecommendationController],
+  controllers: [ClinicalAdminController, ClerkingController, RecommendationController],
   providers: [
     ComplaintService,
     SymptomService,
@@ -66,6 +68,7 @@ import { RecommendationController } from './controllers/recommendation.controlle
     ClinicalMedicationService,
     TreatmentPackService,
     ClinicalAssessmentService,
+    ClerkingPlanService,
     RecommendationService,
     ClinicalSeederService,
     SeedClinicalCommand,
@@ -80,6 +83,7 @@ import { RecommendationController } from './controllers/recommendation.controlle
     ClinicalMedicationService,
     TreatmentPackService,
     ClinicalAssessmentService,
+    ClerkingPlanService,
     RecommendationService,
     ClinicalSeederService,
   ],

@@ -73,6 +73,101 @@ export enum RedFlagSeverity {
   MINOR = 'MINOR',
 }
 
+/** What a clerking question is asked for. */
+export type ClerkingQuestionKind =
+  | 'RED_FLAG'
+  | 'SYMPTOM'
+  | 'CONTRAINDICATION'
+  | 'CONTEXT';
+
+/**
+ * One question the clerking agent may ask. Built from the knowledge base, never
+ * from the conversation service's seed data — a new symptom, red flag or
+ * contraindication becomes askable without a conversation deploy.
+ */
+export interface ClerkingQuestionSpec {
+  /** Stable question code, e.g. SYMPTOM_PAPULES. */
+  code: string;
+  /** Stable id the conversation engine uses as the question's id. */
+  questionId: string;
+  /** Canonical attribute the answer is stored under, e.g. clerking.SYMPTOM_PAPULES. */
+  clinicalAttribute: string;
+  kind: ClerkingQuestionKind;
+  /** Clinical code the answer resolves to (symptom/contraindication code). */
+  targetCode: string | null;
+  text: string;
+  questionType: 'BOOLEAN' | 'NUMBER' | 'TEXT' | 'SINGLE_CHOICE';
+  /** Choose-one answers; BOOLEAN questions expose PRESENT/ABSENT. */
+  options: Array<{ key: string; label: string; value: string }>;
+  required: boolean;
+  /** Lower runs first; red flags are asked before anything else. */
+  priority: number;
+  /** How the answer maps into clerking state. */
+  interpretation: {
+    /** symptom finding the answer sets (status PRESENT/ABSENT). */
+    symptomCode?: string;
+    /** contraindication the answer resolves. */
+    contraindicationCode?: string;
+    /** additionalInfo field the answer fills (e.g. age). */
+    infoField?: string;
+    /** Severity that fires when the answer is affirmative. */
+    redFlag?: { ruleCode: string; severity: string };
+  };
+}
+
+/** Ordered question plan for one or more complaints. */
+export interface ClerkingPlan {
+  complaintCodes: string[];
+  protocolVersion: string;
+  questions: ClerkingQuestionSpec[];
+}
+
+/** Answer already given, as read from the workflow state. */
+export interface ClerkingAnswerInput {
+  questionId?: string;
+  questionCode?: string;
+  clinicalAttribute?: string;
+  /** Every answer recorded for that question, newest last. */
+  values: unknown[];
+}
+
+/** Next-question request the conversation engine posts after every answer. */
+export interface ClerkingNextQuestionRequest {
+  state: RxShopClerkingState;
+  /** Explicitly skipped question codes (patient refused / not applicable). */
+  skipQuestionCodes?: string[];
+}
+
+export interface ClerkingNextQuestionResult {
+  status: 'QUESTION' | 'COMPLETE';
+  done: boolean;
+  question: ClerkingQuestionSpec | null;
+  /** Questions still unanswered after this one. */
+  remainingQuestionCodes: string[];
+  /**
+   * The same pending questions with their text, so a caller (e.g. an AI
+   * clerking agent) can choose a shorter path without a second round trip.
+   */
+  remainingQuestions: ClerkingQuestionSpec[];
+  complaintCodes: string[];
+  protocolVersion: string;
+}
+
+/** One medicine line in a prescription (array-valued, never a single item). */
+export interface PrescriptionLine {
+  packCode: string;
+  packName: string;
+  itemType: string;
+  medicineCode: string | null;
+  medicineName: string | null;
+  dose: string | null;
+  frequency: string | null;
+  duration: string | null;
+  instructions: Record<string, any>;
+  sequence: number;
+  required: boolean;
+}
+
 /**
  * Canonical clerking state (§4.3) as supplied by the conversation engine. It is
  * read from `WorkflowInstance.state`; this service never persists it.
@@ -92,6 +187,16 @@ export interface RxShopClerkingState {
     status: ContraindicationAnswerStatus;
   }>;
   additionalInfo: Record<string, unknown>;
+  /**
+   * Every answer given, one entry per question, `values` kept as an array so
+   * repeated/clarifying answers to the same question accumulate instead of
+   * overwriting each other.
+   */
+  answers?: ClerkingAnswerInput[];
+  /** Question codes already asked (so re-asking never happens). */
+  askedQuestionCodes?: string[];
+  /** Prescriptions resolved for this session — always an array. */
+  prescriptions?: PrescriptionLine[];
   triageOutcome?: TriageOutcome;
   recommendationRequestId?: string;
   recommendationResult?: Record<string, unknown>;

@@ -103,7 +103,11 @@ export class ClinicalSeederService {
           name: 'Red bumps / pimples',
           synonyms: ['papules', 'pimples'],
           category: 'Skin',
-          interpretation: { bodySystem: 'skin' },
+          interpretation: {
+            bodySystem: 'skin',
+            // Authored wording for the generated clerking question.
+            questionText: 'Do you have red bumps or pimples on the skin? Reply 1 for yes, 2 for no.',
+          },
         },
         stats,
       );
@@ -113,7 +117,12 @@ export class ClinicalSeederService {
           name: 'Severe pain',
           synonyms: ['severe pain'],
           category: 'Pain',
-          interpretation: { bodySystem: 'general', redFlagAdjacent: true },
+          interpretation: {
+            bodySystem: 'general',
+            redFlagAdjacent: true,
+            questionText:
+              'Do you have severe pain, or a painful rash that is spreading quickly? Reply 1 for yes, 2 for no.',
+          },
         },
         stats,
       );
@@ -149,7 +158,11 @@ export class ClinicalSeederService {
         await this.contraindications.save(
           this.contraindications.create({
             code: 'PREGNANCY',
-            applicability: { complaints: ['ACNE'] },
+            applicability: {
+              complaints: ['ACNE'],
+              questionText:
+                'Are you pregnant, breastfeeding, or could you be pregnant? Reply 1 for yes, 2 for no.',
+            },
             significance: 'ABSOLUTE',
             medicineExclusions: ['TRETINOIN_TOPICAL_0025'],
           }),
@@ -262,14 +275,24 @@ export class ClinicalSeederService {
           name: 'Sudden, worst-ever headache',
           synonyms: ['thunderclap headache'],
           category: 'Neurological',
-          interpretation: { bodySystem: 'neurological', redFlagAdjacent: true },
+          interpretation: {
+            bodySystem: 'neurological',
+            redFlagAdjacent: true,
+            questionText:
+              'Did this headache start suddenly and reach its worst level within a minute? Reply 1 for yes, 2 for no.',
+          },
         },
         {
           code: 'NECK_STIFFNESS',
           name: 'Stiff neck',
           synonyms: ['neck stiffness', 'cannot bend neck'],
           category: 'Neurological',
-          interpretation: { bodySystem: 'neurological', redFlagAdjacent: true },
+          interpretation: {
+            bodySystem: 'neurological',
+            redFlagAdjacent: true,
+            questionText:
+              'Do you have a stiff neck, or does light hurt your eyes more than usual? Reply 1 for yes, 2 for no.',
+          },
         },
       ]) {
         await this.upsertSymptom(symptom, stats);
@@ -321,7 +344,11 @@ export class ClinicalSeederService {
         await this.contraindications.save(
           this.contraindications.create({
             code: 'LIVER_DISEASE',
-            applicability: { complaints: ['HEADACHE'] },
+            applicability: {
+              complaints: ['HEADACHE'],
+              questionText:
+                'Have you ever been told you have liver disease or jaundice? Reply 1 for yes, 2 for no.',
+            },
             significance: 'ABSOLUTE',
             medicineExclusions: ['PARACETAMOL_500_TABLET'],
           }),

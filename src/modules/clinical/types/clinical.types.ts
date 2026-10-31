@@ -1,5 +1,6 @@
 import type {
   ClinicalStatus,
+  PrescriptionLine,
   RecommendationResponseStatus,
   TriageOutcome,
   TreatmentPackStatus,
@@ -189,4 +190,10 @@ export interface RecommendationResult {
   notifications?: Array<{ type: string; message: string }>;
   pharmacistReviewRequired?: boolean;
   availableItems?: AvailableItemType[];
+  /**
+   * Flattened prescription lines for every resolved pack item. Always an array
+   * (possibly empty) so downstream mappers never have to branch on a single
+   * medicine: one pack can carry several generics plus counselling items.
+   */
+  prescriptions?: PrescriptionLine[];
 }

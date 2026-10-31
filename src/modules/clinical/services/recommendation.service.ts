@@ -1,8 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { ClinicalAssessmentService } from './clinical-assessment.service';
+import { normalizeClerkingState } from './clerking-state.util';
 import { ClinicalMedicationService } from './clinical-medication.service';
 import { TreatmentPackService } from './treatment-pack.service';
 import type { AvailableItemType, RecommendationResult } from '../types/clinical.types';
+import type { PrescriptionLine } from '../types/clinical-triage.types';
 import {
   isAffirmativeAnswer,
   RecommendationResponseStatus,
@@ -29,7 +31,10 @@ export class RecommendationService {
     private readonly packs: TreatmentPackService,
   ) {}
 
-  async recommend(state: RxShopClerkingState): Promise<RecommendationResult> {
+  async recommend(rawState: RxShopClerkingState): Promise<RecommendationResult> {
+    // Accepts the conversation engine's flat attribute map as well as canonical
+    // state: the assessment and pack resolver only ever see canonical state.
+    const state = normalizeClerkingState(rawState);
     const result = await this.assessment.assess(state);
 
     if (
@@ -154,6 +159,27 @@ export class RecommendationService {
 
     const requiresPharmacistReview = resolvedPacks.some((pack) => pack.requiresPharmacistReview);
 
+    // Prescriptions are array-valued: a pack can carry several medicines, and
+    // the caller must render/dispense all of them, never just the first.
+    const prescriptions: PrescriptionLine[] = recommendations.flatMap((pack) =>
+      pack.items.map((item) => {
+        const instructions = (item.instructions ?? {}) as Record<string, any>;
+        return {
+          packCode: pack.packCode,
+          packName: pack.name,
+          itemType: item.itemType,
+          medicineCode: item.genericDrugCode ?? null,
+          medicineName: item.genericDrugName ?? null,
+          dose: instructions.dose ?? null,
+          frequency: instructions.frequency ?? null,
+          duration: instructions.duration ?? null,
+          instructions,
+          sequence: item.sequence,
+          required: item.required,
+        };
+      }),
+    );
+
     this.logger.log(
       `Recommendation for ${state.sessionId}: ${resolvedPacks.length} packs, review=${requiresPharmacistReview}`,
     );
@@ -164,6 +190,7 @@ export class RecommendationService {
       reasonCodes: ['NO_RED_FLAGS_PACKS_MATCHED'],
       protocolVersion: result.protocolVersion,
       recommendations,
+      prescriptions,
       pharmacistReviewRequired: requiresPharmacistReview || undefined,
     };
   }
