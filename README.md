@@ -32,6 +32,7 @@ The API defaults to **port 3011** (configurable via `PORT`).
 | **concepts** | LOINC, ICD-10, SNOMED, and other medical coding concepts. Seeders for Google Sheets import. |
 | **facilities** | Facility registry with states, LGAs, wards, facility types/levels. Hierarchical query support. |
 | **drugs** | Drug/medication reference data with seeders. |
+| **clinical** | Complaint-led clerking knowledge base under `/api/clinical`: complaints, symptoms, clinical questions, red-flag rules, contraindications, generic-medicine attributes, treatment packs, plus the stateless `assess` / `recommendations` engine used by the conversation workflow. |
 | **api-explorer** | CMS-style FHIR API explorer UI for browsing concepts |
 
 ## Architecture
@@ -49,11 +50,15 @@ The API defaults to **port 3011** (configurable via `PORT`).
 | `npm run start:dev` | Dev server (seeds LOINC on start) |
 | `npm run start:cli` | CLI entrypoint (`ts-node src/cli.ts`) |
 | `npm run build` | Compile TypeScript |
+| `npm test` | Run the unit test suite (jest + ts-jest) |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run test:cov` | Run tests with coverage |
 | `npm run start:prod` | Production start |
 | `npm run seed:facility` | Seed facility data |
 | `npm run seed:icd` | Seed ICD codes |
 | `npm run seed:loinc` | Seed LOINC codes |
 | `npm run seed:drug` | Seed drug data |
+| `npm run seed:clinical` | Seed the clinical triage knowledge base |
 | `npm run seed:all` | Seed all data |
 
 ## Environment Variables
@@ -76,6 +81,15 @@ The API defaults to **port 3011** (configurable via `PORT`).
 | `ICD_SHEET_ID` | — | Sheet ID for ICD import |
 | `GOOGLE_CLIENT_EMAIL` | — | Service account email |
 | `GOOGLE_PRIVATE_KEY` | — | Service account private key |
+| `ADMIN_API_KEY` | — | Required `x-api-key` for `/api/clinical` admin writes (complaints, packs, red-flag rules) |
+
+## Testing
+
+`npm test` runs jest over `src/**/*.spec.ts`. The clinical suite covers the
+assessment rules engine (missing-information gates, red-flag predicates,
+escalation ordering) and the recommendation matrix (pack resolution, generic
+name enrichment, product availability, contraindication screening) with fake
+repositories, so it needs no database.
 
 ## Database
 

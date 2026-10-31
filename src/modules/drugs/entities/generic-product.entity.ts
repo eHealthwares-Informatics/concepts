@@ -69,6 +69,28 @@ export class GenericProductEntity {
   @Column({ name: 'is_prescription_required', type: 'boolean', default: false })
   isPrescriptionRequired!: boolean;
 
+  // ── Clinical availability attributes (clerking recommendations) ────────
+
+  /** rxsoft commercial item code resolved at available-items time. */
+  @Column({ name: 'commercial_item_code', type: 'text', nullable: true })
+  commercialItemCode!: string | null;
+
+  /**
+   * Reconciliation state of the generic-medicine → product mapping:
+   * unmapped | matched_by_code | matched_by_name. Only mapped products are
+   * offered as available items.
+   */
+  @Column({ name: 'clinical_mapping_status', type: 'text', default: 'unmapped' })
+  clinicalMappingStatus!: string;
+
+  /** Form/strength constraints the product must satisfy, e.g. { form, strength }. */
+  @Column({ name: 'required_attributes', type: 'simple-json', nullable: true })
+  requiredAttributes!: Record<string, any> | null;
+
+  /** Controlled substance flag. */
+  @Column({ name: 'is_controlled_substance', type: 'boolean', default: false })
+  isControlledSubstance!: boolean;
+
   // ── Relation to Pharmaceutics (monograph) ──────────────────────────────
 
   @ManyToOne(() => PharmaceuticsEntity, (p) => p.genericProducts, {
