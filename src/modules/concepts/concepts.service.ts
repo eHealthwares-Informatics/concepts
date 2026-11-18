@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ILike, Repository } from 'typeorm';
+import { ILike, Brackets, Repository } from 'typeorm';
 import {
   ConceptAttributeValueEntity,
   ExternalConceptMappingEntity,
@@ -74,7 +74,35 @@ export class ConceptsService {
     const qb = this.conceptCodeRepository.createQueryBuilder('concept')
     return executeListQuery(qb, 'concept', query)
   }
-  parseFilter(value: string) {
+
+  /** Lightweight autocomplete for a single concept module (DICOM, LOINC, …). */
+  async suggest(concept: string, term?: string, limit = 20) {
+    const take = Math.min(Math.max(Number(limit) || 20, 1), 50);
+    const qb = this.conceptCodeRepository
+      .createQueryBuilder('concept')
+      .where('concept.concept = :concept', { concept })
+      .orderBy('concept.name', 'ASC')
+      .take(take);
+
+    if (term?.trim()) {
+      qb.andWhere(
+        new Brackets((where) => {
+          where
+            .where('concept.code ILIKE :term', { term: `%${term.trim()}%` })
+            .orWhere('concept.name ILIKE :term', { term: `%${term.trim()}%` })
+            .orWhere('concept.shortName ILIKE :term', {
+              term: `%${term.trim()}%`,
+            })
+            .orWhere('concept.longName ILIKE :term', {
+              term: `%${term.trim()}%`,
+            });
+        }),
+      );
+    }
+
+    return qb.getMany();
+  }
+  async parseFilter(value: string) {
     const [type, rawValue, rawValueTo] = value.split(':')
 
     return {

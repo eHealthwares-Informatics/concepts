@@ -99,6 +99,33 @@ export class ConceptsController {
     });
   }
 
+  @Get('suggest')
+  @ApiOperation({ summary: 'Autocomplete concepts for a module' })
+  @ApiQuery({ name: 'concept', required: true })
+  @ApiQuery({ name: 'term', required: false })
+  @ApiQuery({ name: 'limit', required: false })
+  async suggest(
+    @Query('concept') concept: string,
+    @Query('term') term?: string,
+    @Query('limit') limit?: string,
+  ) {
+    const data = await this.conceptsService.suggest(
+      concept,
+      term,
+      Number(limit || 20),
+    );
+    return {
+      data: data.map((row) => ({
+        id: row.id,
+        concept: row.concept,
+        code: row.code,
+        name: row.name ?? row.shortName ?? row.longName ?? row.code,
+        shortName: row.shortName ?? null,
+        longName: row.longName ?? null,
+      })),
+    };
+  }
+
   @Get('search/:concept/:conceptCode')
   @ApiOperation({ summary: 'Search concept by concept and code' })
   @ApiParam({ name: 'concept' })
